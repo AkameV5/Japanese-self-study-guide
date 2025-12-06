@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".kanji.KanjiActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Поиск -->
+        <SearchView
+            android:id="@+id/searchViewKanji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Поиск кандзи..."
+            android:iconifiedByDefault="false"
+            android:layout_marginBottom="8dp"
+            android:background="@color/pinkBackground"
+            android:padding="4dp" />
+
+        <!-- Сортировка -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <Spinner
+                android:id="@+id/spinnerSort"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/spinnerJlpt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- Счётчик -->
+        <TextView
+            android:id="@+id/textKanjiCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Показано: 0 кандзи"
+            android:textSize="16sp"
+            android:textColor="@color/textDark"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp" />
+
+        <!-- Список -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewKanji"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
+
+    <!-- 🎲 Кнопка -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎲"
+        android:textSize="26sp"
+        android:textColor="@color/textDark"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="12dp"
+        app:cornerRadius="40dp"
+        app:backgroundTint="@color/accentPink"
+        app:layout_anchor="@id/recyclerViewKanji"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin="18dp"
+        app:elevation="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Упражнения"
+        android:textSize="18sp"
+        android:backgroundTint="@color/accentPink"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:layout_gravity="bottom"
+        app:layout_anchor="@id/recyclerViewKanji"
+        app:layout_anchorGravity="bottom|start"
+        android:layout_margin="18dp"
+        app:elevation="8dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

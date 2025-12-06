@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/pinkBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".texts_and_translation.TextDetailActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/textDark"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonJapanese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日本語"
+            android:textColor="@color/textDark"
+            android:backgroundTint="#e91e63"
+            android:checked="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Перевод"
+            android:textColor="@color/textDark"
+            android:backgroundTint="#f06292" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <TextView
+        android:id="@+id/textContent"
+        android:textSize="17sp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/textDark"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Предыдущее"
+            android:backgroundTint="#f48fb1"
+            android:textColor="@color/textDark"
+            android:layout_marginEnd="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Следующее"
+            android:backgroundTint="#f48fb1"
+            android:textColor="@color/textDark" />
+    </LinearLayout>
+</LinearLayout>

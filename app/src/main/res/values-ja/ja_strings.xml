@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">日本語学習ガイド</string>
+    <string name="lang_button">Русский / 日本語</string>
+    <string name="login">ログイン</string>
+    <string name="register">登録</string>
+    <string name="email">メール</string>
+    <string name="password">パスワード</string>
+    <string name="username">ユーザー名</string>
+    <string name="no_account">アカウントがありませんか？ 登録</string>
+    <string name="have_account">すでにアカウントをお持ちですか？ ログイン</string>
+    <string name="fill_all_fields">すべての項目を入力してください</string>
+    <string name="email_verification">ログインする前にメールを確認してください。</string>
+    <string name="verification_sent">確認メールを送信しました。</string>
+    <string name="login_success">ログインに成功しました</string>
+    <string name="navigation_drawer_open">メニューを開く</string>
+    <string name="navigation_drawer_close">メニューを閉じる</string>
+
+    <string name="verify_email_message">
+    確認メールを次のメールアドレスに送信しました:
+    %1$s
+
+    メール内のリンクをクリックしてください。
+</string>
+
+    <string name="email_verified">メールが確認されました！</string>
+    <string name="email_sent_again">確認メールを再送信しました。</string>
+    <string name="email_send_failed">メールの送信に失敗しました。</string>
+
+    <string name="verify_title">メールアドレスを確認してください</string>
+    <string name="verify_message">確認用のメールを送信しました。メール内のリンクをクリックしてアカウントを有効にしてください。</string>
+    <string name="resend_email">確認メールを再送信</string>
+    <string name="back_to_login">ログイン画面に戻る</string>
+
+
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="pinkBackground">#FFE0E6</color>
+    <color name="cardBackground">#FFFFFFFF</color>
+
+    <color name="accentPink">#E91E63</color>
+    <color name="statusBarPinkDark">#A72E5D</color>
+    <color name="textDark">#4A4A4A</color>
+    <color name="accentPinkDark">#C13D6C</color>
+</resources>

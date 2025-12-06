@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Japaneseselfstudyguide" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Theme.MyApp.UCrop" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Основные цвета для светлой темы -->
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/accentPink</item>
+
+        <item name="android:statusBarColor">@color/accentPinkDark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Текст и фон -->
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+
+
+
+    <style name="Theme.Japaneseselfstudyguide" parent="Base.Theme.Japaneseselfstudyguide" />
+</resources>

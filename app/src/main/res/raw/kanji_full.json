@@ -1,0 +1,1383 @@
+[
+  {
+    "id": 1,
+    "kanji": "一",
+    "meaning": "один",
+    "onYomi": [
+      "イチ",
+      "イツ"
+    ],
+    "kunYomi": [
+      "ひと",
+      "ひとつ"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 2,
+    "kanji": "二",
+    "meaning": "два",
+    "onYomi": [
+      "ニ"
+    ],
+    "kunYomi": [
+      "ふた",
+      "ふたつ"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 3,
+    "kanji": "三",
+    "meaning": "три",
+    "onYomi": [
+      "サン"
+    ],
+    "kunYomi": [
+      "み",
+      "みつ",
+      "みっつ"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 4,
+    "kanji": "四",
+    "meaning": "четыре",
+    "onYomi": [
+      "シ"
+    ],
+    "kunYomi": [
+      "よ",
+      "よつ",
+      "よん"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 5,
+    "kanji": "五",
+    "meaning": "пять",
+    "onYomi": [
+      "ゴ"
+    ],
+    "kunYomi": [
+      "いつ",
+      "いつつ"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 6,
+    "kanji": "六",
+    "meaning": "шесть",
+    "onYomi": [
+      "ロク"
+    ],
+    "kunYomi": [
+      "む",
+      "むつ",
+      "むっつ",
+      "むい"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 7,
+    "kanji": "七",
+    "meaning": "семь",
+    "onYomi": [
+      "シチ"
+    ],
+    "kunYomi": [
+      "なな",
+      "ななつ",
+      "なの"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 8,
+    "kanji": "八",
+    "meaning": "восемь",
+    "onYomi": [
+      "ハチ"
+    ],
+    "kunYomi": [
+      "や",
+      "やつ",
+      "やっつ",
+      "よう"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 9,
+    "kanji": "九",
+    "meaning": "девять",
+    "onYomi": [
+      "キュウ",
+      "ク"
+    ],
+    "kunYomi": [
+      "ここの",
+      "ここのつ"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 10,
+    "kanji": "十",
+    "meaning": "десять",
+    "onYomi": [
+      "ジュウ",
+      "ジッ"
+    ],
+    "kunYomi": [
+      "とお",
+      "と"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 11,
+    "kanji": "百",
+    "meaning": "сто",
+    "onYomi": [
+      "ヒャク"
+    ],
+    "kunYomi": [
+      "もも"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 12,
+    "kanji": "千",
+    "meaning": "тысяча",
+    "onYomi": [
+      "セン"
+    ],
+    "kunYomi": [
+      "ち"
+    ],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 13,
+    "kanji": "万",
+    "meaning": "десять тысяч",
+    "onYomi": [
+      "マン",
+      "バン"
+    ],
+    "kunYomi": [],
+    "jlpt": 5,
+    "category": "числа"
+  },
+  {
+    "id": 14,
+    "kanji": "円",
+    "meaning": "круглый, йена (en, marui)",
+    "onYomi": [
+      "エン"
+    ],
+    "kunYomi": [
+      "まる",
+      "まるい"
+    ],
+    "jlpt": 5,
+    "category": "формы"
+  },
+  {
+    "id": 15,
+    "kanji": "日",
+    "meaning": "солнце, день, воскресенье",
+    "onYomi": [
+      "ニチ",
+      "ジツ"
+    ],
+    "kunYomi": [
+      "ひ",
+      "か"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 16,
+    "kanji": "月",
+    "meaning": "луна, месяц, понедельник",
+    "onYomi": [
+      "ゲツ",
+      "ガツ"
+    ],
+    "kunYomi": [
+      "つき"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 17,
+    "kanji": "火",
+    "meaning": "огонь, вторник",
+    "onYomi": [
+      "カ"
+    ],
+    "kunYomi": [
+      "ひ",
+      "ほ"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 18,
+    "kanji": "水",
+    "meaning": "вода, среда",
+    "onYomi": [
+      "スイ"
+    ],
+    "kunYomi": [
+      "みず"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 19,
+    "kanji": "木",
+    "meaning": "дерево, древесина, четверг",
+    "onYomi": [
+      "モク",
+      "ボク"
+    ],
+    "kunYomi": [
+      "き",
+      "こ"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 20,
+    "kanji": "土",
+    "meaning": "земля, суббота",
+    "onYomi": [
+      "ド",
+      "ト"
+    ],
+    "kunYomi": [
+      "つち"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 21,
+    "kanji": "王",
+    "meaning": "король",
+    "onYomi": [
+      "オウ"
+    ],
+    "kunYomi": [],
+    "jlpt": 4,
+    "category": "люди"
+  },
+  {
+    "id": 22,
+    "kanji": "金",
+    "meaning": "золото, деньги, металл, пятница",
+    "onYomi": [
+      "キン",
+      "コン"
+    ],
+    "kunYomi": [
+      "かね",
+      "かな"
+    ],
+    "jlpt": 5,
+    "category": "материалы"
+  },
+  {
+    "id": 23,
+    "kanji": "山",
+    "meaning": "гора",
+    "onYomi": [
+      "サン"
+    ],
+    "kunYomi": [
+      "やま"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 24,
+    "kanji": "田",
+    "meaning": "рисовое поле",
+    "onYomi": [
+      "デン"
+    ],
+    "kunYomi": [
+      "た"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+  {
+    "id": 25,
+    "kanji": "川",
+    "meaning": "река",
+    "onYomi": [
+      "セン"
+    ],
+    "kunYomi": [
+      "かわ"
+    ],
+    "jlpt": 5,
+    "category": "природа"
+  },
+   {
+    "id": 26,
+    "kanji": "人",
+    "meaning": "человек",
+    "onYomi": [
+      "ジン",
+      "ニン"
+    ],
+    "kunYomi": [
+      "ひと"
+    ],
+    "jlpt": 5,
+    "category": "существительные"
+  },
+  {
+    "id": 27,
+    "kanji": "力",
+    "meaning": "сила",
+    "onYomi": [
+      "リョク",
+      "リキ"
+    ],
+    "kunYomi": [
+      "ちから"
+    ],
+    "jlpt": 5,
+    "category": "качества"
+  },
+  {
+    "id": 28,
+    "kanji": "男",
+    "meaning": "мужчина",
+    "onYomi": [
+      "ダン",
+      "ナン"
+    ],
+    "kunYomi": [
+      "おとこ"
+    ],
+    "jlpt": 5,
+    "category": "люди"
+  },
+  {
+    "id": 29,
+    "kanji": "父",
+    "meaning": "отец",
+    "onYomi": [
+      "フ"
+    ],
+    "kunYomi": [
+      "ちち"
+    ],
+    "jlpt": 5,
+    "category": "семья"
+  },
+  {
+    "id": 30,
+    "kanji": "女",
+    "meaning": "женщина",
+    "onYomi": [
+      "ジョ",
+      "ニョ",
+      "ニョウ"
+    ],
+    "kunYomi": [
+      "おんな",
+      "め"
+    ],
+    "jlpt": 5,
+    "category": "люди"
+  },
+  {
+    "id": 31,
+    "kanji": "母",
+    "meaning": "мать",
+    "onYomi": [
+      "ボ"
+    ],
+    "kunYomi": [
+      "はは"
+    ],
+    "jlpt": 5,
+    "category": "семья"
+  },
+  {
+    "id": 32,
+    "kanji": "子",
+    "meaning": "ребёнок",
+    "onYomi": [
+      "シ",
+      "ス"
+    ],
+    "kunYomi": [
+      "こ"
+    ],
+    "jlpt": 5,
+    "category": "семья"
+  },
+  {
+    "id": 33,
+    "kanji": "好",
+    "meaning": "нравиться, любить",
+    "onYomi": [
+      "コウ"
+    ],
+    "kunYomi": [
+      "す.き",
+      "この.む"
+    ],
+    "jlpt": 4,
+    "category": "эмоции"
+  },
+  {
+    "id": 34,
+    "kanji": "方",
+    "meaning": "человек (вежливо), этот, направление",
+    "onYomi": [
+      "ホウ"
+    ],
+    "kunYomi": [
+      "かた"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 35,
+    "kanji": "小",
+    "meaning": "маленький",
+    "onYomi": [
+      "ショウ"
+    ],
+    "kunYomi": [
+      "ちい.さい",
+      "こ",
+      "お"
+    ],
+    "jlpt": 5,
+    "category": "размер"
+  },
+  {
+    "id": 36,
+    "kanji": "少",
+    "meaning": "несколько, мало",
+    "onYomi": [
+      "ショウ"
+    ],
+    "kunYomi": [
+      "すく.ない",
+      "すこ.し"
+    ],
+    "jlpt": 5,
+    "category": "количество"
+  },
+  {
+    "id": 37,
+    "kanji": "中",
+    "meaning": "середина, внутри",
+    "onYomi": [
+      "チュウ"
+    ],
+    "kunYomi": [
+      "なか"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 38,
+    "kanji": "大",
+    "meaning": "большой",
+    "onYomi": [
+      "ダイ",
+      "タイ"
+    ],
+    "kunYomi": [
+      "おお",
+      "おお.きい"
+    ],
+    "jlpt": 5,
+    "category": "размер"
+  },
+  {
+    "id": 39,
+    "kanji": "夕",
+    "meaning": "ранний вечер",
+    "onYomi": [
+      "セキ"
+    ],
+    "kunYomi": [
+      "ゆう"
+    ],
+    "jlpt": 5,
+    "category": "время"
+  },
+  {
+    "id": 40,
+    "kanji": "多",
+    "meaning": "много",
+    "onYomi": [
+      "タ"
+    ],
+    "kunYomi": [
+      "おお.い"
+    ],
+    "jlpt": 5,
+    "category": "количество"
+  },
+  {
+    "id": 41,
+    "kanji": "内",
+    "meaning": "внутри",
+    "onYomi": [
+      "ナイ",
+      "ダイ"
+    ],
+    "kunYomi": [
+      "うち"
+    ],
+    "jlpt": 4,
+    "category": "направления"
+  },
+  {
+    "id": 42,
+    "kanji": "外",
+    "meaning": "снаружи",
+    "onYomi": [
+      "ガイ",
+      "ゲ"
+    ],
+    "kunYomi": [
+      "そと",
+      "ほか",
+      "はず.す"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 43,
+    "kanji": "上",
+    "meaning": "вверх, над, на",
+    "onYomi": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "kunYomi": [
+      "うえ",
+      "あ.げる",
+      "のぼ.る"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 44,
+    "kanji": "下",
+    "meaning": "вниз, под",
+    "onYomi": [
+      "カ",
+      "ゲ"
+    ],
+    "kunYomi": [
+      "した",
+      "さ.げる",
+      "くだ.る"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 45,
+    "kanji": "工",
+    "meaning": "ремесло, техника",
+    "onYomi": [
+      "コウ",
+      "ク"
+    ],
+    "kunYomi": [],
+    "jlpt": 5,
+    "category": "работа"
+  },
+  {
+    "id": 46,
+    "kanji": "左",
+    "meaning": "левый",
+    "onYomi": [
+      "サ"
+    ],
+    "kunYomi": [
+      "ひだり"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 47,
+    "kanji": "右",
+    "meaning": "правый",
+    "onYomi": [
+      "ウ",
+      "ユウ"
+    ],
+    "kunYomi": [
+      "みぎ"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 48,
+    "kanji": "家",
+    "meaning": "дом, жилище",
+    "onYomi": [
+      "カ",
+      "ケ"
+    ],
+    "kunYomi": [
+      "いえ",
+      "や",
+      "うち"
+    ],
+    "jlpt": 5,
+    "category": "жильё"
+  },
+  {
+    "id": 49,
+    "kanji": "入",
+    "meaning": "входить",
+    "onYomi": [
+      "ニュウ"
+    ],
+    "kunYomi": [
+      "い.る",
+      "はい.る"
+    ],
+    "jlpt": 5,
+    "category": "действия"
+  },
+  {
+    "id": 50,
+    "kanji": "出",
+    "meaning": "выходить",
+    "onYomi": [
+      "シュツ",
+      "スイ"
+    ],
+    "kunYomi": [
+      "で.る",
+      "だ.す"
+    ],
+    "jlpt": 5,
+    "category": "действия"
+  },
+  
+  {
+    "id": 51,
+    "kanji": "門",
+    "meaning": "ворота",
+    "onYomi": [
+      "モン"
+    ],
+    "kunYomi": [
+      "かど"
+    ],
+    "jlpt": 4,
+    "category": "здания"
+  },
+  {
+    "id": 52,
+    "kanji": "開",
+    "meaning": "открывать",
+    "onYomi": [
+      "カイ"
+    ],
+    "kunYomi": [
+      "ひら.く",
+      "あ.ける"
+    ],
+    "jlpt": 4,
+    "category": "действия"
+  },
+  {
+    "id": 53,
+    "kanji": "閉",
+    "meaning": "закрывать",
+    "onYomi": [
+      "ヘイ"
+    ],
+    "kunYomi": [
+      "と.じる",
+      "し.める"
+    ],
+    "jlpt": 3,
+    "category": "действия"
+  },
+  {
+    "id": 54,
+    "kanji": "所",
+    "meaning": "место",
+    "onYomi": [
+      "ショ"
+    ],
+    "kunYomi": [
+      "ところ"
+    ],
+    "jlpt": 4,
+    "category": "места"
+  },
+  {
+    "id": 55,
+    "kanji": "近",
+    "meaning": "близко",
+    "onYomi": [
+      "キン"
+    ],
+    "kunYomi": [
+      "ちか.い"
+    ],
+    "jlpt": 4,
+    "category": "расстояние"
+  },
+  {
+    "id": 56,
+    "kanji": "口",
+    "meaning": "рот",
+    "onYomi": [
+      "コウ",
+      "ク"
+    ],
+    "kunYomi": [
+      "くち"
+    ],
+    "jlpt": 5,
+    "category": "тело"
+  },
+  {
+    "id": 57,
+    "kanji": "目",
+    "meaning": "глаз(а)",
+    "onYomi": [
+      "モク",
+      "ボク"
+    ],
+    "kunYomi": [
+      "め"
+    ],
+    "jlpt": 5,
+    "category": "тело"
+  },
+  {
+    "id": 58,
+    "kanji": "耳",
+    "meaning": "ухо, уши",
+    "onYomi": [
+      "ジ"
+    ],
+    "kunYomi": [
+      "みみ"
+    ],
+    "jlpt": 5,
+    "category": "тело"
+  },
+  {
+    "id": 59,
+    "kanji": "手",
+    "meaning": "рука",
+    "onYomi": [
+      "シュ"
+    ],
+    "kunYomi": [
+      "て"
+    ],
+    "jlpt": 5,
+    "category": "тело"
+  },
+  {
+    "id": 60,
+    "kanji": "心",
+    "meaning": "сердце",
+    "onYomi": [
+      "シン"
+    ],
+    "kunYomi": [
+      "こころ"
+    ],
+    "jlpt": 4,
+    "category": "эмоции"
+  },
+  {
+    "id": 61,
+    "kanji": "寺",
+    "meaning": "храм",
+    "onYomi": [
+      "ジ"
+    ],
+    "kunYomi": [
+      "てら"
+    ],
+    "jlpt": 5,
+    "category": "здания"
+  },
+  {
+    "id": 62,
+    "kanji": "時",
+    "meaning": "время",
+    "onYomi": [
+      "ジ"
+    ],
+    "kunYomi": [
+      "とき"
+    ],
+    "jlpt": 5,
+    "category": "время"
+  },
+  {
+    "id": 63,
+    "kanji": "半",
+    "meaning": "половина",
+    "onYomi": [
+      "ハン"
+    ],
+    "kunYomi": [
+      "なか.ば"
+    ],
+    "jlpt": 5,
+    "category": "количество"
+  },
+  {
+    "id": 64,
+    "kanji": "間",
+    "meaning": "интервал, между",
+    "onYomi": [
+      "カン",
+      "ケン"
+    ],
+    "kunYomi": [
+      "あいだ",
+      "ま"
+    ],
+    "jlpt": 5,
+    "category": "время"
+  },
+  {
+    "id": 65,
+    "kanji": "分",
+    "meaning": "минута, делить, понимать",
+    "onYomi": [
+      "ブン",
+      "フン",
+      "ブ"
+    ],
+    "kunYomi": [
+      "わ.ける",
+      "わ.かる"
+    ],
+    "jlpt": 5,
+    "category": "время"
+  },
+  {
+    "id": 66,
+    "kanji": "今",
+    "meaning": "сейчас",
+    "onYomi": [
+      "コン",
+      "キン"
+    ],
+    "kunYomi": [
+      "いま"
+    ],
+    "jlpt": 5,
+    "category": "время"
+  },
+  {
+    "id": 67,
+    "kanji": "何",
+    "meaning": "что",
+    "onYomi": [
+      "カ"
+    ],
+    "kunYomi": [
+      "なに",
+      "なん"
+    ],
+    "jlpt": 5,
+    "category": "вопросительные"
+  },
+  {
+    "id": 68,
+    "kanji": "年",
+    "meaning": "год",
+    "onYomi": [
+      "ネン"
+    ],
+    "kunYomi": [
+      "とし"
+    ],
+    "jlpt": 5,
+    "category": "время"
+  },
+  {
+    "id": 69,
+    "kanji": "回",
+    "meaning": "поворачиваться, разы",
+    "onYomi": [
+      "カイ",
+      "エ"
+    ],
+    "kunYomi": [
+      "まわ.る",
+      "まわ.す"
+    ],
+    "jlpt": 5,
+    "category": "действия"
+  },
+  {
+    "id": 70,
+    "kanji": "毎",
+    "meaning": "каждый",
+    "onYomi": [
+      "マイ"
+    ],
+    "kunYomi": [],
+    "jlpt": 5,
+    "category": "частота"
+  },
+  {
+    "id": 71,
+    "kanji": "聞",
+    "meaning": "слышать",
+    "onYomi": [
+      "ブン",
+      "モン"
+    ],
+    "kunYomi": [
+      "き.く"
+    ],
+    "jlpt": 5,
+    "category": "чувства"
+  },
+  {
+    "id": 72,
+    "kanji": "見",
+    "meaning": "видеть",
+    "onYomi": [
+      "ケン"
+    ],
+    "kunYomi": [
+      "み.る",
+      "み.える"
+    ],
+    "jlpt": 5,
+    "category": "чувства"
+  },
+  {
+    "id": 73,
+    "kanji": "思",
+    "meaning": "думать",
+    "onYomi": [
+      "シ"
+    ],
+    "kunYomi": [
+      "おも.う"
+    ],
+    "jlpt": 4,
+    "category": "умственные"
+  },
+  {
+    "id": 74,
+    "kanji": "言",
+    "meaning": "сказать",
+    "onYomi": [
+      "ゲン",
+      "ゴン"
+    ],
+    "kunYomi": [
+      "い.う"
+    ],
+    "jlpt": 5,
+    "category": "речь"
+  },
+  {
+    "id": 75,
+    "kanji": "語",
+    "meaning": "язык",
+    "onYomi": [
+      "ゴ"
+    ],
+    "kunYomi": [
+      "かた.る",
+      "かた.らう"
+    ],
+    "jlpt": 5,
+    "category": "речь"
+  },
+  {
+    "id": 76,
+    "kanji": "話",
+    "meaning": "рассказывать",
+    "onYomi": [
+      "ワ"
+    ],
+    "kunYomi": [
+      "はな.す"
+    ],
+    "jlpt": 5,
+    "category": "речь"
+  },
+  {
+    "id": 77,
+    "kanji": "会",
+    "meaning": "встречать",
+    "onYomi": [
+      "カイ",
+      "エ"
+    ],
+    "kunYomi": [
+      "あ.う"
+    ],
+    "jlpt": 5,
+    "category": "действия"
+  },
+  {
+    "id": 78,
+    "kanji": "生",
+    "meaning": "жизнь, рождение",
+    "onYomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunYomi": [
+      "い.きる",
+      "う.まれる"
+    ],
+    "jlpt": 5,
+    "category": "существование"
+  },
+  {
+    "id": 79,
+    "kanji": "先",
+    "meaning": "впереди",
+    "onYomi": [
+      "セン"
+    ],
+    "kunYomi": [
+      "さき"
+    ],
+    "jlpt": 5,
+    "category": "направления"
+  },
+  {
+    "id": 80,
+    "kanji": "私",
+    "meaning": "я, сам, себя",
+    "onYomi": [
+      "シ"
+    ],
+    "kunYomi": [
+      "わたし",
+      "わたくし"
+    ],
+    "jlpt": 5,
+    "category": "местоимения"
+  },
+  {
+    "id": 81,
+    "kanji": "友",
+    "meaning": "друг",
+    "onYomi": [
+      "ユウ"
+    ],
+    "kunYomi": [
+      "とも"
+    ],
+    "jlpt": 5,
+    "category": "отношения"
+  },
+  {
+    "id": 82,
+    "kanji": "学",
+    "meaning": "учить(ся)",
+    "onYomi": [
+      "ガク"
+    ],
+    "kunYomi": [
+      "まな.ぶ"
+    ],
+    "jlpt": 5,
+    "category": "образование"
+  },
+  {
+    "id": 83,
+    "kanji": "校",
+    "meaning": "школа",
+    "onYomi": [
+      "コウ"
+    ],
+    "kunYomi": [],
+    "jlpt": 5,
+    "category": "образование"
+  },
+  {
+    "id": 84,
+    "kanji": "本",
+    "meaning": "книга, главный",
+    "onYomi": [
+      "ホン"
+    ],
+    "kunYomi": [
+      "もと"
+    ],
+    "jlpt": 5,
+    "category": "предметы"
+  },
+  {
+    "id": 85,
+    "kanji": "字",
+    "meaning": "иероглиф, буква",
+    "onYomi": [
+      "ジ"
+    ],
+    "kunYomi": [
+      "あざ",
+      "もじ"
+    ],
+    "jlpt": 5,
+    "category": "язык"
+  },
+  {
+    "id": 86,
+    "kanji": "文",
+    "meaning": "буквы, письмо",
+    "onYomi": [
+      "ブン",
+      "モン"
+    ],
+    "kunYomi": [
+      "ふみ"
+    ],
+    "jlpt": 5,
+    "category": "язык"
+  },
+  {
+    "id": 87,
+    "kanji": "対",
+    "meaning": "противоположный, против",
+    "onYomi": [
+      "タイ",
+      "ツイ"
+    ],
+    "kunYomi": [],
+    "jlpt": 3,
+    "category": "отношения"
+  },
+  {
+    "id": 88,
+    "kanji": "書",
+    "meaning": "книги, письмо (писать)",
+    "onYomi": [
+      "ショ"
+    ],
+    "kunYomi": [
+      "か.く"
+    ],
+    "jlpt": 5,
+    "category": "язык"
+  },
+  {
+    "id": 89,
+    "kanji": "化",
+    "meaning": "превращаться, становиться",
+    "onYomi": [
+      "カ",
+      "ケ"
+    ],
+    "kunYomi": [
+      "ば.ける",
+      "ば.かす"
+    ],
+    "jlpt": 4,
+    "category": "действия"
+  },
+  {
+    "id": 90,
+    "kanji": "公",
+    "meaning": "публичный, общественный",
+    "onYomi": [
+      "コウ"
+    ],
+    "kunYomi": [
+      "おおやけ"
+    ],
+    "jlpt": 4,
+    "category": "общество"
+  },
+  {
+    "id": 91,
+    "kanji": "立",
+    "meaning": "стоять",
+    "onYomi": [
+      "リツ",
+      "リュウ"
+    ],
+    "kunYomi": [
+      "た.つ"
+    ],
+    "jlpt": 5,
+    "category": "действия"
+  },
+  {
+    "id": 92,
+    "kanji": "犬",
+    "meaning": "собака",
+    "onYomi": [
+      "ケン"
+    ],
+    "kunYomi": [
+      "いぬ"
+    ],
+    "jlpt": 5,
+    "category": "животные"
+  },
+  {
+    "id": 93,
+    "kanji": "鳥",
+    "meaning": "птица",
+    "onYomi": [
+      "チョウ"
+    ],
+    "kunYomi": [
+      "とり"
+    ],
+    "jlpt": 5,
+    "category": "животные"
+  },
+  {
+    "id": 94,
+    "kanji": "馬",
+    "meaning": "лошадь, конь",
+    "onYomi": [
+      "バ"
+    ],
+    "kunYomi": [
+      "うま"
+    ],
+    "jlpt": 5,
+    "category": "животные"
+  },
+  {
+    "id": 95,
+    "kanji": "羊",
+    "meaning": "овца",
+    "onYomi": [
+      "ヨウ"
+    ],
+    "kunYomi": [
+      "ひつじ"
+    ],
+    "jlpt": 4,
+    "category": "животные"
+  },
+  {
+    "id": 96,
+    "kanji": "牛",
+    "meaning": "корова",
+    "onYomi": [
+      "ギュウ"
+    ],
+    "kunYomi": [
+      "うし"
+    ],
+    "jlpt": 5,
+    "category": "животные"
+  },
+  {
+    "id": 97,
+    "kanji": "魚",
+    "meaning": "рыба",
+    "onYomi": [
+      "ギョ"
+    ],
+    "kunYomi": [
+      "さかな",
+      "うお"
+    ],
+    "jlpt": 5,
+    "category": "животные"
+  },
+  {
+    "id": 98,
+    "kanji": "虫",
+    "meaning": "жучок, букашка",
+    "onYomi": [
+      "チュウ"
+    ],
+    "kunYomi": [
+      "むし"
+    ],
+    "jlpt": 5,
+    "category": "животные"
+  },
+  {
+    "id": 99,
+    "kanji": "米",
+    "meaning": "рис",
+    "onYomi": [
+      "ベイ",
+      "マイ"
+    ],
+    "kunYomi": [
+      "こめ"
+    ],
+    "jlpt": 5,
+    "category": "еда"
+  },
+  {
+    "id": 100,
+    "kanji": "来",
+    "meaning": "приходить",
+    "onYomi": [
+      "ライ"
+    ],
+    "kunYomi": [
+      "く.る",
+      "き.たる"
+    ],
+    "jlpt": 5,
+    "category": "действия"
+  }
+]

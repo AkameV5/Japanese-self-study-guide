@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkBackground"
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:text="1 / 40"
+            android:textSize="16sp"
+            android:textColor="@color/textDark"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:text="Вопрос"
+            android:textSize="22sp"
+            android:textColor="@color/textDark"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/layoutOptions"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите ответ"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/cardBackground"/>
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Проверить"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/accentPink"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/textDark"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Далее"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/accentPink"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</ScrollView>

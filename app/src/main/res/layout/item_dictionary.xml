@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Японское слово -->
+        <TextView
+            android:id="@+id/textWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textDark"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Чтение -->
+        <TextView
+            android:id="@+id/textReading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/textDark"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Перевод -->
+        <TextView
+            android:id="@+id/textTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/textDark"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Категория -->
+        <TextView
+            android:id="@+id/textCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/textDark" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

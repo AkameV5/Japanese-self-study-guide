@@ -1,0 +1,2896 @@
+{
+  "ex_001": {
+    "exerciseId": 1,
+    "hiraganaId": 1,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для あ",
+    "correctAnswer": "a",
+    "options": ["a", "o", "u", "e"],
+    "explanation": "あ читается как 'a'"
+  },
+  "ex_002": {
+    "exerciseId": 2,
+    "hiraganaId": 1,
+    "type": "write",
+    "question": "Напиши ромадзи для あ",
+    "correctAnswer": "a",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_003": {
+    "exerciseId": 3,
+    "hiraganaId": 1,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'a'",
+    "correctAnswer": "あ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_004": {
+    "exerciseId": 4,
+    "hiraganaId": 2,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для い",
+    "correctAnswer": "i",
+    "options": ["i", "a", "u", "e"],
+    "explanation": "い читается как 'i'"
+  },
+  "ex_005": {
+    "exerciseId": 5,
+    "hiraganaId": 2,
+    "type": "write",
+    "question": "Напиши ромадзи для い",
+    "correctAnswer": "i",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_006": {
+    "exerciseId": 6,
+    "hiraganaId": 2,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'i'",
+    "correctAnswer": "い",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_007": {
+    "exerciseId": 7,
+    "hiraganaId": 3,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для う",
+    "correctAnswer": "u",
+    "options": ["u", "a", "i", "e"],
+    "explanation": "う читается как 'u'"
+  },
+  "ex_008": {
+    "exerciseId": 8,
+    "hiraganaId": 3,
+    "type": "write",
+    "question": "Напиши ромадзи для う",
+    "correctAnswer": "u",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_009": {
+    "exerciseId": 9,
+    "hiraganaId": 3,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'u'",
+    "correctAnswer": "う",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_010": {
+    "exerciseId": 10,
+    "hiraganaId": 4,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для え",
+    "correctAnswer": "e",
+    "options": ["e", "a", "i", "u"],
+    "explanation": "え читается как 'e'"
+  },
+  "ex_011": {
+    "exerciseId": 11,
+    "hiraganaId": 4,
+    "type": "write",
+    "question": "Напиши ромадзи для え",
+    "correctAnswer": "e",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_012": {
+    "exerciseId": 12,
+    "hiraganaId": 4,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'e'",
+    "correctAnswer": "え",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_013": {
+    "exerciseId": 13,
+    "hiraganaId": 5,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для お",
+    "correctAnswer": "o",
+    "options": ["o", "a", "i", "u"],
+    "explanation": "お читается как 'o'"
+  },
+  "ex_014": {
+    "exerciseId": 14,
+    "hiraganaId": 5,
+    "type": "write",
+    "question": "Напиши ромадзи для お",
+    "correctAnswer": "o",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_015": {
+    "exerciseId": 15,
+    "hiraganaId": 5,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'o'",
+    "correctAnswer": "お",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_016": {
+    "exerciseId": 16,
+    "hiraganaId": 6,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для か",
+    "correctAnswer": "ka",
+    "options": ["ka", "ki", "ku", "ke"],
+    "explanation": "か читается как 'ka'"
+  },
+  "ex_017": {
+    "exerciseId": 17,
+    "hiraganaId": 6,
+    "type": "write",
+    "question": "Напиши ромадзи для か",
+    "correctAnswer": "ka",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_018": {
+    "exerciseId": 18,
+    "hiraganaId": 6,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ka'",
+    "correctAnswer": "か",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_019": {
+    "exerciseId": 19,
+    "hiraganaId": 7,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для き",
+    "correctAnswer": "ki",
+    "options": ["ki", "ka", "ku", "ke"],
+    "explanation": "き читается как 'ki'"
+  },
+  "ex_020": {
+    "exerciseId": 20,
+    "hiraganaId": 7,
+    "type": "write",
+    "question": "Напиши ромадзи для き",
+    "correctAnswer": "ki",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_021": {
+    "exerciseId": 21,
+    "hiraganaId": 7,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ki'",
+    "correctAnswer": "き",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_022": {
+    "exerciseId": 22,
+    "hiraganaId": 8,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для く",
+    "correctAnswer": "ku",
+    "options": ["ku", "ka", "ki", "ke"],
+    "explanation": "く читается как 'ku'"
+  },
+  "ex_023": {
+    "exerciseId": 23,
+    "hiraganaId": 8,
+    "type": "write",
+    "question": "Напиши ромадзи для く",
+    "correctAnswer": "ku",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_024": {
+    "exerciseId": 24,
+    "hiraganaId": 8,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ku'",
+    "correctAnswer": "く",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_025": {
+    "exerciseId": 25,
+    "hiraganaId": 9,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для け",
+    "correctAnswer": "ke",
+    "options": ["ke", "ka", "ki", "ku"],
+    "explanation": "け читается как 'ke'"
+  },
+  "ex_026": {
+    "exerciseId": 26,
+    "hiraganaId": 9,
+    "type": "write",
+    "question": "Напиши ромадзи для け",
+    "correctAnswer": "ke",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_027": {
+    "exerciseId": 27,
+    "hiraganaId": 9,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ke'",
+    "correctAnswer": "け",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_028": {
+    "exerciseId": 28,
+    "hiraganaId": 10,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для こ",
+    "correctAnswer": "ko",
+    "options": ["ko", "ka", "ki", "ku"],
+    "explanation": "こ читается как 'ko'"
+  },
+  "ex_029": {
+    "exerciseId": 29,
+    "hiraganaId": 10,
+    "type": "write",
+    "question": "Напиши ромадзи для こ",
+    "correctAnswer": "ko",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_030": {
+    "exerciseId": 30,
+    "hiraganaId": 10,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ko'",
+    "correctAnswer": "こ",
+    "options": [],
+    "explanation": ""
+  }, 
+  "ex_031": {
+    "exerciseId": 31,
+    "hiraganaId": 11,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для が",
+    "correctAnswer": "ga",
+    "options": ["ga", "ka", "gi", "go"],
+    "explanation": "が читается как 'ga'"
+  },
+  "ex_032": {
+    "exerciseId": 32,
+    "hiraganaId": 11,
+    "type": "write",
+    "question": "Напиши ромадзи для が",
+    "correctAnswer": "ga",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_033": {
+    "exerciseId": 33,
+    "hiraganaId": 11,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ga'",
+    "correctAnswer": "が",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_034": {
+    "exerciseId": 34,
+    "hiraganaId": 12,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぎ",
+    "correctAnswer": "gi",
+    "options": ["gi", "ga", "gu", "ge"],
+    "explanation": "ぎ читается как 'gi'"
+  },
+  "ex_035": {
+    "exerciseId": 35,
+    "hiraganaId": 12,
+    "type": "write",
+    "question": "Напиши ромадзи для ぎ",
+    "correctAnswer": "gi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_036": {
+    "exerciseId": 36,
+    "hiraganaId": 12,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'gi'",
+    "correctAnswer": "ぎ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_037": {
+    "exerciseId": 37,
+    "hiraganaId": 13,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぐ",
+    "correctAnswer": "gu",
+    "options": ["gu", "ga", "gi", "go"],
+    "explanation": "ぐ читается как 'gu'"
+  },
+  "ex_038": {
+    "exerciseId": 38,
+    "hiraganaId": 13,
+    "type": "write",
+    "question": "Напиши ромадзи для ぐ",
+    "correctAnswer": "gu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_039": {
+    "exerciseId": 39,
+    "hiraganaId": 13,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'gu'",
+    "correctAnswer": "ぐ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_040": {
+    "exerciseId": 40,
+    "hiraganaId": 14,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для げ",
+    "correctAnswer": "ge",
+    "options": ["ge", "ga", "gi", "gu"],
+    "explanation": "げ читается как 'ge'"
+  },
+  "ex_041": {
+    "exerciseId": 41,
+    "hiraganaId": 14,
+    "type": "write",
+    "question": "Напиши ромадзи для げ",
+    "correctAnswer": "ge",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_042": {
+    "exerciseId": 42,
+    "hiraganaId": 14,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ge'",
+    "correctAnswer": "げ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_043": {
+    "exerciseId": 43,
+    "hiraganaId": 15,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ご",
+    "correctAnswer": "go",
+    "options": ["go", "ga", "gi", "gu"],
+    "explanation": "ご читается как 'go'"
+  },
+  "ex_044": {
+    "exerciseId": 44,
+    "hiraganaId": 15,
+    "type": "write",
+    "question": "Напиши ромадзи для ご",
+    "correctAnswer": "go",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_045": {
+    "exerciseId": 45,
+    "hiraganaId": 15,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'go'",
+    "correctAnswer": "ご",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_046": {
+    "exerciseId": 46,
+    "hiraganaId": 16,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для さ",
+    "correctAnswer": "sa",
+    "options": ["sa", "shi", "su", "se"],
+    "explanation": "さ читается как 'sa'"
+  },
+  "ex_047": {
+    "exerciseId": 47,
+    "hiraganaId": 16,
+    "type": "write",
+    "question": "Напиши ромадзи для さ",
+    "correctAnswer": "sa",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_048": {
+    "exerciseId": 48,
+    "hiraganaId": 16,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'sa'",
+    "correctAnswer": "さ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_049": {
+    "exerciseId": 49,
+    "hiraganaId": 17,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для し",
+    "correctAnswer": "shi",
+    "options": ["shi", "sa", "su", "se"],
+    "explanation": "し читается как 'shi'"
+  },
+  "ex_050": {
+    "exerciseId": 50,
+    "hiraganaId": 17,
+    "type": "write",
+    "question": "Напиши ромадзи для し",
+    "correctAnswer": "shi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_051": {
+    "exerciseId": 51,
+    "hiraganaId": 17,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'shi'",
+    "correctAnswer": "し",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_052": {
+    "exerciseId": 52,
+    "hiraganaId": 18,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для す",
+    "correctAnswer": "su",
+    "options": ["su", "sa", "shi", "se"],
+    "explanation": "す читается как 'su'"
+  },
+  "ex_053": {
+    "exerciseId": 53,
+    "hiraganaId": 18,
+    "type": "write",
+    "question": "Напиши ромадзи для す",
+    "correctAnswer": "su",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_054": {
+    "exerciseId": 54,
+    "hiraganaId": 18,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'su'",
+    "correctAnswer": "す",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_055": {
+    "exerciseId": 55,
+    "hiraganaId": 19,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для せ",
+    "correctAnswer": "se",
+    "options": ["se", "sa", "shi", "su"],
+    "explanation": "せ читается как 'se'"
+  },
+  "ex_056": {
+    "exerciseId": 56,
+    "hiraganaId": 19,
+    "type": "write",
+    "question": "Напиши ромадзи для せ",
+    "correctAnswer": "se",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_057": {
+    "exerciseId": 57,
+    "hiraganaId": 19,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'se'",
+    "correctAnswer": "せ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_058": {
+    "exerciseId": 58,
+    "hiraganaId": 20,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для そ",
+    "correctAnswer": "so",
+    "options": ["so", "sa", "shi", "su"],
+    "explanation": "そ читается как 'so'"
+  },
+  "ex_059": {
+    "exerciseId": 59,
+    "hiraganaId": 20,
+    "type": "write",
+    "question": "Напиши ромадзи для そ",
+    "correctAnswer": "so",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_060": {
+    "exerciseId": 60,
+    "hiraganaId": 20,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'so'",
+    "correctAnswer": "そ",
+    "options": [],
+    "explanation": ""
+  },
+
+  "ex_061": {
+    "exerciseId": 61,
+    "hiraganaId": 21,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ざ",
+    "correctAnswer": "za",
+    "options": ["za", "sa", "ji", "zu"],
+    "explanation": "ざ читается как 'za'"
+  },
+  "ex_062": {
+    "exerciseId": 62,
+    "hiraganaId": 21,
+    "type": "write",
+    "question": "Напиши ромадзи для ざ",
+    "correctAnswer": "za",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_063": {
+    "exerciseId": 63,
+    "hiraganaId": 21,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'za'",
+    "correctAnswer": "ざ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_064": {
+    "exerciseId": 64,
+    "hiraganaId": 22,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для じ",
+    "correctAnswer": "ji",
+    "options": ["ji", "za", "zu", "ze"],
+    "explanation": "じ читается как 'ji'"
+  },
+  "ex_065": {
+    "exerciseId": 65,
+    "hiraganaId": 22,
+    "type": "write",
+    "question": "Напиши ромадзи для じ",
+    "correctAnswer": "ji",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_066": {
+    "exerciseId": 66,
+    "hiraganaId": 22,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ji'",
+    "correctAnswer": "じ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_067": {
+    "exerciseId": 67,
+    "hiraganaId": 23,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ず",
+    "correctAnswer": "zu",
+    "options": ["zu", "za", "ji", "ze"],
+    "explanation": "ず читается как 'zu'"
+  },
+  "ex_068": {
+    "exerciseId": 68,
+    "hiraganaId": 23,
+    "type": "write",
+    "question": "Напиши ромадзи для ず",
+    "correctAnswer": "zu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_069": {
+    "exerciseId": 69,
+    "hiraganaId": 23,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'zu'",
+    "correctAnswer": "ず",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_070": {
+    "exerciseId": 70,
+    "hiraganaId": 24,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぜ",
+    "correctAnswer": "ze",
+    "options": ["ze", "za", "ji", "zu"],
+    "explanation": "ぜ читается как 'ze'"
+  },
+  "ex_071": {
+    "exerciseId": 71,
+    "hiraganaId": 24,
+    "type": "write",
+    "question": "Напиши ромадзи для ぜ",
+    "correctAnswer": "ze",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_072": {
+    "exerciseId": 72,
+    "hiraganaId": 24,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ze'",
+    "correctAnswer": "ぜ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_073": {
+    "exerciseId": 73,
+    "hiraganaId": 25,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぞ",
+    "correctAnswer": "zo",
+    "options": ["zo", "za", "ji", "zu"],
+    "explanation": "ぞ читается как 'zo'"
+  },
+  "ex_074": {
+    "exerciseId": 74,
+    "hiraganaId": 25,
+    "type": "write",
+    "question": "Напиши ромадзи для ぞ",
+    "correctAnswer": "zo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_075": {
+    "exerciseId": 75,
+    "hiraganaId": 25,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'zo'",
+    "correctAnswer": "ぞ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_076": {
+    "exerciseId": 76,
+    "hiraganaId": 26,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для た",
+    "correctAnswer": "ta",
+    "options": ["ta", "chi", "tsu", "te"],
+    "explanation": "た читается как 'ta'"
+  },
+  "ex_077": {
+    "exerciseId": 77,
+    "hiraganaId": 26,
+    "type": "write",
+    "question": "Напиши ромадзи для た",
+    "correctAnswer": "ta",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_078": {
+    "exerciseId": 78,
+    "hiraganaId": 26,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ta'",
+    "correctAnswer": "た",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_079": {
+    "exerciseId": 79,
+    "hiraganaId": 27,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ち",
+    "correctAnswer": "chi",
+    "options": ["chi", "ta", "tsu", "te"],
+    "explanation": "ち читается как 'chi'"
+  },
+  "ex_080": {
+    "exerciseId": 80,
+    "hiraganaId": 27,
+    "type": "write",
+    "question": "Напиши ромадзи для ち",
+    "correctAnswer": "chi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_081": {
+    "exerciseId": 81,
+    "hiraganaId": 27,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'chi'",
+    "correctAnswer": "ち",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_082": {
+    "exerciseId": 82,
+    "hiraganaId": 28,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для つ",
+    "correctAnswer": "tsu",
+    "options": ["tsu", "ta", "chi", "te"],
+    "explanation": "つ читается как 'tsu'"
+  },
+  "ex_083": {
+    "exerciseId": 83,
+    "hiraganaId": 28,
+    "type": "write",
+    "question": "Напиши ромадзи для つ",
+    "correctAnswer": "tsu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_084": {
+    "exerciseId": 84,
+    "hiraganaId": 28,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'tsu'",
+    "correctAnswer": "つ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_085": {
+    "exerciseId": 85,
+    "hiraganaId": 29,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для て",
+    "correctAnswer": "te",
+    "options": ["te", "ta", "chi", "tsu"],
+    "explanation": "て читается как 'te'"
+  },
+  "ex_086": {
+    "exerciseId": 86,
+    "hiraganaId": 29,
+    "type": "write",
+    "question": "Напиши ромадзи для て",
+    "correctAnswer": "te",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_087": {
+    "exerciseId": 87,
+    "hiraganaId": 29,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'te'",
+    "correctAnswer": "て",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_088": {
+    "exerciseId": 88,
+    "hiraganaId": 30,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для と",
+    "correctAnswer": "to",
+    "options": ["to", "ta", "chi", "tsu"],
+    "explanation": "と читается как 'to'"
+  },
+  "ex_089": {
+    "exerciseId": 89,
+    "hiraganaId": 30,
+    "type": "write",
+    "question": "Напиши ромадзи для と",
+    "correctAnswer": "to",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_090": {
+    "exerciseId": 90,
+    "hiraganaId": 30,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'to'",
+    "correctAnswer": "と",
+    "options": [],
+    "explanation": ""
+  },
+
+  "ex_091": {
+    "exerciseId": 91,
+    "hiraganaId": 31,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для だ",
+    "correctAnswer": "da",
+    "options": ["da", "ta", "ji", "zu"],
+    "explanation": "だ читается как 'da'"
+  },
+  "ex_092": {
+    "exerciseId": 92,
+    "hiraganaId": 31,
+    "type": "write",
+    "question": "Напиши ромадзи для だ",
+    "correctAnswer": "da",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_093": {
+    "exerciseId": 93,
+    "hiraganaId": 31,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'da'",
+    "correctAnswer": "だ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_094": {
+    "exerciseId": 94,
+    "hiraganaId": 32,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぢ",
+    "correctAnswer": "ji",
+    "options": ["ji", "da", "zu", "de"],
+    "explanation": "ぢ читается как 'ji'"
+  },
+  "ex_095": {
+    "exerciseId": 95,
+    "hiraganaId": 32,
+    "type": "write",
+    "question": "Напиши ромадзи для ぢ",
+    "correctAnswer": "ji",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_096": {
+    "exerciseId": 96,
+    "hiraganaId": 32,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ji' (ぢ)",
+    "correctAnswer": "ぢ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_097": {
+    "exerciseId": 97,
+    "hiraganaId": 33,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для づ",
+    "correctAnswer": "zu",
+    "options": ["zu", "da", "ji", "de"],
+    "explanation": "づ читается как 'zu'"
+  },
+  "ex_098": {
+    "exerciseId": 98,
+    "hiraganaId": 33,
+    "type": "write",
+    "question": "Напиши ромадзи для づ",
+    "correctAnswer": "zu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_099": {
+    "exerciseId": 99,
+    "hiraganaId": 33,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'zu' (づ)",
+    "correctAnswer": "づ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_100": {
+    "exerciseId": 100,
+    "hiraganaId": 34,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для で",
+    "correctAnswer": "de",
+    "options": ["de", "da", "ji", "zu"],
+    "explanation": "で читается как 'de'"
+  },
+  "ex_101": {
+    "exerciseId": 101,
+    "hiraganaId": 34,
+    "type": "write",
+    "question": "Напиши ромадзи для で",
+    "correctAnswer": "de",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_102": {
+    "exerciseId": 102,
+    "hiraganaId": 34,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'de'",
+    "correctAnswer": "で",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_103": {
+    "exerciseId": 103,
+    "hiraganaId": 35,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ど",
+    "correctAnswer": "do",
+    "options": ["do", "da", "ji", "zu"],
+    "explanation": "ど читается как 'do'"
+  },
+  "ex_104": {
+    "exerciseId": 104,
+    "hiraganaId": 35,
+    "type": "write",
+    "question": "Напиши ромадзи для ど",
+    "correctAnswer": "do",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_105": {
+    "exerciseId": 105,
+    "hiraganaId": 35,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'do'",
+    "correctAnswer": "ど",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_106": {
+    "exerciseId": 106,
+    "hiraganaId": 36,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для な",
+    "correctAnswer": "na",
+    "options": ["na", "ni", "nu", "ne"],
+    "explanation": "な читается как 'na'"
+  },
+  "ex_107": {
+    "exerciseId": 107,
+    "hiraganaId": 36,
+    "type": "write",
+    "question": "Напиши ромадзи для な",
+    "correctAnswer": "na",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_108": {
+    "exerciseId": 108,
+    "hiraganaId": 36,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'na'",
+    "correctAnswer": "な",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_109": {
+    "exerciseId": 109,
+    "hiraganaId": 37,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для に",
+    "correctAnswer": "ni",
+    "options": ["ni", "na", "nu", "ne"],
+    "explanation": "に читается как 'ni'"
+  },
+  "ex_110": {
+    "exerciseId": 110,
+    "hiraganaId": 37,
+    "type": "write",
+    "question": "Напиши ромадзи для に",
+    "correctAnswer": "ni",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_111": {
+    "exerciseId": 111,
+    "hiraganaId": 37,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ni'",
+    "correctAnswer": "に",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_112": {
+    "exerciseId": 112,
+    "hiraganaId": 38,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぬ",
+    "correctAnswer": "nu",
+    "options": ["nu", "na", "ni", "ne"],
+    "explanation": "ぬ читается как 'nu'"
+  },
+  "ex_113": {
+    "exerciseId": 113,
+    "hiraganaId": 38,
+    "type": "write",
+    "question": "Напиши ромадзи для ぬ",
+    "correctAnswer": "nu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_114": {
+    "exerciseId": 114,
+    "hiraganaId": 38,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'nu'",
+    "correctAnswer": "ぬ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_115": {
+    "exerciseId": 115,
+    "hiraganaId": 39,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ね",
+    "correctAnswer": "ne",
+    "options": ["ne", "na", "ni", "nu"],
+    "explanation": "ね читается как 'ne'"
+  },
+  "ex_116": {
+    "exerciseId": 116,
+    "hiraganaId": 39,
+    "type": "write",
+    "question": "Напиши ромадзи для ね",
+    "correctAnswer": "ne",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_117": {
+    "exerciseId": 117,
+    "hiraganaId": 39,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ne'",
+    "correctAnswer": "ね",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_118": {
+    "exerciseId": 118,
+    "hiraganaId": 40,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для の",
+    "correctAnswer": "no",
+    "options": ["no", "na", "ni", "nu"],
+    "explanation": "の читается как 'no'"
+  },
+  "ex_119": {
+    "exerciseId": 119,
+    "hiraganaId": 40,
+    "type": "write",
+    "question": "Напиши ромадзи для の",
+    "correctAnswer": "no",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_120": {
+    "exerciseId": 120,
+    "hiraganaId": 40,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'no'",
+    "correctAnswer": "の",
+    "options": [],
+    "explanation": ""
+  }, 
+  "ex_121": {
+    "exerciseId": 121,
+    "hiraganaId": 41,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для は",
+    "correctAnswer": "ha",
+    "options": ["ha", "hi", "fu", "he"],
+    "explanation": "は читается как 'ha'"
+  },
+  "ex_122": {
+    "exerciseId": 122,
+    "hiraganaId": 41,
+    "type": "write",
+    "question": "Напиши ромадзи для は",
+    "correctAnswer": "ha",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_123": {
+    "exerciseId": 123,
+    "hiraganaId": 41,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ha'",
+    "correctAnswer": "は",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_124": {
+    "exerciseId": 124,
+    "hiraganaId": 42,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ひ",
+    "correctAnswer": "hi",
+    "options": ["hi", "ha", "fu", "he"],
+    "explanation": "ひ читается как 'hi'"
+  },
+  "ex_125": {
+    "exerciseId": 125,
+    "hiraganaId": 42,
+    "type": "write",
+    "question": "Напиши ромадзи для ひ",
+    "correctAnswer": "hi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_126": {
+    "exerciseId": 126,
+    "hiraganaId": 42,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'hi'",
+    "correctAnswer": "ひ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_127": {
+    "exerciseId": 127,
+    "hiraganaId": 43,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ふ",
+    "correctAnswer": "fu",
+    "options": ["fu", "ha", "hi", "he"],
+    "explanation": "ふ читается как 'fu'"
+  },
+  "ex_128": {
+    "exerciseId": 128,
+    "hiraganaId": 43,
+    "type": "write",
+    "question": "Напиши ромадзи для ふ",
+    "correctAnswer": "fu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_129": {
+    "exerciseId": 129,
+    "hiraganaId": 43,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'fu'",
+    "correctAnswer": "ふ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_130": {
+    "exerciseId": 130,
+    "hiraganaId": 44,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для へ",
+    "correctAnswer": "he",
+    "options": ["he", "ha", "hi", "fu"],
+    "explanation": "へ читается как 'he'"
+  },
+  "ex_131": {
+    "exerciseId": 131,
+    "hiraganaId": 44,
+    "type": "write",
+    "question": "Напиши ромадзи для へ",
+    "correctAnswer": "he",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_132": {
+    "exerciseId": 132,
+    "hiraganaId": 44,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'he'",
+    "correctAnswer": "へ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_133": {
+    "exerciseId": 133,
+    "hiraganaId": 45,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ほ",
+    "correctAnswer": "ho",
+    "options": ["ho", "ha", "hi", "fu"],
+    "explanation": "ほ читается как 'ho'"
+  },
+  "ex_134": {
+    "exerciseId": 134,
+    "hiraganaId": 45,
+    "type": "write",
+    "question": "Напиши ромадзи для ほ",
+    "correctAnswer": "ho",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_135": {
+    "exerciseId": 135,
+    "hiraganaId": 45,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ho'",
+    "correctAnswer": "ほ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_136": {
+    "exerciseId": 136,
+    "hiraganaId": 46,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ば",
+    "correctAnswer": "ba",
+    "options": ["ba", "ha", "bi", "bo"],
+    "explanation": "ば читается как 'ba'"
+  },
+  "ex_137": {
+    "exerciseId": 137,
+    "hiraganaId": 46,
+    "type": "write",
+    "question": "Напиши ромадзи для ば",
+    "correctAnswer": "ba",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_138": {
+    "exerciseId": 138,
+    "hiraganaId": 46,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ba'",
+    "correctAnswer": "ば",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_139": {
+    "exerciseId": 139,
+    "hiraganaId": 47,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для び",
+    "correctAnswer": "bi",
+    "options": ["bi", "ba", "bu", "be"],
+    "explanation": "び читается как 'bi'"
+  },
+  "ex_140": {
+    "exerciseId": 140,
+    "hiraganaId": 47,
+    "type": "write",
+    "question": "Напиши ромадзи для び",
+    "correctAnswer": "bi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_141": {
+    "exerciseId": 141,
+    "hiraganaId": 47,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'bi'",
+    "correctAnswer": "び",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_142": {
+    "exerciseId": 142,
+    "hiraganaId": 48,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぶ",
+    "correctAnswer": "bu",
+    "options": ["bu", "ba", "bi", "be"],
+    "explanation": "ぶ читается как 'bu'"
+  },
+  "ex_143": {
+    "exerciseId": 143,
+    "hiraganaId": 48,
+    "type": "write",
+    "question": "Напиши ромадзи для ぶ",
+    "correctAnswer": "bu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_144": {
+    "exerciseId": 144,
+    "hiraganaId": 48,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'bu'",
+    "correctAnswer": "ぶ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_145": {
+    "exerciseId": 145,
+    "hiraganaId": 49,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для べ",
+    "correctAnswer": "be",
+    "options": ["be", "ba", "bi", "bu"],
+    "explanation": "べ читается как 'be'"
+  },
+  "ex_146": {
+    "exerciseId": 146,
+    "hiraganaId": 49,
+    "type": "write",
+    "question": "Напиши ромадзи для べ",
+    "correctAnswer": "be",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_147": {
+    "exerciseId": 147,
+    "hiraganaId": 49,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'be'",
+    "correctAnswer": "べ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_148": {
+    "exerciseId": 148,
+    "hiraganaId": 50,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぼ",
+    "correctAnswer": "bo",
+    "options": ["bo", "ba", "bi", "bu"],
+    "explanation": "ぼ читается как 'bo'"
+  },
+  "ex_149": {
+    "exerciseId": 149,
+    "hiraganaId": 50,
+    "type": "write",
+    "question": "Напиши ромадзи для ぼ",
+    "correctAnswer": "bo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_150": {
+    "exerciseId": 150,
+    "hiraganaId": 50,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'bo'",
+    "correctAnswer": "ぼ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_151": {
+    "exerciseId": 151,
+    "hiraganaId": 51,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぱ",
+    "correctAnswer": "pa",
+    "options": ["pa", "ha", "pi", "pu"],
+    "explanation": "ぱ читается как 'pa'"
+  },
+  "ex_152": {
+    "exerciseId": 152,
+    "hiraganaId": 51,
+    "type": "write",
+    "question": "Напиши ромадзи для ぱ",
+    "correctAnswer": "pa",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_153": {
+    "exerciseId": 153,
+    "hiraganaId": 51,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pa'",
+    "correctAnswer": "ぱ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_154": {
+    "exerciseId": 154,
+    "hiraganaId": 52,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぴ",
+    "correctAnswer": "pi",
+    "options": ["pi", "pa", "pu", "pe"],
+    "explanation": "ぴ читается как 'pi'"
+  },
+  "ex_155": {
+    "exerciseId": 155,
+    "hiraganaId": 52,
+    "type": "write",
+    "question": "Напиши ромадзи для ぴ",
+    "correctAnswer": "pi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_156": {
+    "exerciseId": 156,
+    "hiraganaId": 52,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pi'",
+    "correctAnswer": "ぴ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_157": {
+    "exerciseId": 157,
+    "hiraganaId": 53,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぷ",
+    "correctAnswer": "pu",
+    "options": ["pu", "pa", "pi", "pe"],
+    "explanation": "ぷ читается как 'pu'"
+  },
+  "ex_158": {
+    "exerciseId": 158,
+    "hiraganaId": 53,
+    "type": "write",
+    "question": "Напиши ромадзи для ぷ",
+    "correctAnswer": "pu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_159": {
+    "exerciseId": 159,
+    "hiraganaId": 53,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pu'",
+    "correctAnswer": "ぷ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_160": {
+    "exerciseId": 160,
+    "hiraganaId": 54,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぺ",
+    "correctAnswer": "pe",
+    "options": ["pe", "pa", "pi", "pu"],
+    "explanation": "ぺ читается как 'pe'"
+  },
+  "ex_161": {
+    "exerciseId": 161,
+    "hiraganaId": 54,
+    "type": "write",
+    "question": "Напиши ромадзи для ぺ",
+    "correctAnswer": "pe",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_162": {
+    "exerciseId": 162,
+    "hiraganaId": 54,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pe'",
+    "correctAnswer": "ぺ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_163": {
+    "exerciseId": 163,
+    "hiraganaId": 55,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぽ",
+    "correctAnswer": "po",
+    "options": ["po", "pa", "pi", "pu"],
+    "explanation": "ぽ читается как 'po'"
+  },
+  "ex_164": {
+    "exerciseId": 164,
+    "hiraganaId": 55,
+    "type": "write",
+    "question": "Напиши ромадзи для ぽ",
+    "correctAnswer": "po",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_165": {
+    "exerciseId": 165,
+    "hiraganaId": 55,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'po'",
+    "correctAnswer": "ぽ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_166": {
+    "exerciseId": 166,
+    "hiraganaId": 56,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ま",
+    "correctAnswer": "ma",
+    "options": ["ma", "mi", "mu", "me"],
+    "explanation": "ま читается как 'ma'"
+  },
+  "ex_167": {
+    "exerciseId": 167,
+    "hiraganaId": 56,
+    "type": "write",
+    "question": "Напиши ромадзи для ま",
+    "correctAnswer": "ma",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_168": {
+    "exerciseId": 168,
+    "hiraganaId": 56,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ma'",
+    "correctAnswer": "ま",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_169": {
+    "exerciseId": 169,
+    "hiraganaId": 57,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для み",
+    "correctAnswer": "mi",
+    "options": ["mi", "ma", "mu", "me"],
+    "explanation": "み читается как 'mi'"
+  },
+  "ex_170": {
+    "exerciseId": 170,
+    "hiraganaId": 57,
+    "type": "write",
+    "question": "Напиши ромадзи для み",
+    "correctAnswer": "mi",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_171": {
+    "exerciseId": 171,
+    "hiraganaId": 57,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'mi'",
+    "correctAnswer": "み",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_172": {
+    "exerciseId": 172,
+    "hiraganaId": 58,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для む",
+    "correctAnswer": "mu",
+    "options": ["mu", "ma", "mi", "me"],
+    "explanation": "む читается как 'mu'"
+  },
+  "ex_173": {
+    "exerciseId": 173,
+    "hiraganaId": 58,
+    "type": "write",
+    "question": "Напиши ромадзи для む",
+    "correctAnswer": "mu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_174": {
+    "exerciseId": 174,
+    "hiraganaId": 58,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'mu'",
+    "correctAnswer": "む",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_175": {
+    "exerciseId": 175,
+    "hiraganaId": 59,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для め",
+    "correctAnswer": "me",
+    "options": ["me", "ma", "mi", "mu"],
+    "explanation": "め читается как 'me'"
+  },
+  "ex_176": {
+    "exerciseId": 176,
+    "hiraganaId": 59,
+    "type": "write",
+    "question": "Напиши ромадзи для め",
+    "correctAnswer": "me",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_177": {
+    "exerciseId": 177,
+    "hiraganaId": 59,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'me'",
+    "correctAnswer": "め",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_178": {
+    "exerciseId": 178,
+    "hiraganaId": 60,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для も",
+    "correctAnswer": "mo",
+    "options": ["mo", "ma", "mi", "mu"],
+    "explanation": "も читается как 'mo'"
+  },
+  "ex_179": {
+    "exerciseId": 179,
+    "hiraganaId": 60,
+    "type": "write",
+    "question": "Напиши ромадзи для も",
+    "correctAnswer": "mo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_180": {
+    "exerciseId": 180,
+    "hiraganaId": 60,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'mo'",
+    "correctAnswer": "も",
+    "options": [],
+    "explanation": ""
+  },
+  
+  "ex_181": {
+    "exerciseId": 181,
+    "hiraganaId": 61,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для や",
+    "correctAnswer": "ya",
+    "options": ["ya", "yu", "yo", "wa"],
+    "explanation": "や читается как 'ya'"
+  },
+  "ex_182": {
+    "exerciseId": 182,
+    "hiraganaId": 61,
+    "type": "write",
+    "question": "Напиши ромадзи для や",
+    "correctAnswer": "ya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_183": {
+    "exerciseId": 183,
+    "hiraganaId": 61,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ya'",
+    "correctAnswer": "や",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_184": {
+    "exerciseId": 184,
+    "hiraganaId": 62,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ゆ",
+    "correctAnswer": "yu",
+    "options": ["yu", "ya", "yo", "wa"],
+    "explanation": "ゆ читается как 'yu'"
+  },
+  "ex_185": {
+    "exerciseId": 185,
+    "hiraganaId": 62,
+    "type": "write",
+    "question": "Напиши ромадзи для ゆ",
+    "correctAnswer": "yu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_186": {
+    "exerciseId": 186,
+    "hiraganaId": 62,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'yu'",
+    "correctAnswer": "ゆ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_187": {
+    "exerciseId": 187,
+    "hiraganaId": 63,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для よ",
+    "correctAnswer": "yo",
+    "options": ["yo", "ya", "yu", "wa"],
+    "explanation": "よ читается как 'yo'"
+  },
+  "ex_188": {
+    "exerciseId": 188,
+    "hiraganaId": 63,
+    "type": "write",
+    "question": "Напиши ромадзи для よ",
+    "correctAnswer": "yo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_189": {
+    "exerciseId": 189,
+    "hiraganaId": 63,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'yo'",
+    "correctAnswer": "よ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_190": {
+    "exerciseId": 190,
+    "hiraganaId": 64,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ら",
+    "correctAnswer": "ra",
+    "options": ["ra", "ri", "ru", "re"],
+    "explanation": "ら читается как 'ra'"
+  },
+  "ex_191": {
+    "exerciseId": 191,
+    "hiraganaId": 64,
+    "type": "write",
+    "question": "Напиши ромадзи для ら",
+    "correctAnswer": "ra",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_192": {
+    "exerciseId": 192,
+    "hiraganaId": 64,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ra'",
+    "correctAnswer": "ら",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_193": {
+    "exerciseId": 193,
+    "hiraganaId": 65,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для り",
+    "correctAnswer": "ri",
+    "options": ["ri", "ra", "ru", "re"],
+    "explanation": "り читается как 'ri'"
+  },
+  "ex_194": {
+    "exerciseId": 194,
+    "hiraganaId": 65,
+    "type": "write",
+    "question": "Напиши ромадзи для り",
+    "correctAnswer": "ri",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_195": {
+    "exerciseId": 195,
+    "hiraganaId": 65,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ri'",
+    "correctAnswer": "り",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_196": {
+    "exerciseId": 196,
+    "hiraganaId": 66,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для る",
+    "correctAnswer": "ru",
+    "options": ["ru", "ra", "ri", "re"],
+    "explanation": "る читается как 'ru'"
+  },
+  "ex_197": {
+    "exerciseId": 197,
+    "hiraganaId": 66,
+    "type": "write",
+    "question": "Напиши ромадзи для る",
+    "correctAnswer": "ru",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_198": {
+    "exerciseId": 198,
+    "hiraganaId": 66,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ru'",
+    "correctAnswer": "る",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_199": {
+    "exerciseId": 199,
+    "hiraganaId": 67,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для れ",
+    "correctAnswer": "re",
+    "options": ["re", "ra", "ri", "ru"],
+    "explanation": "れ читается как 're'"
+  },
+  "ex_200": {
+    "exerciseId": 200,
+    "hiraganaId": 67,
+    "type": "write",
+    "question": "Напиши ромадзи для れ",
+    "correctAnswer": "re",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_201": {
+    "exerciseId": 201,
+    "hiraganaId": 67,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 're'",
+    "correctAnswer": "れ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_202": {
+    "exerciseId": 202,
+    "hiraganaId": 68,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ろ",
+    "correctAnswer": "ro",
+    "options": ["ro", "ra", "ri", "ru"],
+    "explanation": "ろ читается как 'ro'"
+  },
+  "ex_203": {
+    "exerciseId": 203,
+    "hiraganaId": 68,
+    "type": "write",
+    "question": "Напиши ромадзи для ろ",
+    "correctAnswer": "ro",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_204": {
+    "exerciseId": 204,
+    "hiraganaId": 68,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ro'",
+    "correctAnswer": "ろ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_205": {
+    "exerciseId": 205,
+    "hiraganaId": 69,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для わ",
+    "correctAnswer": "wa",
+    "options": ["wa", "wo", "n", "ya"],
+    "explanation": "わ читается как 'wa'"
+  },
+  "ex_206": {
+    "exerciseId": 206,
+    "hiraganaId": 69,
+    "type": "write",
+    "question": "Напиши ромадзи для わ",
+    "correctAnswer": "wa",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_207": {
+    "exerciseId": 207,
+    "hiraganaId": 69,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'wa'",
+    "correctAnswer": "わ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_208": {
+    "exerciseId": 208,
+    "hiraganaId": 70,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для を",
+    "correctAnswer": "wo",
+    "options": ["wo", "wa", "n", "yo"],
+    "explanation": "を читается как 'wo'"
+  },
+  "ex_209": {
+    "exerciseId": 209,
+    "hiraganaId": 70,
+    "type": "write",
+    "question": "Напиши ромадзи для を",
+    "correctAnswer": "wo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_210": {
+    "exerciseId": 210,
+    "hiraganaId": 70,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'wo'",
+    "correctAnswer": "を",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_211": {
+    "exerciseId": 211,
+    "hiraganaId": 71,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ん",
+    "correctAnswer": "n",
+    "options": ["n", "na", "ni", "nu"],
+    "explanation": "ん читается как 'n'"
+  },
+  "ex_212": {
+    "exerciseId": 212,
+    "hiraganaId": 71,
+    "type": "write",
+    "question": "Напиши ромадзи для ん",
+    "correctAnswer": "n",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_213": {
+    "exerciseId": 213,
+    "hiraganaId": 71,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'n'",
+    "correctAnswer": "ん",
+    "options": [],
+    "explanation": ""
+  },
+
+  "ex_214": {
+    "exerciseId": 214,
+    "hiraganaId": 72,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для きゃ",
+    "correctAnswer": "kya",
+    "options": ["kya", "kyu", "kyo", "gya"],
+    "explanation": "きゃ читается как 'kya'"
+  },
+  "ex_215": {
+    "exerciseId": 215,
+    "hiraganaId": 72,
+    "type": "write",
+    "question": "Напиши ромадзи для きゃ",
+    "correctAnswer": "kya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_216": {
+    "exerciseId": 216,
+    "hiraganaId": 72,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'kya'",
+    "correctAnswer": "きゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_217": {
+    "exerciseId": 217,
+    "hiraganaId": 73,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для きゅ",
+    "correctAnswer": "kyu",
+    "options": ["kyu", "kya", "kyo", "gyu"],
+    "explanation": "きゅ читается как 'kyu'"
+  },
+  "ex_218": {
+    "exerciseId": 218,
+    "hiraganaId": 73,
+    "type": "write",
+    "question": "Напиши ромадзи для きゅ",
+    "correctAnswer": "kyu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_219": {
+    "exerciseId": 219,
+    "hiraganaId": 73,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'kyu'",
+    "correctAnswer": "きゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_220": {
+    "exerciseId": 220,
+    "hiraganaId": 74,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для きょ",
+    "correctAnswer": "kyo",
+    "options": ["kyo", "kya", "kyu", "gyo"],
+    "explanation": "きょ читается как 'kyo'"
+  },
+  "ex_221": {
+    "exerciseId": 221,
+    "hiraganaId": 74,
+    "type": "write",
+    "question": "Напиши ромадзи для きょ",
+    "correctAnswer": "kyo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_222": {
+    "exerciseId": 222,
+    "hiraganaId": 74,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'kyo'",
+    "correctAnswer": "きょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_223": {
+    "exerciseId": 223,
+    "hiraganaId": 75,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぎゃ",
+    "correctAnswer": "gya",
+    "options": ["gya", "kya", "gyu", "gyo"],
+    "explanation": "ぎゃ читается как 'gya'"
+  },
+  "ex_224": {
+    "exerciseId": 224,
+    "hiraganaId": 75,
+    "type": "write",
+    "question": "Напиши ромадзи для ぎゃ",
+    "correctAnswer": "gya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_225": {
+    "exerciseId": 225,
+    "hiraganaId": 75,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'gya'",
+    "correctAnswer": "ぎゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_226": {
+    "exerciseId": 226,
+    "hiraganaId": 76,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぎゅ",
+    "correctAnswer": "gyu",
+    "options": ["gyu", "gya", "gyo", "kyu"],
+    "explanation": "ぎゅ читается как 'gyu'"
+  },
+  "ex_227": {
+    "exerciseId": 227,
+    "hiraganaId": 76,
+    "type": "write",
+    "question": "Напиши ромадзи для ぎゅ",
+    "correctAnswer": "gyu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_228": {
+    "exerciseId": 228,
+    "hiraganaId": 76,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'gyu'",
+    "correctAnswer": "ぎゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_229": {
+    "exerciseId": 229,
+    "hiraganaId": 77,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぎょ",
+    "correctAnswer": "gyo",
+    "options": ["gyo", "gya", "gyu", "kyo"],
+    "explanation": "ぎょ читается как 'gyo'"
+  },
+  "ex_230": {
+    "exerciseId": 230,
+    "hiraganaId": 77,
+    "type": "write",
+    "question": "Напиши ромадзи для ぎょ",
+    "correctAnswer": "gyo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_231": {
+    "exerciseId": 231,
+    "hiraganaId": 77,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'gyo'",
+    "correctAnswer": "ぎょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_232": {
+    "exerciseId": 232,
+    "hiraganaId": 78,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для しゃ",
+    "correctAnswer": "sha",
+    "options": ["sha", "shu", "sho", "ja"],
+    "explanation": "しゃ читается как 'sha'"
+  },
+  "ex_233": {
+    "exerciseId": 233,
+    "hiraganaId": 78,
+    "type": "write",
+    "question": "Напиши ромадзи для しゃ",
+    "correctAnswer": "sha",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_234": {
+    "exerciseId": 234,
+    "hiraganaId": 78,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'sha'",
+    "correctAnswer": "しゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_235": {
+    "exerciseId": 235,
+    "hiraganaId": 79,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для しゅ",
+    "correctAnswer": "shu",
+    "options": ["shu", "sha", "sho", "ju"],
+    "explanation": "しゅ читается как 'shu'"
+  },
+  "ex_236": {
+    "exerciseId": 236,
+    "hiraganaId": 79,
+    "type": "write",
+    "question": "Напиши ромадзи для しゅ",
+    "correctAnswer": "shu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_237": {
+    "exerciseId": 237,
+    "hiraganaId": 79,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'shu'",
+    "correctAnswer": "しゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_238": {
+    "exerciseId": 238,
+    "hiraganaId": 80,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для しょ",
+    "correctAnswer": "sho",
+    "options": ["sho", "sha", "shu", "jo"],
+    "explanation": "しょ читается как 'sho'"
+  },
+  "ex_239": {
+    "exerciseId": 239,
+    "hiraganaId": 80,
+    "type": "write",
+    "question": "Напиши ромадзи для しょ",
+    "correctAnswer": "sho",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_240": {
+    "exerciseId": 240,
+    "hiraganaId": 80,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'sho'",
+    "correctAnswer": "しょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_241": {
+    "exerciseId": 241,
+    "hiraganaId": 81,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для じゃ",
+    "correctAnswer": "ja",
+    "options": ["ja", "sha", "ju", "jo"],
+    "explanation": "じゃ читается как 'ja'"
+  },
+  "ex_242": {
+    "exerciseId": 242,
+    "hiraganaId": 81,
+    "type": "write",
+    "question": "Напиши ромадзи для じゃ",
+    "correctAnswer": "ja",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_243": {
+    "exerciseId": 243,
+    "hiraganaId": 81,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ja'",
+    "correctAnswer": "じゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_244": {
+    "exerciseId": 244,
+    "hiraganaId": 82,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для じゅ",
+    "correctAnswer": "ju",
+    "options": ["ju", "ja", "jo", "shu"],
+    "explanation": "じゅ читается как 'ju'"
+  },
+  "ex_245": {
+    "exerciseId": 245,
+    "hiraganaId": 82,
+    "type": "write",
+    "question": "Напиши ромадзи для じゅ",
+    "correctAnswer": "ju",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_246": {
+    "exerciseId": 246,
+    "hiraganaId": 82,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ju'",
+    "correctAnswer": "じゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_247": {
+    "exerciseId": 247,
+    "hiraganaId": 83,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для じょ",
+    "correctAnswer": "jo",
+    "options": ["jo", "ja", "ju", "sho"],
+    "explanation": "じょ читается как 'jo'"
+  },
+  "ex_248": {
+    "exerciseId": 248,
+    "hiraganaId": 83,
+    "type": "write",
+    "question": "Напиши ромадзи для じょ",
+    "correctAnswer": "jo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_249": {
+    "exerciseId": 249,
+    "hiraganaId": 83,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'jo'",
+    "correctAnswer": "じょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_250": {
+    "exerciseId": 250,
+    "hiraganaId": 84,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ちゃ",
+    "correctAnswer": "cha",
+    "options": ["cha", "chu", "cho", "ja"],
+    "explanation": "ちゃ читается как 'cha'"
+  },
+  "ex_251": {
+    "exerciseId": 251,
+    "hiraganaId": 84,
+    "type": "write",
+    "question": "Напиши ромадзи для ちゃ",
+    "correctAnswer": "cha",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_252": {
+    "exerciseId": 252,
+    "hiraganaId": 84,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'cha'",
+    "correctAnswer": "ちゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_253": {
+    "exerciseId": 253,
+    "hiraganaId": 85,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ちゅ",
+    "correctAnswer": "chu",
+    "options": ["chu", "cha", "cho", "ju"],
+    "explanation": "ちゅ читается как 'chu'"
+  },
+  "ex_254": {
+    "exerciseId": 254,
+    "hiraganaId": 85,
+    "type": "write",
+    "question": "Напиши ромадзи для ちゅ",
+    "correctAnswer": "chu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_255": {
+    "exerciseId": 255,
+    "hiraganaId": 85,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'chu'",
+    "correctAnswer": "ちゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_256": {
+    "exerciseId": 256,
+    "hiraganaId": 86,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ちょ",
+    "correctAnswer": "cho",
+    "options": ["cho", "cha", "chu", "jo"],
+    "explanation": "ちょ читается как 'cho'"
+  },
+  "ex_257": {
+    "exerciseId": 257,
+    "hiraganaId": 86,
+    "type": "write",
+    "question": "Напиши ромадзи для ちょ",
+    "correctAnswer": "cho",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_258": {
+    "exerciseId": 258,
+    "hiraganaId": 86,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'cho'",
+    "correctAnswer": "ちょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_259": {
+    "exerciseId": 259,
+    "hiraganaId": 87,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для にゃ",
+    "correctAnswer": "nya",
+    "options": ["nya", "nyu", "nyo", "nya"],
+    "explanation": "にゃ читается как 'nya'"
+  },
+  "ex_260": {
+    "exerciseId": 260,
+    "hiraganaId": 87,
+    "type": "write",
+    "question": "Напиши ромадзи для にゃ",
+    "correctAnswer": "nya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_261": {
+    "exerciseId": 261,
+    "hiraganaId": 87,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'nya'",
+    "correctAnswer": "にゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_262": {
+    "exerciseId": 262,
+    "hiraganaId": 88,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для にゅ",
+    "correctAnswer": "nyu",
+    "options": ["nyu", "nya", "nyo", "myu"],
+    "explanation": "にゅ читается как 'nyu'"
+  },
+  "ex_263": {
+    "exerciseId": 263,
+    "hiraganaId": 88,
+    "type": "write",
+    "question": "Напиши ромадзи для にゅ",
+    "correctAnswer": "nyu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_264": {
+    "exerciseId": 264,
+    "hiraganaId": 88,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'nyu'",
+    "correctAnswer": "にゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_265": {
+    "exerciseId": 265,
+    "hiraganaId": 89,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для にょ",
+    "correctAnswer": "nyo",
+    "options": ["nyo", "nya", "nyu", "myo"],
+    "explanation": "にょ читается как 'nyo'"
+  },
+  "ex_266": {
+    "exerciseId": 266,
+    "hiraganaId": 89,
+    "type": "write",
+    "question": "Напиши ромадзи для にょ",
+    "correctAnswer": "nyo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_267": {
+    "exerciseId": 267,
+    "hiraganaId": 89,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'nyo'",
+    "correctAnswer": "にょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_268": {
+    "exerciseId": 268,
+    "hiraganaId": 90,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ひゃ",
+    "correctAnswer": "hya",
+    "options": ["hya", "hyu", "hyo", "bya"],
+    "explanation": "ひゃ читается как 'hya'"
+  },
+  "ex_269": {
+    "exerciseId": 269,
+    "hiraganaId": 90,
+    "type": "write",
+    "question": "Напиши ромадзи для ひゃ",
+    "correctAnswer": "hya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_270": {
+    "exerciseId": 270,
+    "hiraganaId": 90,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'hya'",
+    "correctAnswer": "ひゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_271": {
+    "exerciseId": 271,
+    "hiraganaId": 91,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ひゅ",
+    "correctAnswer": "hyu",
+    "options": ["hyu", "hya", "hyo", "byu"],
+    "explanation": "ひゅ читается как 'hyu'"
+  },
+  "ex_272": {
+    "exerciseId": 272,
+    "hiraganaId": 91,
+    "type": "write",
+    "question": "Напиши ромадзи для ひゅ",
+    "correctAnswer": "hyu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_273": {
+    "exerciseId": 273,
+    "hiraganaId": 91,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'hyu'",
+    "correctAnswer": "ひゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_274": {
+    "exerciseId": 274,
+    "hiraganaId": 92,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ひょ",
+    "correctAnswer": "hyo",
+    "options": ["hyo", "hya", "hyu", "byo"],
+    "explanation": "ひょ читается как 'hyo'"
+  },
+  "ex_275": {
+    "exerciseId": 275,
+    "hiraganaId": 92,
+    "type": "write",
+    "question": "Напиши ромадзи для ひょ",
+    "correctAnswer": "hyo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_276": {
+    "exerciseId": 276,
+    "hiraganaId": 92,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'hyo'",
+    "correctAnswer": "ひょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_277": {
+    "exerciseId": 277,
+    "hiraganaId": 93,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для びゃ",
+    "correctAnswer": "bya",
+    "options": ["bya", "byu", "byo", "hya"],
+    "explanation": "びゃ читается как 'bya'"
+  },
+  "ex_278": {
+    "exerciseId": 278,
+    "hiraganaId": 93,
+    "type": "write",
+    "question": "Напиши ромадзи для びゃ",
+    "correctAnswer": "bya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_279": {
+    "exerciseId": 279,
+    "hiraganaId": 93,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'bya'",
+    "correctAnswer": "びゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_280": {
+    "exerciseId": 280,
+    "hiraganaId": 94,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для びゅ",
+    "correctAnswer": "byu",
+    "options": ["byu", "bya", "byo", "hyu"],
+    "explanation": "びゅ читается как 'byu'"
+  },
+  "ex_281": {
+    "exerciseId": 281,
+    "hiraganaId": 94,
+    "type": "write",
+    "question": "Напиши ромадзи для びゅ",
+    "correctAnswer": "byu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_282": {
+    "exerciseId": 282,
+    "hiraganaId": 94,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'byu'",
+    "correctAnswer": "びゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_283": {
+    "exerciseId": 283,
+    "hiraganaId": 95,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для びょ",
+    "correctAnswer": "byo",
+    "options": ["byo", "bya", "byu", "hyo"],
+    "explanation": "びょ читается как 'byo'"
+  },
+  "ex_284": {
+    "exerciseId": 284,
+    "hiraganaId": 95,
+    "type": "write",
+    "question": "Напиши ромадзи для びょ",
+    "correctAnswer": "byo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_285": {
+    "exerciseId": 285,
+    "hiraganaId": 95,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'byo'",
+    "correctAnswer": "びょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_286": {
+    "exerciseId": 286,
+    "hiraganaId": 96,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぴゃ",
+    "correctAnswer": "pya",
+    "options": ["pya", "pyu", "pyo", "bya"],
+    "explanation": "ぴゃ читается как 'pya'"
+  },
+  "ex_287": {
+    "exerciseId": 287,
+    "hiraganaId": 96,
+    "type": "write",
+    "question": "Напиши ромадзи для ぴゃ",
+    "correctAnswer": "pya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_288": {
+    "exerciseId": 288,
+    "hiraganaId": 96,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pya'",
+    "correctAnswer": "ぴゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_289": {
+    "exerciseId": 289,
+    "hiraganaId": 97,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぴゅ",
+    "correctAnswer": "pyu",
+    "options": ["pyu", "pya", "pyo", "byu"],
+    "explanation": "ぴゅ читается как 'pyu'"
+  },
+  "ex_290": {
+    "exerciseId": 290,
+    "hiraganaId": 97,
+    "type": "write",
+    "question": "Напиши ромадзи для ぴゅ",
+    "correctAnswer": "pyu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_291": {
+    "exerciseId": 291,
+    "hiraganaId": 97,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pyu'",
+    "correctAnswer": "ぴゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_292": {
+    "exerciseId": 292,
+    "hiraganaId": 98,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぴょ",
+    "correctAnswer": "pyo",
+    "options": ["pyo", "pya", "pyu", "byo"],
+    "explanation": "ぴょ читается как 'pyo'"
+  },
+  "ex_293": {
+    "exerciseId": 293,
+    "hiraganaId": 98,
+    "type": "write",
+    "question": "Напиши ромадзи для ぴょ",
+    "correctAnswer": "pyo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_294": {
+    "exerciseId": 294,
+    "hiraganaId": 98,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'pyo'",
+    "correctAnswer": "ぴょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_295": {
+    "exerciseId": 295,
+    "hiraganaId": 99,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для みゃ",
+    "correctAnswer": "mya",
+    "options": ["mya", "myu", "myo", "nya"],
+    "explanation": "みゃ читается как 'mya'"
+  },
+  "ex_296": {
+    "exerciseId": 296,
+    "hiraganaId": 99,
+    "type": "write",
+    "question": "Напиши ромадзи для みゃ",
+    "correctAnswer": "mya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_297": {
+    "exerciseId": 297,
+    "hiraganaId": 99,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'mya'",
+    "correctAnswer": "みゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_298": {
+    "exerciseId": 298,
+    "hiraganaId": 100,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для みゅ",
+    "correctAnswer": "myu",
+    "options": ["myu", "mya", "myo", "nyu"],
+    "explanation": "みゅ читается как 'myu'"
+  },
+  "ex_299": {
+    "exerciseId": 299,
+    "hiraganaId": 100,
+    "type": "write",
+    "question": "Напиши ромадзи для みゅ",
+    "correctAnswer": "myu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_300": {
+    "exerciseId": 300,
+    "hiraganaId": 100,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'myu'",
+    "correctAnswer": "みゅ",
+    "options": [],
+    "explanation": ""
+  },
+  
+  "ex_301": {
+    "exerciseId": 301,
+    "hiraganaId": 101,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для みょ",
+    "correctAnswer": "myo",
+    "options": ["myo", "mya", "myu", "nyo"],
+    "explanation": "みょ читается как 'myo'"
+  },
+  "ex_302": {
+    "exerciseId": 302,
+    "hiraganaId": 101,
+    "type": "write",
+    "question": "Напиши ромадзи для みょ",
+    "correctAnswer": "myo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_303": {
+    "exerciseId": 303,
+    "hiraganaId": 101,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'myo'",
+    "correctAnswer": "みょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_304": {
+    "exerciseId": 304,
+    "hiraganaId": 102,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для りゃ",
+    "correctAnswer": "rya",
+    "options": ["rya", "ryu", "ryo", "mya"],
+    "explanation": "りゃ читается как 'rya'"
+  },
+  "ex_305": {
+    "exerciseId": 305,
+    "hiraganaId": 102,
+    "type": "write",
+    "question": "Напиши ромадзи для りゃ",
+    "correctAnswer": "rya",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_306": {
+    "exerciseId": 306,
+    "hiraganaId": 102,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'rya'",
+    "correctAnswer": "りゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_307": {
+    "exerciseId": 307,
+    "hiraganaId": 103,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для りゅ",
+    "correctAnswer": "ryu",
+    "options": ["ryu", "rya", "ryo", "myu"],
+    "explanation": "りゅ читается как 'ryu'"
+  },
+  "ex_308": {
+    "exerciseId": 308,
+    "hiraganaId": 103,
+    "type": "write",
+    "question": "Напиши ромадзи для りゅ",
+    "correctAnswer": "ryu",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_309": {
+    "exerciseId": 309,
+    "hiraganaId": 103,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ryu'",
+    "correctAnswer": "りゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_310": {
+    "exerciseId": 310,
+    "hiraganaId": 104,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для りょ",
+    "correctAnswer": "ryo",
+    "options": ["ryo", "rya", "ryu", "myo"],
+    "explanation": "りょ читается как 'ryo'"
+  },
+  "ex_311": {
+    "exerciseId": 311,
+    "hiraganaId": 104,
+    "type": "write",
+    "question": "Напиши ромадзи для りょ",
+    "correctAnswer": "ryo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_312": {
+    "exerciseId": 312,
+    "hiraganaId": 104,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ryo'",
+    "correctAnswer": "りょ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_313": {
+    "exerciseId": 313,
+    "hiraganaId": 105,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぢゃ",
+    "correctAnswer": "ja",
+    "options": ["ja", "ju", "jo", "cha"],
+    "explanation": "ぢゃ читается как 'ja'"
+  },
+  "ex_314": {
+    "exerciseId": 314,
+    "hiraganaId": 105,
+    "type": "write",
+    "question": "Напиши ромадзи для ぢゃ",
+    "correctAnswer": "ja",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_315": {
+    "exerciseId": 315,
+    "hiraganaId": 105,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ja' (ぢゃ)",
+    "correctAnswer": "ぢゃ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_316": {
+    "exerciseId": 316,
+    "hiraganaId": 106,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぢゅ",
+    "correctAnswer": "ju",
+    "options": ["ju", "ja", "jo", "chu"],
+    "explanation": "ぢゅ читается как 'ju'"
+  },
+  "ex_317": {
+    "exerciseId": 317,
+    "hiraganaId": 106,
+    "type": "write",
+    "question": "Напиши ромадзи для ぢゅ",
+    "correctAnswer": "ju",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_318": {
+    "exerciseId": 318,
+    "hiraganaId": 106,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'ju' (ぢゅ)",
+    "correctAnswer": "ぢゅ",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_319": {
+    "exerciseId": 319,
+    "hiraganaId": 107,
+    "type": "choose",
+    "question": "Выбери правильное ромадзи для ぢょ",
+    "correctAnswer": "jo",
+    "options": ["jo", "ja", "ju", "cho"],
+    "explanation": "ぢょ читается как 'jo'"
+  },
+  "ex_320": {
+    "exerciseId": 320,
+    "hiraganaId": 107,
+    "type": "write",
+    "question": "Напиши ромадзи для ぢょ",
+    "correctAnswer": "jo",
+    "options": [],
+    "explanation": ""
+  },
+  "ex_321": {
+    "exerciseId": 321,
+    "hiraganaId": 107,
+    "type": "reverse_write",
+    "question": "Напиши хирагану для 'jo' (ぢょ)",
+    "correctAnswer": "ぢょ",
+    "options": [],
+    "explanation": ""
+  }
+}

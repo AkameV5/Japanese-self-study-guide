@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "432608069908",
+    "project_id": "japanese-server",
+    "storage_bucket": "japanese-server.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432608069908:android:bd3a7298982b6da3a81a01",
+        "android_client_info": {
+          "package_name": "com.example.japanese_self_study_guide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANm5tatTxxFZ_sWwQ2GSE2IKbqTjjYBNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

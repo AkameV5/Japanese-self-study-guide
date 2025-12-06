@@ -1,0 +1,8022 @@
+[
+  {
+    "id": 1,
+    "idKanji": [1],
+    "word": "一つ",
+    "reading": "ひとつ",
+    "category": "числа",
+    "translation": "один (штука)"
+  },
+  {
+    "id": 2,
+    "idKanji": [2],
+    "word": "二つ",
+    "reading": "ふたつ",
+    "category": "числа",
+    "translation": "два (штуки)"
+  },
+  {
+    "id": 3,
+    "idKanji": [3],
+    "word": "三つ",
+    "reading": "みっつ",
+    "category": "числа",
+    "translation": "три (штуки)"
+  },
+  {
+    "id": 4,
+    "idKanji": [4],
+    "word": "四つ",
+    "reading": "よっつ",
+    "category": "числа",
+    "translation": "четыре (штуки)"
+  },
+  {
+    "id": 5,
+    "idKanji": [5],
+    "word": "五つ",
+    "reading": "いつつ",
+    "category": "числа",
+    "translation": "пять (штук)"
+  },
+  {
+    "id": 6,
+    "idKanji": [6],
+    "word": "六つ",
+    "reading": "むっつ",
+    "category": "числа",
+    "translation": "шесть (штук)"
+  },
+  {
+    "id": 7,
+    "idKanji": [7],
+    "word": "七つ",
+    "reading": "ななつ",
+    "category": "числа",
+    "translation": "семь (штук)"
+  },
+  {
+    "id": 8,
+    "idKanji": [8],
+    "word": "八つ",
+    "reading": "やっつ",
+    "category": "числа",
+    "translation": "восемь (штук)"
+  },
+  {
+    "id": 9,
+    "idKanji": [9],
+    "word": "九つ",
+    "reading": "ここのつ",
+    "category": "числа",
+    "translation": "девять (штук)"
+  },
+  {
+    "id": 10,
+    "idKanji": [10],
+    "word": "十",
+    "reading": "とお",
+    "category": "числа",
+    "translation": "десять"
+  },
+  {
+    "id": 11,
+    "idKanji": [11],
+    "word": "百",
+    "reading": "ひゃく",
+    "category": "числа",
+    "translation": "сто"
+  },
+  {
+    "id": 12,
+    "idKanji": [12],
+    "word": "千",
+    "reading": "せん",
+    "category": "числа",
+    "translation": "тысяча"
+  },
+  {
+    "id": 13,
+    "idKanji": [13],
+    "word": "万",
+    "reading": "まん",
+    "category": "числа",
+    "translation": "десять тысяч"
+  },
+  {
+    "id": 14,
+    "idKanji": [14],
+    "word": "円",
+    "reading": "えん",
+    "category": "деньги",
+    "translation": "йена"
+  },
+  {
+    "id": 15,
+    "idKanji": null,
+    "word": "ゼロ",
+    "reading": "ゼロ",
+    "category": "числа",
+    "translation": "ноль"
+  },
+  {
+    "id": 16,
+    "idKanji": [15],
+    "word": "今日",
+    "reading": "きょう",
+    "category": "время",
+    "translation": "сегодня"
+  },
+  {
+    "id": 17,
+    "idKanji": [15],
+    "word": "明日",
+    "reading": "あした",
+    "category": "время",
+    "translation": "завтра"
+  },
+  {
+    "id": 18,
+    "idKanji": [15],
+    "word": "昨日",
+    "reading": "きのう",
+    "category": "время",
+    "translation": "вчера"
+  },
+  {
+    "id": 19,
+    "idKanji": [16],
+    "word": "月曜日",
+    "reading": "げつようび",
+    "category": "время",
+    "translation": "понедельник"
+  },
+  {
+    "id": 20,
+    "idKanji": [17],
+    "word": "火曜日",
+    "reading": "かようび",
+    "category": "время",
+    "translation": "вторник"
+  },
+  {
+    "id": 21,
+    "idKanji": [18],
+    "word": "水曜日",
+    "reading": "すいようび",
+    "category": "время",
+    "translation": "среда"
+  },
+  {
+    "id": 22,
+    "idKanji": [19],
+    "word": "木曜日",
+    "reading": "もくようび",
+    "category": "время",
+    "translation": "четверг"
+  },
+  {
+    "id": 23,
+    "idKanji": [22],
+    "word": "金曜日",
+    "reading": "きんようび",
+    "category": "время",
+    "translation": "пятница"
+  },
+  {
+    "id": 24,
+    "idKanji": [20],
+    "word": "土曜日",
+    "reading": "どようび",
+    "category": "время",
+    "translation": "суббота"
+  },
+  {
+    "id": 25,
+    "idKanji": [15],
+    "word": "日曜日",
+    "reading": "にちようび",
+    "category": "время",
+    "translation": "воскресенье"
+  },
+  {
+    "id": 26,
+    "idKanji": null,
+    "word": "あなた",
+    "reading": "あなた",
+    "category": "местоимения",
+    "translation": "вы/ты"
+  },
+  {
+    "id": 27,
+    "idKanji": null,
+    "word": "わたし",
+    "reading": "わたし",
+    "category": "местоимения",
+    "translation": "я"
+  },
+  {
+    "id": 28,
+    "idKanji": [80],
+    "word": "私",
+    "reading": "わたし",
+    "category": "местоимения",
+    "translation": "я (формальное)"
+  },
+  {
+    "id": 29,
+    "idKanji": null,
+    "word": "ぼく",
+    "reading": "ぼく",
+    "category": "местоимения",
+    "translation": "я (мужское)"
+  },
+  {
+    "id": 30,
+    "idKanji": null,
+    "word": "かれ",
+    "reading": "かれ",
+    "category": "местоимения",
+    "translation": "он"
+  },
+  {
+    "id": 31,
+    "idKanji": null,
+    "word": "かのじょ",
+    "reading": "かのじょ",
+    "category": "местоимения",
+    "translation": "она"
+  },
+  {
+    "id": 32,
+    "idKanji": null,
+    "word": "これ",
+    "reading": "これ",
+    "category": "указательные",
+    "translation": "это (близко к говорящему)"
+  },
+  {
+    "id": 33,
+    "idKanji": null,
+    "word": "それ",
+    "reading": "それ",
+    "category": "указательные",
+    "translation": "то (близко к слушающему)"
+  },
+  {
+    "id": 34,
+    "idKanji": null,
+    "word": "あれ",
+    "reading": "あれ",
+    "category": "указательные",
+    "translation": "то (далеко от обоих)"
+  },
+  {
+    "id": 35,
+    "idKanji": null,
+    "word": "ここ",
+    "reading": "ここ",
+    "category": "указательные",
+    "translation": "здесь"
+  },
+  {
+    "id": 36,
+    "idKanji": null,
+    "word": "そこ",
+    "reading": "そこ",
+    "category": "указательные",
+    "translation": "там"
+  },
+  {
+    "id": 37,
+    "idKanji": null,
+    "word": "あそこ",
+    "reading": "あそこ",
+    "category": "указательные",
+    "translation": "вон там"
+  },
+  {
+    "id": 38,
+    "idKanji": null,
+    "word": "だれ",
+    "reading": "だれ",
+    "category": "вопросы",
+    "translation": "кто"
+  },
+  {
+    "id": 39,
+    "idKanji": [67],
+    "word": "何",
+    "reading": "なに",
+    "category": "вопросы",
+    "translation": "что"
+  },
+  {
+    "id": 40,
+    "idKanji": null,
+    "word": "どこ",
+    "reading": "どこ",
+    "category": "вопросы",
+    "translation": "где"
+  },
+  {
+    "id": 41,
+    "idKanji": null,
+    "word": "いつ",
+    "reading": "いつ",
+    "category": "вопросы",
+    "translation": "когда"
+  },
+  {
+    "id": 42,
+    "idKanji": null,
+    "word": "どうして",
+    "reading": "どうして",
+    "category": "вопросы",
+    "translation": "почему"
+  },
+  {
+    "id": 43,
+    "idKanji": null,
+    "word": "いくつ",
+    "reading": "いくつ",
+    "category": "вопросы",
+    "translation": "сколько"
+  },
+  {
+    "id": 44,
+    "idKanji": null,
+    "word": "こんにちは",
+    "reading": "こんにちは",
+    "category": "приветствия",
+    "translation": "здравствуйте"
+  },
+  {
+    "id": 45,
+    "idKanji": null,
+    "word": "おはよう",
+    "reading": "おはよう",
+    "category": "приветствия",
+    "translation": "доброе утро"
+  },
+  {
+    "id": 46,
+    "idKanji": null,
+    "word": "こんばんは",
+    "reading": "こんばんは",
+    "category": "приветствия",
+    "translation": "добрый вечер"
+  },
+  {
+    "id": 47,
+    "idKanji": null,
+    "word": "さようなら",
+    "reading": "さようなら",
+    "category": "приветствия",
+    "translation": "до свидания"
+  },
+  {
+    "id": 48,
+    "idKanji": null,
+    "word": "ありがとう",
+    "reading": "ありがとう",
+    "category": "выражения",
+    "translation": "спасибо"
+  },
+  {
+    "id": 49,
+    "idKanji": null,
+    "word": "すみません",
+    "reading": "すみません",
+    "category": "выражения",
+    "translation": "извините"
+  },
+  {
+    "id": 50,
+    "idKanji": null,
+    "word": "ごめんなさい",
+    "reading": "ごめんなさい",
+    "category": "выражения",
+    "translation": "простите"
+  },
+  {
+    "id": 51,
+    "idKanji": null,
+    "word": "おねがいします",
+    "reading": "おねがいします",
+    "category": "выражения",
+    "translation": "пожалуйста"
+  },
+  {
+    "id": 52,
+    "idKanji": null,
+    "word": "はい",
+    "reading": "はい",
+    "category": "выражения",
+    "translation": "да"
+  },
+  {
+    "id": 53,
+    "idKanji": null,
+    "word": "いいえ",
+    "reading": "いいえ",
+    "category": "выражения",
+    "translation": "нет"
+  },
+  {
+    "id": 54,
+    "idKanji": [26],
+    "word": "人",
+    "reading": "ひと",
+    "category": "люди",
+    "translation": "человек"
+  },
+  {
+    "id": 55,
+    "idKanji": [28],
+    "word": "男",
+    "reading": "おとこ",
+    "category": "люди",
+    "translation": "мужчина"
+  },
+  {
+    "id": 56,
+    "idKanji": [30],
+    "word": "女",
+    "reading": "おんな",
+    "category": "люди",
+    "translation": "женщина"
+  },
+  {
+    "id": 57,
+    "idKanji": [32],
+    "word": "子",
+    "reading": "こ",
+    "category": "люди",
+    "translation": "ребёнок"
+  },
+  {
+    "id": 58,
+    "idKanji": [32],
+    "word": "子供",
+    "reading": "こども",
+    "category": "люди",
+    "translation": "дети"
+  },
+  {
+    "id": 59,
+    "idKanji": [153],
+    "word": "若い",
+    "reading": "わかい",
+    "category": "люди",
+    "translation": "молодой"
+  },
+  {
+    "id": 60,
+    "idKanji": [29],
+    "word": "父",
+    "reading": "ちち",
+    "category": "семья",
+    "translation": "отец"
+  },
+  {
+    "id": 61,
+    "idKanji": [31],
+    "word": "母",
+    "reading": "はは",
+    "category": "семья",
+    "translation": "мать"
+  },
+  {
+    "id": 62,
+    "idKanji": [171],
+    "word": "兄",
+    "reading": "あに",
+    "category": "семья",
+    "translation": "старший брат"
+  },
+  {
+    "id": 63,
+    "idKanji": [172],
+    "word": "弟",
+    "reading": "おとうと",
+    "category": "семья",
+    "translation": "младший брат"
+  },
+  {
+    "id": 64,
+    "idKanji": [169],
+    "word": "姉",
+    "reading": "あね",
+    "category": "семья",
+    "translation": "старшая сестра"
+  },
+  {
+    "id": 65,
+    "idKanji": [170],
+    "word": "妹",
+    "reading": "いもうと",
+    "category": "семья",
+    "translation": "младшая сестра"
+  },
+  {
+    "id": 66,
+    "idKanji": [317],
+    "word": "夫",
+    "reading": "おっと",
+    "category": "семья",
+    "translation": "муж"
+  },
+  {
+    "id": 67,
+    "idKanji": [318],
+    "word": "妻",
+    "reading": "つま",
+    "category": "семья",
+    "translation": "жена"
+  },
+  {
+    "id": 68,
+    "idKanji": [48],
+    "word": "家",
+    "reading": "いえ",
+    "category": "жильё",
+    "translation": "дом"
+  },
+  {
+    "id": 69,
+    "idKanji": [174],
+    "word": "部屋",
+    "reading": "へや",
+    "category": "жильё",
+    "translation": "комната"
+  },
+  {
+    "id": 70,
+    "idKanji": [51],
+    "word": "門",
+    "reading": "もん",
+    "category": "жильё",
+    "translation": "ворота"
+  },
+  {
+    "id": 71,
+    "idKanji": [52],
+    "word": "開ける",
+    "reading": "あける",
+    "category": "действия",
+    "translation": "открывать"
+  },
+  {
+    "id": 72,
+    "idKanji": [53],
+    "word": "閉める",
+    "reading": "しめる",
+    "category": "действия",
+    "translation": "закрывать"
+  },
+  {
+    "id": 73,
+    "idKanji": [49],
+    "word": "入る",
+    "reading": "はいる",
+    "category": "действия",
+    "translation": "входить"
+  },
+  {
+    "id": 74,
+    "idKanji": [50],
+    "word": "出る",
+    "reading": "でる",
+    "category": "действия",
+    "translation": "выходить"
+  },
+  {
+    "id": 75,
+    "idKanji": [91],
+    "word": "立つ",
+    "reading": "たつ",
+    "category": "действия",
+    "translation": "стоять"
+  },
+  {
+    "id": 76,
+    "idKanji": [142],
+    "word": "歩く",
+    "reading": "あるく",
+    "category": "действия",
+    "translation": "ходить"
+  },
+  {
+    "id": 77,
+    "idKanji": [138],
+    "word": "走る",
+    "reading": "はしる",
+    "category": "действия",
+    "translation": "бежать"
+  },
+  {
+    "id": 78,
+    "idKanji": [347],
+    "word": "乗る",
+    "reading": "のる",
+    "category": "действия",
+    "translation": "садиться (в транспорт)"
+  },
+  {
+    "id": 79,
+    "idKanji": [352],
+    "word": "飛ぶ",
+    "reading": "とぶ",
+    "category": "действия",
+    "translation": "летать"
+  },
+  {
+    "id": 80,
+    "idKanji": [108],
+    "word": "食べる",
+    "reading": "たべる",
+    "category": "действия",
+    "translation": "есть"
+  },
+  {
+    "id": 81,
+    "idKanji": [192],
+    "word": "飲む",
+    "reading": "のむ",
+    "category": "действия",
+    "translation": "пить"
+  },
+  {
+    "id": 82,
+    "idKanji": [72],
+    "word": "見る",
+    "reading": "みる",
+    "category": "действия",
+    "translation": "смотреть"
+  },
+  {
+    "id": 83,
+    "idKanji": [71],
+    "word": "聞く",
+    "reading": "きく",
+    "category": "действия",
+    "translation": "слушать"
+  },
+  {
+    "id": 84,
+    "idKanji": [76],
+    "word": "話す",
+    "reading": "はなす",
+    "category": "действия",
+    "translation": "говорить"
+  },
+  {
+    "id": 85,
+    "idKanji": [88],
+    "word": "書く",
+    "reading": "かく",
+    "category": "действия",
+    "translation": "писать"
+  },
+  {
+    "id": 86,
+    "idKanji": [304],
+    "word": "読む",
+    "reading": "よむ",
+    "category": "действия",
+    "translation": "читать"
+  },
+  {
+    "id": 87,
+    "idKanji": [102],
+    "word": "行く",
+    "reading": "いく",
+    "category": "действия",
+    "translation": "идти"
+  },
+  {
+    "id": 88,
+    "idKanji": [100],
+    "word": "来る",
+    "reading": "くる",
+    "category": "действия",
+    "translation": "приходить"
+  },
+  {
+    "id": 89,
+    "idKanji": [103],
+    "word": "待つ",
+    "reading": "まつ",
+    "category": "действия",
+    "translation": "ждать"
+  },
+  {
+    "id": 90,
+    "idKanji": [104],
+    "word": "持つ",
+    "reading": "もつ",
+    "category": "действия",
+    "translation": "держать"
+  },
+  {
+    "id": 91,
+    "idKanji": [105],
+    "word": "帰る",
+    "reading": "かえる",
+    "category": "действия",
+    "translation": "возвращаться"
+  },
+  {
+    "id": 92,
+    "idKanji": [139],
+    "word": "起きる",
+    "reading": "おきる",
+    "category": "действия",
+    "translation": "вставать"
+  },
+  {
+    "id": 93,
+    "idKanji": [149],
+    "word": "寝る",
+    "reading": "ねる",
+    "category": "действия",
+    "translation": "спать"
+  },
+  {
+    "id": 94,
+    "idKanji": [143],
+    "word": "休む",
+    "reading": "やすむ",
+    "category": "действия",
+    "translation": "отдыхать"
+  },
+  {
+    "id": 95,
+    "idKanji": [275],
+    "word": "始める",
+    "reading": "はじめる",
+    "category": "действия",
+    "translation": "начинать"
+  },
+  {
+    "id": 96,
+    "idKanji": [276],
+    "word": "終わる",
+    "reading": "おわる",
+    "category": "действия",
+    "translation": "заканчивать"
+  },
+  {
+    "id": 97,
+    "idKanji": [277],
+    "word": "働く",
+    "reading": "はたらく",
+    "category": "действия",
+    "translation": "работать"
+  },
+  {
+    "id": 98,
+    "idKanji": [278],
+    "word": "歌う",
+    "reading": "うたう",
+    "category": "действия",
+    "translation": "петь"
+  },
+  {
+    "id": 99,
+    "idKanji": [264],
+    "word": "泳ぐ",
+    "reading": "およぐ",
+    "category": "действия",
+    "translation": "плавать"
+  },
+  {
+    "id": 100,
+    "idKanji": [365],
+    "word": "取る",
+    "reading": "とる",
+    "category": "действия",
+    "translation": "брать"
+  },
+  {
+    "id": 101,
+    "idKanji": [369],
+    "word": "切る",
+    "reading": "きる",
+    "category": "действия",
+    "translation": "резать"
+  },
+  {
+    "id": 102,
+    "idKanji": [370],
+    "word": "洗う",
+    "reading": "あらう",
+    "category": "действия",
+    "translation": "мыть"
+  },
+  {
+    "id": 103,
+    "idKanji": [359],
+    "word": "送る",
+    "reading": "おくる",
+    "category": "действия",
+    "translation": "отправлять"
+  },
+  {
+    "id": 104,
+    "idKanji": [281],
+    "word": "使う",
+    "reading": "つかう",
+    "category": "действия",
+    "translation": "использовать"
+  },
+  {
+    "id": 105,
+    "idKanji": [282],
+    "word": "忘れる",
+    "reading": "わすれる",
+    "category": "действия",
+    "translation": "забывать"
+  },
+  {
+    "id": 106,
+    "idKanji": [327],
+    "word": "笑う",
+    "reading": "わらう",
+    "category": "эмоции",
+    "translation": "смеяться"
+  },
+  {
+    "id": 107,
+    "idKanji": [328],
+    "word": "泣く",
+    "reading": "なく",
+    "category": "эмоции",
+    "translation": "плакать"
+  },
+  {
+    "id": 108,
+    "idKanji": [33],
+    "word": "好き",
+    "reading": "すき",
+    "category": "эмоции",
+    "translation": "нравиться"
+  },
+  {
+    "id": 109,
+    "idKanji": [240],
+    "word": "嫌い",
+    "reading": "きらい",
+    "category": "эмоции",
+    "translation": "не нравиться"
+  },
+  {
+    "id": 110,
+    "idKanji": [329],
+    "word": "困る",
+    "reading": "こまる",
+    "category": "эмоции",
+    "translation": "испытывать трудности"
+  },
+  {
+    "id": 111,
+    "idKanji": [35],
+    "word": "小さい",
+    "reading": "ちいさい",
+    "category": "прилагательные",
+    "translation": "маленький"
+  },
+  {
+    "id": 112,
+    "idKanji": [38],
+    "word": "大きい",
+    "reading": "おおきい",
+    "category": "прилагательные",
+    "translation": "большой"
+  },
+  {
+    "id": 113,
+    "idKanji": [106],
+    "word": "白い",
+    "reading": "しろい",
+    "category": "цвета",
+    "translation": "белый"
+  },
+  {
+    "id": 114,
+    "idKanji": [198],
+    "word": "赤い",
+    "reading": "あかい",
+    "category": "цвета",
+    "translation": "красный"
+  },
+  {
+    "id": 115,
+    "idKanji": [199],
+    "word": "青い",
+    "reading": "あおい",
+    "category": "цвета",
+    "translation": "синий"
+  },
+  {
+    "id": 116,
+    "idKanji": [200],
+    "word": "黒い",
+    "reading": "くろい",
+    "category": "цвета",
+    "translation": "чёрный"
+  },
+  {
+    "id": 117,
+    "idKanji": [202],
+    "word": "黄色い",
+    "reading": "きいろい",
+    "category": "цвета",
+    "translation": "жёлтый"
+  },
+  {
+    "id": 118,
+    "idKanji": [118],
+    "word": "早い",
+    "reading": "はやい",
+    "category": "прилагательные",
+    "translation": "ранний/быстрый"
+  },
+  {
+    "id": 119,
+    "idKanji": [107],
+    "word": "良い",
+    "reading": "いい",
+    "category": "прилагательные",
+    "translation": "хороший"
+  },
+  {
+    "id": 120,
+    "idKanji": [240],
+    "word": "悪い",
+    "reading": "わるい",
+    "category": "прилагательные",
+    "translation": "плохой"
+  },
+  {
+    "id": 121,
+    "idKanji": [156],
+    "word": "高い",
+    "reading": "たかい",
+    "category": "прилагательные",
+    "translation": "высокий/дорогой"
+  },
+  {
+    "id": 122,
+    "idKanji": [157],
+    "word": "安い",
+    "reading": "やすい",
+    "category": "прилагательные",
+    "translation": "дешёвый"
+  },
+  {
+    "id": 123,
+    "idKanji": [150],
+    "word": "新しい",
+    "reading": "あたらしい",
+    "category": "прилагательные",
+    "translation": "новый"
+  },
+  {
+    "id": 124,
+    "idKanji": [151],
+    "word": "古い",
+    "reading": "ふるい",
+    "category": "прилагательные",
+    "translation": "старый"
+  },
+  {
+    "id": 125,
+    "idKanji": [152],
+    "word": "美しい",
+    "reading": "うつくしい",
+    "category": "прилагательные",
+    "translation": "красивый"
+  },
+  {
+    "id": 126,
+    "idKanji": [243],
+    "word": "低い",
+    "reading": "ひくい",
+    "category": "прилагательные",
+    "translation": "низкий"
+  },
+  {
+    "id": 127,
+    "idKanji": [244],
+    "word": "短い",
+    "reading": "みじかい",
+    "category": "прилагательные",
+    "translation": "короткий"
+  },
+  {
+    "id": 128,
+    "idKanji": [154],
+    "word": "長い",
+    "reading": "ながい",
+    "category": "прилагательные",
+    "translation": "длинный"
+  },
+  {
+    "id": 129,
+    "idKanji": [237],
+    "word": "速い",
+    "reading": "はやい",
+    "category": "прилагательные",
+    "translation": "быстрый"
+  },
+  {
+    "id": 130,
+    "idKanji": [238],
+    "word": "遅い",
+    "reading": "おそい",
+    "category": "прилагательные",
+    "translation": "медленный/поздний"
+  },
+  {
+    "id": 131,
+    "idKanji": [333],
+    "word": "寒い",
+    "reading": "さむい",
+    "category": "погода",
+    "translation": "холодный (о погоде)"
+  },
+  {
+    "id": 132,
+    "idKanji": [331],
+    "word": "暑い",
+    "reading": "あつい",
+    "category": "погода",
+    "translation": "жаркий"
+  },
+  {
+    "id": 133,
+    "idKanji": [334],
+    "word": "冷たい",
+    "reading": "つめたい",
+    "category": "прилагательные",
+    "translation": "холодный (на ощупь)"
+  },
+  {
+    "id": 134,
+    "idKanji": [335],
+    "word": "温かい",
+    "reading": "あたたかい",
+    "category": "прилагательные",
+    "translation": "тёплый"
+  },
+  {
+    "id": 135,
+    "idKanji": [246],
+    "word": "重い",
+    "reading": "おもい",
+    "category": "прилагательные",
+    "translation": "тяжёлый"
+  },
+  {
+    "id": 136,
+    "idKanji": null,
+    "word": "軽い",
+    "reading": "かるい",
+    "category": "прилагательные",
+    "translation": "лёгкий"
+  },
+  {
+    "id": 137,
+    "idKanji": [185],
+    "word": "強い",
+    "reading": "つよい",
+    "category": "прилагательные",
+    "translation": "сильный"
+  },
+  {
+    "id": 138,
+    "idKanji": null,
+    "word": "弱い",
+    "reading": "よわい",
+    "category": "прилагательные",
+    "translation": "слабый"
+  },
+  {
+    "id": 139,
+    "idKanji": [158],
+    "word": "楽しい",
+    "reading": "たのしい",
+    "category": "эмоции",
+    "translation": "весёлый"
+  },
+  {
+    "id": 140,
+    "idKanji": null,
+    "word": "悲しい",
+    "reading": "かなしい",
+    "category": "эмоции",
+    "translation": "грустный"
+  },
+  {
+    "id": 141,
+    "idKanji": [241],
+    "word": "忙しい",
+    "reading": "いそがしい",
+    "category": "состояния",
+    "translation": "занятой"
+  },
+  {
+    "id": 142,
+    "idKanji": [242],
+    "word": "静か",
+    "reading": "しずか",
+    "category": "состояния",
+    "translation": "тихий"
+  },
+  {
+    "id": 143,
+    "idKanji": [239],
+    "word": "暗い",
+    "reading": "くらい",
+    "category": "состояния",
+    "translation": "тёмный"
+  },
+  {
+    "id": 144,
+    "idKanji": [159],
+    "word": "明るい",
+    "reading": "あかるい",
+    "category": "состояния",
+    "translation": "яркий"
+  },
+  {
+    "id": 145,
+    "idKanji": [160],
+    "word": "広い",
+    "reading": "ひろい",
+    "category": "пространство",
+    "translation": "широкий"
+  },
+  {
+    "id": 146,
+    "idKanji": null,
+    "word": "狭い",
+    "reading": "せまい",
+    "category": "пространство",
+    "translation": "узкий"
+  },
+  {
+    "id": 147,
+    "idKanji": [418],
+    "word": "難しい",
+    "reading": "むずかしい",
+    "category": "сложность",
+    "translation": "трудный"
+  },
+  {
+    "id": 148,
+    "idKanji": null,
+    "word": "易しい",
+    "reading": "やさしい",
+    "category": "сложность",
+    "translation": "лёгкий"
+  },
+  {
+    "id": 149,
+    "idKanji": [23],
+    "word": "山",
+    "reading": "やま",
+    "category": "природа",
+    "translation": "гора"
+  },
+  {
+    "id": 150,
+    "idKanji": [25],
+    "word": "川",
+    "reading": "かわ",
+    "category": "природа",
+    "translation": "река"
+  },
+  {
+    "id": 151,
+    "idKanji": [343],
+    "word": "海",
+    "reading": "うみ",
+    "category": "природа",
+    "translation": "море"
+  },
+  {
+    "id": 152,
+    "idKanji": [349],
+    "word": "空",
+    "reading": "そら",
+    "category": "природа",
+    "translation": "небо"
+  },
+  {
+    "id": 153,
+    "idKanji": [115],
+    "word": "天気",
+    "reading": "てんき",
+    "category": "погода",
+    "translation": "погода"
+  },
+  {
+    "id": 154,
+    "idKanji": [110],
+    "word": "雨",
+    "reading": "あめ",
+    "category": "погода",
+    "translation": "дождь"
+  },
+  {
+    "id": 155,
+    "idKanji": [111],
+    "word": "雪",
+    "reading": "ゆき",
+    "category": "погода",
+    "translation": "снег"
+  },
+  {
+    "id": 156,
+    "idKanji": [113],
+    "word": "風",
+    "reading": "かぜ",
+    "category": "погода",
+    "translation": "ветер"
+  },
+  {
+    "id": 157,
+    "idKanji": [336],
+    "word": "晴れ",
+    "reading": "はれ",
+    "category": "погода",
+    "translation": "ясная погода"
+  },
+  {
+    "id": 158,
+    "idKanji": [120],
+    "word": "花",
+    "reading": "はな",
+    "category": "природа",
+    "translation": "цветок"
+  },
+  {
+    "id": 159,
+    "idKanji": [119],
+    "word": "草",
+    "reading": "くさ",
+    "category": "природа",
+    "translation": "трава"
+  },
+  {
+    "id": 160,
+    "idKanji": [122],
+    "word": "森",
+    "reading": "もり",
+    "category": "природа",
+    "translation": "лес"
+  },
+  {
+    "id": 161,
+    "idKanji": [121],
+    "word": "林",
+    "reading": "はやし",
+    "category": "природа",
+    "translation": "роща"
+  },
+  {
+    "id": 162,
+    "idKanji": [92],
+    "word": "犬",
+    "reading": "いぬ",
+    "category": "животные",
+    "translation": "собака"
+  },
+  {
+    "id": 163,
+    "idKanji": [93],
+    "word": "鳥",
+    "reading": "とり",
+    "category": "животные",
+    "translation": "птица"
+  },
+  {
+    "id": 164,
+    "idKanji": [94],
+    "word": "馬",
+    "reading": "うま",
+    "category": "животные",
+    "translation": "лошадь"
+  },
+  {
+    "id": 165,
+    "idKanji": [96],
+    "word": "牛",
+    "reading": "うし",
+    "category": "животные",
+    "translation": "корова"
+  },
+  {
+    "id": 166,
+    "idKanji": [97],
+    "word": "魚",
+    "reading": "さかな",
+    "category": "животные",
+    "translation": "рыба"
+  },
+  {
+    "id": 167,
+    "idKanji": [98],
+    "word": "虫",
+    "reading": "むし",
+    "category": "животные",
+    "translation": "насекомое"
+  },
+  {
+    "id": 168,
+    "idKanji": [95],
+    "word": "羊",
+    "reading": "ひつじ",
+    "category": "животные",
+    "translation": "овца"
+  },
+  {
+    "id": 169,
+    "idKanji": [117],
+    "word": "石",
+    "reading": "いし",
+    "category": "природа",
+    "translation": "камень"
+  },
+  {
+    "id": 170,
+    "idKanji": [344],
+    "word": "池",
+    "reading": "いけ",
+    "category": "природа",
+    "translation": "пруд"
+  },
+  {
+    "id": 171,
+    "idKanji": [345],
+    "word": "島",
+    "reading": "しま",
+    "category": "природа",
+    "translation": "остров"
+  },
+  {
+    "id": 172,
+    "idKanji": [346],
+    "word": "野原",
+    "reading": "のはら",
+    "category": "природа",
+    "translation": "поле"
+  },
+  {
+    "id": 173,
+    "idKanji": [83],
+    "word": "学校",
+    "reading": "がっこう",
+    "category": "образование",
+    "translation": "школа"
+  },
+  {
+    "id": 174,
+    "idKanji": [82],
+    "word": "学生",
+    "reading": "がくせい",
+    "category": "образование",
+    "translation": "студент"
+  },
+  {
+    "id": 175,
+    "idKanji": [181],
+    "word": "先生",
+    "reading": "せんせい",
+    "category": "образование",
+    "translation": "учитель"
+  },
+  {
+    "id": 176,
+    "idKanji": [84],
+    "word": "本",
+    "reading": "ほん",
+    "category": "образование",
+    "translation": "книга"
+  },
+  {
+    "id": 177,
+    "idKanji": [187],
+    "word": "紙",
+    "reading": "かみ",
+    "category": "предметы",
+    "translation": "бумага"
+  },
+  {
+    "id": 178,
+    "idKanji": [88],
+    "word": "鉛筆",
+    "reading": "えんぴつ",
+    "category": "предметы",
+    "translation": "карандаш"
+  },
+  {
+    "id": 179,
+    "idKanji": null,
+    "word": "ペン",
+    "reading": "ペン",
+    "category": "предметы",
+    "translation": "ручка"
+  },
+  {
+    "id": 180,
+    "idKanji": [86],
+    "word": "文",
+    "reading": "ぶん",
+    "category": "язык",
+    "translation": "предложение"
+  },
+  {
+    "id": 181,
+    "idKanji": [85],
+    "word": "字",
+    "reading": "じ",
+    "category": "язык",
+    "translation": "иероглиф"
+  },
+  {
+    "id": 182,
+    "idKanji": [75],
+    "word": "言葉",
+    "reading": "ことば",
+    "category": "язык",
+    "translation": "слово"
+  },
+  {
+    "id": 183,
+    "idKanji": [183],
+    "word": "音",
+    "reading": "おと",
+    "category": "звук",
+    "translation": "звук"
+  },
+  {
+    "id": 184,
+    "idKanji": [124],
+    "word": "車",
+    "reading": "くるま",
+    "category": "транспорт",
+    "translation": "автомобиль"
+  },
+  {
+    "id": 185,
+    "idKanji": [127],
+    "word": "駅",
+    "reading": "えき",
+    "category": "транспорт",
+    "translation": "станция"
+  },
+  {
+    "id": 186,
+    "idKanji": [126],
+    "word": "道",
+    "reading": "みち",
+    "category": "транспорт",
+    "translation": "дорога"
+  },
+  {
+    "id": 187,
+    "idKanji": [353],
+    "word": "橋",
+    "reading": "はし",
+    "category": "транспорт",
+    "translation": "мост"
+  },
+  {
+    "id": 188,
+    "idKanji": [354],
+    "word": "線",
+    "reading": "せん",
+    "category": "транспорт",
+    "translation": "линия"
+  },
+  {
+    "id": 189,
+    "idKanji": [350],
+    "word": "港",
+    "reading": "みなと",
+    "category": "транспорт",
+    "translation": "порт"
+  },
+  {
+    "id": 190,
+    "idKanji": [351],
+    "word": "飛行機",
+    "reading": "ひこうき",
+    "category": "транспорт",
+    "translation": "самолёт"
+  },
+  {
+    "id": 191,
+    "idKanji": null,
+    "word": "バス",
+    "reading": "バス",
+    "category": "транспорт",
+    "translation": "автобус"
+  },
+  {
+    "id": 192,
+    "idKanji": null,
+    "word": "タクシー",
+    "reading": "タクシー",
+    "category": "транспорт",
+    "translation": "такси"
+  },
+  {
+    "id": 193,
+    "idKanji": [128],
+    "word": "町",
+    "reading": "まち",
+    "category": "места",
+    "translation": "город"
+  },
+  {
+    "id": 194,
+    "idKanji": [129],
+    "word": "市",
+    "reading": "し",
+    "category": "места",
+    "translation": "город"
+  },
+  {
+    "id": 195,
+    "idKanji": [130],
+    "word": "東京",
+    "reading": "とうきょう",
+    "category": "места",
+    "translation": "Токио"
+  },
+  {
+    "id": 196,
+    "idKanji": [132],
+    "word": "国",
+    "reading": "くに",
+    "category": "места",
+    "translation": "страна"
+  },
+  {
+    "id": 197,
+    "idKanji": [401],
+    "word": "村",
+    "reading": "むら",
+    "category": "места",
+    "translation": "деревня"
+  },
+  {
+    "id": 198,
+    "idKanji": [54],
+    "word": "所",
+    "reading": "ところ",
+    "category": "места",
+    "translation": "место"
+  },
+  {
+    "id": 199,
+    "idKanji": [261],
+    "word": "場所",
+    "reading": "ばしょ",
+    "category": "места",
+    "translation": "место"
+  },
+  {
+    "id": 200,
+    "idKanji": [386],
+    "word": "会社",
+    "reading": "かいしゃ",
+    "category": "работа",
+    "translation": "компания"
+  },
+
+  {
+    "id": 201,
+    "idKanji": [277],
+    "word": "仕事",
+    "reading": "しごと",
+    "category": "работа",
+    "translation": "работа"
+  },
+  {
+    "id": 202,
+    "idKanji": [253],
+    "word": "業界",
+    "reading": "ぎょうかい",
+    "category": "работа",
+    "translation": "индустрия"
+  },
+  {
+    "id": 203,
+    "idKanji": [386],
+    "word": "社員",
+    "reading": "しゃいん",
+    "category": "работа",
+    "translation": "сотрудник компании"
+  },
+  {
+    "id": 204,
+    "idKanji": [291],
+    "word": "店員",
+    "reading": "てんいん",
+    "category": "работа",
+    "translation": "продавец"
+  },
+  {
+    "id": 205,
+    "idKanji": [290],
+    "word": "店",
+    "reading": "みせ",
+    "category": "торговля",
+    "translation": "магазин"
+  },
+  {
+    "id": 206,
+    "idKanji": [289],
+    "word": "商品",
+    "reading": "しょうひん",
+    "category": "торговля",
+    "translation": "товар"
+  },
+  {
+    "id": 207,
+    "idKanji": [287],
+    "word": "品物",
+    "reading": "しなもの",
+    "category": "торговля",
+    "translation": "товары"
+  },
+  {
+    "id": 208,
+    "idKanji": [293],
+    "word": "買う",
+    "reading": "かう",
+    "category": "торговля",
+    "translation": "покупать"
+  },
+  {
+    "id": 209,
+    "idKanji": [294],
+    "word": "売る",
+    "reading": "うる",
+    "category": "торговля",
+    "translation": "продавать"
+  },
+  {
+    "id": 210,
+    "idKanji": [384],
+    "word": "払う",
+    "reading": "はらう",
+    "category": "торговля",
+    "translation": "платить"
+  },
+  {
+    "id": 211,
+    "idKanji": [363],
+    "word": "貸す",
+    "reading": "かす",
+    "category": "торговля",
+    "translation": "одалживать"
+  },
+  {
+    "id": 212,
+    "idKanji": null,
+    "word": "借りる",
+    "reading": "かりる",
+    "category": "торговля",
+    "translation": "брать взаймы"
+  },
+  {
+    "id": 213,
+    "idKanji": [14],
+    "word": "お金",
+    "reading": "おかね",
+    "category": "деньги",
+    "translation": "деньги"
+  },
+  {
+    "id": 214,
+    "idKanji": [22],
+    "word": "金",
+    "reading": "きん",
+    "category": "материалы",
+    "translation": "золото"
+  },
+  {
+    "id": 215,
+    "idKanji": [204],
+    "word": "銀",
+    "reading": "ぎん",
+    "category": "материалы",
+    "translation": "серебро"
+  },
+  {
+    "id": 216,
+    "idKanji": [108],
+    "word": "食べ物",
+    "reading": "たべもの",
+    "category": "еда",
+    "translation": "еда"
+  },
+  {
+    "id": 217,
+    "idKanji": [192],
+    "word": "飲み物",
+    "reading": "のみもの",
+    "category": "еда",
+    "translation": "напитки"
+  },
+  {
+    "id": 218,
+    "idKanji": [99],
+    "word": "米",
+    "reading": "こめ",
+    "category": "еда",
+    "translation": "рис (сырой)"
+  },
+  {
+    "id": 219,
+    "idKanji": [191],
+    "word": "ご飯",
+    "reading": "ごはん",
+    "category": "еда",
+    "translation": "рис (вареный)/еда"
+  },
+  {
+    "id": 220,
+    "idKanji": [189],
+    "word": "肉",
+    "reading": "にく",
+    "category": "еда",
+    "translation": "мясо"
+  },
+  {
+    "id": 221,
+    "idKanji": [97],
+    "word": "魚",
+    "reading": "さかな",
+    "category": "еда",
+    "translation": "рыба"
+  },
+  {
+    "id": 222,
+    "idKanji": [201],
+    "word": "お茶",
+    "reading": "おちゃ",
+    "category": "еда",
+    "translation": "чай"
+  },
+  {
+    "id": 223,
+    "idKanji": [361],
+    "word": "酒",
+    "reading": "さけ",
+    "category": "еда",
+    "translation": "алкоголь"
+  },
+  {
+    "id": 224,
+    "idKanji": null,
+    "word": "水",
+    "reading": "みず",
+    "category": "еда",
+    "translation": "вода"
+  },
+  {
+    "id": 225,
+    "idKanji": [193],
+    "word": "味",
+    "reading": "あじ",
+    "category": "еда",
+    "translation": "вкус"
+  },
+  {
+    "id": 226,
+    "idKanji": null,
+    "word": "甘い",
+    "reading": "あまい",
+    "category": "еда",
+    "translation": "сладкий"
+  },
+  {
+    "id": 227,
+    "idKanji": null,
+    "word": "辛い",
+    "reading": "からい",
+    "category": "еда",
+    "translation": "острый"
+  },
+  {
+    "id": 228,
+    "idKanji": null,
+    "word": "酸っぱい",
+    "reading": "すっぱい",
+    "category": "еда",
+    "translation": "кислый"
+  },
+  {
+    "id": 229,
+    "idKanji": [56],
+    "word": "口",
+    "reading": "くち",
+    "category": "тело",
+    "translation": "рот"
+  },
+  {
+    "id": 230,
+    "idKanji": [57],
+    "word": "目",
+    "reading": "め",
+    "category": "тело",
+    "translation": "глаз"
+  },
+  {
+    "id": 231,
+    "idKanji": [58],
+    "word": "耳",
+    "reading": "みみ",
+    "category": "тело",
+    "translation": "ухо"
+  },
+  {
+    "id": 232,
+    "idKanji": [59],
+    "word": "手",
+    "reading": "て",
+    "category": "тело",
+    "translation": "рука"
+  },
+  {
+    "id": 233,
+    "idKanji": [137],
+    "word": "足",
+    "reading": "あし",
+    "category": "тело",
+    "translation": "нога"
+  },
+  {
+    "id": 234,
+    "idKanji": [144],
+    "word": "体",
+    "reading": "からだ",
+    "category": "тело",
+    "translation": "тело"
+  },
+  {
+    "id": 235,
+    "idKanji": [322],
+    "word": "頭",
+    "reading": "あたま",
+    "category": "тело",
+    "translation": "голова"
+  },
+  {
+    "id": 236,
+    "idKanji": [323],
+    "word": "顔",
+    "reading": "かお",
+    "category": "тело",
+    "translation": "лицо"
+  },
+  {
+    "id": 237,
+    "idKanji": [125],
+    "word": "首",
+    "reading": "くび",
+    "category": "тело",
+    "translation": "шея"
+  },
+  {
+    "id": 238,
+    "idKanji": [148],
+    "word": "鼻",
+    "reading": "はな",
+    "category": "тело",
+    "translation": "нос"
+  },
+  {
+    "id": 239,
+    "idKanji": [145],
+    "word": "指",
+    "reading": "ゆび",
+    "category": "тело",
+    "translation": "палец"
+  },
+  {
+    "id": 240,
+    "idKanji": [146],
+    "word": "背中",
+    "reading": "せなか",
+    "category": "тело",
+    "translation": "спина"
+  },
+  {
+    "id": 241,
+    "idKanji": [60],
+    "word": "心",
+    "reading": "こころ",
+    "category": "тело",
+    "translation": "сердце (в перен. смысле)"
+  },
+  {
+    "id": 242,
+    "idKanji": [309],
+    "word": "病気",
+    "reading": "びょうき",
+    "category": "здоровье",
+    "translation": "болезнь"
+  },
+  {
+    "id": 243,
+    "idKanji": [307],
+    "word": "薬",
+    "reading": "くすり",
+    "category": "здоровье",
+    "translation": "лекарство"
+  },
+  {
+    "id": 244,
+    "idKanji": [305],
+    "word": "医者",
+    "reading": "いしゃ",
+    "category": "здоровье",
+    "translation": "врач"
+  },
+  {
+    "id": 245,
+    "idKanji": [310],
+    "word": "病院",
+    "reading": "びょういん",
+    "category": "здоровье",
+    "translation": "больница"
+  },
+  {
+    "id": 246,
+    "idKanji": [311],
+    "word": "痛い",
+    "reading": "いたい",
+    "category": "здоровье",
+    "translation": "больно"
+  },
+  {
+    "id": 247,
+    "idKanji": [330],
+    "word": "熱",
+    "reading": "ねつ",
+    "category": "здоровье",
+    "translation": "жар"
+  },
+  {
+    "id": 248,
+    "idKanji": [308],
+    "word": "治る",
+    "reading": "なおる",
+    "category": "здоровье",
+    "translation": "выздоравливать"
+  },
+  {
+    "id": 249,
+    "idKanji": [267],
+    "word": "服",
+    "reading": "ふく",
+    "category": "одежда",
+    "translation": "одежда"
+  },
+  {
+    "id": 250,
+    "idKanji": [279],
+    "word": "着る",
+    "reading": "きる",
+    "category": "одежда",
+    "translation": "надевать (одежду)"
+  },
+  {
+    "id": 251,
+    "idKanji": null,
+    "word": "脱ぐ",
+    "reading": "ぬぐ",
+    "category": "одежда",
+    "translation": "снимать (одежду)"
+  },
+  {
+    "id": 252,
+    "idKanji": null,
+    "word": "靴",
+    "reading": "くつ",
+    "category": "одежда",
+    "translation": "обувь"
+  },
+  {
+    "id": 253,
+    "idKanji": null,
+    "word": "帽子",
+    "reading": "ぼうし",
+    "category": "одежда",
+    "translation": "шляпа"
+  },
+  {
+    "id": 254,
+    "idKanji": [205],
+    "word": "春",
+    "reading": "はる",
+    "category": "время",
+    "translation": "весна"
+  },
+  {
+    "id": 255,
+    "idKanji": [206],
+    "word": "夏",
+    "reading": "なつ",
+    "category": "время",
+    "translation": "лето"
+  },
+  {
+    "id": 256,
+    "idKanji": [207],
+    "word": "秋",
+    "reading": "あき",
+    "category": "время",
+    "translation": "осень"
+  },
+  {
+    "id": 257,
+    "idKanji": [208],
+    "word": "冬",
+    "reading": "ふゆ",
+    "category": "время",
+    "translation": "зима"
+  },
+  {
+    "id": 258,
+    "idKanji": [209],
+    "word": "朝",
+    "reading": "あさ",
+    "category": "время",
+    "translation": "утро"
+  },
+  {
+    "id": 259,
+    "idKanji": [210],
+    "word": "昼",
+    "reading": "ひる",
+    "category": "время",
+    "translation": "день"
+  },
+  {
+    "id": 260,
+    "idKanji": [212],
+    "word": "夜",
+    "reading": "よる",
+    "category": "время",
+    "translation": "ночь"
+  },
+  {
+    "id": 261,
+    "idKanji": [39],
+    "word": "夕方",
+    "reading": "ゆうがた",
+    "category": "время",
+    "translation": "вечер"
+  },
+  {
+    "id": 262,
+    "idKanji": [213],
+    "word": "午前",
+    "reading": "ごぜん",
+    "category": "время",
+    "translation": "до полудня"
+  },
+  {
+    "id": 263,
+    "idKanji": [213],
+    "word": "午後",
+    "reading": "ごご",
+    "category": "время",
+    "translation": "после полудня"
+  },
+  {
+    "id": 264,
+    "idKanji": [68],
+    "word": "年",
+    "reading": "とし",
+    "category": "время",
+    "translation": "год"
+  },
+  {
+    "id": 265,
+    "idKanji": [214],
+    "word": "週",
+    "reading": "しゅう",
+    "category": "время",
+    "translation": "неделя"
+  },
+  {
+    "id": 266,
+    "idKanji": [62],
+    "word": "時",
+    "reading": "とき",
+    "category": "время",
+    "translation": "время"
+  },
+  {
+    "id": 267,
+    "idKanji": [65],
+    "word": "分",
+    "reading": "ふん",
+    "category": "время",
+    "translation": "минута"
+  },
+  {
+    "id": 268,
+    "idKanji": [66],
+    "word": "今",
+    "reading": "いま",
+    "category": "время",
+    "translation": "сейчас"
+  },
+  {
+    "id": 269,
+    "idKanji": [222],
+    "word": "昨日",
+    "reading": "さくじつ",
+    "category": "время",
+    "translation": "вчера"
+  },
+  {
+    "id": 270,
+    "idKanji": [221],
+    "word": "去年",
+    "reading": "きょねん",
+    "category": "время",
+    "translation": "прошлый год"
+  },
+  {
+    "id": 271,
+    "idKanji": [217],
+    "word": "初めて",
+    "reading": "はじめて",
+    "category": "время",
+    "translation": "впервые"
+  },
+  {
+    "id": 272,
+    "idKanji": [218],
+    "word": "次",
+    "reading": "つぎ",
+    "category": "время",
+    "translation": "следующий"
+  },
+  {
+    "id": 273,
+    "idKanji": [427],
+    "word": "歳",
+    "reading": "さい",
+    "category": "время",
+    "translation": "годы (возраст)"
+  },
+  {
+    "id": 274,
+    "idKanji": [37],
+    "word": "中",
+    "reading": "なか",
+    "category": "пространство",
+    "translation": "внутри"
+  },
+  {
+    "id": 275,
+    "idKanji": [41],
+    "word": "内",
+    "reading": "うち",
+    "category": "пространство",
+    "translation": "внутри"
+  },
+  {
+    "id": 276,
+    "idKanji": [42],
+    "word": "外",
+    "reading": "そと",
+    "category": "пространство",
+    "translation": "снаружи"
+  },
+  {
+    "id": 277,
+    "idKanji": [43],
+    "word": "上",
+    "reading": "うえ",
+    "category": "пространство",
+    "translation": "верх"
+  },
+  {
+    "id": 278,
+    "idKanji": [44],
+    "word": "下",
+    "reading": "した",
+    "category": "пространство",
+    "translation": "низ"
+  },
+  {
+    "id": 279,
+    "idKanji": [46],
+    "word": "左",
+    "reading": "ひだり",
+    "category": "пространство",
+    "translation": "левый"
+  },
+  {
+    "id": 280,
+    "idKanji": [47],
+    "word": "右",
+    "reading": "みぎ",
+    "category": "пространство",
+    "translation": "правый"
+  },
+  {
+    "id": 281,
+    "idKanji": [79],
+    "word": "先",
+    "reading": "さき",
+    "category": "пространство",
+    "translation": "впереди"
+  },
+  {
+    "id": 282,
+    "idKanji": [162],
+    "word": "前",
+    "reading": "まえ",
+    "category": "пространство",
+    "translation": "перед"
+  },
+  {
+    "id": 283,
+    "idKanji": [164],
+    "word": "後",
+    "reading": "うしろ",
+    "category": "пространство",
+    "translation": "зад"
+  },
+  {
+    "id": 284,
+    "idKanji": [55],
+    "word": "近い",
+    "reading": "ちかい",
+    "category": "пространство",
+    "translation": "близкий"
+  },
+  {
+    "id": 285,
+    "idKanji": [413],
+    "word": "遠い",
+    "reading": "とおい",
+    "category": "пространство",
+    "translation": "далёкий"
+  },
+  {
+    "id": 286,
+    "idKanji": [133],
+    "word": "北",
+    "reading": "きた",
+    "category": "пространство",
+    "translation": "север"
+  },
+  {
+    "id": 287,
+    "idKanji": [134],
+    "word": "南",
+    "reading": "みなみ",
+    "category": "пространство",
+    "translation": "юг"
+  },
+  {
+    "id": 288,
+    "idKanji": [135],
+    "word": "西",
+    "reading": "にし",
+    "category": "пространство",
+    "translation": "запад"
+  },
+  {
+    "id": 289,
+    "idKanji": [136],
+    "word": "東",
+    "reading": "ひがし",
+    "category": "пространство",
+    "translation": "восток"
+  },
+  {
+    "id": 290,
+    "idKanji": [203],
+    "word": "横",
+    "reading": "よこ",
+    "category": "пространство",
+    "translation": "бок"
+  },
+  {
+    "id": 291,
+    "idKanji": [403],
+    "word": "側",
+    "reading": "がわ",
+    "category": "пространство",
+    "translation": "сторона"
+  },
+  {
+    "id": 292,
+    "idKanji": [402],
+    "word": "向こう",
+    "reading": "むこう",
+    "category": "пространство",
+    "translation": "та сторона"
+  },
+  {
+    "id": 293,
+    "idKanji": [404],
+    "word": "階",
+    "reading": "かい",
+    "category": "пространство",
+    "translation": "этаж"
+  },
+  {
+    "id": 294,
+    "idKanji": [73],
+    "word": "思う",
+    "reading": "おもう",
+    "category": "мысли",
+    "translation": "думать"
+  },
+  {
+    "id": 295,
+    "idKanji": [379],
+    "word": "考える",
+    "reading": "かんがえる",
+    "category": "мысли",
+    "translation": "обдумывать"
+  },
+  {
+    "id": 296,
+    "idKanji": [179],
+    "word": "知る",
+    "reading": "しる",
+    "category": "мысли",
+    "translation": "знать"
+  },
+  {
+    "id": 297,
+    "idKanji": [282],
+    "word": "忘れる",
+    "reading": "わすれる",
+    "category": "мысли",
+    "translation": "забывать"
+  },
+  {
+    "id": 298,
+    "idKanji": [375],
+    "word": "決める",
+    "reading": "きめる",
+    "category": "мысли",
+    "translation": "решать"
+  },
+  {
+    "id": 299,
+    "idKanji": [263],
+    "word": "選ぶ",
+    "reading": "えらぶ",
+    "category": "мысли",
+    "translation": "выбирать"
+  },
+  {
+    "id": 300,
+    "idKanji": [376],
+    "word": "現れる",
+    "reading": "あらわれる",
+    "category": "действия",
+    "translation": "появляться"
+  },
+  {
+    "id": 301,
+    "idKanji": [377],
+    "word": "引く",
+    "reading": "ひく",
+    "category": "действия",
+    "translation": "тянуть"
+  },
+  {
+    "id": 302,
+    "idKanji": [378],
+    "word": "写す",
+    "reading": "うつす",
+    "category": "действия",
+    "translation": "копировать"
+  },
+  {
+    "id": 303,
+    "idKanji": [380],
+    "word": "集める",
+    "reading": "あつめる",
+    "category": "действия",
+    "translation": "собирать"
+  },
+  {
+    "id": 304,
+    "idKanji": [381],
+    "word": "進む",
+    "reading": "すすむ",
+    "category": "действия",
+    "translation": "продвигаться"
+  },
+  {
+    "id": 305,
+    "idKanji": [382],
+    "word": "落ちる",
+    "reading": "おちる",
+    "category": "действия",
+    "translation": "падать"
+  },
+  {
+    "id": 306,
+    "idKanji": [383],
+    "word": "続く",
+    "reading": "つづく",
+    "category": "действия",
+    "translation": "продолжаться"
+  },
+  {
+    "id": 307,
+    "idKanji": [315],
+    "word": "結ぶ",
+    "reading": "むすぶ",
+    "category": "действия",
+    "translation": "связывать"
+  },
+  {
+    "id": 308,
+    "idKanji": [348],
+    "word": "転ぶ",
+    "reading": "ころぶ",
+    "category": "действия",
+    "translation": "падать (спотыкаться)"
+  },
+  {
+    "id": 309,
+    "idKanji": [280],
+    "word": "登る",
+    "reading": "のぼる",
+    "category": "действия",
+    "translation": "взбираться"
+  },
+  {
+    "id": 310,
+    "idKanji": [371],
+    "word": "残る",
+    "reading": "のこる",
+    "category": "действия",
+    "translation": "оставаться"
+  },
+  {
+    "id": 311,
+    "idKanji": [372],
+    "word": "置く",
+    "reading": "おく",
+    "category": "действия",
+    "translation": "класть"
+  },
+  {
+    "id": 312,
+    "idKanji": [247],
+    "word": "置く",
+    "reading": "おく",
+    "category": "действия",
+    "translation": "помещать"
+  },
+  {
+    "id": 313,
+    "idKanji": [273],
+    "word": "留める",
+    "reading": "とめる",
+    "category": "действия",
+    "translation": "останавливать"
+  },
+  {
+    "id": 314,
+    "idKanji": [140],
+    "word": "止まる",
+    "reading": "とまる",
+    "category": "действия",
+    "translation": "останавливаться"
+  },
+  {
+    "id": 315,
+    "idKanji": [269],
+    "word": "組む",
+    "reading": "くむ",
+    "category": "действия",
+    "translation": "составлять"
+  },
+  {
+    "id": 316,
+    "idKanji": [362],
+    "word": "配る",
+    "reading": "くばる",
+    "category": "действия",
+    "translation": "распределять"
+  },
+  {
+    "id": 317,
+    "idKanji": [364],
+    "word": "願う",
+    "reading": "ねがう",
+    "category": "действия",
+    "translation": "просить"
+  },
+  {
+    "id": 318,
+    "idKanji": [368],
+    "word": "失う",
+    "reading": "うしなう",
+    "category": "действия",
+    "translation": "терять"
+  },
+  {
+    "id": 319,
+    "idKanji": [374],
+    "word": "遊ぶ",
+    "reading": "あそぶ",
+    "category": "действия",
+    "translation": "играть"
+  },
+  {
+    "id": 320,
+    "idKanji": [258],
+    "word": "動く",
+    "reading": "うごく",
+    "category": "действия",
+    "translation": "двигаться"
+  },
+  {
+    "id": 321,
+    "idKanji": [257],
+    "word": "運ぶ",
+    "reading": "はこぶ",
+    "category": "действия",
+    "translation": "переносить"
+  },
+  {
+    "id": 322,
+    "idKanji": [262],
+    "word": "打つ",
+    "reading": "うつ",
+    "category": "действия",
+    "translation": "ударять"
+  },
+  {
+    "id": 323,
+    "idKanji": [227],
+    "word": "伝える",
+    "reading": "つたえる",
+    "category": "коммуникация",
+    "translation": "передавать"
+  },
+  {
+    "id": 324,
+    "idKanji": [232],
+    "word": "信じる",
+    "reading": "しんじる",
+    "category": "коммуникация",
+    "translation": "верить"
+  },
+  {
+    "id": 325,
+    "idKanji": [233],
+    "word": "説明",
+    "reading": "せつめい",
+    "category": "коммуникация",
+    "translation": "объяснение"
+  },
+  {
+    "id": 326,
+    "idKanji": [271],
+    "word": "質問",
+    "reading": "しつもん",
+    "category": "коммуникация",
+    "translation": "вопрос"
+  },
+  {
+    "id": 327,
+    "idKanji": [272],
+    "word": "答える",
+    "reading": "こたえる",
+    "category": "коммуникация",
+    "translation": "отвечать"
+  },
+  {
+    "id": 328,
+    "idKanji": [274],
+    "word": "辞める",
+    "reading": "やめる",
+    "category": "действия",
+    "translation": "уходить с работы"
+  },
+  {
+    "id": 329,
+    "idKanji": [286],
+    "word": "作る",
+    "reading": "つくる",
+    "category": "действия",
+    "translation": "создавать"
+  },
+  {
+    "id": 330,
+    "idKanji": [292],
+    "word": "用いる",
+    "reading": "もちいる",
+    "category": "действия",
+    "translation": "использовать"
+  },
+  {
+    "id": 331,
+    "idKanji": [406],
+    "word": "注ぐ",
+    "reading": "そそぐ",
+    "category": "действия",
+    "translation": "наливать"
+  },
+  {
+    "id": 332,
+    "idKanji": [407],
+    "word": "計る",
+    "reading": "はかる",
+    "category": "действия",
+    "translation": "измерять"
+  },
+  {
+    "id": 333,
+    "idKanji": [235],
+    "word": "出発",
+    "reading": "しゅっぱつ",
+    "category": "путешествия",
+    "translation": "отправление"
+  },
+  {
+    "id": 334,
+    "idKanji": [123],
+    "word": "旅行",
+    "reading": "りょこう",
+    "category": "путешествия",
+    "translation": "путешествие"
+  },
+  {
+    "id": 335,
+    "idKanji": [358],
+    "word": "泊まる",
+    "reading": "とまる",
+    "category": "путешествия",
+    "translation": "останавливаться (в гостинице)"
+  },
+  {
+    "id": 336,
+    "idKanji": [357],
+    "word": "切符",
+    "reading": "きっぷ",
+    "category": "путешествия",
+    "translation": "билет"
+  },
+  {
+    "id": 337,
+    "idKanji": [356],
+    "word": "荷物",
+    "reading": "にもつ",
+    "category": "путешествия",
+    "translation": "багаж"
+  },
+  {
+    "id": 338,
+    "idKanji": [355],
+    "word": "通る",
+    "reading": "とおる",
+    "category": "транспорт",
+    "translation": "проходить"
+  },
+  {
+    "id": 339,
+    "idKanji": [226],
+    "word": "映画",
+    "reading": "えいが",
+    "category": "развлечения",
+    "translation": "кино"
+  },
+  {
+    "id": 340,
+    "idKanji": [225],
+    "word": "絵画",
+    "reading": "かいが",
+    "category": "развлечения",
+    "translation": "живопись"
+  },
+  {
+    "id": 341,
+    "idKanji": [188],
+    "word": "絵",
+    "reading": "え",
+    "category": "развлечения",
+    "translation": "картина"
+  },
+  {
+    "id": 342,
+    "idKanji": [278],
+    "word": "歌",
+    "reading": "うた",
+    "category": "развлечения",
+    "translation": "песня"
+  },
+  {
+    "id": 343,
+    "idKanji": null,
+    "word": "音楽",
+    "reading": "おんがく",
+    "category": "развлечения",
+    "translation": "музыка"
+  },
+  {
+    "id": 344,
+    "idKanji": [387],
+    "word": "祭り",
+    "reading": "まつり",
+    "category": "развлечения",
+    "translation": "фестиваль"
+  },
+  {
+    "id": 345,
+    "idKanji": [385],
+    "word": "神様",
+    "reading": "かみさま",
+    "category": "религия",
+    "translation": "бог"
+  },
+  {
+    "id": 346,
+    "idKanji": [61],
+    "word": "寺",
+    "reading": "てら",
+    "category": "религия",
+    "translation": "храм"
+  },
+  {
+    "id": 347,
+    "idKanji": [90],
+    "word": "公園",
+    "reading": "こうえん",
+    "category": "места",
+    "translation": "парк"
+  },
+  {
+    "id": 348,
+    "idKanji": [392],
+    "word": "庭園",
+    "reading": "ていえん",
+    "category": "места",
+    "translation": "сад"
+  },
+  {
+    "id": 349,
+    "idKanji": [391],
+    "word": "庭",
+    "reading": "にわ",
+    "category": "места",
+    "translation": "сад (двор)"
+  },
+  {
+    "id": 350,
+    "idKanji": [390],
+    "word": "図書館",
+    "reading": "としょかん",
+    "category": "места",
+    "translation": "библиотека"
+  },
+  {
+    "id": 351,
+    "idKanji": [393],
+    "word": "郵便局",
+    "reading": "ゆうびんきょく",
+    "category": "места",
+    "translation": "почта"
+  },
+  {
+    "id": 351,
+    "idKanji": [398],
+    "word": "都",
+    "reading": "と",
+    "category": "места",
+    "translation": "столица"
+  },
+  {
+    "id": 352,
+    "idKanji": [399],
+    "word": "県",
+    "reading": "けん",
+    "category": "места",
+    "translation": "префектура"
+  },
+  {
+    "id": 353,
+    "idKanji": [400],
+    "word": "区",
+    "reading": "く",
+    "category": "места",
+    "translation": "район"
+  },
+  {
+    "id": 354,
+    "idKanji": [397],
+    "word": "州",
+    "reading": "しゅう",
+    "category": "места",
+    "translation": "штат"
+  },
+  {
+    "id": 355,
+    "idKanji": [224],
+    "word": "平和",
+    "reading": "へいわ",
+    "category": "общество",
+    "translation": "мир"
+  },
+  {
+    "id": 356,
+    "idKanji": [177],
+    "word": "和食",
+    "reading": "わしょく",
+    "category": "общество",
+    "translation": "японская еда"
+  },
+  {
+    "id": 357,
+    "idKanji": [178],
+    "word": "洋食",
+    "reading": "ようしょく",
+    "category": "общество",
+    "translation": "европейская еда"
+  },
+  {
+    "id": 358,
+    "idKanji": [182],
+    "word": "英語",
+    "reading": "えいご",
+    "category": "язык",
+    "translation": "английский язык"
+  },
+  {
+    "id": 359,
+    "idKanji": [186],
+    "word": "漢字",
+    "reading": "かんじ",
+    "category": "язык",
+    "translation": "иероглифы"
+  },
+  {
+    "id": 360,
+    "idKanji": [75],
+    "word": "日本語",
+    "reading": "にほんご",
+    "category": "язык",
+    "translation": "японский язык"
+  },
+  {
+    "id": 361,
+    "idKanji": [254],
+    "word": "経験",
+    "reading": "けいけん",
+    "category": "понятия",
+    "translation": "опыт"
+  },
+  {
+    "id": 362,
+    "idKanji": [250],
+    "word": "試験",
+    "reading": "しけん",
+    "category": "образование",
+    "translation": "экзамен"
+  },
+  {
+    "id": 363,
+    "idKanji": [259],
+    "word": "テスト",
+    "reading": "てすと",
+    "category": "образование",
+    "translation": "тест"
+  },
+  {
+    "id": 364,
+    "idKanji": [248],
+    "word": "問題",
+    "reading": "もんだい",
+    "category": "образование",
+    "translation": "вопрос/проблема"
+  },
+  {
+    "id": 365,
+    "idKanji": [249],
+    "word": "経過",
+    "reading": "けいか",
+    "category": "понятия",
+    "translation": "процесс"
+  },
+  {
+    "id": 366,
+    "idKanji": [251],
+    "word": "受ける",
+    "reading": "うける",
+    "category": "действия",
+    "translation": "получать"
+  },
+  {
+    "id": 367,
+    "idKanji": [252],
+    "word": "授ける",
+    "reading": "さずける",
+    "category": "действия",
+    "translation": "даровать"
+  },
+  {
+    "id": 368,
+    "idKanji": [255],
+    "word": "卒業",
+    "reading": "そつぎょう",
+    "category": "образование",
+    "translation": "выпуск"
+  },
+  {
+    "id": 369,
+    "idKanji": [256],
+    "word": "式",
+    "reading": "しき",
+    "category": "события",
+    "translation": "церемония"
+  },
+  {
+    "id": 370,
+    "idKanji": [260],
+    "word": "合格",
+    "reading": "ごうかく",
+    "category": "образование",
+    "translation": "сдача экзамена"
+  },
+  {
+    "id": 371,
+    "idKanji": [266],
+    "word": "練習",
+    "reading": "れんしゅう",
+    "category": "образование",
+    "translation": "практика"
+  },
+  {
+    "id": 372,
+    "idKanji": [184],
+    "word": "勉強",
+    "reading": "べんきょう",
+    "category": "образование",
+    "translation": "учёба"
+  },
+  {
+    "id": 373,
+    "idKanji": [299],
+    "word": "研究",
+    "reading": "けんきゅう",
+    "category": "образование",
+    "translation": "исследование"
+  },
+  {
+    "id": 374,
+    "idKanji": [300],
+    "word": "研ぐ",
+    "reading": "とぐ",
+    "category": "действия",
+    "translation": "точить"
+  },
+  {
+    "id": 375,
+    "idKanji": [298],
+    "word": "方法",
+    "reading": "ほうほう",
+    "category": "понятия",
+    "translation": "метод"
+  },
+  {
+    "id": 376,
+    "idKanji": [195],
+    "word": "理由",
+    "reading": "りゆう",
+    "category": "понятия",
+    "translation": "причина"
+  },
+  {
+    "id": 377,
+    "idKanji": [196],
+    "word": "由緒",
+    "reading": "ゆいしょ",
+    "category": "понятия",
+    "translation": "происхождение"
+  },
+  {
+    "id": 378,
+    "idKanji": [194],
+    "word": "料金",
+    "reading": "りょうきん",
+    "category": "торговля",
+    "translation": "плата"
+  },
+  {
+    "id": 379,
+    "idKanji": [190],
+    "word": "反対",
+    "reading": "はんたい",
+    "category": "понятия",
+    "translation": "противоположность"
+  },
+  {
+    "id": 380,
+    "idKanji": [87],
+    "word": "対する",
+    "reading": "たいする",
+    "category": "понятия",
+    "translation": "относиться к"
+  },
+  {
+    "id": 381,
+    "idKanji": [228],
+    "word": "目的",
+    "reading": "もくてき",
+    "category": "понятия",
+    "translation": "цель"
+  },
+  {
+    "id": 382,
+    "idKanji": [229],
+    "word": "連れる",
+    "reading": "つれる",
+    "category": "действия",
+    "translation": "брать с собой"
+  },
+  {
+    "id": 383,
+    "idKanji": [230],
+    "word": "絡む",
+    "reading": "からむ",
+    "category": "действия",
+    "translation": "запутываться"
+  },
+  {
+    "id": 384,
+    "idKanji": [231],
+    "word": "接する",
+    "reading": "せっする",
+    "category": "действия",
+    "translation": "соприкасаться"
+  },
+  {
+    "id": 385,
+    "idKanji": [234],
+    "word": "面白い",
+    "reading": "おもしろい",
+    "category": "эмоции",
+    "translation": "интересный"
+  },
+  {
+    "id": 386,
+    "idKanji": [236],
+    "word": "表現",
+    "reading": "ひょうげん",
+    "category": "коммуникация",
+    "translation": "выражение"
+  },
+  {
+    "id": 387,
+    "idKanji": [245],
+    "word": "変化",
+    "reading": "へんか",
+    "category": "понятия",
+    "translation": "изменение"
+  },
+  {
+    "id": 388,
+    "idKanji": [215],
+    "word": "末",
+    "reading": "すえ",
+    "category": "время",
+    "translation": "конец"
+  },
+  {
+    "id": 389,
+    "idKanji": [216],
+    "word": "期間",
+    "reading": "きかん",
+    "category": "время",
+    "translation": "период"
+  },
+  {
+    "id": 390,
+    "idKanji": [219],
+    "word": "曜日",
+    "reading": "ようび",
+    "category": "время",
+    "translation": "день недели"
+  },
+  {
+    "id": 391,
+    "idKanji": [220],
+    "word": "昔",
+    "reading": "むかし",
+    "category": "время",
+    "translation": "давно"
+  },
+  {
+    "id": 392,
+    "idKanji": [223],
+    "word": "季節",
+    "reading": "きせつ",
+    "category": "время",
+    "translation": "сезон"
+  },
+  {
+    "id": 393,
+    "idKanji": [114],
+    "word": "元気",
+    "reading": "げんき",
+    "category": "здоровье",
+    "translation": "здоровье/энергия"
+  },
+  {
+    "id": 394,
+    "idKanji": [116],
+    "word": "気持ち",
+    "reading": "きもち",
+    "category": "эмоции",
+    "translation": "чувство"
+  },
+  {
+    "id": 395,
+    "idKanji": [312],
+    "word": "活動",
+    "reading": "かつどう",
+    "category": "действия",
+    "translation": "активность"
+  },
+  {
+    "id": 396,
+    "idKanji": [313],
+    "word": "両方",
+    "reading": "りょうほう",
+    "category": "понятия",
+    "translation": "обе стороны"
+  },
+  {
+    "id": 397,
+    "idKanji": [314],
+    "word": "親切",
+    "reading": "しんせつ",
+    "category": "характер",
+    "translation": "доброта"
+  },
+  {
+    "id": 398,
+    "idKanji": [316],
+    "word": "結婚",
+    "reading": "けっこん",
+    "category": "отношения",
+    "translation": "брак"
+  },
+  {
+    "id": 399,
+    "idKanji": [319],
+    "word": "関係",
+    "reading": "かんけい",
+    "category": "отношения",
+    "translation": "отношения"
+  },
+  {
+    "id": 400,
+    "idKanji": [320],
+    "word": "関心",
+    "reading": "かんしん",
+    "category": "эмоции",
+    "translation": "интерес"
+  },
+
+  {
+    "id": 401,
+    "idKanji": [321],
+    "word": "教育",
+    "reading": "きょういく",
+    "category": "образование",
+    "translation": "образование"
+  },
+  {
+    "id": 402,
+    "idKanji": [324],
+    "word": "体育",
+    "reading": "たいいく",
+    "category": "спорт",
+    "translation": "физкультура"
+  },
+  {
+    "id": 403,
+    "idKanji": [325],
+    "word": "形式",
+    "reading": "けいしき",
+    "category": "понятия",
+    "translation": "форма"
+  },
+  {
+    "id": 404,
+    "idKanji": [326],
+    "word": "成功",
+    "reading": "せいこう",
+    "category": "понятия",
+    "translation": "успех"
+  },
+  {
+    "id": 405,
+    "idKanji": [332],
+    "word": "氷水",
+    "reading": "こおりみず",
+    "category": "еда",
+    "translation": "ледяная вода"
+  },
+  {
+    "id": 406,
+    "idKanji": [337],
+    "word": "降水",
+    "reading": "こうすい",
+    "category": "погода",
+    "translation": "осадки"
+  },
+  {
+    "id": 407,
+    "idKanji": [338],
+    "word": "温度",
+    "reading": "おんど",
+    "category": "погода",
+    "translation": "температура"
+  },
+  {
+    "id": 408,
+    "idKanji": [339],
+    "word": "世界",
+    "reading": "せかい",
+    "category": "география",
+    "translation": "мир"
+  },
+  {
+    "id": 409,
+    "idKanji": [340],
+    "word": "境界",
+    "reading": "きょうかい",
+    "category": "география",
+    "translation": "граница"
+  },
+  {
+    "id": 410,
+    "idKanji": [341],
+    "word": "地球",
+    "reading": "ちきゅう",
+    "category": "география",
+    "translation": "Земля"
+  },
+  {
+    "id": 411,
+    "idKanji": [342],
+    "word": "地図",
+    "reading": "ちず",
+    "category": "география",
+    "translation": "карта"
+  },
+  {
+    "id": 412,
+    "idKanji": [360],
+    "word": "贈り物",
+    "reading": "おくりもの",
+    "category": "общество",
+    "translation": "подарок"
+  },
+  {
+    "id": 413,
+    "idKanji": [366],
+    "word": "相対",
+    "reading": "そうたい",
+    "category": "понятия",
+    "translation": "относительный"
+  },
+  {
+    "id": 414,
+    "idKanji": [367],
+    "word": "礼儀",
+    "reading": "れいぎ",
+    "category": "общество",
+    "translation": "этикет"
+  },
+  {
+    "id": 415,
+    "idKanji": [373],
+    "word": "調査",
+    "reading": "ちょうさ",
+    "category": "действия",
+    "translation": "расследование"
+  },
+  {
+    "id": 416,
+    "idKanji": [388],
+    "word": "際立つ",
+    "reading": "きわだつ",
+    "category": "действия",
+    "translation": "выделяться"
+  },
+  {
+    "id": 417,
+    "idKanji": [389],
+    "word": "技術",
+    "reading": "ぎじゅつ",
+    "category": "работа",
+    "translation": "технология"
+  },
+  {
+    "id": 418,
+    "idKanji": [394],
+    "word": "記録",
+    "reading": "きろく",
+    "category": "документы",
+    "translation": "запись"
+  },
+  {
+    "id": 419,
+    "idKanji": [395],
+    "word": "急ぐ",
+    "reading": "いそぐ",
+    "category": "действия",
+    "translation": "торопиться"
+  },
+  {
+    "id": 420,
+    "idKanji": [396],
+    "word": "定める",
+    "reading": "さだめる",
+    "category": "действия",
+    "translation": "устанавливать"
+  },
+  {
+    "id": 421,
+    "idKanji": [405],
+    "word": "意味",
+    "reading": "いみ",
+    "category": "язык",
+    "translation": "значение"
+  },
+  {
+    "id": 422,
+    "idKanji": [408],
+    "word": "信号",
+    "reading": "しんごう",
+    "category": "транспорт",
+    "translation": "сигнал"
+  },
+  {
+    "id": 423,
+    "idKanji": [409],
+    "word": "特別",
+    "reading": "とくべつ",
+    "category": "понятия",
+    "translation": "особенный"
+  },
+  {
+    "id": 424,
+    "idKanji": [410],
+    "word": "別れる",
+    "reading": "わかれる",
+    "category": "действия",
+    "translation": "расставаться"
+  },
+  {
+    "id": 425,
+    "idKanji": [411],
+    "word": "必要",
+    "reading": "ひつよう",
+    "category": "понятия",
+    "translation": "необходимость"
+  },
+  {
+    "id": 426,
+    "idKanji": [412],
+    "word": "要点",
+    "reading": "ようてん",
+    "category": "понятия",
+    "translation": "ключевой момент"
+  },
+  {
+    "id": 427,
+    "idKanji": [414],
+    "word": "同じ",
+    "reading": "おなじ",
+    "category": "понятия",
+    "translation": "одинаковый"
+  },
+  {
+    "id": 428,
+    "idKanji": [415],
+    "word": "便利",
+    "reading": "べんり",
+    "category": "понятия",
+    "translation": "удобный"
+  },
+  {
+    "id": 429,
+    "idKanji": [416],
+    "word": "利益",
+    "reading": "りえき",
+    "category": "экономика",
+    "translation": "прибыль"
+  },
+  {
+    "id": 430,
+    "idKanji": [417],
+    "word": "雑誌",
+    "reading": "ざっし",
+    "category": "медиа",
+    "translation": "журнал"
+  },
+  {
+    "id": 431,
+    "idKanji": [419],
+    "word": "最高",
+    "reading": "さいこう",
+    "category": "понятия",
+    "translation": "наивысший"
+  },
+  {
+    "id": 432,
+    "idKanji": [420],
+    "word": "以上",
+    "reading": "いじょう",
+    "category": "понятия",
+    "translation": "более"
+  },
+  {
+    "id": 433,
+    "idKanji": [421],
+    "word": "第一",
+    "reading": "だいいち",
+    "category": "числа",
+    "translation": "первый"
+  },
+  {
+    "id": 434,
+    "idKanji": [422],
+    "word": "不安",
+    "reading": "ふあん",
+    "category": "эмоции",
+    "translation": "беспокойство"
+  },
+  {
+    "id": 435,
+    "idKanji": [423],
+    "word": "非常",
+    "reading": "ひじょう",
+    "category": "понятия",
+    "translation": "чрезвычайный"
+  },
+  {
+    "id": 436,
+    "idKanji": [424],
+    "word": "無料",
+    "reading": "むりょう",
+    "category": "торговля",
+    "translation": "бесплатный"
+  },
+  {
+    "id": 437,
+    "idKanji": [425],
+    "word": "全部",
+    "reading": "ぜんぶ",
+    "category": "понятия",
+    "translation": "все"
+  },
+  {
+    "id": 438,
+    "idKanji": [426],
+    "word": "自然",
+    "reading": "しぜん",
+    "category": "природа",
+    "translation": "природа"
+  },
+  {
+    "id": 439,
+    "idKanji": [428],
+    "word": "達成",
+    "reading": "たっせい",
+    "category": "действия",
+    "translation": "достижение"
+  },
+  {
+    "id": 440,
+    "idKanji": [301],
+    "word": "比較",
+    "reading": "ひかく",
+    "category": "действия",
+    "translation": "сравнение"
+  },
+  {
+    "id": 441,
+    "idKanji": [302],
+    "word": "皆さん",
+    "reading": "みなさん",
+    "category": "люди",
+    "translation": "все (уважительно)"
+  },
+  {
+    "id": 442,
+    "idKanji": [303],
+    "word": "専門",
+    "reading": "せんもん",
+    "category": "работа",
+    "translation": "специальность"
+  },
+  {
+    "id": 443,
+    "idKanji": [306],
+    "word": "作者",
+    "reading": "さくしゃ",
+    "category": "люди",
+    "translation": "автор"
+  },
+  {
+    "id": 444,
+    "idKanji": [295],
+    "word": "数字",
+    "reading": "すうじ",
+    "category": "числа",
+    "translation": "цифра"
+  },
+  {
+    "id": 445,
+    "idKanji": [296],
+    "word": "点",
+    "reading": "てん",
+    "category": "понятия",
+    "translation": "точка"
+  },
+  {
+    "id": 446,
+    "idKanji": [297],
+    "word": "単語",
+    "reading": "たんご",
+    "category": "язык",
+    "translation": "слово (в словаре)"
+  },
+  {
+    "id": 447,
+    "idKanji": [268],
+    "word": "制度",
+    "reading": "せいど",
+    "category": "общество",
+    "translation": "система"
+  },
+  {
+    "id": 448,
+    "idKanji": [270],
+    "word": "台所",
+    "reading": "だいどころ",
+    "category": "дом",
+    "translation": "кухня"
+  },
+  {
+    "id": 449,
+    "idKanji": [283],
+    "word": "付く",
+    "reading": "つく",
+    "category": "действия",
+    "translation": "прикрепляться"
+  },
+  {
+    "id": 450,
+    "idKanji": [284],
+    "word": "事件",
+    "reading": "じけん",
+    "category": "общество",
+    "translation": "инцидент"
+  },
+  {
+    "id": 451,
+    "idKanji": [285],
+    "word": "仕事",
+    "reading": "しごと",
+    "category": "работа",
+    "translation": "работа"
+  },
+  {
+    "id": 452,
+    "idKanji": [288],
+    "word": "個人",
+    "reading": "こじん",
+    "category": "люди",
+    "translation": "индивидуум"
+  },
+  {
+    "id": 453,
+    "idKanji": [295],
+    "word": "数学",
+    "reading": "すうがく",
+    "category": "образование",
+    "translation": "математика"
+  },
+  {
+    "id": 454,
+    "idKanji": [101],
+    "word": "番号",
+    "reading": "ばんごう",
+    "category": "числа",
+    "translation": "номер"
+  },
+  {
+    "id": 455,
+    "idKanji": [69],
+    "word": "回る",
+    "reading": "まわる",
+    "category": "действия",
+    "translation": "вращаться"
+  },
+  {
+    "id": 456,
+    "idKanji": [70],
+    "word": "毎日",
+    "reading": "まいにち",
+    "category": "время",
+    "translation": "каждый день"
+  },
+  {
+    "id": 457,
+    "idKanji": [74],
+    "word": "言う",
+    "reading": "いう",
+    "category": "коммуникация",
+    "translation": "говорить"
+  },
+  {
+    "id": 458,
+    "idKanji": [77],
+    "word": "会う",
+    "reading": "あう",
+    "category": "действия",
+    "translation": "встречать"
+  },
+  {
+    "id": 459,
+    "idKanji": [78],
+    "word": "生活",
+    "reading": "せいかつ",
+    "category": "общество",
+    "translation": "жизнь"
+  },
+  {
+    "id": 460,
+    "idKanji": [81],
+    "word": "友人",
+    "reading": "ゆうじん",
+    "category": "люди",
+    "translation": "друг"
+  },
+  {
+    "id": 461,
+    "idKanji": [89],
+    "word": "文化",
+    "reading": "ぶんか",
+    "category": "общество",
+    "translation": "культура"
+  },
+  {
+    "id": 462,
+    "idKanji": [112],
+    "word": "電気",
+    "reading": "でんき",
+    "category": "технологии",
+    "translation": "электричество"
+  },
+  {
+    "id": 463,
+    "idKanji": [131],
+    "word": "玉ねぎ",
+    "reading": "たまねぎ",
+    "category": "еда",
+    "translation": "лук"
+  },
+  {
+    "id": 464,
+    "idKanji": [141],
+    "word": "正しい",
+    "reading": "ただしい",
+    "category": "понятия",
+    "translation": "правильный"
+  },
+  {
+    "id": 465,
+    "idKanji": [147],
+    "word": "自分",
+    "reading": "じぶん",
+    "category": "местоимения",
+    "translation": "сам"
+  },
+  {
+    "id": 466,
+    "idKanji": [155],
+    "word": "太る",
+    "reading": "ふとる",
+    "category": "здоровье",
+    "translation": "толстеть"
+  },
+  {
+    "id": 467,
+    "idKanji": [161],
+    "word": "有名",
+    "reading": "ゆうめい",
+    "category": "понятия",
+    "translation": "известный"
+  },
+  {
+    "id": 468,
+    "idKanji": [163],
+    "word": "名字",
+    "reading": "みょうじ",
+    "category": "люди",
+    "translation": "фамилия"
+  },
+  {
+    "id": 469,
+    "idKanji": [165],
+    "word": "家族",
+    "reading": "かぞく",
+    "category": "семья",
+    "translation": "семья"
+  },
+  {
+    "id": 470,
+    "idKanji": [166],
+    "word": "様子",
+    "reading": "ようす",
+    "category": "понятия",
+    "translation": "ситуация"
+  },
+  {
+    "id": 471,
+    "idKanji": [167],
+    "word": "主要",
+    "reading": "しゅよう",
+    "category": "понятия",
+    "translation": "главный"
+  },
+  {
+    "id": 472,
+    "idKanji": [168],
+    "word": "未来",
+    "reading": "みらい",
+    "category": "время",
+    "translation": "будущее"
+  },
+  {
+    "id": 473,
+    "idKanji": [173],
+    "word": "住所",
+    "reading": "じゅうしょ",
+    "category": "места",
+    "translation": "адрес"
+  },
+  {
+    "id": 474,
+    "idKanji": [175],
+    "word": "部分",
+    "reading": "ぶぶん",
+    "category": "понятия",
+    "translation": "часть"
+  },
+  {
+    "id": 475,
+    "idKanji": [176],
+    "word": "屋上",
+    "reading": "おくじょう",
+    "category": "места",
+    "translation": "крыша"
+  },
+  {
+    "id": 476,
+    "idKanji": [180],
+    "word": "科学",
+    "reading": "かがく",
+    "category": "образование",
+    "translation": "наука"
+  },
+  {
+    "id": 477,
+    "idKanji": [197],
+    "word": "色々",
+    "reading": "いろいろ",
+    "category": "понятия",
+    "translation": "различный"
+  },
+  {
+    "id": 478,
+    "idKanji": [211],
+    "word": "晩ご飯",
+    "reading": "ばんごはん",
+    "category": "еда",
+    "translation": "ужин"
+  },
+  {
+    "id": 479,
+    "idKanji": [226],
+    "word": "映す",
+    "reading": "うつす",
+    "category": "действия",
+    "translation": "отражать"
+  },
+  {
+    "id": 480,
+    "idKanji": [227],
+    "word": "伝統",
+    "reading": "でんとう",
+    "category": "культура",
+    "translation": "традиция"
+  },
+  {
+    "id": 481,
+    "idKanji": [228],
+    "word": "的確",
+    "reading": "てきかく",
+    "category": "понятия",
+    "translation": "точный"
+  },
+  {
+    "id": 482,
+    "idKanji": [229],
+    "word": "連絡",
+    "reading": "れんらく",
+    "category": "коммуникация",
+    "translation": "связь"
+  },
+  {
+    "id": 483,
+    "idKanji": [230],
+    "word": "連想",
+    "reading": "れんそう",
+    "category": "мысли",
+    "translation": "ассоциация"
+  },
+  {
+    "id": 484,
+    "idKanji": [231],
+    "word": "接続",
+    "reading": "せつぞく",
+    "category": "технологии",
+    "translation": "соединение"
+  },
+  {
+    "id": 485,
+    "idKanji": [232],
+    "word": "信用",
+    "reading": "しんよう",
+    "category": "общество",
+    "translation": "доверие"
+  },
+  {
+    "id": 486,
+    "idKanji": [233],
+    "word": "説得",
+    "reading": "せっとく",
+    "category": "коммуникация",
+    "translation": "убеждение"
+  },
+  {
+    "id": 487,
+    "idKanji": [234],
+    "word": "面接",
+    "reading": "めんせつ",
+    "category": "работа",
+    "translation": "собеседование"
+  },
+  {
+    "id": 488,
+    "idKanji": [235],
+    "word": "発音",
+    "reading": "はつおん",
+    "category": "язык",
+    "translation": "произношение"
+  },
+  {
+    "id": 489,
+    "idKanji": [236],
+    "word": "表現",
+    "reading": "ひょうげん",
+    "category": "язык",
+    "translation": "выражение"
+  },
+  {
+    "id": 490,
+    "idKanji": [237],
+    "word": "速度",
+    "reading": "そくど",
+    "category": "понятия",
+    "translation": "скорость"
+  },
+  {
+    "id": 491,
+    "idKanji": [238],
+    "word": "遅刻",
+    "reading": "ちこく",
+    "category": "время",
+    "translation": "опоздание"
+  },
+  {
+    "id": 492,
+    "idKanji": [239],
+    "word": "暗記",
+    "reading": "あんき",
+    "category": "образование",
+    "translation": "запоминание"
+  },
+  {
+    "id": 493,
+    "idKanji": [240],
+    "word": "悪口",
+    "reading": "わるくち",
+    "category": "коммуникация",
+    "translation": "оскорбление"
+  },
+  {
+    "id": 494,
+    "idKanji": [241],
+    "word": "忙しさ",
+    "reading": "いそがしさ",
+    "category": "состояния",
+    "translation": "занятость"
+  },
+  {
+    "id": 495,
+    "idKanji": [242],
+    "word": "静寂",
+    "reading": "せいじゃく",
+    "category": "состояния",
+    "translation": "тишина"
+  },
+  {
+    "id": 496,
+    "idKanji": [243],
+    "word": "低気圧",
+    "reading": "ていきあつ",
+    "category": "погода",
+    "translation": "низкое давление"
+  },
+  {
+    "id": 497,
+    "idKanji": [244],
+    "word": "短期",
+    "reading": "たんき",
+    "category": "время",
+    "translation": "короткий период"
+  },
+  {
+    "id": 498,
+    "idKanji": [245],
+    "word": "変わる",
+    "reading": "かわる",
+    "category": "действия",
+    "translation": "меняться"
+  },
+  {
+    "id": 499,
+    "idKanji": [246],
+    "word": "重要",
+    "reading": "じゅうよう",
+    "category": "понятия",
+    "translation": "важный"
+  },
+  {
+    "id": 500,
+    "idKanji": [247],
+    "word": "置き場",
+    "reading": "おきば",
+    "category": "места",
+    "translation": "место для хранения"
+  },
+  {
+    "id": 501,
+    "idKanji": [248],
+    "word": "題名",
+    "reading": "だいめい",
+    "category": "литература",
+    "translation": "название"
+  },
+  {
+    "id": 502,
+    "idKanji": [249],
+    "word": "経営",
+    "reading": "けいえい",
+    "category": "бизнес",
+    "translation": "управление"
+  },
+  {
+    "id": 503,
+    "idKanji": [250],
+    "word": "経験",
+    "reading": "けいけん",
+    "category": "понятия",
+    "translation": "опыт"
+  },
+  {
+    "id": 504,
+    "idKanji": [251],
+    "word": "受付",
+    "reading": "うけつけ",
+    "category": "работа",
+    "translation": "приёмная"
+  },
+  {
+    "id": 505,
+    "idKanji": [252],
+    "word": "教授",
+    "reading": "きょうじゅ",
+    "category": "образование",
+    "translation": "профессор"
+  },
+  {
+    "id": 506,
+    "idKanji": [253],
+    "word": "産業",
+    "reading": "さんぎょう",
+    "category": "экономика",
+    "translation": "индустрия"
+  },
+  {
+    "id": 507,
+    "idKanji": [254],
+    "word": "実現",
+    "reading": "じつげん",
+    "category": "действия",
+    "translation": "реализация"
+  },
+  {
+    "id": 508,
+    "idKanji": [255],
+    "word": "卒業式",
+    "reading": "そつぎょうしき",
+    "category": "образование",
+    "translation": "выпускная церемония"
+  },
+  {
+    "id": 509,
+    "idKanji": [256],
+    "word": "形式",
+    "reading": "けいしき",
+    "category": "понятия",
+    "translation": "форма"
+  },
+  {
+    "id": 510,
+    "idKanji": [257],
+    "word": "運転",
+    "reading": "うんてん",
+    "category": "транспорт",
+    "translation": "вождение"
+  },
+  {
+    "id": 511,
+    "idKanji": [258],
+    "word": "動作",
+    "reading": "どうさ",
+    "category": "действия",
+    "translation": "движение"
+  },
+  {
+    "id": 512,
+    "idKanji": [259],
+    "word": "試合",
+    "reading": "しあい",
+    "category": "спорт",
+    "translation": "матч"
+  },
+  {
+    "id": 513,
+    "idKanji": [260],
+    "word": "合図",
+    "reading": "あいず",
+    "category": "коммуникация",
+    "translation": "сигнал"
+  },
+  {
+    "id": 514,
+    "idKanji": [261],
+    "word": "場合",
+    "reading": "ばあい",
+    "category": "понятия",
+    "translation": "случай"
+  },
+  {
+    "id": 515,
+    "idKanji": [262],
+    "word": "打撃",
+    "reading": "だげき",
+    "category": "спорт",
+    "translation": "удар"
+  },
+  {
+    "id": 516,
+    "idKanji": [263],
+    "word": "選択",
+    "reading": "せんたく",
+    "category": "действия",
+    "translation": "выбор"
+  },
+  {
+    "id": 517,
+    "idKanji": [264],
+    "word": "水泳",
+    "reading": "すいえい",
+    "category": "спорт",
+    "translation": "плавание"
+  },
+  {
+    "id": 518,
+    "idKanji": [265],
+    "word": "学校",
+    "reading": "がっこう",
+    "category": "образование",
+    "translation": "школа"
+  },
+  {
+    "id": 519,
+    "idKanji": [266],
+    "word": "習慣",
+    "reading": "しゅうかん",
+    "category": "общество",
+    "translation": "привычка"
+  },
+  {
+    "id": 520,
+    "idKanji": [267],
+    "word": "服裝",
+    "reading": "ふくそう",
+    "category": "одежда",
+    "translation": "одежда"
+  },
+  {
+    "id": 521,
+    "idKanji": [268],
+    "word": "制限",
+    "reading": "せいげん",
+    "category": "понятия",
+    "translation": "ограничение"
+  },
+  {
+    "id": 522,
+    "idKanji": [269],
+    "word": "組織",
+    "reading": "そしき",
+    "category": "общество",
+    "translation": "организация"
+  },
+  {
+    "id": 523,
+    "idKanji": [270],
+    "word": "台風",
+    "reading": "たいふう",
+    "category": "погода",
+    "translation": "тайфун"
+  },
+  {
+    "id": 524,
+    "idKanji": [271],
+    "word": "問い合わせ",
+    "reading": "といあわせ",
+    "category": "коммуникация",
+    "translation": "запрос"
+  },
+  {
+    "id": 525,
+    "idKanji": [272],
+    "word": "回答",
+    "reading": "かいとう",
+    "category": "коммуникация",
+    "translation": "ответ"
+  },
+  {
+    "id": 526,
+    "idKanji": [273],
+    "word": "留学",
+    "reading": "りゅうがく",
+    "category": "образование",
+    "translation": "обучение за границей"
+  },
+  {
+    "id": 527,
+    "idKanji": [274],
+    "word": "辞書",
+    "reading": "じしょ",
+    "category": "язык",
+    "translation": "словарь"
+  },
+  {
+    "id": 528,
+    "idKanji": [275],
+    "word": "開始",
+    "reading": "かいし",
+    "category": "действия",
+    "translation": "начало"
+  },
+  {
+    "id": 529,
+    "idKanji": [276],
+    "word": "終了",
+    "reading": "しゅうりょう",
+    "category": "действия",
+    "translation": "окончание"
+  },
+  {
+    "id": 530,
+    "idKanji": [277],
+    "word": "労働",
+    "reading": "ろうどう",
+    "category": "работа",
+    "translation": "труд"
+  },
+  {
+    "id": 531,
+    "idKanji": [278],
+    "word": "歌手",
+    "reading": "かしゅ",
+    "category": "профессии",
+    "translation": "певец"
+  },
+  {
+    "id": 532,
+    "idKanji": [279],
+    "word": "到着",
+    "reading": "とうちゃく",
+    "category": "действия",
+    "translation": "прибытие"
+  },
+  {
+    "id": 533,
+    "idKanji": [280],
+    "word": "登山",
+    "reading": "とざん",
+    "category": "спорт",
+    "translation": "восхождение"
+  },
+  {
+    "id": 534,
+    "idKanji": [281],
+    "word": "使用",
+    "reading": "しよう",
+    "category": "действия",
+    "translation": "использование"
+  },
+  {
+    "id": 535,
+    "idKanji": [282],
+    "word": "忘れ物",
+    "reading": "わすれもの",
+    "category": "предметы",
+    "translation": "забытая вещь"
+  },
+  {
+    "id": 536,
+    "idKanji": [283],
+    "word": "付属",
+    "reading": "ふぞく",
+    "category": "понятия",
+    "translation": "приложение"
+  },
+  {
+    "id": 537,
+    "idKanji": [284],
+    "word": "事業",
+    "reading": "じぎょう",
+    "category": "бизнес",
+    "translation": "предприятие"
+  },
+  {
+    "id": 538,
+    "idKanji": [285],
+    "word": "仕事中",
+    "reading": "しごとちゅう",
+    "category": "работа",
+    "translation": "во время работы"
+  },
+  {
+    "id": 539,
+    "idKanji": [286],
+    "word": "作品",
+    "reading": "さくひん",
+    "category": "искусство",
+    "translation": "произведение"
+  },
+  {
+    "id": 540,
+    "idKanji": [287],
+    "word": "商品価値",
+    "reading": "しょうひんかち",
+    "category": "экономика",
+    "translation": "стоимость товара"
+  },
+  {
+    "id": 541,
+    "idKanji": [288],
+    "word": "個性",
+    "reading": "こせい",
+    "category": "характер",
+    "translation": "индивидуальность"
+  },
+  {
+    "id": 542,
+    "idKanji": [289],
+    "word": "商業",
+    "reading": "しょうぎょう",
+    "category": "экономика",
+    "translation": "коммерция"
+  },
+  {
+    "id": 543,
+    "idKanji": [290],
+    "word": "書店",
+    "reading": "しょてん",
+    "category": "торговля",
+    "translation": "книжный магазин"
+  },
+  {
+    "id": 544,
+    "idKanji": [291],
+    "word": "員数",
+    "reading": "いんすう",
+    "category": "числа",
+    "translation": "количество человек"
+  },
+  {
+    "id": 545,
+    "idKanji": [292],
+    "word": "用事",
+    "reading": "ようじ",
+    "category": "понятия",
+    "translation": "дело"
+  },
+  {
+    "id": 546,
+    "idKanji": [293],
+    "word": "買い物",
+    "reading": "かいもの",
+    "category": "торговля",
+    "translation": "покупки"
+  },
+  {
+    "id": 547,
+    "idKanji": [294],
+    "word": "販売",
+    "reading": "はんばい",
+    "category": "торговля",
+    "translation": "продажа"
+  },
+  {
+    "id": 548,
+    "idKanji": [295],
+    "word": "数える",
+    "reading": "かぞえる",
+    "category": "действия",
+    "translation": "считать"
+  },
+  {
+    "id": 549,
+    "idKanji": [296],
+    "word": "点検",
+    "reading": "てんけん",
+    "category": "действия",
+    "translation": "проверка"
+  },
+  {
+    "id": 550,
+    "idKanji": [297],
+    "word": "単純",
+    "reading": "たんじゅん",
+    "category": "понятия",
+    "translation": "простой"
+  },
+  {
+    "id": 551,
+    "idKanji": [298],
+    "word": "法律",
+    "reading": "ほうりつ",
+    "category": "общество",
+    "translation": "закон"
+  },
+  {
+    "id": 552,
+    "idKanji": [299],
+    "word": "究極",
+    "reading": "きゅうきょく",
+    "category": "понятия",
+    "translation": "конечный"
+  },
+  {
+    "id": 553,
+    "idKanji": [300],
+    "word": "研究開発",
+    "reading": "けんきゅうかいはつ",
+    "category": "наука",
+    "translation": "исследования и разработки"
+  },
+  {
+    "id": 554,
+    "idKanji": [301],
+    "word": "比率",
+    "reading": "ひりつ",
+    "category": "математика",
+    "translation": "коэффициент"
+  },
+  {
+    "id": 555,
+    "idKanji": [302],
+    "word": "皆無",
+    "reading": "かいむ",
+    "category": "понятия",
+    "translation": "полное отсутствие"
+  },
+  {
+    "id": 556,
+    "idKanji": [303],
+    "word": "専攻",
+    "reading": "せんこう",
+    "category": "образование",
+    "translation": "специализация"
+  },
+  {
+    "id": 557,
+    "idKanji": [304],
+    "word": "読書",
+    "reading": "どくしょ",
+    "category": "образование",
+    "translation": "чтение"
+  },
+  {
+    "id": 558,
+    "idKanji": [305],
+    "word": "医学",
+    "reading": "いがく",
+    "category": "наука",
+    "translation": "медицина"
+  },
+  {
+    "id": 559,
+    "idKanji": [306],
+    "word": "学者",
+    "reading": "がくしゃ",
+    "category": "профессии",
+    "translation": "учёный"
+  },
+  {
+    "id": 560,
+    "idKanji": [307],
+    "word": "薬局",
+    "reading": "やっきょく",
+    "category": "здоровье",
+    "translation": "аптека"
+  },
+  {
+    "id": 561,
+    "idKanji": [308],
+    "word": "政治",
+    "reading": "せいじ",
+    "category": "общество",
+    "translation": "политика"
+  },
+  {
+    "id": 562,
+    "idKanji": [309],
+    "word": "病状",
+    "reading": "びょうじょう",
+    "category": "здоровье",
+    "translation": "состояние болезни"
+  },
+  {
+    "id": 563,
+    "idKanji": [310],
+    "word": "寺院",
+    "reading": "じいん",
+    "category": "религия",
+    "translation": "храм"
+  },
+  {
+    "id": 564,
+    "idKanji": [311],
+    "word": "痛み",
+    "reading": "いたみ",
+    "category": "здоровье",
+    "translation": "боль"
+  },
+  {
+    "id": 565,
+    "idKanji": [312],
+    "word": "活発",
+    "reading": "かっぱつ",
+    "category": "характер",
+    "translation": "активный"
+  },
+  {
+    "id": 566,
+    "idKanji": [313],
+    "word": "両親",
+    "reading": "りょうしん",
+    "category": "семья",
+    "translation": "родители"
+  },
+  {
+    "id": 567,
+    "idKanji": [314],
+    "word": "親友",
+    "reading": "しんゆう",
+    "category": "люди",
+    "translation": "лучший друг"
+  },
+  {
+    "id": 568,
+    "idKanji": [315],
+    "word": "結果",
+    "reading": "けっか",
+    "category": "понятия",
+    "translation": "результат"
+  },
+  {
+    "id": 569,
+    "idKanji": [316],
+    "word": "婚姻",
+    "reading": "こんいん",
+    "category": "общество",
+    "translation": "брак"
+  },
+  {
+    "id": 570,
+    "idKanji": [317],
+    "word": "夫婦",
+    "reading": "ふうふ",
+    "category": "семья",
+    "translation": "супруги"
+  },
+  {
+    "id": 571,
+    "idKanji": [318],
+    "word": "婦人",
+    "reading": "ふじん",
+    "category": "люди",
+    "translation": "женщина"
+  },
+  {
+    "id": 572,
+    "idKanji": [319],
+    "word": "係員",
+    "reading": "かかりいん",
+    "category": "работа",
+    "translation": "ответственный работник"
+  },
+  {
+    "id": 573,
+    "idKanji": [320],
+    "word": "関連",
+    "reading": "かんれん",
+    "category": "понятия",
+    "translation": "связь"
+  },
+  {
+    "id": 574,
+    "idKanji": [321],
+    "word": "育成",
+    "reading": "いくせい",
+    "category": "действия",
+    "translation": "воспитание"
+  },
+  {
+    "id": 575,
+    "idKanji": [322],
+    "word": "頭痛",
+    "reading": "ずつう",
+    "category": "здоровье",
+    "translation": "головная боль"
+  },
+  {
+    "id": 576,
+    "idKanji": [323],
+    "word": "顔色",
+    "reading": "かおいろ",
+    "category": "внешность",
+    "translation": "цвет лица"
+  },
+  {
+    "id": 577,
+    "idKanji": [324],
+    "word": "体型",
+    "reading": "たいけい",
+    "category": "тело",
+    "translation": "телосложение"
+  },
+  {
+    "id": 578,
+    "idKanji": [325],
+    "word": "形成",
+    "reading": "けいせい",
+    "category": "понятия",
+    "translation": "формирование"
+  },
+  {
+    "id": 579,
+    "idKanji": [326],
+    "word": "成長",
+    "reading": "せいちょう",
+    "category": "развитие",
+    "translation": "рост"
+  },
+  {
+    "id": 580,
+    "idKanji": [327],
+    "word": "笑顔",
+    "reading": "えがお",
+    "category": "эмоции",
+    "translation": "улыбка"
+  },
+  {
+    "id": 581,
+    "idKanji": [328],
+    "word": "泣き声",
+    "reading": "なきごえ",
+    "category": "звуки",
+    "translation": "плач"
+  },
+  {
+    "id": 582,
+    "idKanji": [329],
+    "word": "困難",
+    "reading": "こんなん",
+    "category": "понятия",
+    "translation": "трудность"
+  },
+  {
+    "id": 583,
+    "idKanji": [330],
+    "word": "熱心",
+    "reading": "ねっしん",
+    "category": "характер",
+    "translation": "усердие"
+  },
+  {
+    "id": 584,
+    "idKanji": [331],
+    "word": "暑さ",
+    "reading": "あつさ",
+    "category": "погода",
+    "translation": "жара"
+  },
+  {
+    "id": 585,
+    "idKanji": [332],
+    "word": "氷山",
+    "reading": "ひょうざん",
+    "category": "география",
+    "translation": "айсберг"
+  },
+  {
+    "id": 586,
+    "idKanji": [333],
+    "word": "寒気",
+    "reading": "さむけ",
+    "category": "здоровье",
+    "translation": "озноб"
+  },
+  {
+    "id": 587,
+    "idKanji": [334],
+    "word": "冷蔵庫",
+    "reading": "れいぞうこ",
+    "category": "быт",
+    "translation": "холодильник"
+  },
+  {
+    "id": 588,
+    "idKanji": [335],
+    "word": "温度計",
+    "reading": "おんどけい",
+    "category": "предметы",
+    "translation": "термометр"
+  },
+  {
+    "id": 589,
+    "idKanji": [336],
+    "word": "晴天",
+    "reading": "せいてん",
+    "category": "погода",
+    "translation": "ясная погода"
+  },
+  {
+    "id": 590,
+    "idKanji": [337],
+    "word": "降伏",
+    "reading": "こうふく",
+    "category": "действия",
+    "translation": "капитуляция"
+  },
+  {
+    "id": 591,
+    "idKanji": [338],
+    "word": "度胸",
+    "reading": "どきょう",
+    "category": "характер",
+    "translation": "смелость"
+  },
+  {
+    "id": 592,
+    "idKanji": [339],
+    "word": "世間",
+    "reading": "せけん",
+    "category": "общество",
+    "translation": "общество"
+  },
+  {
+    "id": 593,
+    "idKanji": [340],
+    "word": "外界",
+    "reading": "がいかい",
+    "category": "понятия",
+    "translation": "внешний мир"
+  },
+  {
+    "id": 594,
+    "idKanji": [341],
+    "word": "地域",
+    "reading": "ちいき",
+    "category": "география",
+    "translation": "регион"
+  },
+  {
+    "id": 595,
+    "idKanji": [342],
+    "word": "図面",
+    "reading": "ずめん",
+    "category": "документы",
+    "translation": "чертёж"
+  },
+  {
+    "id": 596,
+    "idKanji": [343],
+    "word": "海外",
+    "reading": "かいがい",
+    "category": "география",
+    "translation": "заграница"
+  },
+  {
+    "id": 597,
+    "idKanji": [344],
+    "word": "電池",
+    "reading": "でんち",
+    "category": "технологии",
+    "translation": "батарейка"
+  },
+  {
+    "id": 598,
+    "idKanji": [345],
+    "word": "島国",
+    "reading": "しまぐに",
+    "category": "география",
+    "translation": "островное государство"
+  },
+  {
+    "id": 599,
+    "idKanji": [346],
+    "word": "野生",
+    "reading": "やせい",
+    "category": "природа",
+    "translation": "дикая природа"
+  },
+  {
+    "id": 600,
+    "idKanji": [347],
+    "word": "乗客",
+    "reading": "じょうきゃく",
+    "category": "транспорт",
+    "translation": "пассажир"
+  },
+
+  {
+    "id": 601,
+    "idKanji": [348],
+    "word": "転職",
+    "reading": "てんしょく",
+    "category": "работа",
+    "translation": "смена работы"
+  },
+  {
+    "id": 602,
+    "idKanji": [349],
+    "word": "空港",
+    "reading": "くうこう",
+    "category": "транспорт",
+    "translation": "аэропорт"
+  },
+  {
+    "id": 603,
+    "idKanji": [350],
+    "word": "空港",
+    "reading": "くうこう",
+    "category": "транспорт",
+    "translation": "аэропорт"
+  },
+  {
+    "id": 604,
+    "idKanji": [351],
+    "word": "機会",
+    "reading": "きかい",
+    "category": "понятия",
+    "translation": "возможность"
+  },
+  {
+    "id": 605,
+    "idKanji": [352],
+    "word": "飛行",
+    "reading": "ひこう",
+    "category": "транспорт",
+    "translation": "полёт"
+  },
+  {
+    "id": 606,
+    "idKanji": [353],
+    "word": "鉄橋",
+    "reading": "てっきょう",
+    "category": "транспорт",
+    "translation": "железный мост"
+  },
+  {
+    "id": 607,
+    "idKanji": [354],
+    "word": "直線",
+    "reading": "ちょくせん",
+    "category": "математика",
+    "translation": "прямая линия"
+  },
+  {
+    "id": 608,
+    "idKanji": [355],
+    "word": "通信",
+    "reading": "つうしん",
+    "category": "технологии",
+    "translation": "связь"
+  },
+  {
+    "id": 609,
+    "idKanji": [356],
+    "word": "荷物",
+    "reading": "にもつ",
+    "category": "предметы",
+    "translation": "багаж"
+  },
+  {
+    "id": 610,
+    "idKanji": [357],
+    "word": "券売機",
+    "reading": "けんばいき",
+    "category": "транспорт",
+    "translation": "билетный автомат"
+  },
+  {
+    "id": 611,
+    "idKanji": [358],
+    "word": "宿泊",
+    "reading": "しゅくはく",
+    "category": "путешествия",
+    "translation": "ночлег"
+  },
+  {
+    "id": 612,
+    "idKanji": [359],
+    "word": "送信",
+    "reading": "そうしん",
+    "category": "технологии",
+    "translation": "отправка"
+  },
+  {
+    "id": 613,
+    "idKanji": [360],
+    "word": "贈呈",
+    "reading": "ぞうてい",
+    "category": "общество",
+    "translation": "дарение"
+  },
+  {
+    "id": 614,
+    "idKanji": null,
+    "word": "コーヒー",
+    "reading": "コーヒー",
+    "category": "еда",
+    "translation": "кофе"
+  },
+  {
+    "id": 615,
+    "idKanji": null,
+    "word": "テレビ",
+    "reading": "テレビ",
+    "category": "технологии",
+    "translation": "телевизор"
+  },
+  {
+    "id": 616,
+    "idKanji": null,
+    "word": "コンピューター",
+    "reading": "コンピューター",
+    "category": "технологии",
+    "translation": "компьютер"
+  },
+  {
+    "id": 617,
+    "idKanji": null,
+    "word": "スマートフォン",
+    "reading": "スマートフォン",
+    "category": "технологии",
+    "translation": "смартфон"
+  },
+  {
+    "id": 618,
+    "idKanji": null,
+    "word": "インターネット",
+    "reading": "インターネット",
+    "category": "технологии",
+    "translation": "интернет"
+  },
+  {
+    "id": 619,
+    "idKanji": null,
+    "word": "エアコン",
+    "reading": "エアコン",
+    "category": "быт",
+    "translation": "кондиционер"
+  },
+  {
+    "id": 620,
+    "idKanji": null,
+    "word": "レストラン",
+    "reading": "レストラン",
+    "category": "еда",
+    "translation": "ресторан"
+  },
+  {
+    "id": 621,
+    "idKanji": null,
+    "word": "ホテル",
+    "reading": "ホテル",
+    "category": "путешествия",
+    "translation": "отель"
+  },
+  {
+    "id": 622,
+    "idKanji": null,
+    "word": "スーパー",
+    "reading": "スーパー",
+    "category": "торговля",
+    "translation": "супермаркет"
+  },
+  {
+    "id": 623,
+    "idKanji": null,
+    "word": "デパート",
+    "reading": "デパート",
+    "category": "торговля",
+    "translation": "универмаг"
+  },
+  {
+    "id": 624,
+    "idKanji": null,
+    "word": "カメラ",
+    "reading": "カメラ",
+    "category": "технологии",
+    "translation": "камера"
+  },
+  {
+    "id": 625,
+    "idKanji": null,
+    "word": "ラジオ",
+    "reading": "ラジオ",
+    "category": "технологии",
+    "translation": "радио"
+  },
+  {
+    "id": 626,
+    "idKanji": null,
+    "word": "ビール",
+    "reading": "ビール",
+    "category": "еда",
+    "translation": "пиво"
+  },
+  {
+    "id": 627,
+    "idKanji": null,
+    "word": "ワイン",
+    "reading": "ワイン",
+    "category": "еда",
+    "translation": "вино"
+  },
+  {
+    "id": 628,
+    "idKanji": null,
+    "word": "ジュース",
+    "reading": "ジュース",
+    "category": "еда",
+    "translation": "сок"
+  },
+  {
+    "id": 629,
+    "idKanji": null,
+    "word": "ケーキ",
+    "reading": "ケーキ",
+    "category": "еда",
+    "translation": "торт"
+  },
+  {
+    "id": 630,
+    "idKanji": null,
+    "word": "チョコレート",
+    "reading": "チョコレート",
+    "category": "еда",
+    "translation": "шоколад"
+  },
+  {
+    "id": 631,
+    "idKanji": null,
+    "word": "アイスクリーム",
+    "reading": "アイスクリーム",
+    "category": "еда",
+    "translation": "мороженое"
+  },
+  {
+    "id": 632,
+    "idKanji": null,
+    "word": "パン",
+    "reading": "パン",
+    "category": "еда",
+    "translation": "хлеб"
+  },
+  {
+    "id": 633,
+    "idKanji": null,
+    "word": "バター",
+    "reading": "バター",
+    "category": "еда",
+    "translation": "масло"
+  },
+  {
+    "id": 634,
+    "idKanji": null,
+    "word": "チーズ",
+    "reading": "チーズ",
+    "category": "еда",
+    "translation": "сыр"
+  },
+  {
+    "id": 635,
+    "idKanji": null,
+    "word": "サラダ",
+    "reading": "サラダ",
+    "category": "еда",
+    "translation": "салат"
+  },
+  {
+    "id": 636,
+    "idKanji": null,
+    "word": "スープ",
+    "reading": "スープ",
+    "category": "еда",
+    "translation": "суп"
+  },
+  {
+    "id": 637,
+    "idKanji": null,
+    "word": "ハンバーガー",
+    "reading": "ハンバーガー",
+    "category": "еда",
+    "translation": "гамбургер"
+  },
+  {
+    "id": 638,
+    "idKanji": null,
+    "word": "ピザ",
+    "reading": "ピザ",
+    "category": "еда",
+    "translation": "пицца"
+  },
+  {
+    "id": 639,
+    "idKanji": null,
+    "word": "スポーツ",
+    "reading": "スポーツ",
+    "category": "спорт",
+    "translation": "спорт"
+  },
+  {
+    "id": 640,
+    "idKanji": null,
+    "word": "サッカー",
+    "reading": "サッカー",
+    "category": "спорт",
+    "translation": "футбол"
+  },
+  {
+    "id": 641,
+    "idKanji": null,
+    "word": "バスケットボール",
+    "reading": "バスケットボール",
+    "category": "спорт",
+    "translation": "баскетбол"
+  },
+  {
+    "id": 642,
+    "idKanji": null,
+    "word": "テニス",
+    "reading": "テニス",
+    "category": "спорт",
+    "translation": "теннис"
+  },
+  {
+    "id": 643,
+    "idKanji": null,
+    "word": "ゴルフ",
+    "reading": "ゴルフ",
+    "category": "спорт",
+    "translation": "гольф"
+  },
+  {
+    "id": 644,
+    "idKanji": null,
+    "word": "ジョギング",
+    "reading": "ジョギング",
+    "category": "спорт",
+    "translation": "бег трусцой"
+  },
+  {
+    "id": 645,
+    "idKanji": null,
+    "word": "ヨガ",
+    "reading": "ヨガ",
+    "category": "спорт",
+    "translation": "йога"
+  },
+  {
+    "id": 646,
+    "idKanji": null,
+    "word": "ダンス",
+    "reading": "ダンス",
+    "category": "развлечения",
+    "translation": "танец"
+  },
+  {
+    "id": 647,
+    "idKanji": null,
+    "word": "コンサート",
+    "reading": "コンサート",
+    "category": "развлечения",
+    "translation": "концерт"
+  },
+  {
+    "id": 648,
+    "idKanji": null,
+    "word": "ミュージカル",
+    "reading": "ミュージカル",
+    "category": "развлечения",
+    "translation": "мюзикл"
+  },
+  {
+    "id": 649,
+    "idKanji": null,
+    "word": "オペラ",
+    "reading": "オペラ",
+    "category": "развлечения",
+    "translation": "опера"
+  },
+  {
+    "id": 650,
+    "idKanji": null,
+    "word": "バレエ",
+    "reading": "バレエ",
+    "category": "развлечения",
+    "translation": "балет"
+  },
+  {
+    "id": 651,
+    "idKanji": null,
+    "word": "ギター",
+    "reading": "ギター",
+    "category": "музыка",
+    "translation": "гитара"
+  },
+  {
+    "id": 652,
+    "idKanji": null,
+    "word": "ピアノ",
+    "reading": "ピアノ",
+    "category": "музыка",
+    "translation": "пианино"
+  },
+  {
+    "id": 653,
+    "idKanji": null,
+    "word": "バイオリン",
+    "reading": "バイオリン",
+    "category": "музыка",
+    "translation": "скрипка"
+  },
+  {
+    "id": 654,
+    "idKanji": null,
+    "word": "ドラム",
+    "reading": "ドラム",
+    "category": "музыка",
+    "translation": "барабаны"
+  },
+  {
+    "id": 655,
+    "idKanji": null,
+    "word": "トランペット",
+    "reading": "トランペット",
+    "category": "музыка",
+    "translation": "труба"
+  },
+  {
+    "id": 656,
+    "idKanji": [361],
+    "word": "日本酒",
+    "reading": "にほんしゅ",
+    "category": "еда",
+    "translation": "сакэ"
+  },
+  {
+    "id": 657,
+    "idKanji": [362],
+    "word": "配布",
+    "reading": "はいふ",
+    "category": "действия",
+    "translation": "распространение"
+  },
+  {
+    "id": 658,
+    "idKanji": [363],
+    "word": "貸し出し",
+    "reading": "かしだし",
+    "category": "финансы",
+    "translation": "выдача взаймы"
+  },
+  {
+    "id": 659,
+    "idKanji": [364],
+    "word": "願書",
+    "reading": "がんしょ",
+    "category": "документы",
+    "translation": "заявление"
+  },
+  {
+    "id": 660,
+    "idKanji": [365],
+    "word": "取材",
+    "reading": "しゅざい",
+    "category": "медиа",
+    "translation": "сбор информации"
+  },
+  {
+    "id": 661,
+    "idKanji": [366],
+    "word": "相談",
+    "reading": "そうだん",
+    "category": "коммуникация",
+    "translation": "консультация"
+  },
+  {
+    "id": 662,
+    "idKanji": [367],
+    "word": "礼状",
+    "reading": "れいじょう",
+    "category": "документы",
+    "translation": "благодарственное письмо"
+  },
+  {
+    "id": 663,
+    "idKanji": [368],
+    "word": "失敗",
+    "reading": "しっぱい",
+    "category": "понятия",
+    "translation": "неудача"
+  },
+  {
+    "id": 664,
+    "idKanji": [369],
+    "word": "親切",
+    "reading": "しんせつ",
+    "category": "характер",
+    "translation": "доброта"
+  },
+  {
+    "id": 665,
+    "idKanji": [370],
+    "word": "洗濯",
+    "reading": "せんたく",
+    "category": "быт",
+    "translation": "стирка"
+  },
+  {
+    "id": 666,
+    "idKanji": [371],
+    "word": "残業",
+    "reading": "ざんぎょう",
+    "category": "работа",
+    "translation": "сверхурочная работа"
+  },
+  {
+    "id": 667,
+    "idKanji": [372],
+    "word": "設置",
+    "reading": "せっち",
+    "category": "действия",
+    "translation": "установка"
+  },
+  {
+    "id": 668,
+    "idKanji": [373],
+    "word": "調節",
+    "reading": "ちょうせつ",
+    "category": "действия",
+    "translation": "регулировка"
+  },
+  {
+    "id": 669,
+    "idKanji": [374],
+    "word": "遊園地",
+    "reading": "ゆうえんち",
+    "category": "развлечения",
+    "translation": "парк развлечений"
+  },
+  {
+    "id": 670,
+    "idKanji": [375],
+    "word": "決断",
+    "reading": "けつだん",
+    "category": "действия",
+    "translation": "решение"
+  },
+  {
+    "id": 671,
+    "idKanji": [376],
+    "word": "現金",
+    "reading": "げんきん",
+    "category": "финансы",
+    "translation": "наличные"
+  },
+  {
+    "id": 671,
+    "idKanji": [377],
+    "word": "引用",
+    "reading": "いんよう",
+    "category": "язык",
+    "translation": "цитирование"
+  },
+  {
+    "id": 672,
+    "idKanji": [378],
+    "word": "写生",
+    "reading": "しゃせい",
+    "category": "искусство",
+    "translation": "зарисовка с натуры"
+  },
+  {
+    "id": 673,
+    "idKanji": [379],
+    "word": "思考",
+    "reading": "しこう",
+    "category": "мысли",
+    "translation": "мышление"
+  },
+  {
+    "id": 674,
+    "idKanji": [380],
+    "word": "集合",
+    "reading": "しゅうごう",
+    "category": "действия",
+    "translation": "собрание"
+  },
+  {
+    "id": 675,
+    "idKanji": [381],
+    "word": "進学",
+    "reading": "しんがく",
+    "category": "образование",
+    "translation": "поступление в школу"
+  },
+  {
+    "id": 676,
+    "idKanji": [382],
+    "word": "落第",
+    "reading": "らくだい",
+    "category": "образование",
+    "translation": "провал на экзамене"
+  },
+  {
+    "id": 677,
+    "idKanji": [383],
+    "word": "続編",
+    "reading": "ぞくへん",
+    "category": "литература",
+    "translation": "продолжение"
+  },
+  {
+    "id": 678,
+    "idKanji": [384],
+    "word": "支払い",
+    "reading": "しはらい",
+    "category": "финансы",
+    "translation": "платёж"
+  },
+  {
+    "id": 679,
+    "idKanji": [385],
+    "word": "神社",
+    "reading": "じんじゃ",
+    "category": "религия",
+    "translation": "синтоистский храм"
+  },
+  {
+    "id": 680,
+    "idKanji": [386],
+    "word": "社会",
+    "reading": "しゃかい",
+    "category": "общество",
+    "translation": "общество"
+  },
+  {
+    "id": 681,
+    "idKanji": [387],
+    "word": "祭日",
+    "reading": "さいじつ",
+    "category": "время",
+    "translation": "праздничный день"
+  },
+  {
+    "id": 682,
+    "idKanji": [388],
+    "word": "国際的",
+    "reading": "こくさいてき",
+    "category": "общество",
+    "translation": "международный"
+  },
+  {
+    "id": 683,
+    "idKanji": [389],
+    "word": "美術",
+    "reading": "びじゅつ",
+    "category": "искусство",
+    "translation": "изобразительное искусство"
+  },
+  {
+    "id": 684,
+    "idKanji": [390],
+    "word": "旅館",
+    "reading": "りょかん",
+    "category": "путешествия",
+    "translation": "традиционная гостиница"
+  },
+  {
+    "id": 685,
+    "idKanji": [391],
+    "word": "庭園",
+    "reading": "ていえん",
+    "category": "природа",
+    "translation": "сад"
+  },
+  {
+    "id": 686,
+    "idKanji": [392],
+    "word": "動物園",
+    "reading": "どうぶつえん",
+    "category": "развлечения",
+    "translation": "зоопарк"
+  },
+  {
+    "id": 687,
+    "idKanji": [393],
+    "word": "劇場",
+    "reading": "げきじょう",
+    "category": "развлечения",
+    "translation": "театр"
+  },
+  {
+    "id": 688,
+    "idKanji": [394],
+    "word": "記憶",
+    "reading": "きおく",
+    "category": "мысли",
+    "translation": "память"
+  },
+  {
+    "id": 689,
+    "idKanji": [395],
+    "word": "急行",
+    "reading": "きゅうこう",
+    "category": "транспорт",
+    "translation": "скорый поезд"
+  },
+  {
+    "id": 690,
+    "idKanji": [396],
+    "word": "定価",
+    "reading": "ていか",
+    "category": "торговля",
+    "translation": "установленная цена"
+  },
+  {
+    "id": 691,
+    "idKanji": [397],
+    "word": "州立",
+    "reading": "しゅうりつ",
+    "category": "образование",
+    "translation": "государственный (штата)"
+  },
+  {
+    "id": 692,
+    "idKanji": [398],
+    "word": "都会",
+    "reading": "とかい",
+    "category": "места",
+    "translation": "город"
+  },
+  {
+    "id": 693,
+    "idKanji": [399],
+    "word": "県庁",
+    "reading": "けんちょう",
+    "category": "места",
+    "translation": "префектуральное управление"
+  },
+  {
+    "id": 694,
+    "idKanji": [400],
+    "word": "区域",
+    "reading": "くいき",
+    "category": "география",
+    "translation": "район"
+  },
+  {
+    "id": 695,
+    "idKanji": [401],
+    "word": "村長",
+    "reading": "そんちょう",
+    "category": "общество",
+    "translation": "деревенский староста"
+  },
+  {
+    "id": 696,
+    "idKanji": [402],
+    "word": "方向",
+    "reading": "ほうこう",
+    "category": "направления",
+    "translation": "направление"
+  },
+  {
+    "id": 697,
+    "idKanji": [403],
+    "word": "側面",
+    "reading": "そくめん",
+    "category": "понятия",
+    "translation": "сторона"
+  },
+  {
+    "id": 698,
+    "idKanji": [404],
+    "word": "階段",
+    "reading": "かいだん",
+    "category": "жильё",
+    "translation": "лестница"
+  },
+  {
+    "id": 699,
+    "idKanji": [405],
+    "word": "意見",
+    "reading": "いけん",
+    "category": "коммуникация",
+    "translation": "мнение"
+  },
+  {
+    "id": 700,
+    "idKanji": [406],
+    "word": "注意",
+    "reading": "ちゅうい",
+    "category": "понятия",
+    "translation": "внимание"
+  },
+  {
+    "id": 701,
+    "idKanji": [407],
+    "word": "計画",
+    "reading": "けいかく",
+    "category": "понятия",
+    "translation": "план"
+  },
+  {
+    "id": 702,
+    "idKanji": [408],
+    "word": "番号",
+    "reading": "ばんごう",
+    "category": "числа",
+    "translation": "номер"
+  },
+  {
+    "id": 703,
+    "idKanji": [409],
+    "word": "特徴",
+    "reading": "とくちょう",
+    "category": "понятия",
+    "translation": "характеристика"
+  },
+  {
+    "id": 704,
+    "idKanji": [410],
+    "word": "別荘",
+    "reading": "べっそう",
+    "category": "жильё",
+    "translation": "загородный дом"
+  },
+  {
+    "id": 705,
+    "idKanji": [411],
+    "word": "必死",
+    "reading": "ひっし",
+    "category": "эмоции",
+    "translation": "отчаянный"
+  },
+  {
+    "id": 706,
+    "idKanji": [412],
+    "word": "要求",
+    "reading": "ようきゅう",
+    "category": "действия",
+    "translation": "требование"
+  },
+  {
+    "id": 707,
+    "idKanji": [413],
+    "word": "遠足",
+    "reading": "えんそく",
+    "category": "развлечения",
+    "translation": "экскурсия"
+  },
+  {
+    "id": 708,
+    "idKanji": [414],
+    "word": "同意",
+    "reading": "どうい",
+    "category": "коммуникация",
+    "translation": "согласие"
+  },
+  {
+    "id": 709,
+    "idKanji": [415],
+    "word": "便所",
+    "reading": "べんじょ",
+    "category": "жильё",
+    "translation": "туалет"
+  },
+  {
+    "id": 710,
+    "idKanji": [416],
+    "word": "利用",
+    "reading": "りよう",
+    "category": "действия",
+    "translation": "использование"
+  },
+  {
+    "id": 711,
+    "idKanji": [417],
+    "word": "雑音",
+    "reading": "ざつおん",
+    "category": "звуки",
+    "translation": "шум"
+  },
+  {
+    "id": 712,
+    "idKanji": [418],
+    "word": "困難",
+    "reading": "こんなん",
+    "category": "понятия",
+    "translation": "трудность"
+  },
+  {
+    "id": 713,
+    "idKanji": [419],
+    "word": "最終",
+    "reading": "さいしゅう",
+    "category": "понятия",
+    "translation": "последний"
+  },
+  {
+    "id": 714,
+    "idKanji": [420],
+    "word": "以下",
+    "reading": "いか",
+    "category": "понятия",
+    "translation": "ниже"
+  },
+  {
+    "id": 715,
+    "idKanji": [421],
+    "word": "第三",
+    "reading": "だいさん",
+    "category": "числа",
+    "translation": "третий"
+  },
+  {
+    "id": 716,
+    "idKanji": [422],
+    "word": "不足",
+    "reading": "ふそく",
+    "category": "понятия",
+    "translation": "недостаток"
+  },
+  {
+    "id": 717,
+    "idKanji": [423],
+    "word": "非公開",
+    "reading": "ひこうかい",
+    "category": "понятия",
+    "translation": "непубличный"
+  },
+  {
+    "id": 718,
+    "idKanji": [424],
+    "word": "無視",
+    "reading": "むし",
+    "category": "действия",
+    "translation": "игнорирование"
+  },
+  {
+    "id": 719,
+    "idKanji": [425],
+    "word": "完全",
+    "reading": "かんぜん",
+    "category": "понятия",
+    "translation": "полный"
+  },
+  {
+    "id": 720,
+    "idKanji": [426],
+    "word": "当然",
+    "reading": "とうぜん",
+    "category": "понятия",
+    "translation": "естественно"
+  },
+  {
+    "id": 721,
+    "idKanji": [427],
+    "word": "二十歳",
+    "reading": "はたち",
+    "category": "возраст",
+    "translation": "двадцать лет"
+  },
+  {
+    "id": 722,
+    "idKanji": [428],
+    "word": "達人",
+    "reading": "たつじん",
+    "category": "люди",
+    "translation": "мастер"
+  },
+  {
+    "id": 723,
+    "idKanji": null,
+    "word": "お腹",
+    "reading": "おなか",
+    "category": "тело",
+    "translation": "живот"
+  },
+  {
+    "id": 724,
+    "idKanji": null,
+    "word": "喉",
+    "reading": "のど",
+    "category": "тело",
+    "translation": "горло"
+  },
+  {
+    "id": 725,
+    "idKanji": null,
+    "word": "肩",
+    "reading": "かた",
+    "category": "тело",
+    "translation": "плечо"
+  },
+  {
+    "id": 726,
+    "idKanji": null,
+    "word": "肘",
+    "reading": "ひじ",
+    "category": "тело",
+    "translation": "локоть"
+  },
+  {
+    "id": 727,
+    "idKanji": null,
+    "word": "膝",
+    "reading": "ひざ",
+    "category": "тело",
+    "translation": "колено"
+  },
+  {
+    "id": 728,
+    "idKanji": null,
+    "word": "腰",
+    "reading": "こし",
+    "category": "тело",
+    "translation": "поясница"
+  },
+  {
+    "id": 729,
+    "idKanji": null,
+    "word": "爪",
+    "reading": "つめ",
+    "category": "тело",
+    "translation": "ноготь"
+  },
+  {
+    "id": 730,
+    "idKanji": null,
+    "word": "髪",
+    "reading": "かみ",
+    "category": "тело",
+    "translation": "волосы"
+  },
+  {
+    "id": 731,
+    "idKanji": null,
+    "word": "肌",
+    "reading": "はだ",
+    "category": "тело",
+    "translation": "кожа"
+  },
+  {
+    "id": 732,
+    "idKanji": null,
+    "word": "骨",
+    "reading": "ほね",
+    "category": "тело",
+    "translation": "кость"
+  },
+  {
+    "id": 733,
+    "idKanji": null,
+    "word": "血",
+    "reading": "ち",
+    "category": "тело",
+    "translation": "кровь"
+  },
+  {
+    "id": 734,
+    "idKanji": null,
+    "word": "筋肉",
+    "reading": "きんにく",
+    "category": "тело",
+    "translation": "мускулы"
+  },
+  {
+    "id": 735,
+    "idKanji": null,
+    "word": "神経",
+    "reading": "しんけい",
+    "category": "тело",
+    "translation": "нерв"
+  },
+  {
+    "id": 736,
+    "idKanji": null,
+    "word": "呼吸",
+    "reading": "こきゅう",
+    "category": "тело",
+    "translation": "дыхание"
+  },
+  {
+    "id": 737,
+    "idKanji": null,
+    "word": "脈",
+    "reading": "みゃく",
+    "category": "тело",
+    "translation": "пульс"
+  },
+  {
+    "id": 738,
+    "idKanji": null,
+    "word": "体温",
+    "reading": "たいおん",
+    "category": "тело",
+    "translation": "температура тела"
+  },
+  {
+    "id": 739,
+    "idKanji": null,
+    "word": "汗",
+    "reading": "あせ",
+    "category": "тело",
+    "translation": "пот"
+  },
+  {
+    "id": 740,
+    "idKanji": null,
+    "word": "涙",
+    "reading": "なみだ",
+    "category": "тело",
+    "translation": "слезы"
+  },
+  {
+    "id": 741,
+    "idKanji": null,
+    "word": "唾液",
+    "reading": "だえき",
+    "category": "тело",
+    "translation": "слюна"
+  },
+  {
+    "id": 742,
+    "idKanji": null,
+    "word": "胃",
+    "reading": "い",
+    "category": "тело",
+    "translation": "желудок"
+  },
+  {
+    "id": 743,
+    "idKanji": null,
+    "word": "腸",
+    "reading": "ちょう",
+    "category": "тело",
+    "translation": "кишечник"
+  },
+  {
+    "id": 744,
+    "idKanji": null,
+    "word": "肝臓",
+    "reading": "かんぞう",
+    "category": "тело",
+    "translation": "печень"
+  },
+  {
+    "id": 745,
+    "idKanji": null,
+    "word": "腎臓",
+    "reading": "じんぞう",
+    "category": "тело",
+    "translation": "почки"
+  },
+  {
+    "id": 746,
+    "idKanji": null,
+    "word": "肺",
+    "reading": "はい",
+    "category": "тело",
+    "translation": "легкие"
+  },
+  {
+    "id": 747,
+    "idKanji": null,
+    "word": "心臓",
+    "reading": "しんぞう",
+    "category": "тело",
+    "translation": "сердце"
+  },
+  {
+    "id": 748,
+    "idKanji": null,
+    "word": "脳",
+    "reading": "のう",
+    "category": "тело",
+    "translation": "мозг"
+  },
+  {
+    "id": 749,
+    "idKanji": null,
+    "word": "細胞",
+    "reading": "さいぼう",
+    "category": "биология",
+    "translation": "клетка"
+  },
+  {
+    "id": 750,
+    "idKanji": null,
+    "word": "遺伝",
+    "reading": "いでん",
+    "category": "биология",
+    "translation": "наследственность"
+  },
+  {
+    "id": 751,
+    "idKanji": null,
+    "word": "免疫",
+    "reading": "めんえき",
+    "category": "биология",
+    "translation": "иммунитет"
+  },
+  {
+    "id": 752,
+    "idKanji": null,
+    "word": "感染",
+    "reading": "かんせん",
+    "category": "медицина",
+    "translation": "инфекция"
+  },
+  {
+    "id": 753,
+    "idKanji": null,
+    "word": "治療",
+    "reading": "ちりょう",
+    "category": "медицина",
+    "translation": "лечение"
+  },
+  {
+    "id": 754,
+    "idKanji": null,
+    "word": "手術",
+    "reading": "しゅじゅつ",
+    "category": "медицина",
+    "translation": "операция"
+  },
+  {
+    "id": 755,
+    "idKanji": null,
+    "word": "麻酔",
+    "reading": "ますい",
+    "category": "медицина",
+    "translation": "анестезия"
+  },
+  {
+    "id": 756,
+    "idKanji": null,
+    "word": "栄養",
+    "reading": "えいよう",
+    "category": "здоровье",
+    "translation": "питание"
+  },
+  {
+    "id": 757,
+    "idKanji": null,
+    "word": "睡眠",
+    "reading": "すいみん",
+    "category": "здоровье",
+    "translation": "сон"
+  },
+  {
+    "id": 758,
+    "idKanji": null,
+    "word": "ストレス",
+    "reading": "ストレス",
+    "category": "здоровье",
+    "translation": "стресс"
+  },
+  {
+    "id": 759,
+    "idKanji": null,
+    "word": "アレルギー",
+    "reading": "アレルギー",
+    "category": "здоровье",
+    "translation": "аллергия"
+  },
+  {
+    "id": 760,
+    "idKanji": null,
+    "word": "ウイルス",
+    "reading": "ウイルス",
+    "category": "здоровье",
+    "translation": "вирус"
+  },
+  {
+    "id": 761,
+    "idKanji": null,
+    "word": "バクテリア",
+    "reading": "バクテリア",
+    "category": "биология",
+    "translation": "бактерии"
+  },
+  {
+    "id": 762,
+    "idKanji": null,
+    "word": "遺伝子",
+    "reading": "いでんし",
+    "category": "биология",
+    "translation": "ген"
+  },
+  {
+    "id": 763,
+    "idKanji": null,
+    "word": "染色体",
+    "reading": "せんしょくたい",
+    "category": "биология",
+    "translation": "хромосома"
+  },
+  {
+    "id": 764,
+    "idKanji": null,
+    "word": "DNA",
+    "reading": "ディーエヌエー",
+    "category": "биология",
+    "translation": "ДНК"
+  },
+  {
+    "id": 765,
+    "idKanji": null,
+    "word": "RNA",
+    "reading": "アールエヌエー",
+    "category": "биология",
+    "translation": "РНК"
+  },
+  {
+    "id": 766,
+    "idKanji": null,
+    "word": "タンパク質",
+    "reading": "タンパクしつ",
+    "category": "биология",
+    "translation": "белок"
+  },
+  {
+    "id": 767,
+    "idKanji": null,
+    "word": "酵素",
+    "reading": "こうそ",
+    "category": "биология",
+    "translation": "фермент"
+  },
+  {
+    "id": 768,
+    "idKanji": null,
+    "word": "ホルモン",
+    "reading": "ホルモン",
+    "category": "биология",
+    "translation": "гормон"
+  },
+  {
+    "id": 769,
+    "idKanji": null,
+    "word": "神経伝達物質",
+    "reading": "しんけいでんたつぶっしつ",
+    "category": "биология",
+    "translation": "нейромедиатор"
+  },
+  {
+    "id": 770,
+    "idKanji": null,
+    "word": "代謝",
+    "reading": "たいしゃ",
+    "category": "биология",
+    "translation": "метаболизм"
+  },
+  {
+    "id": 771,
+    "idKanji": null,
+    "word": "光合成",
+    "reading": "こうごうせい",
+    "category": "биология",
+    "translation": "фотосинтез"
+  },
+  {
+    "id": 772,
+    "idKanji": null,
+    "word": "呼吸器",
+    "reading": "こきゅうき",
+    "category": "биология",
+    "translation": "дыхательная система"
+  },
+  {
+    "id": 773,
+    "idKanji": null,
+    "word": "循環器",
+    "reading": "じゅんかんき",
+    "category": "биология",
+    "translation": "кровеносная система"
+  },
+  {
+    "id": 774,
+    "idKanji": null,
+    "word": "消化器",
+    "reading": "しょうかき",
+    "category": "биология",
+    "translation": "пищеварительная система"
+  },
+  {
+    "id": 775,
+    "idKanji": null,
+    "word": "内分泌系",
+    "reading": "ないぶんぴつけい",
+    "category": "биология",
+    "translation": "эндокринная система"
+  },
+  {
+    "id": 776,
+    "idKanji": null,
+    "word": "神経系",
+    "reading": "しんけいけい",
+    "category": "биология",
+    "translation": "нервная система"
+  },
+  {
+    "id": 777,
+    "idKanji": null,
+    "word": "筋肉系",
+    "reading": "きんにくけい",
+    "category": "биология",
+    "translation": "мышечная система"
+  },
+  {
+    "id": 778,
+    "idKanji": null,
+    "word": "骨格系",
+    "reading": "こっかくけい",
+    "category": "биология",
+    "translation": "скелетная система"
+  },
+  {
+    "id": 779,
+    "idKanji": null,
+    "word": "皮膚",
+    "reading": "ひふ",
+    "category": "биология",
+    "translation": "кожа"
+  },
+  {
+    "id": 780,
+    "idKanji": null,
+    "word": "感覚器",
+    "reading": "かんかくき",
+    "category": "биология",
+    "translation": "органы чувств"
+  },
+  {
+    "id": 781,
+    "idKanji": null,
+    "word": "生殖器",
+    "reading": "せいしょくき",
+    "category": "биология",
+    "translation": "репродуктивные органы"
+  },
+  {
+    "id": 782,
+    "idKanji": null,
+    "word": "排泄器",
+    "reading": "はいせつき",
+    "category": "биология",
+    "translation": "выделительная система"
+  },
+  {
+    "id": 783,
+    "idKanji": null,
+    "word": "リンパ系",
+    "reading": "リンパけい",
+    "category": "биология",
+    "translation": "лимфатическая система"
+  },
+  {
+    "id": 784,
+    "idKanji": null,
+    "word": "免疫系",
+    "reading": "めんえきけい",
+    "category": "биология",
+    "translation": "иммунная система"
+  },
+  {
+    "id": 785,
+    "idKanji": null,
+    "word": "解剖学",
+    "reading": "かいぼうがく",
+    "category": "медицина",
+    "translation": "анатомия"
+  },
+  {
+    "id": 786,
+    "idKanji": null,
+    "word": "生理学",
+    "reading": "せいりがく",
+    "category": "медицина",
+    "translation": "физиология"
+  },
+  {
+    "id": 787,
+    "idKanji": null,
+    "word": "生化学",
+    "reading": "せいかがく",
+    "category": "медицина",
+    "translation": "биохимия"
+  },
+  {
+    "id": 788,
+    "idKanji": null,
+    "word": "病理学",
+    "reading": "びょうりがく",
+    "category": "медицина",
+    "translation": "патология"
+  },
+  {
+    "id": 789,
+    "idKanji": null,
+    "word": "薬理学",
+    "reading": "やくりがく",
+    "category": "медицина",
+    "translation": "фармакология"
+  },
+  {
+    "id": 790,
+    "idKanji": null,
+    "word": "微生物学",
+    "reading": "びせいぶつがく",
+    "category": "биология",
+    "translation": "микробиология"
+  },
+  {
+    "id": 791,
+    "idKanji": null,
+    "word": "遺伝学",
+    "reading": "いでんがく",
+    "category": "биология",
+    "translation": "генетика"
+  },
+  {
+    "id": 792,
+    "idKanji": null,
+    "word": "進化論",
+    "reading": "しんかろん",
+    "category": "биология",
+    "translation": "теория эволюции"
+  },
+  {
+    "id": 793,
+    "idKanji": null,
+    "word": "生態学",
+    "reading": "せいたいがく",
+    "category": "биология",
+    "translation": "экология"
+  },
+  {
+    "id": 794,
+    "idKanji": null,
+    "word": "分類学",
+    "reading": "ぶんるいがく",
+    "category": "биология",
+    "translation": "таксономия"
+  },
+  {
+    "id": 795,
+    "idKanji": null,
+    "word": "細胞学",
+    "reading": "さいぼうがく",
+    "category": "биология",
+    "translation": "цитология"
+  },
+  {
+    "id": 796,
+    "idKanji": null,
+    "word": "組織学",
+    "reading": "そしきがく",
+    "category": "биология",
+    "translation": "гистология"
+  },
+  {
+    "id": 797,
+    "idKanji": null,
+    "word": "発生学",
+    "reading": "はっせいがく",
+    "category": "биология",
+    "translation": "эмбриология"
+  },
+  {
+    "id": 798,
+    "idKanji": null,
+    "word": "分子生物学",
+    "reading": "ぶんしせいぶつがく",
+    "category": "биология",
+    "translation": "молекулярная биология"
+  },
+  {
+    "id": 799,
+    "idKanji": null,
+    "word": "バイオテクノロジー",
+    "reading": "バイオテクノロジー",
+    "category": "биология",
+    "translation": "биотехнология"
+  },
+  {
+    "id": 800,
+    "idKanji": null,
+    "word": "ゲノム",
+    "reading": "ゲノム",
+    "category": "биология",
+    "translation": "геном"
+  },
+  
+  {
+    "id": 801,
+    "idKanji": null,
+    "word": "クローン",
+    "reading": "クローン",
+    "category": "биология",
+    "translation": "клон"
+  },
+  {
+    "id": 802,
+    "idKanji": null,
+    "word": "幹細胞",
+    "reading": "かんさいぼう",
+    "category": "биология",
+    "translation": "стволовая клетка"
+  },
+  {
+    "id": 803,
+    "idKanji": null,
+    "word": "再生医療",
+    "reading": "さいせいいりょう",
+    "category": "медицина",
+    "translation": "регенеративная медицина"
+  },
+  {
+    "id": 804,
+    "idKanji": null,
+    "word": "遺伝子治療",
+    "reading": "いでんしちりょう",
+    "category": "медицина",
+    "translation": "генотерапия"
+  },
+  {
+    "id": 805,
+    "idKanji": null,
+    "word": "ナノテクノロジー",
+    "reading": "ナノテクノロジー",
+    "category": "технологии",
+    "translation": "нанотехнологии"
+  },
+  {
+    "id": 806,
+    "idKanji": null,
+    "word": "人工知能",
+    "reading": "じんこうちのう",
+    "category": "технологии",
+    "translation": "искусственный интеллект"
+  },
+  {
+    "id": 807,
+    "idKanji": null,
+    "word": "機械学習",
+    "reading": "きかいがくしゅう",
+    "category": "технологии",
+    "translation": "машинное обучение"
+  },
+  {
+    "id": 808,
+    "idKanji": null,
+    "word": "深層学習",
+    "reading": "しんそうがくしゅう",
+    "category": "технологии",
+    "translation": "глубокое обучение"
+  },
+  {
+    "id": 809,
+    "idKanji": null,
+    "word": "ニューラルネットワーク",
+    "reading": "ニューラルネットワーク",
+    "category": "технологии",
+    "translation": "нейронная сеть"
+  },
+  {
+    "id": 810,
+    "idKanji": null,
+    "word": "ブロックチェーン",
+    "reading": "ブロックチェーン",
+    "category": "технологии",
+    "translation": "блокчейн"
+  },
+  {
+    "id": 811,
+    "idKanji": null,
+    "word": "暗号資産",
+    "reading": "あんごうしさん",
+    "category": "финансы",
+    "translation": "криптовалюта"
+  },
+  {
+    "id": 812,
+    "idKanji": null,
+    "word": "仮想通貨",
+    "reading": "かそうつうか",
+    "category": "финансы",
+    "translation": "виртуальная валюта"
+  },
+  {
+    "id": 813,
+    "idKanji": null,
+    "word": "メタバース",
+    "reading": "メタバース",
+    "category": "технологии",
+    "translation": "метавселенная"
+  },
+  {
+    "id": 814,
+    "idKanji": null,
+    "word": "拡張現実",
+    "reading": "かくちょうげんじつ",
+    "category": "технологии",
+    "translation": "дополненная реальность"
+  },
+  {
+    "id": 815,
+    "idKanji": null,
+    "word": "仮想現実",
+    "reading": "かそうげんじつ",
+    "category": "технологии",
+    "translation": "виртуальная реальность"
+  },
+  {
+    "id": 816,
+    "idKanji": null,
+    "word": "量子コンピューター",
+    "reading": "りょうしコンピューター",
+    "category": "технологии",
+    "translation": "квантовый компьютер"
+  },
+  {
+    "id": 817,
+    "idKanji": null,
+    "word": "IoT",
+    "reading": "アイオーティー",
+    "category": "технологии",
+    "translation": "интернет вещей"
+  },
+  {
+    "id": 818,
+    "idKanji": null,
+    "word": "5G",
+    "reading": "ファイブジー",
+    "category": "технологии",
+    "translation": "5G"
+  },
+  {
+    "id": 819,
+    "idKanji": null,
+    "word": "クラウドコンピューティング",
+    "reading": "クラウドコンピューティング",
+    "category": "технологии",
+    "translation": "облачные вычисления"
+  },
+  {
+    "id": 820,
+    "idKanji": null,
+    "word": "ビッグデータ",
+    "reading": "ビッグデータ",
+    "category": "технологии",
+    "translation": "большие данные"
+  },
+  {
+    "id": 821,
+    "idKanji": null,
+    "word": "データサイエンス",
+    "reading": "データサイエンス",
+    "category": "технологии",
+    "translation": "наука о данных"
+  },
+  {
+    "id": 822,
+    "idKanji": null,
+    "word": "プログラミング",
+    "reading": "プログラミング",
+    "category": "технологии",
+    "translation": "программирование"
+  },
+  {
+    "id": 823,
+    "idKanji": null,
+    "word": "アルゴリズム",
+    "reading": "アルゴリズム",
+    "category": "технологии",
+    "translation": "алгоритм"
+  },
+  {
+    "id": 824,
+    "idKanji": null,
+    "word": "セキュリティ",
+    "reading": "セキュリティ",
+    "category": "технологии",
+    "translation": "безопасность"
+  },
+  {
+    "id": 825,
+    "idKanji": null,
+    "word": "ハッキング",
+    "reading": "ハッキング",
+    "category": "технологии",
+    "translation": "взлом"
+  },
+  {
+    "id": 826,
+    "idKanji": null,
+    "word": "マルウェア",
+    "reading": "マルウェア",
+    "category": "технологии",
+    "translation": "вредоносное ПО"
+  },
+  {
+    "id": 827,
+    "idKanji": null,
+    "word": "フィッシング",
+    "reading": "フィッシング",
+    "category": "технологии",
+    "translation": "фишинг"
+  },
+  {
+    "id": 828,
+    "idKanji": null,
+    "word": "ブログ",
+    "reading": "ブログ",
+    "category": "интернет",
+    "translation": "блог"
+  },
+  {
+    "id": 829,
+    "idKanji": null,
+    "word": "SNS",
+    "reading": "エスエヌエス",
+    "category": "интернет",
+    "translation": "социальные сети"
+  },
+  {
+    "id": 830,
+    "idKanji": null,
+    "word": "インフルエンサー",
+    "reading": "インフルエンサー",
+    "category": "интернет",
+    "translation": "инфлюенсер"
+  },
+  {
+    "id": 831,
+    "idKanji": null,
+    "word": "ユーチューバー",
+    "reading": "ユーチューバー",
+    "category": "интернет",
+    "translation": "ютубер"
+  },
+  {
+    "id": 832,
+    "idKanji": null,
+    "word": "ポッドキャスト",
+    "reading": "ポッドキャスト",
+    "category": "медиа",
+    "translation": "подкаст"
+  },
+  {
+    "id": 833,
+    "idKanji": null,
+    "word": "ストリーミング",
+    "reading": "ストリーミング",
+    "category": "медиа",
+    "translation": "стриминг"
+  },
+  {
+    "id": 834,
+    "idKanji": null,
+    "word": "サブスクリプション",
+    "reading": "サブスクリプション",
+    "category": "бизнес",
+    "translation": "подписка"
+  },
+  {
+    "id": 835,
+    "idKanji": null,
+    "word": "シェアリングエコノミー",
+    "reading": "シェアリングエコノミー",
+    "category": "экономика",
+    "translation": "шеринговая экономика"
+  },
+  {
+    "id": 836,
+    "idKanji": null,
+    "word": "ギグエコノミー",
+    "reading": "ギグエコノミー",
+    "category": "экономика",
+    "translation": "гиг-экономика"
+  },
+  {
+    "id": 837,
+    "idKanji": null,
+    "word": "リモートワーク",
+    "reading": "リモートワーク",
+    "category": "работа",
+    "translation": "удаленная работа"
+  },
+  {
+    "id": 838,
+    "idKanji": null,
+    "word": "テレワーク",
+    "reading": "テレワーク",
+    "category": "работа",
+    "translation": "телемастерская"
+  },
+  {
+    "id": 839,
+    "idKanji": null,
+    "word": "ワークライフバランス",
+    "reading": "ワークライフバランス",
+    "category": "работа",
+    "translation": "баланс работы и жизни"
+  },
+  {
+    "id": 840,
+    "idKanji": null,
+    "word": "生産性",
+    "reading": "せいさんせい",
+    "category": "работа",
+    "translation": "производительность"
+  },
+  {
+    "id": 841,
+    "idKanji": null,
+    "word": "効率化",
+    "reading": "こうりつか",
+    "category": "работа",
+    "translation": "оптимизация"
+  },
+  {
+    "id": 842,
+    "idKanji": null,
+    "word": "自動化",
+    "reading": "じどうか",
+    "category": "технологии",
+    "translation": "автоматизация"
+  },
+  {
+    "id": 843,
+    "idKanji": null,
+    "word": "デジタル化",
+    "reading": "デジタルか",
+    "category": "технологии",
+    "translation": "цифровизация"
+  },
+  {
+    "id": 844,
+    "idKanji": null,
+    "word": "DX",
+    "reading": "ディーエックス",
+    "category": "бизнес",
+    "translation": "цифровая трансформация"
+  },
+  {
+    "id": 845,
+    "idKanji": null,
+    "word": "イノベーション",
+    "reading": "イノベーション",
+    "category": "бизнес",
+    "translation": "инновация"
+  },
+  {
+    "id": 846,
+    "idKanji": null,
+    "word": "スタートアップ",
+    "reading": "スタートアップ",
+    "category": "бизнес",
+    "translation": "стартап"
+  },
+  {
+    "id": 847,
+    "idKanji": null,
+    "word": "ベンチャー企業",
+    "reading": "ベンチャーきぎょう",
+    "category": "бизнес",
+    "translation": "венчурная компания"
+  },
+  {
+    "id": 848,
+    "idKanji": null,
+    "word": "ユニコーン企業",
+    "reading": "ユニコーンきぎょう",
+    "category": "бизнес",
+    "translation": "единорог-компания"
+  },
+  {
+    "id": 849,
+    "idKanji": null,
+    "word": "ESG",
+    "reading": "イーエスジー",
+    "category": "бизнес",
+    "translation": "ESG (экология, социальная политика, управление)"
+  },
+  {
+    "id": 850,
+    "idKanji": null,
+    "word": "SDGs",
+    "reading": "エスディージーズ",
+    "category": "общество",
+    "translation": "цели устойчивого развития"
+  },
+  {
+    "id": 851,
+    "idKanji": null,
+    "word": "カーボンニュートラル",
+    "reading": "カーボンニュートラル",
+    "category": "экология",
+    "translation": "углеродная нейтральность"
+  },
+  {
+    "id": 852,
+    "idKanji": null,
+    "word": "脱炭素",
+    "reading": "だつたんそ",
+    "category": "экология",
+    "translation": "декарбонизация"
+  },
+  {
+    "id": 853,
+    "idKanji": null,
+    "word": "再生可能エネルギー",
+    "reading": "さいせいかのうエネルギー",
+    "category": "экология",
+    "translation": "возобновляемая энергия"
+  },
+  {
+    "id": 854,
+    "idKanji": null,
+    "word": "サステナビリティ",
+    "reading": "サステナビリティ",
+    "category": "экология",
+    "translation": "устойчивость"
+  },
+  {
+    "id": 855,
+    "idKanji": null,
+    "word": "循環型社会",
+    "reading": "じゅんかんがたしゃかい",
+    "category": "экология",
+    "translation": "циркулярная экономика"
+  },
+  {
+    "id": 856,
+    "idKanji": null,
+    "word": "プラスチックフリー",
+    "reading": "プラスチックフリー",
+    "category": "экология",
+    "translation": "свободный от пластика"
+  },
+  {
+    "id": 857,
+    "idKanji": null,
+    "word": "ゼロウェイスト",
+    "reading": "ゼロウェイスト",
+    "category": "экология",
+    "translation": "ноль отходов"
+  },
+  {
+    "id": 858,
+    "idKanji": null,
+    "word": "ヴィーガン",
+    "reading": "ヴィーガン",
+    "category": "еда",
+    "translation": "веган"
+  },
+  {
+    "id": 859,
+    "idKanji": null,
+    "word": "ベジタリアン",
+    "reading": "ベジタリアン",
+    "category": "еда",
+    "translation": "вегетарианец"
+  },
+  {
+    "id": 860,
+    "idKanji": null,
+    "word": "オーガニック",
+    "reading": "オーガニック",
+    "category": "еда",
+    "translation": "органический"
+  },
+  {
+    "id": 861,
+    "idKanji": null,
+    "word": "地産地消",
+    "reading": "ちさんちしょう",
+    "category": "еда",
+    "translation": "местное производство и потребление"
+  },
+  {
+    "id": 862,
+    "idKanji": null,
+    "word": "フードロス",
+    "reading": "フードロス",
+    "category": "еда",
+    "translation": "пищевые отходы"
+  },
+  {
+    "id": 863,
+    "idKanji": null,
+    "word": "健康寿命",
+    "reading": "けんこうじゅみょう",
+    "category": "здоровье",
+    "translation": "продолжительность здоровой жизни"
+  },
+  {
+    "id": 864,
+    "idKanji": null,
+    "word": "予防医学",
+    "reading": "よぼういがく",
+    "category": "медицина",
+    "translation": "превентивная медицина"
+  },
+  {
+    "id": 865,
+    "idKanji": null,
+    "word": "ウェルネス",
+    "reading": "ウェルネス",
+    "category": "здоровье",
+    "translation": "оздоровление"
+  },
+  {
+    "id": 866,
+    "idKanji": null,
+    "word": "マインドフルネス",
+    "reading": "マインドフルネス",
+    "category": "здоровье",
+    "translation": "осознанность"
+  },
+  {
+    "id": 867,
+    "idKanji": null,
+    "word": "メンタルヘルス",
+    "reading": "メンタルヘルス",
+    "category": "здоровье",
+    "translation": "психическое здоровье"
+  },
+  {
+    "id": 868,
+    "idKanji": null,
+    "word": "ワークアウト",
+    "reading": "ワークアウト",
+    "category": "спорт",
+    "translation": "тренировка"
+  },
+  {
+    "id": 869,
+    "idKanji": null,
+    "word": "フィットネス",
+    "reading": "フィットネス",
+    "category": "спорт",
+    "translation": "фитнес"
+  },
+  {
+    "id": 870,
+    "idKanji": null,
+    "word": "栄養学",
+    "reading": "えいようがく",
+    "category": "здоровье",
+    "translation": "диетология"
+  },
+  {
+    "id": 871,
+    "idKanji": null,
+    "word": "分子栄養学",
+    "reading": "ぶんしえいようがく",
+    "category": "здоровье",
+    "translation": "молекулярная диетология"
+  },
+  {
+    "id": 872,
+    "idKanji": null,
+    "word": "機能性食品",
+    "reading": "きのうせいしょくひん",
+    "category": "еда",
+    "translation": "функциональные продукты"
+  },
+  {
+    "id": 873,
+    "idKanji": null,
+    "word": "サプリメント",
+    "reading": "サプリメント",
+    "category": "здоровье",
+    "translation": "биодобавки"
+  },
+  {
+    "id": 874,
+    "idKanji": null,
+    "word": "プロバイオティクス",
+    "reading": "プロバイオティクス",
+    "category": "здоровье",
+    "translation": "пробиотики"
+  },
+  {
+    "id": 875,
+    "idKanji": null,
+    "word": "プレバイオティクス",
+    "reading": "プレバイオティクス",
+    "category": "здоровье",
+    "translation": "пребиотики"
+  },
+  {
+    "id": 876,
+    "idKanji": null,
+    "word": "腸内細菌",
+    "reading": "ちょうないさいきん",
+    "category": "биология",
+    "translation": "кишечная микрофлора"
+  },
+  {
+    "id": 877,
+    "idKanji": null,
+    "word": "マイクロバイオーム",
+    "reading": "マイクロバイオーム",
+    "category": "биология",
+    "translation": "микробиом"
+  },
+  {
+    "id": 878,
+    "idKanji": null,
+    "word": "エピジェネティクス",
+    "reading": "エピジェネティクス",
+    "category": "биология",
+    "translation": "эпигенетика"
+  },
+  {
+    "id": 879,
+    "idKanji": null,
+    "word": "テロメア",
+    "reading": "テロメア",
+    "category": "биология",
+    "translation": "теломера"
+  },
+  {
+    "id": 880,
+    "idKanji": null,
+    "word": "老化防止",
+    "reading": "ろうかぼうし",
+    "category": "здоровье",
+    "translation": "антивозрастная профилактика"
+  },
+  {
+    "id": 881,
+    "idKanji": null,
+    "word": "アンチエイジング",
+    "reading": "アンチエイジング",
+    "category": "здоровье",
+    "translation": "антивозрастной уход"
+  },
+  {
+    "id": 882,
+    "idKanji": null,
+    "word": "長寿科学",
+    "reading": "ちょうじゅかがく",
+    "category": "наука",
+    "translation": "геронтология"
+  },
+  {
+    "id": 883,
+    "idKanji": null,
+    "word": "再生医学",
+    "reading": "さいせいいがく",
+    "category": "медицина",
+    "translation": "регенеративная медицина"
+  },
+  {
+    "id": 884,
+    "idKanji": null,
+    "word": "組織工学",
+    "reading": "そしきこうがく",
+    "category": "медицина",
+    "translation": "тканевая инженерия"
+  },
+  {
+    "id": 885,
+    "idKanji": null,
+    "word": "3Dバイオプリンティング",
+    "reading": "スリーディーバイオプリンティング",
+    "category": "медицина",
+    "translation": "3D-биопринтинг"
+  },
+  {
+    "id": 886,
+    "idKanji": null,
+    "word": "遺伝子編集",
+    "reading": "いでんしへんしゅう",
+    "category": "биология",
+    "translation": "редактирование генов"
+  },
+  {
+    "id": 887,
+    "idKanji": null,
+    "word": "CRISPR",
+    "reading": "クリスパー",
+    "category": "биология",
+    "translation": "CRISPR"
+  },
+  {
+    "id": 888,
+    "idKanji": null,
+    "word": "mRNAワクチン",
+    "reading": "エムアールエヌエーワクチン",
+    "category": "медицина",
+    "translation": "мРНК-вакцина"
+  },
+  {
+    "id": 889,
+    "idKanji": null,
+    "word": "テクノロジー",
+    "reading": "テクノロジー",
+    "category": "технологии",
+    "translation": "технология"
+  },
+  {
+    "id": 890,
+    "idKanji": null,
+    "word": "イノベーション",
+    "reading": "イノベーション",
+    "category": "бизнес",
+    "translation": "инновация"
+  },
+  {
+    "id": 891,
+    "idKanji": null,
+    "word": "ディスラプション",
+    "reading": "ディスラプション",
+    "category": "бизнес",
+    "translation": "дисрупция"
+  },
+  {
+    "id": 892,
+    "idKanji": null,
+    "word": "パラダイムシフト",
+    "reading": "パラダイムシフト",
+    "category": "понятия",
+    "translation": "смена парадигмы"
+  },
+  {
+    "id": 893,
+    "idKanji": null,
+    "word": "ゲームチェンジャー",
+    "reading": "ゲームチェンジャー",
+    "category": "бизнес",
+    "translation": "игрок, меняющий правила"
+  },
+  {
+    "id": 894,
+    "idKanji": null,
+    "word": "ムーアの法則",
+    "reading": "ムーアのほうそく",
+    "category": "технологии",
+    "translation": "закон Мура"
+  },
+  {
+    "id": 895,
+    "idKanji": null,
+    "word": "シンギュラリティ",
+    "reading": "シンギュラリティ",
+    "category": "технологии",
+    "translation": "сингулярность"
+  },
+  {
+    "id": 896,
+    "idKanji": null,
+    "word": "トランスヒューマニズム",
+    "reading": "トランスヒューマニズム",
+    "category": "философия",
+    "translation": "трансгуманизм"
+  },
+  {
+    "id": 897,
+    "idKanji": null,
+    "word": "ポストヒューマン",
+    "reading": "ポストヒューマン",
+    "category": "философия",
+    "translation": "постчеловек"
+  },
+  {
+    "id": 898,
+    "idKanji": null,
+    "word": "宇宙旅行",
+    "reading": "うちゅうりょこう",
+    "category": "космос",
+    "translation": "космический туризм"
+  },
+  {
+    "id": 899,
+    "idKanji": null,
+    "word": "火星移住",
+    "reading": "かせいいじゅう",
+    "category": "космос",
+    "translation": "колонизация Марса"
+  },
+  {
+    "id": 900,
+    "idKanji": null,
+    "word": "地球温暖化",
+    "reading": "ちきゅうおんだんか",
+    "category": "экология",
+    "translation": "глобальное потепление"
+  },
+  {
+    "id": 901,
+    "idKanji": null,
+    "word": "気候変動",
+    "reading": "きこうへんどう",
+    "category": "экология",
+    "translation": "изменение климата"
+  },
+  {
+    "id": 902,
+    "idKanji": null,
+    "word": "異常気象",
+    "reading": "いじょうきしょう",
+    "category": "экология",
+    "translation": "аномальная погода"
+  },
+  {
+    "id": 903,
+    "idKanji": null,
+    "word": "自然災害",
+    "reading": "しぜんさいがい",
+    "category": "экология",
+    "translation": "стихийное бедствие"
+  },
+  {
+    "id": 904,
+    "idKanji": null,
+    "word": "防災",
+    "reading": "ぼうさい",
+    "category": "общество",
+    "translation": "предотвращение катастроф"
+  },
+  {
+    "id": 905,
+    "idKanji": null,
+    "word": "減災",
+    "reading": "げんさい",
+    "category": "общество",
+    "translation": "снижение ущерба от катастроф"
+  },
+  {
+    "id": 906,
+    "idKanji": null,
+    "word": "レジリエンス",
+    "reading": "レジリエンス",
+    "category": "общество",
+    "translation": "устойчивость"
+  },
+  {
+    "id": 907,
+    "idKanji": null,
+    "word": "サプライチェーン",
+    "reading": "サプライチェーン",
+    "category": "бизнес",
+    "translation": "цепочка поставок"
+  },
+  {
+    "id": 908,
+    "idKanji": null,
+    "word": "グローバル化",
+    "reading": "グローバルか",
+    "category": "экономика",
+    "translation": "глобализация"
+  },
+  {
+    "id": 909,
+    "idKanji": null,
+    "word": "ローカライゼーション",
+    "reading": "ローカライゼーション",
+    "category": "бизнес",
+    "translation": "локализация"
+  },
+  {
+    "id": 910,
+    "idKanji": null,
+    "word": "グローカリゼーション",
+    "reading": "グローカリゼーション",
+    "category": "бизнес",
+    "translation": "глокализация"
+  },
+  {
+    "id": 911,
+    "idKanji": null,
+    "word": "多様性",
+    "reading": "たようせい",
+    "category": "общество",
+    "translation": "разнообразие"
+  },
+  {
+    "id": 912,
+    "idKanji": null,
+    "word": "包摂",
+    "reading": "ほうせつ",
+    "category": "общество",
+    "translation": "инклюзивность"
+  },
+  {
+    "id": 913,
+    "idKanji": null,
+    "word": "エクイティ",
+    "reading": "エクイティ",
+    "category": "общество",
+    "translation": "равенство"
+  },
+  {
+    "id": 914,
+    "idKanji": null,
+    "word": "ジェンダー平等",
+    "reading": "ジェンダーびょうどう",
+    "category": "общество",
+    "translation": "гендерное равенство"
+  },
+  {
+    "id": 915,
+    "idKanji": null,
+    "word": "LGBTQ+",
+    "reading": "エルジービーティーキュー",
+    "category": "общество",
+    "translation": "LGBTQ+"
+  },
+  {
+    "id": 916,
+    "idKanji": null,
+    "word": "アライ",
+    "reading": "アライ",
+    "category": "общество",
+    "translation": "союзник"
+  },
+  {
+    "id": 917,
+    "idKanji": null,
+    "word": "心理的安全性",
+    "reading": "しんりてきあんぜんせい",
+    "category": "работа",
+    "translation": "психологическая безопасность"
+  },
+  {
+    "id": 918,
+    "idKanji": null,
+    "word": "エンパシー",
+    "reading": "エンパシー",
+    "category": "психология",
+    "translation": "эмпатия"
+  },
+  {
+    "id": 919,
+    "idKanji": null,
+    "word": "レジリエンス",
+    "reading": "レジリエンス",
+    "category": "психология",
+    "translation": "устойчивость"
+  },
+  {
+    "id": 920,
+    "idKanji": null,
+    "word": "グリット",
+    "reading": "グリット",
+    "category": "психология",
+    "translation": "упорство"
+  },
+  {
+    "id": 921,
+    "idKanji": null,
+    "word": "グロースマインドセット",
+    "reading": "グロースマインドセット",
+    "category": "психология",
+    "translation": "мышление роста"
+  },
+  {
+    "id": 922,
+    "idKanji": null,
+    "word": "エモーショナルインテリジェンス",
+    "reading": "エモーショナルインテリジェンス",
+    "category": "психология",
+    "translation": "эмоциональный интеллект"
+  },
+  {
+    "id": 923,
+    "idKanji": null,
+    "word": "リーダーシップ",
+    "reading": "リーダーシップ",
+    "category": "работа",
+    "translation": "лидерство"
+  },
+  {
+    "id": 924,
+    "idKanji": null,
+    "word": "マネジメント",
+    "reading": "マネジメント",
+    "category": "работа",
+    "translation": "управление"
+  },
+  {
+    "id": 925,
+    "idKanji": null,
+    "word": "コーチング",
+    "reading": "コーチング",
+    "category": "работа",
+    "translation": "коучинг"
+  },
+  {
+    "id": 926,
+    "idKanji": null,
+    "word": "メンター",
+    "reading": "メンター",
+    "category": "работа",
+    "translation": "наставник"
+  },
+  {
+    "id": 927,
+    "idKanji": null,
+    "word": "ネットワーキング",
+    "reading": "ネットワーキング",
+    "category": "работа",
+    "translation": "нетворкинг"
+  },
+  {
+    "id": 928,
+    "idKanji": null,
+    "word": "ブランディング",
+    "reading": "ブランディング",
+    "category": "бизнес",
+    "translation": "брендинг"
+  },
+  {
+    "id": 929,
+    "idKanji": null,
+    "word": "マーケティング",
+    "reading": "マーケティング",
+    "category": "бизнес",
+    "translation": "маркетинг"
+  },
+  {
+    "id": 930,
+    "idKanji": null,
+    "word": "コンテンツマーケティング",
+    "reading": "コンテンツマーケティング",
+    "category": "бизнес",
+    "translation": "контент-маркетинг"
+  },
+  {
+    "id": 931,
+    "idKanji": null,
+    "word": "SEO",
+    "reading": "エスイーオー",
+    "category": "интернет",
+    "translation": "поисковая оптимизация"
+  },
+  {
+    "id": 932,
+    "idKanji": null,
+    "word": "SEM",
+    "reading": "エスイーエム",
+    "category": "интернет",
+    "translation": "поисковый маркетинг"
+  },
+  {
+    "id": 933,
+    "idKanji": null,
+    "word": "SMO",
+    "reading": "エスエムオー",
+    "category": "интернет",
+    "translation": "оптимизация для социальных сетей"
+  },
+  {
+    "id": 934,
+    "idKanji": null,
+    "word": "KPI",
+    "reading": "ケーピーアイ",
+    "category": "бизнес",
+    "translation": "ключевой показатель эффективности"
+  },
+  {
+    "id": 935,
+    "idKanji": null,
+    "word": "OKR",
+    "reading": "オーケーアール",
+    "category": "бизнес",
+    "translation": "цели и ключевые результаты"
+  },
+  {
+    "id": 936,
+    "idKanji": null,
+    "word": "ROI",
+    "reading": "アールオーアイ",
+    "category": "бизнес",
+    "translation": "возврат инвестиций"
+  },
+  {
+    "id": 937,
+    "idKanji": null,
+    "word": "CRM",
+    "reading": "シーアールエム",
+    "category": "бизнес",
+    "translation": "управление взаимоотношениями с клиентами"
+  },
+  {
+    "id": 938,
+    "idKanji": null,
+    "word": "ERP",
+    "reading": "イーアールピー",
+    "category": "бизнес",
+    "translation": "планирование ресурсов предприятия"
+  },
+  {
+    "id": 939,
+    "idKanji": null,
+    "word": "SCM",
+    "reading": "エスシーエム",
+    "category": "бизнес",
+    "translation": "управление цепочками поставок"
+  },
+  {
+    "id": 940,
+    "idKanji": null,
+    "word": "BPR",
+    "reading": "ビーピーアール",
+    "category": "бизнес",
+    "translation": "реинжиниринг бизнес-процессов"
+  },
+  {
+    "id": 941,
+    "idKanji": null,
+    "word": "M&A",
+    "reading": "エムアンドエー",
+    "category": "бизнес",
+    "translation": "слияния и поглощения"
+  },
+  {
+    "id": 942,
+    "idKanji": null,
+    "word": "IPO",
+    "reading": "アイピーオー",
+    "category": "финансы",
+    "translation": "первичное публичное предложение"
+  },
+  {
+    "id": 943,
+    "idKanji": null,
+    "word": "VC",
+    "reading": "ブイシー",
+    "category": "финансы",
+    "translation": "венчурный капитал"
+  },
+  {
+    "id": 944,
+    "idKanji": null,
+    "word": "PE",
+    "reading": "ピーイー",
+    "category": "финансы",
+    "translation": "частный капитал"
+  },
+  {
+    "id": 945,
+    "idKanji": null,
+    "word": "FinTech",
+    "reading": "フィンテック",
+    "category": "финансы",
+    "translation": "финтех"
+  },
+  {
+    "id": 946,
+    "idKanji": null,
+    "word": "InsurTech",
+    "reading": "インシュアテック",
+    "category": "финансы",
+    "translation": "иншуритех"
+  },
+  {
+    "id": 947,
+    "idKanji": null,
+    "word": "RegTech",
+    "reading": "レグテック",
+    "category": "финансы",
+    "translation": "регтех"
+  },
+  {
+    "id": 948,
+    "idKanji": null,
+    "word": "プロップテック",
+    "reading": "プロップテック",
+    "category": "технологии",
+    "translation": "проптех"
+  },
+  {
+    "id": 949,
+    "idKanji": null,
+    "word": "HRTech",
+    "reading": "エイチアールテック",
+    "category": "технологии",
+    "translation": "HR-технологии"
+  },
+  {
+    "id": 950,
+    "idKanji": null,
+    "word": "EdTech",
+    "reading": "エドテック",
+    "category": "образование",
+    "translation": "образовательные технологии"
+  },
+  {
+    "id": 951,
+    "idKanji": null,
+    "word": "HealthTech",
+    "reading": "ヘルステック",
+    "category": "медицина",
+    "translation": "медицинские технологии"
+  },
+  {
+    "id": 952,
+    "idKanji": null,
+    "word": "MedTech",
+    "reading": "メドテック",
+    "category": "медицина",
+    "translation": "медтех"
+  },
+  {
+    "id": 953,
+    "idKanji": null,
+    "word": "AgriTech",
+    "reading": "アグリテック",
+    "category": "технологии",
+    "translation": "агротехнологии"
+  },
+  {
+    "id": 954,
+    "idKanji": null,
+    "word": "FoodTech",
+    "reading": "フードテック",
+    "category": "технологии",
+    "translation": "фудтех"
+  },
+  {
+    "id": 955,
+    "idKanji": null,
+    "word": "CleanTech",
+    "reading": "クリーンテック",
+    "category": "технологии",
+    "translation": "климатические технологии"
+  },
+  {
+    "id": 956,
+    "idKanji": null,
+    "word": "GreenTech",
+    "reading": "グリーンテック",
+    "category": "технологии",
+    "translation": "зеленые технологии"
+  },
+  {
+    "id": 957,
+    "idKanji": null,
+    "word": "ClimateTech",
+    "reading": "クライメイトテック",
+    "category": "технологии",
+    "translation": "климатические технологии"
+  },
+  {
+    "id": 958,
+    "idKanji": null,
+    "word": "SpaceTech",
+    "reading": "スペーステック",
+    "category": "космос",
+    "translation": "космические технологии"
+  },
+  {
+    "id": 959,
+    "idKanji": null,
+    "word": "DeepTech",
+    "reading": "ディープテック",
+    "category": "технологии",
+    "translation": "глубокие технологии"
+  },
+  {
+    "id": 960,
+    "idKanji": null,
+    "word": "FrontierTech",
+    "reading": "フロンティアテック",
+    "category": "технологии",
+    "translation": "передовые технологии"
+  },
+  {
+    "id": 961,
+    "idKanji": null,
+    "word": "イーサリアム",
+    "reading": "イーサリアム",
+    "category": "технологии",
+    "translation": "Ethereum"
+  },
+  {
+    "id": 962,
+    "idKanji": null,
+    "word": "ビットコイン",
+    "reading": "ビットコイン",
+    "category": "финансы",
+    "translation": "Bitcoin"
+  },
+  {
+    "id": 963,
+    "idKanji": null,
+    "word": "アルトコイン",
+    "reading": "アルトコイン",
+    "category": "финансы",
+    "translation": "альткоин"
+  },
+  {
+    "id": 964,
+    "idKanji": null,
+    "word": "DeFi",
+    "reading": "ディーファイ",
+    "category": "финансы",
+    "translation": "децентрализованные финансы"
+  },
+  {
+    "id": 965,
+    "idKanji": null,
+    "word": "NFT",
+    "reading": "エヌエフティー",
+    "category": "технологии",
+    "translation": "невзаимозаменяемый токен"
+  },
+  {
+    "id": 966,
+    "idKanji": null,
+    "word": "メタバース",
+    "reading": "メタバース",
+    "category": "технологии",
+    "translation": "метавселенная"
+  },
+  {
+    "id": 967,
+    "idKanji": null,
+    "word": "Web3",
+    "reading": "ウェブスリー",
+    "category": "интернет",
+    "translation": "Web3"
+  },
+  {
+    "id": 968,
+    "idKanji": null,
+    "word": "DAO",
+    "reading": "ダオ",
+    "category": "технологии",
+    "translation": "децентрализованная автономная организация"
+  },
+  {
+    "id": 969,
+    "idKanji": null,
+    "word": "スマートコントラクト",
+    "reading": "スマートコントラクト",
+    "category": "технологии",
+    "translation": "умный контракт"
+  },
+  {
+    "id": 970,
+    "idKanji": null,
+    "word": "トークンエコノミー",
+    "reading": "トークンエコノミー",
+    "category": "экономика",
+    "translation": "токен-экономика"
+  },
+  {
+    "id": 971,
+    "idKanji": null,
+    "word": "ガバナンストークン",
+    "reading": "ガバナンストークン",
+    "category": "финансы",
+    "translation": "токен управления"
+  },
+  {
+    "id": 972,
+    "idKanji": null,
+    "word": "ユーティリティトークン",
+    "reading": "ユーティリティトークン",
+    "category": "финансы",
+    "translation": "утилитарный токен"
+  },
+  {
+    "id": 973,
+    "idKanji": null,
+    "word": "セキュリティトークン",
+    "reading": "セキュリティトークン",
+    "category": "финансы",
+    "translation": "security token"
+  },
+  {
+    "id": 974,
+    "idKanji": null,
+    "word": "ステーブルコイン",
+    "reading": "ステーブルコイン",
+    "category": "финансы",
+    "translation": "стейблкоин"
+  },
+  {
+    "id": 975,
+    "idKanji": null,
+    "word": "マイニング",
+    "reading": "マイニング",
+    "category": "технологии",
+    "translation": "майнинг"
+  },
+  {
+    "id": 976,
+    "idKanji": null,
+    "word": "ステーキング",
+    "reading": "ステーキング",
+    "category": "технологии",
+    "translation": "стейкинг"
+  },
+  {
+    "id": 977,
+    "idKanji": null,
+    "word": "流動性マイニング",
+    "reading": "りゅうどうせいマイニング",
+    "category": "финансы",
+    "translation": "ликвидный майнинг"
+  },
+  {
+    "id": 978,
+    "idKanji": null,
+    "word": "ガス代",
+    "reading": "ガスだい",
+    "category": "технологии",
+    "translation": "комиссия за газ"
+  },
+  {
+    "id": 979,
+    "idKanji": null,
+    "word": "スケーラビリティ",
+    "reading": "スケーラビリティ",
+    "category": "технологии",
+    "translation": "масштабируемость"
+  },
+  {
+    "id": 980,
+    "idKanji": null,
+    "word": "インターオペラビリティ",
+    "reading": "インターオペラビリティ",
+    "category": "технологии",
+    "translation": "взаимодействие"
+  },
+  {
+    "id": 981,
+    "idKanji": null,
+    "word": "ゼロ知識証明",
+    "reading": "ゼロちしきしょうめい",
+    "category": "технологии",
+    "translation": "доказательство с нулевым разглашением"
+  },
+  {
+    "id": 982,
+    "idKanji": null,
+    "word": "レイヤー2",
+    "reading": "レイヤーツー",
+    "category": "технологии",
+    "translation": "второй слой"
+  },
+  {
+    "id": 983,
+    "idKanji": null,
+    "word": "サイドチェーン",
+    "reading": "サイドチェーン",
+    "category": "технологии",
+    "translation": "сайдчейн"
+  },
+  {
+    "id": 984,
+    "idKanji": null,
+    "word": "クロスチェーン",
+    "reading": "クロスチェーン",
+    "category": "технологии",
+    "translation": "кроссчейн"
+  },
+  {
+    "id": 985,
+    "idKanji": null,
+    "word": "オラクル",
+    "reading": "オラクル",
+    "category": "технологии",
+    "translation": "оракул"
+  },
+  {
+    "id": 986,
+    "idKanji": null,
+    "word": "ブリッジ",
+    "reading": "ブリッジ",
+    "category": "технологии",
+    "translation": "мост"
+  },
+  {
+    "id": 987,
+    "idKanji": null,
+    "word": "マルチシグ",
+    "reading": "マルチシグ",
+    "category": "технологии",
+    "translation": "мультиподпись"
+  },
+  {
+    "id": 988,
+    "idKanji": null,
+    "word": "ホットウォレット",
+    "reading": "ホットウォレット",
+    "category": "технологии",
+    "translation": "горячий кошелек"
+  },
+  {
+    "id": 989,
+    "idKanji": null,
+    "word": "コールドウォレット",
+    "reading": "コールドウォレット",
+    "category": "технологии",
+    "translation": "холодный кошелек"
+  },
+  {
+    "id": 990,
+    "idKanji": null,
+    "word": "ハードウェアウォレット",
+    "reading": "ハードウェアウォレット",
+    "category": "технологии",
+    "translation": "аппаратный кошелек"
+  },
+  {
+    "id": 991,
+    "idKanji": null,
+    "word": "秘密鍵",
+    "reading": "ひみつけん",
+    "category": "технологии",
+    "translation": "приватный ключ"
+  },
+  {
+    "id": 992,
+    "idKanji": null,
+    "word": "公開鍵",
+    "reading": "こうかいけん",
+    "category": "технологии",
+    "translation": "публичный ключ"
+  },
+  {
+    "id": 993,
+    "idKanji": null,
+    "word": "ウォレットアドレス",
+    "reading": "ウォレットアドレス",
+    "category": "технологии",
+    "translation": "адрес кошелька"
+  },
+  {
+    "id": 994,
+    "idKanji": null,
+    "word": "トランザクション",
+    "reading": "トランザクション",
+    "category": "технологии",
+    "translation": "транзакция"
+  },
+  {
+    "id": 995,
+    "idKanji": null,
+    "word": "ブロック",
+    "reading": "ブロック",
+    "category": "технологии",
+    "translation": "блок"
+  },
+  {
+    "id": 996,
+    "idKanji": null,
+    "word": "コンセンサス",
+    "reading": "コンセンサス",
+    "category": "технологии",
+    "translation": "консенсус"
+  },
+  {
+    "id": 997,
+    "idKanji": null,
+    "word": "PoW",
+    "reading": "ピーオーダブリュー",
+    "category": "технологии",
+    "translation": "Proof of Work"
+  },
+  {
+    "id": 998,
+    "idKanji": null,
+    "word": "PoS",
+    "reading": "ピーオーエス",
+    "category": "технологии",
+    "translation": "Proof of Stake"
+  },
+  {
+    "id": 999,
+    "idKanji": null,
+    "word": "dApp",
+    "reading": "ディーアプリ",
+    "category": "технологии",
+    "translation": "децентрализованное приложение"
+  },
+  {
+    "id": 1000,
+    "idKanji": null,
+    "word": "未来",
+    "reading": "みらい",
+    "category": "понятия",
+    "translation": "будущее"
+  }
+]

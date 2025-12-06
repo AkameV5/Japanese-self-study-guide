@@ -1,0 +1,542 @@
+[
+  {
+    "id": 301,
+    "kanji": "比",
+    "meaning": "сравнивать",
+    "onYomi": ["ヒ"],
+    "kunYomi": ["くら.べる"],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 302,
+    "kanji": "皆",
+    "meaning": "все, весь",
+    "onYomi": ["カイ"],
+    "kunYomi": ["みな", "みんな"],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 303,
+    "kanji": "専",
+    "meaning": "специальность, специалист",
+    "onYomi": ["セン"],
+    "kunYomi": ["もっぱ.ら"],
+    "category": "образование",
+    "jlpt": 2
+  },
+  {
+    "id": 304,
+    "kanji": "読",
+    "meaning": "читать",
+    "onYomi": ["ドク", "トク"],
+    "kunYomi": ["よ.む"],
+    "category": "действия",
+    "jlpt": 5
+  },
+  {
+    "id": 305,
+    "kanji": "医",
+    "meaning": "медицина, врач",
+    "onYomi": ["イ"],
+    "kunYomi": [],
+    "category": "медицина",
+    "jlpt": 2
+  },
+  {
+    "id": 306,
+    "kanji": "者",
+    "meaning": "человек",
+    "onYomi": ["シャ"],
+    "kunYomi": ["もの"],
+    "category": "люди",
+    "jlpt": 3
+  },
+  {
+    "id": 307,
+    "kanji": "薬",
+    "meaning": "лекарство",
+    "onYomi": ["ヤク"],
+    "kunYomi": ["くすり"],
+    "category": "медицина",
+    "jlpt": 4
+  },
+  {
+    "id": 308,
+    "kanji": "治",
+    "meaning": "лечить, управлять",
+    "onYomi": ["ジ", "チ"],
+    "kunYomi": ["なお.る", "なお.す", "おさ.める"],
+    "category": "медицина",
+    "jlpt": 3
+  },
+  {
+    "id": 309,
+    "kanji": "病",
+    "meaning": "болезнь",
+    "onYomi": ["ビョウ"],
+    "kunYomi": ["や.む"],
+    "category": "медицина",
+    "jlpt": 5
+  },
+  {
+    "id": 310,
+    "kanji": "院",
+    "meaning": "учреждение",
+    "onYomi": ["イン"],
+    "kunYomi": [],
+    "category": "места",
+    "jlpt": 4
+  },
+  {
+    "id": 311,
+    "kanji": "痛",
+    "meaning": "боль",
+    "onYomi": ["ツウ"],
+    "kunYomi": ["いた.い", "いた.む"],
+    "category": "медицина",
+    "jlpt": 3
+  },
+  {
+    "id": 312,
+    "kanji": "活",
+    "meaning": "активный, жизнь",
+    "onYomi": ["カツ"],
+    "kunYomi": [],
+    "category": "понятия",
+    "jlpt": 4
+  },
+  {
+    "id": 313,
+    "kanji": "両",
+    "meaning": "оба",
+    "onYomi": ["リョウ"],
+    "kunYomi": [],
+    "category": "понятия",
+    "jlpt": 2
+  },
+  {
+    "id": 314,
+    "kanji": "親",
+    "meaning": "родители, близкий",
+    "onYomi": ["シン"],
+    "kunYomi": ["おや", "した.しい"],
+    "category": "семья",
+    "jlpt": 4
+  },
+  {
+    "id": 315,
+    "kanji": "結",
+    "meaning": "завязывать, связывать",
+    "onYomi": ["ケツ"],
+    "kunYomi": ["むす.ぶ"],
+    "category": "действия",
+    "jlpt": 3
+  },
+  {
+    "id": 316,
+    "kanji": "婚",
+    "meaning": "жениться",
+    "onYomi": ["コン"],
+    "kunYomi": [],
+    "category": "отношения",
+    "jlpt": 3
+  },
+  {
+    "id": 317,
+    "kanji": "夫",
+    "meaning": "муж",
+    "onYomi": ["フ"],
+    "kunYomi": ["おっと"],
+    "category": "семья",
+    "jlpt": 5
+  },
+  {
+    "id": 318,
+    "kanji": "婦",
+    "meaning": "женщина, хозяйка дома",
+    "onYomi": ["フ"],
+    "kunYomi": [],
+    "category": "семья",
+    "jlpt": 3
+  },
+  {
+    "id": 319,
+    "kanji": "係",
+    "meaning": "связывать, ответственное лицо",
+    "onYomi": ["ケイ"],
+    "kunYomi": ["かか.り"],
+    "category": "работа",
+    "jlpt": 3
+  },
+  {
+    "id": 320,
+    "kanji": "関",
+    "meaning": "беспокойство, барьер",
+    "onYomi": ["カン"],
+    "kunYomi": ["せき"],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 321,
+    "kanji": "育",
+    "meaning": "поднимать, растить",
+    "onYomi": ["イク"],
+    "kunYomi": ["そだ.つ", "そだ.てる"],
+    "category": "действия",
+    "jlpt": 4
+  },
+  {
+    "id": 322,
+    "kanji": "頭",
+    "meaning": "голова",
+    "onYomi": ["トウ"],
+    "kunYomi": ["あたま"],
+    "category": "части тела",
+    "jlpt": 5
+  },
+  {
+    "id": 323,
+    "kanji": "顔",
+    "meaning": "лицо",
+    "onYomi": ["ガン"],
+    "kunYomi": ["かお"],
+    "category": "части тела",
+    "jlpt": 5
+  },
+  {
+    "id": 324,
+    "kanji": "体",
+    "meaning": "тело, сам",
+    "onYomi": ["タイ"],
+    "kunYomi": ["からだ"],
+    "category": "части тела",
+    "jlpt": 5
+  },
+  {
+    "id": 325,
+    "kanji": "形",
+    "meaning": "форма",
+    "onYomi": ["ケイ", "ギョウ"],
+    "kunYomi": ["かたち", "かた"],
+    "category": "понятия",
+    "jlpt": 4
+  },
+  {
+    "id": 326,
+    "kanji": "成",
+    "meaning": "достичь, форма",
+    "onYomi": ["セイ", " ジョウ"],
+    "kunYomi": ["な.る"],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 327,
+    "kanji": "笑",
+    "meaning": "смеяться",
+    "onYomi": ["ショウ"],
+    "kunYomi": ["わら.う", "え.む"],
+    "category": "чувства",
+    "jlpt": 4
+  },
+  {
+    "id": 328,
+    "kanji": "泣",
+    "meaning": "плакать",
+    "onYomi": ["キュウ"],
+    "kunYomi": ["な.く"],
+    "category": "чувства",
+    "jlpt": 4
+  },
+  {
+    "id": 329,
+    "kanji": "困",
+    "meaning": "испытывать неудобства",
+    "onYomi": ["コン"],
+    "kunYomi": ["こま.る"],
+    "category": "чувства",
+    "jlpt": 4
+  },
+  {
+    "id": 330,
+    "kanji": "熱",
+    "meaning": "горячий",
+    "onYomi": ["ネツ"],
+    "kunYomi": ["あつ.い"],
+    "category": "медицина",
+    "jlpt": 3
+  },
+  {
+    "id": 331,
+    "kanji": "暑",
+    "meaning": "жаркий, знойный",
+    "onYomi": ["ショ"],
+    "kunYomi": ["あつ.い"],
+    "category": "погода",
+    "jlpt": 4
+  },
+  {
+    "id": 332,
+    "kanji": "氷",
+    "meaning": "лёд",
+    "onYomi": ["ヒョウ"],
+    "kunYomi": ["こおり", "ひ"],
+    "category": "природа",
+    "jlpt": 3
+  },
+  {
+    "id": 333,
+    "kanji": "寒",
+    "meaning": "холодный (о погоде)",
+    "onYomi": ["カン"],
+    "kunYomi": ["さむ.い"],
+    "category": "погода",
+    "jlpt": 5
+  },
+  {
+    "id": 334,
+    "kanji": "冷",
+    "meaning": "холодный",
+    "onYomi": ["レイ"],
+    "kunYomi": ["つめ.たい", "ひ.やす"],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 335,
+    "kanji": "温",
+    "meaning": "тёплый",
+    "onYomi": ["オン"],
+    "kunYomi": ["あたた.かい"],
+    "category": "погода",
+    "jlpt": 3
+  },
+  {
+    "id": 336,
+    "kanji": "晴",
+    "meaning": "ясная погода",
+    "onYomi": ["セイ"],
+    "kunYomi": ["は.れる"],
+    "category": "погода",
+    "jlpt": 5
+  },
+  {
+    "id": 337,
+    "kanji": "降",
+    "meaning": "спускаться, падать",
+    "onYomi": ["コウ"],
+    "kunYomi": ["ふ.る", "お.りる"],
+    "category": "погода",
+    "jlpt": 4
+  },
+  {
+    "id": 338,
+    "kanji": "度",
+    "meaning": "время, градусы",
+    "onYomi": ["ド"],
+    "kunYomi": ["たび"],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 339,
+    "kanji": "世",
+    "meaning": "поколение, мир",
+    "onYomi": ["セ"],
+    "kunYomi": ["よ"],
+    "category": "общество",
+    "jlpt": 3
+  },
+  {
+    "id": 340,
+    "kanji": "界",
+    "meaning": "мир, граница",
+    "onYomi": ["カイ"],
+    "kunYomi": [],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 341,
+    "kanji": "地",
+    "meaning": "земля, место",
+    "onYomi": ["チ", "ジ"],
+    "kunYomi": [],
+    "category": "природа",
+    "jlpt": 4
+  },
+  {
+    "id": 342,
+    "kanji": "図",
+    "meaning": "карта, рисунок",
+    "onYomi": ["ズ", "ト"],
+    "kunYomi": ["はか.る"],
+    "category": "предметы",
+    "jlpt": 3
+  },
+  {
+    "id": 343,
+    "kanji": "海",
+    "meaning": "море",
+    "onYomi": ["カイ"],
+    "kunYomi": ["うみ"],
+    "category": "природа",
+    "jlpt": 5
+  },
+  {
+    "id": 344,
+    "kanji": "池",
+    "meaning": "пруд",
+    "onYomi": ["チ"],
+    "kunYomi": ["いけ"],
+    "category": "природа",
+    "jlpt": 4
+  },
+  {
+    "id": 345,
+    "kanji": "島",
+    "meaning": "остров",
+    "onYomi": ["トウ"],
+    "kunYomi": ["しま"],
+    "category": "природа",
+    "jlpt": 3
+  },
+  {
+    "id": 346,
+    "kanji": "野",
+    "meaning": "поле",
+    "onYomi": ["ヤ"],
+    "kunYomi": ["の"],
+    "category": "природа",
+    "jlpt": 4
+  },
+  {
+    "id": 347,
+    "kanji": "乗",
+    "meaning": "ехать, садиться",
+    "onYomi": ["ジョウ"],
+    "kunYomi": ["の.る"],
+    "category": "транспорт",
+    "jlpt": 4
+  },
+  {
+    "id": 348,
+    "kanji": "転",
+    "meaning": "поворачивать",
+    "onYomi": ["テン"],
+    "kunYomi": ["ころ.ぶ"],
+    "category": "действия",
+    "jlpt": 3
+  },
+  {
+    "id": 349,
+    "kanji": "空",
+    "meaning": "небо, воздух, пустой",
+    "onYomi": ["クウ"],
+    "kunYomi": ["そら", "あ.く"],
+    "category": "природа",
+    "jlpt": 5
+  },
+  {
+    "id": 350,
+    "kanji": "港",
+    "meaning": "порт",
+    "onYomi": ["コウ"],
+    "kunYomi": ["みなと"],
+    "category": "места",
+    "jlpt": 3
+  },
+  {
+    "id": 351,
+    "kanji": "機",
+    "meaning": "механизм, машина, возможность",
+    "onYomi": ["キ"],
+    "kunYomi": ["はた"],
+    "category": "технологии",
+    "jlpt": 2
+  },
+  {
+    "id": 352,
+    "kanji": "飛",
+    "meaning": "летать",
+    "onYomi": ["ヒ"],
+    "kunYomi": ["と.ぶ"],
+    "category": "действия",
+    "jlpt": 3
+  },
+  {
+    "id": 353,
+    "kanji": "橋",
+    "meaning": "мост",
+    "onYomi": ["キョウ"],
+    "kunYomi": ["はし"],
+    "category": "места",
+    "jlpt": 3
+  },
+  {
+    "id": 354,
+    "kanji": "線",
+    "meaning": "линия",
+    "onYomi": ["セン"],
+    "kunYomi": [],
+    "category": "понятия",
+    "jlpt": 3
+  },
+  {
+    "id": 355,
+    "kanji": "通",
+    "meaning": "проходить, курсировать",
+    "onYomi": ["ツウ"],
+    "kunYomi": ["とお.る", "かよ.う"],
+    "category": "действия",
+    "jlpt": 4
+  },
+  {
+    "id": 356,
+    "kanji": "荷",
+    "meaning": "груз",
+    "onYomi": ["カ"],
+    "kunYomi": ["に"],
+    "category": "предметы",
+    "jlpt": 3
+  },
+  {
+    "id": 357,
+    "kanji": "券",
+    "meaning": "билет, купон",
+    "onYomi": ["ケン"],
+    "kunYomi": [],
+    "category": "предметы",
+    "jlpt": 2
+  },
+  {
+    "id": 358,
+    "kanji": "泊",
+    "meaning": "останавливаться на ночь",
+    "onYomi": ["ハク"],
+    "kunYomi": ["と.まる"],
+    "category": "путешествия",
+    "jlpt": 3
+  },
+  {
+    "id": 359,
+    "kanji": "送",
+    "meaning": "посылать",
+    "onYomi": ["ソウ"],
+    "kunYomi": ["おく.る"],
+    "category": "действия",
+    "jlpt": 4
+  },
+  {
+    "id": 360,
+    "kanji": "贈",
+    "meaning": "дарить подарок",
+    "onYomi": ["ゾウ"],
+    "kunYomi": ["おく.る"],
+    "category": "отношения",
+    "jlpt": 2
+  }
+]

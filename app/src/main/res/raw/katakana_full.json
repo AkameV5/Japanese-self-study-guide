@@ -1,0 +1,644 @@
+{
+  "1": {
+    "id": 1,
+    "romanji": "a",
+    "symbol": "ア",
+    "imageUrl": null
+  },
+  "2": {
+    "id": 2,
+    "romanji": "i",
+    "symbol": "イ",
+    "imageUrl": null
+  },
+  "3": {
+    "id": 3,
+    "romanji": "u",
+    "symbol": "ウ",
+    "imageUrl": null
+  },
+  "4": {
+    "id": 4,
+    "romanji": "e",
+    "symbol": "エ",
+    "imageUrl": null
+  },
+  "5": {
+    "id": 5,
+    "romanji": "o",
+    "symbol": "オ",
+    "imageUrl": null
+  },
+  "6": {
+    "id": 6,
+    "romanji": "ka",
+    "symbol": "カ",
+    "imageUrl": null
+  },
+  "7": {
+    "id": 7,
+    "romanji": "ki",
+    "symbol": "キ",
+    "imageUrl": null
+  },
+  "8": {
+    "id": 8,
+    "romanji": "ku",
+    "symbol": "ク",
+    "imageUrl": null
+  },
+  "9": {
+    "id": 9,
+    "romanji": "ke",
+    "symbol": "ケ",
+    "imageUrl": null
+  },
+  "10": {
+    "id": 10,
+    "romanji": "ko",
+    "symbol": "コ",
+    "imageUrl": null
+  },
+  "11": {
+    "id": 11,
+    "romanji": "ga",
+    "symbol": "ガ",
+    "imageUrl": null
+  },
+  "12": {
+    "id": 12,
+    "romanji": "gi",
+    "symbol": "ギ",
+    "imageUrl": null
+  },
+  "13": {
+    "id": 13,
+    "romanji": "gu",
+    "symbol": "グ",
+    "imageUrl": null
+  },
+  "14": {
+    "id": 14,
+    "romanji": "ge",
+    "symbol": "ゲ",
+    "imageUrl": null
+  },
+  "15": {
+    "id": 15,
+    "romanji": "go",
+    "symbol": "ゴ",
+    "imageUrl": null
+  },
+  "16": {
+    "id": 16,
+    "romanji": "sa",
+    "symbol": "サ",
+    "imageUrl": null
+  },
+  "17": {
+    "id": 17,
+    "romanji": "shi",
+    "symbol": "シ",
+    "imageUrl": null
+  },
+  "18": {
+    "id": 18,
+    "romanji": "su",
+    "symbol": "ス",
+    "imageUrl": null
+  },
+  "19": {
+    "id": 19,
+    "romanji": "se",
+    "symbol": "セ",
+    "imageUrl": null
+  },
+  "20": {
+    "id": 20,
+    "romanji": "so",
+    "symbol": "ソ",
+    "imageUrl": null
+  },
+  "21": {
+    "id": 21,
+    "romanji": "za",
+    "symbol": "ザ",
+    "imageUrl": null
+  },
+  "22": {
+    "id": 22,
+    "romanji": "ji",
+    "symbol": "ジ",
+    "imageUrl": null
+  },
+  "23": {
+    "id": 23,
+    "romanji": "zu",
+    "symbol": "ズ",
+    "imageUrl": null
+  },
+  "24": {
+    "id": 24,
+    "romanji": "ze",
+    "symbol": "ゼ",
+    "imageUrl": null
+  },
+  "25": {
+    "id": 25,
+    "romanji": "zo",
+    "symbol": "ゾ",
+    "imageUrl": null
+  },
+  "26": {
+    "id": 26,
+    "romanji": "ta",
+    "symbol": "タ",
+    "imageUrl": null
+  },
+  "27": {
+    "id": 27,
+    "romanji": "chi",
+    "symbol": "チ",
+    "imageUrl": null
+  },
+  "28": {
+    "id": 28,
+    "romanji": "tsu",
+    "symbol": "ツ",
+    "imageUrl": null
+  },
+  "29": {
+    "id": 29,
+    "romanji": "te",
+    "symbol": "テ",
+    "imageUrl": null
+  },
+  "30": {
+    "id": 30,
+    "romanji": "to",
+    "symbol": "ト",
+    "imageUrl": null
+  },
+  "31": {
+    "id": 31,
+    "romanji": "da",
+    "symbol": "ダ",
+    "imageUrl": null
+  },
+  "32": {
+    "id": 32,
+    "romanji": "ji",
+    "symbol": "ヂ",
+    "imageUrl": null
+  },
+  "33": {
+    "id": 33,
+    "romanji": "zu",
+    "symbol": "ヅ",
+    "imageUrl": null
+  },
+  "34": {
+    "id": 34,
+    "romanji": "de",
+    "symbol": "デ",
+    "imageUrl": null
+  },
+  "35": {
+    "id": 35,
+    "romanji": "do",
+    "symbol": "ド",
+    "imageUrl": null
+  },
+  "36": {
+    "id": 36,
+    "romanji": "na",
+    "symbol": "ナ",
+    "imageUrl": null
+  },
+  "37": {
+    "id": 37,
+    "romanji": "ni",
+    "symbol": "ニ",
+    "imageUrl": null
+  },
+  "38": {
+    "id": 38,
+    "romanji": "nu",
+    "symbol": "ヌ",
+    "imageUrl": null
+  },
+  "39": {
+    "id": 39,
+    "romanji": "ne",
+    "symbol": "ネ",
+    "imageUrl": null
+  },
+  "40": {
+    "id": 40,
+    "romanji": "no",
+    "symbol": "ノ",
+    "imageUrl": null
+  },
+  "41": {
+    "id": 41,
+    "romanji": "ha",
+    "symbol": "ハ",
+    "imageUrl": null
+  },
+  "42": {
+    "id": 42,
+    "romanji": "hi",
+    "symbol": "ヒ",
+    "imageUrl": null
+  },
+  "43": {
+    "id": 43,
+    "romanji": "fu",
+    "symbol": "フ",
+    "imageUrl": null
+  },
+  "44": {
+    "id": 44,
+    "romanji": "he",
+    "symbol": "ヘ",
+    "imageUrl": null
+  },
+  "45": {
+    "id": 45,
+    "romanji": "ho",
+    "symbol": "ホ",
+    "imageUrl": null
+  },
+  "46": {
+    "id": 46,
+    "romanji": "ba",
+    "symbol": "バ",
+    "imageUrl": null
+  },
+  "47": {
+    "id": 47,
+    "romanji": "bi",
+    "symbol": "ビ",
+    "imageUrl": null
+  },
+  "48": {
+    "id": 48,
+    "romanji": "bu",
+    "symbol": "ブ",
+    "imageUrl": null
+  },
+  "49": {
+    "id": 49,
+    "romanji": "be",
+    "symbol": "ベ",
+    "imageUrl": null
+  },
+  "50": {
+    "id": 50,
+    "romanji": "bo",
+    "symbol": "ボ",
+    "imageUrl": null
+  },
+  "51": {
+    "id": 51,
+    "romanji": "pa",
+    "symbol": "パ",
+    "imageUrl": null
+  },
+  "52": {
+    "id": 52,
+    "romanji": "pi",
+    "symbol": "ピ",
+    "imageUrl": null
+  },
+  "53": {
+    "id": 53,
+    "romanji": "pu",
+    "symbol": "プ",
+    "imageUrl": null
+  },
+  "54": {
+    "id": 54,
+    "romanji": "pe",
+    "symbol": "ペ",
+    "imageUrl": null
+  },
+  "55": {
+    "id": 55,
+    "romanji": "po",
+    "symbol": "ポ",
+    "imageUrl": null
+  },
+  "56": {
+    "id": 56,
+    "romanji": "ma",
+    "symbol": "マ",
+    "imageUrl": null
+  },
+  "57": {
+    "id": 57,
+    "romanji": "mi",
+    "symbol": "ミ",
+    "imageUrl": null
+  },
+  "58": {
+    "id": 58,
+    "romanji": "mu",
+    "symbol": "ム",
+    "imageUrl": null
+  },
+  "59": {
+    "id": 59,
+    "romanji": "me",
+    "symbol": "メ",
+    "imageUrl": null
+  },
+  "60": {
+    "id": 60,
+    "romanji": "mo",
+    "symbol": "モ",
+    "imageUrl": null
+  },
+  "61": {
+    "id": 61,
+    "romanji": "ya",
+    "symbol": "ヤ",
+    "imageUrl": null
+  },
+  "62": {
+    "id": 62,
+    "romanji": "yu",
+    "symbol": "ユ",
+    "imageUrl": null
+  },
+  "63": {
+    "id": 63,
+    "romanji": "yo",
+    "symbol": "ヨ",
+    "imageUrl": null
+  },
+  "64": {
+    "id": 64,
+    "romanji": "ra",
+    "symbol": "ラ",
+    "imageUrl": null
+  },
+  "65": {
+    "id": 65,
+    "romanji": "ri",
+    "symbol": "リ",
+    "imageUrl": null
+  },
+  "66": {
+    "id": 66,
+    "romanji": "ru",
+    "symbol": "ル",
+    "imageUrl": null
+  },
+  "67": {
+    "id": 67,
+    "romanji": "re",
+    "symbol": "レ",
+    "imageUrl": null
+  },
+  "68": {
+    "id": 68,
+    "romanji": "ro",
+    "symbol": "ロ",
+    "imageUrl": null
+  },
+  "69": {
+    "id": 69,
+    "romanji": "wa",
+    "symbol": "ワ",
+    "imageUrl": null
+  },
+  "70": {
+    "id": 70,
+    "romanji": "wo",
+    "symbol": "ヲ",
+    "imageUrl": null
+  },
+  "71": {
+    "id": 71,
+    "romanji": "n",
+    "symbol": "ン",
+    "imageUrl": null
+  },
+  "72": {
+    "id": 72,
+    "romanji": "kya",
+    "symbol": "キャ",
+    "imageUrl": null
+  },
+  "73": {
+    "id": 73,
+    "romanji": "kyu",
+    "symbol": "キュ",
+    "imageUrl": null
+  },
+  "74": {
+    "id": 74,
+    "romanji": "kyo",
+    "symbol": "キョ",
+    "imageUrl": null
+  },
+  "75": {
+    "id": 75,
+    "romanji": "gya",
+    "symbol": "ギャ",
+    "imageUrl": null
+  },
+  "76": {
+    "id": 76,
+    "romanji": "gyu",
+    "symbol": "ギュ",
+    "imageUrl": null
+  },
+  "77": {
+    "id": 77,
+    "romanji": "gyo",
+    "symbol": "ギョ",
+    "imageUrl": null
+  },
+  "78": {
+    "id": 78,
+    "romanji": "sha",
+    "symbol": "シャ",
+    "imageUrl": null
+  },
+  "79": {
+    "id": 79,
+    "romanji": "shu",
+    "symbol": "シュ",
+    "imageUrl": null
+  },
+  "80": {
+    "id": 80,
+    "romanji": "sho",
+    "symbol": "ショ",
+    "imageUrl": null
+  },
+  "81": {
+    "id": 81,
+    "romanji": "ja",
+    "symbol": "ジャ",
+    "imageUrl": null
+  },
+  "82": {
+    "id": 82,
+    "romanji": "ju",
+    "symbol": "ジュ",
+    "imageUrl": null
+  },
+  "83": {
+    "id": 83,
+    "romanji": "jo",
+    "symbol": "ジョ",
+    "imageUrl": null
+  },
+  "84": {
+    "id": 84,
+    "romanji": "cha",
+    "symbol": "チャ",
+    "imageUrl": null
+  },
+  "85": {
+    "id": 85,
+    "romanji": "chu",
+    "symbol": "チュ",
+    "imageUrl": null
+  },
+  "86": {
+    "id": 86,
+    "romanji": "cho",
+    "symbol": "チョ",
+    "imageUrl": null
+  },
+  "87": {
+    "id": 87,
+    "romanji": "nya",
+    "symbol": "ニャ",
+    "imageUrl": null
+  },
+  "88": {
+    "id": 88,
+    "romanji": "nyu",
+    "symbol": "ニュ",
+    "imageUrl": null
+  },
+  "89": {
+    "id": 89,
+    "romanji": "nyo",
+    "symbol": "ニョ",
+    "imageUrl": null
+  },
+  "90": {
+    "id": 90,
+    "romanji": "hya",
+    "symbol": "ヒャ",
+    "imageUrl": null
+  },
+  "91": {
+    "id": 91,
+    "romanji": "hyu",
+    "symbol": "ヒュ",
+    "imageUrl": null
+  },
+  "92": {
+    "id": 92,
+    "romanji": "hyo",
+    "symbol": "ヒョ",
+    "imageUrl": null
+  },
+  "93": {
+    "id": 93,
+    "romanji": "bya",
+    "symbol": "ビャ",
+    "imageUrl": null
+  },
+  "94": {
+    "id": 94,
+    "romanji": "byu",
+    "symbol": "ビュ",
+    "imageUrl": null
+  },
+  "95": {
+    "id": 95,
+    "romanji": "byo",
+    "symbol": "ビョ",
+    "imageUrl": null
+  },
+  "96": {
+    "id": 96,
+    "romanji": "pya",
+    "symbol": "ピャ",
+    "imageUrl": null
+  },
+  "97": {
+    "id": 97,
+    "romanji": "pyu",
+    "symbol": "ピュ",
+    "imageUrl": null
+  },
+  "98": {
+    "id": 98,
+    "romanji": "pyo",
+    "symbol": "ピョ",
+    "imageUrl": null
+  },
+  "99": {
+    "id": 99,
+    "romanji": "mya",
+    "symbol": "ミャ",
+    "imageUrl": null
+  },
+  "100": {
+    "id": 100,
+    "romanji": "myu",
+    "symbol": "ミュ",
+    "imageUrl": null
+  },
+  "101": {
+    "id": 101,
+    "romanji": "myo",
+    "symbol": "ミョ",
+    "imageUrl": null
+  },
+  "102": {
+    "id": 102,
+    "romanji": "rya",
+    "symbol": "リャ",
+    "imageUrl": null
+  },
+  "103": {
+    "id": 103,
+    "romanji": "ryu",
+    "symbol": "リュ",
+    "imageUrl": null
+  },
+  "104": {
+    "id": 104,
+    "romanji": "ryo",
+    "symbol": "リョ",
+    "imageUrl": null
+  },
+  "105": {
+    "id": 105,
+    "romanji": "ja",
+    "symbol": "ヂャ",
+    "imageUrl": null
+  },
+  "106": {
+    "id": 106,
+    "romanji": "ju",
+    "symbol": "ヂュ",
+    "imageUrl": null
+  },
+  "107": {
+    "id": 107,
+    "romanji": "jo",
+    "symbol": "ヂョ",
+    "imageUrl": null
+  }
+}

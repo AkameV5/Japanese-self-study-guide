@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/verify_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkBackground"
+    android:fitsSystemWindows="true"
+    android:padding="24dp">
+
+    <!-- Контейнер -->
+    <LinearLayout
+        android:id="@+id/container"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:padding="24dp"
+        android:background="@color/pinkBackground"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Иконка -->
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_email"
+            app:tint="#C2185B"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/tvVerifyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_title"
+            android:textColor="@color/textDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Сообщение -->
+        <TextView
+            android:id="@+id/tvVerifyMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/verify_message"
+            android:textColor="@color/textDark"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Кнопка повторной отправки -->
+        <Button
+            android:id="@+id/btnResendEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_email"
+            android:textAllCaps="false"
+            android:backgroundTint="#E91E63"
+            android:textColor="@color/textDark"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Вернуться ко входу -->
+        <TextView
+            android:id="@+id/tvBackToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_to_login"
+            android:textColor="@color/textDark"
+            android:textStyle="italic"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

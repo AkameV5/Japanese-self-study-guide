@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    android:background="@color/pinkBackground">
+
+    <TextView
+        android:id="@+id/moduleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Аудио"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:textColor="@color/textDark" />
+
+    <!-- Название трека -->
+    <TextView
+        android:id="@+id/audioTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Название аудио"
+        android:textColor="@color/textDark"
+        android:textSize="18sp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Play-Pause -->
+    <Button
+        android:id="@+id/playPauseButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="▶ Воспроизвести"
+        android:backgroundTint="@color/accentPink"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Скорость -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/speed05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.5×"
+            android:backgroundTint="@color/accentPink"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/speed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1×"
+            android:backgroundTint="@color/accentPink"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/speed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2×"
+            android:backgroundTint="@color/accentPink"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@color/pinkBackground"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="?attr/actionBarSize"
+    android:gravity="bottom">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/profile_pic" />
+
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Имя пользователя"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email@example.com"
+        android:textColor="@color/textDark"
+        android:textSize="14sp"
+        android:gravity="center_vertical" />
+
+</LinearLayout>

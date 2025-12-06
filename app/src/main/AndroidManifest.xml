@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:name=".DB"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Sakura Spark"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Japaneseselfstudyguide"
+        tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".login_and_registration.Registration"
+            android:exported="false" />
+        <activity
+            android:name=".login_and_registration.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main_profile.MainActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".main_profile.Profile" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyApp.UCrop" />
+
+        <activity
+            android:name=".login_and_registration.VerifyEmail"
+            android:exported="true">
+
+        </activity>
+
+        <activity android:name=".hiragana_katakana.HiraganaActivity"
+            android:exported="false"/>
+        <activity android:name=".hiragana_katakana.HiraganaExercisesActivity"
+            android:exported="false"/>
+        <activity android:name=".hiragana_katakana.HiraganaGroupsActivity"
+            android:exported="false"/>
+
+        <activity android:name=".hiragana_katakana.KatakanaActivity"
+            android:exported="false"/>
+        <activity android:name=".hiragana_katakana.KatakanaExercisesActivity"
+            android:exported="false"/>
+        <activity android:name=".hiragana_katakana.KatakanaGroupsActivity"
+            android:exported="false"/>
+
+        <activity android:name=".kanji.KanjiActivity" />
+        <activity android:name=".kanji.KanjiExercisesActivity"
+            android:exported="false"/>
+        <activity android:name=".kanji.KanjiExerciseGroupsActivity"
+            android:exported="false"/>
+
+        <activity android:name=".dictionary.DictionaryActivity"
+            android:exported="false" />
+
+        <activity android:name=".grammar.GrammarActivity"
+            android:exported="false"/>
+        <activity android:name=".grammar.GrammarDetailActivity"
+            android:exported="false"/>
+        <activity android:name=".grammar.GrammarExerciseActivity"
+            android:exported="false"/>
+        <activity android:name=".grammar.GrammarExerciseDetailActivity"
+            android:exported="false"/>
+
+
+        <activity android:name=".texts_and_translation.TextsActivity"
+            android:exported="false"/>
+        <activity android:name=".texts_and_translation.TextDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+
+        <activity
+            android:name=".audio.AudioActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".audio.AudioPlayerActivity"
+            android:exported="false"/>
+
+    </application>
+
+
+</manifest>

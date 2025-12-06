@@ -1,0 +1,130 @@
+[
+  { "id": 201, "kanji": "茶", "meaning": "чай", "onYomi": ["チャ"], "kunYomi": [], "jlpt": 4, "category": "еда" },
+  { "id": 202, "kanji": "黄", "meaning": "желтый", "onYomi": ["コウ", "オウ"], "kunYomi": ["き"], "jlpt": 3, "category": "цвета" },
+  { "id": 203, "kanji": "横", "meaning": "сторона", "onYomi": ["オウ"], "kunYomi": ["よこ"], "jlpt": 3, "category": "направления" },
+  
+  { "id": 204, "kanji": "銀", "meaning": "серебро", "onYomi": ["ギン"], "kunYomi": [], "jlpt": 3, "category": "материалы" },
+  { "id": 205, "kanji": "春", "meaning": "весна", "onYomi": ["シュン"], "kunYomi": ["はる"], "jlpt": 4, "category": "время" },
+  { "id": 206, "kanji": "夏", "meaning": "лето", "onYomi": ["カ"], "kunYomi": ["なつ"], "jlpt": 4, "category": "время" },
+  { "id": 207, "kanji": "秋", "meaning": "осень", "onYomi": ["シュウ"], "kunYomi": ["あき"], "jlpt": 4, "category": "время" },
+  { "id": 208, "kanji": "冬", "meaning": "зима", "onYomi": ["トウ"], "kunYomi": ["ふゆ"], "jlpt": 4, "category": "время" },
+
+  { "id": 209, "kanji": "朝", "meaning": "утро", "onYomi": ["チョウ"], "kunYomi": ["あさ"], "jlpt": 4, "category": "время" },
+  { "id": 210, "kanji": "昼", "meaning": "день, полдень", "onYomi": ["チュウ"], "kunYomi": ["ひる"], "jlpt": 4, "category": "время" },
+  { "id": 211, "kanji": "晩", "meaning": "ранний вечер, ночь", "onYomi": ["バン"], "kunYomi": [], "jlpt": 3, "category": "время" },
+  { "id": 212, "kanji": "夜", "meaning": "вечер, ночь", "onYomi": ["ヤ"], "kunYomi": ["よる"], "jlpt": 4, "category": "время" },
+
+  { "id": 213, "kanji": "午", "meaning": "полдень", "onYomi": ["ゴ"], "kunYomi": [], "jlpt": 4, "category": "время" },
+  { "id": 214, "kanji": "週", "meaning": "неделя", "onYomi": ["シュウ"], "kunYomi": [], "jlpt": 4, "category": "время" },
+
+  { "id": 215, "kanji": "末", "meaning": "верхушка, конец", "onYomi": ["マツ", "バツ"], "kunYomi": ["すえ"], "jlpt": 3, "category": "понятия" },
+  { "id": 216, "kanji": "期", "meaning": "срок, период", "onYomi": ["キ"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 217, "kanji": "初", "meaning": "первый", "onYomi": ["ショ"], "kunYomi": ["はじ.め", "はつ"], "jlpt": 3, "category": "понятия" },
+  { "id": 218, "kanji": "次", "meaning": "следующий", "onYomi": ["ジ", "シ"], "kunYomi": ["つぎ"], "jlpt": 3, "category": "понятия" },
+  { "id": 219, "kanji": "曜", "meaning": "день недели", "onYomi": ["ヨウ"], "kunYomi": [], "jlpt": 3, "category": "время" },
+
+  { "id": 220, "kanji": "昔", "meaning": "однажды, старые времена", "onYomi": ["セキ", "シャク"], "kunYomi": ["むかし"], "jlpt": 3, "category": "понятия" },
+  { "id": 221, "kanji": "去", "meaning": "прошлое, ушедшее", "onYomi": ["キョ", "コ"], "kunYomi": ["さ.る"], "jlpt": 4, "category": "понятия" },
+  { "id": 222, "kanji": "昨", "meaning": "вчера, предыдущий", "onYomi": ["サク"], "kunYomi": [], "jlpt": 3, "category": "время" },
+  { "id": 223, "kanji": "節", "meaning": "сезон, время года", "onYomi": ["セツ", "セチ"], "kunYomi": ["ふし"], "jlpt": 3, "category": "время" },
+  { "id": 224, "kanji": "平", "meaning": "плоский, спокойный", "onYomi": ["ヘイ"], "kunYomi": ["たい.ら", "ひら"], "jlpt": 3, "category": "качества" },
+
+  { "id": 225, "kanji": "画", "meaning": "картина, мазки кистью", "onYomi": ["ガ", "カク"], "kunYomi": [], "jlpt": 4, "category": "искусство" },
+  { "id": 226, "kanji": "映", "meaning": "отражать, отражение", "onYomi": ["エイ"], "kunYomi": ["うつ.る", "うつ.す"], "jlpt": 3, "category": "действия" },
+  { "id": 227, "kanji": "伝", "meaning": "передавать", "onYomi": ["デン"], "kunYomi": ["つた.える"], "jlpt": 3, "category": "действия" },
+  { "id": 228, "kanji": "的", "meaning": "цель, окончание прилагательных", "onYomi": ["テキ"], "kunYomi": ["まと"], "jlpt": 3, "category": "понятия" },
+  { "id": 229, "kanji": "連", "meaning": "брать с собой, соединять", "onYomi": ["レン"], "kunYomi": ["つ.れる"], "jlpt": 3, "category": "действия" },
+  { "id": 230, "kanji": "絡", "meaning": "касаться, обвиваться", "onYomi": ["ラク"], "kunYomi": ["から.む"], "jlpt": 2, "category": "действия" },
+  { "id": 231, "kanji": "接", "meaning": "контактировать", "onYomi": ["セツ"], "kunYomi": ["つ.ぐ"], "jlpt": 2, "category": "действия" },
+
+  { "id": 232, "kanji": "信", "meaning": "верить, сообщение", "onYomi": ["シン"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 233, "kanji": "説", "meaning": "объяснять, теория", "onYomi": ["セツ"], "kunYomi": ["と.く"], "jlpt": 3, "category": "понятия" },
+  { "id": 234, "kanji": "面", "meaning": "лицо, маска", "onYomi": ["メン"], "kunYomi": ["おも"], "jlpt": 3, "category": "тело" },
+
+  { "id": 235, "kanji": "発", "meaning": "отправляться, испускать", "onYomi": ["ハツ", "ホツ"], "kunYomi": [], "jlpt": 3, "category": "действия" },
+  { "id": 236, "kanji": "表", "meaning": "выражать, поверхность, стол", "onYomi": ["ヒョウ"], "kunYomi": ["おもて"], "jlpt": 3, "category": "понятия" },
+  { "id": 237, "kanji": "速", "meaning": "быстрый", "onYomi": ["ソク"], "kunYomi": ["はや.い"], "jlpt": 4, "category": "качества" },
+  { "id": 238, "kanji": "遅", "meaning": "медленный, поздний", "onYomi": ["チ"], "kunYomi": ["おそ.い", "おく.れる"], "jlpt": 3, "category": "качества" },
+  { "id": 239, "kanji": "暗", "meaning": "темный", "onYomi": ["アン"], "kunYomi": ["くら.い"], "jlpt": 4, "category": "качества" },
+
+  { "id": 240, "kanji": "悪", "meaning": "плохой", "onYomi": ["アク"], "kunYomi": ["わる.い"], "jlpt": 4, "category": "качества" },
+  { "id": 241, "kanji": "忙", "meaning": "занятой, занятый", "onYomi": ["ボウ"], "kunYomi": ["いそが.しい"], "jlpt": 3, "category": "качества" },
+  { "id": 242, "kanji": "静", "meaning": "спокойный", "onYomi": ["アン"], "kunYomi": ["やす.い"], "jlpt": 4, "category": "качества" },
+
+  { "id": 243, "kanji": "低", "meaning": "низкий, невысокий", "onYomi": ["テイ"], "kunYomi": ["ひく.い"], "jlpt": 4, "category": "качества" },
+  { "id": 244, "kanji": "短", "meaning": "короткий", "onYomi": ["タン"], "kunYomi": ["みじか.い"], "jlpt": 4, "category": "качества" },
+  { "id": 245, "kanji": "変", "meaning": "меняться, странный", "onYomi": ["ヘン"], "kunYomi": ["か.わる", "か.える"], "jlpt": 3, "category": "качества" },
+  { "id": 246, "kanji": "重", "meaning": "тяжелый", "onYomi": ["ジュウ"], "kunYomi": ["おも.い"], "jlpt": 3, "category": "качества" },
+
+  { "id": 247, "kanji": "置", "meaning": "размещать, селить", "onYomi": ["チ"], "kunYomi": ["お.く"], "jlpt": 3, "category": "действия" },
+  { "id": 248, "kanji": "題", "meaning": "тема, вопрос, проблема", "onYomi": ["ダイ"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 249, "kanji": "経", "meaning": "проходить, управлять", "onYomi": ["ケイ"], "kunYomi": ["へ.る"], "jlpt": 3, "category": "понятия" },
+  { "id": 250, "kanji": "験", "meaning": "испытывать, тест", "onYomi": ["ケン"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+
+  { "id": 251, "kanji": "受", "meaning": "получать", "onYomi": ["ジュ"], "kunYomi": ["う.ける"], "jlpt": 3, "category": "действия" },
+  { "id": 252, "kanji": "授", "meaning": "даровать, предоставлять", "onYomi": ["ジュ"], "kunYomi": ["さず.ける"], "jlpt": 3, "category": "действия" },
+
+  { "id": 253, "kanji": "業", "meaning": "работа, бизнес, промышленность", "onYomi": ["ギョウ"], "kunYomi": [], "jlpt": 3, "category": "работа" },
+  { "id": 254, "kanji": "実", "meaning": "правда", "onYomi": ["ジツ"], "kunYomi": ["み"], "jlpt": 3, "category": "понятия" },
+
+  { "id": 255, "kanji": "卒", "meaning": "выпускник", "onYomi": ["ソツ"], "kunYomi": [], "jlpt": 3, "category": "образование" },
+  { "id": 256, "kanji": "式", "meaning": "стиль, церемония, ритуал", "onYomi": ["シキ"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 257, "kanji": "運", "meaning": "нести, везти, счастье", "onYomi": ["ウン"], "kunYomi": ["はこ.ぶ"], "jlpt": 3, "category": "действия" },
+  { "id": 258, "kanji": "動", "meaning": "двигать", "onYomi": ["ドウ"], "kunYomi": ["うご.く"], "jlpt": 4, "category": "действия" },
+  { "id": 259, "kanji": "試", "meaning": "пытаться, пробовать, тест", "onYomi": ["シ"], "kunYomi": ["こころ.みる"], "jlpt": 3, "category": "понятия" },
+  { "id": 260, "kanji": "合", "meaning": "подходить, совпадать", "onYomi": ["ゴウ", "ガッ"], "kunYomi": ["あ.う"], "jlpt": 4, "category": "понятия" },
+
+  { "id": 261, "kanji": "場", "meaning": "место", "onYomi": ["ジョウ"], "kunYomi": ["ば"], "jlpt": 3, "category": "места" },
+  { "id": 262, "kanji": "打", "meaning": "ударять", "onYomi": ["ダ"], "kunYomi": ["う.つ"], "jlpt": 3, "category": "действия" },
+  { "id": 263, "kanji": "選", "meaning": "выбирать", "onYomi": ["セン"], "kunYomi": ["えら.ぶ"], "jlpt": 3, "category": "действия" },
+  { "id": 264, "kanji": "泳", "meaning": "плавать", "onYomi": ["エイ"], "kunYomi": ["およ.ぐ"], "jlpt": 4, "category": "действия" },
+
+  { "id": 265, "kanji": "学", "meaning": "учиться, изучать, привычка", "onYomi": ["ガク"], "kunYomi": ["まな.ぶ"], "jlpt": 5, "category": "образование" },
+  { "id": 266, "kanji": "習", "meaning": "тренироваться", "onYomi": ["シュウ"], "kunYomi": ["なら.う"], "jlpt": 4, "category": "образование" },
+
+  { "id": 267, "kanji": "服", "meaning": "одежда", "onYomi": ["フク"], "kunYomi": [], "jlpt": 4, "category": "предметы" },
+  { "id": 268, "kanji": "制", "meaning": "система, контроль", "onYomi": ["セイ"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+
+  { "id": 269, "kanji": "組", "meaning": "собирать, комплект, набор", "onYomi": ["ソ"], "kunYomi": ["く.む"], "jlpt": 3, "category": "действия" },
+
+  { "id": 270, "kanji": "台", "meaning": "подставка", "onYomi": ["ダイ", "タイ"], "kunYomi": [], "jlpt": 3, "category": "предметы" },
+  { "id": 271, "kanji": "問", "meaning": "вопрос", "onYomi": ["モン"], "kunYomi": ["と.う"], "jlpt": 4, "category": "понятия" },
+  { "id": 272, "kanji": "答", "meaning": "ответ", "onYomi": ["トウ"], "kunYomi": ["こた.える"], "jlpt": 4, "category": "понятия" },
+
+  { "id": 273, "kanji": "留", "meaning": "держать, хранить, останавливать", "onYomi": ["リュウ", "ル"], "kunYomi": ["と.める"], "jlpt": 3, "category": "действия" },
+
+  { "id": 274, "kanji": "辞", "meaning": "слово, уйти в отставку", "onYomi": ["ジ"], "kunYomi": ["や.める"], "jlpt": 3, "category": "понятия" },
+  { "id": 275, "kanji": "始", "meaning": "начинать", "onYomi": ["シ"], "kunYomi": ["はじ.める"], "jlpt": 4, "category": "действия" },
+  { "id": 276, "kanji": "終", "meaning": "заканчивать", "onYomi": ["シュウ"], "kunYomi": ["お.わる"], "jlpt": 4, "category": "действия" },
+  { "id": 277, "kanji": "働", "meaning": "работать", "onYomi": ["ドウ"], "kunYomi": ["はたら.く"], "jlpt": 3, "category": "работа" },
+  { "id": 278, "kanji": "歌", "meaning": "петь, песня", "onYomi": ["カ"], "kunYomi": ["うた"], "jlpt": 3, "category": "искусство" },
+
+  { "id": 279, "kanji": "着", "meaning": "надевать, прибывать", "onYomi": ["チャク"], "kunYomi": ["き.る", "つ.く"], "jlpt": 3, "category": "действия" },
+  { "id": 280, "kanji": "登", "meaning": "взбираться, залезать", "onYomi": ["トウ"], "kunYomi": ["のぼ.る"], "jlpt": 3, "category": "действия" },
+  { "id": 281, "kanji": "使", "meaning": "использовать, посыльный", "onYomi": ["シ"], "kunYomi": ["つか.う"], "jlpt": 4, "category": "действия" },
+
+  { "id": 282, "kanji": "忘", "meaning": "забывать", "onYomi": ["ボウ"], "kunYomi": ["わす.れる"], "jlpt": 3, "category": "понятия" },
+  { "id": 283, "kanji": "付", "meaning": "прикреплять, включать, присоединять", "onYomi": ["フ"], "kunYomi": ["つ.ける"], "jlpt": 3, "category": "действия" },
+
+  { "id": 284, "kanji": "事", "meaning": "факт, дело, случай", "onYomi": ["ジ"], "kunYomi": ["こと"], "jlpt": 3, "category": "понятия" },
+  { "id": 285, "kanji": "仕", "meaning": "служить, выполнять", "onYomi": ["シ"], "kunYomi": ["つか.える"], "jlpt": 3, "category": "работа" },
+  { "id": 286, "kanji": "作", "meaning": "создавать, делать", "onYomi": ["サク"], "kunYomi": ["つく.る"], "jlpt": 4, "category": "работа" },
+
+  { "id": 287, "kanji": "品", "meaning": "товары", "onYomi": ["ヒン"], "kunYomi": ["しな"], "jlpt": 3, "category": "экономика" },
+  { "id": 288, "kanji": "個", "meaning": "индивидуальный", "onYomi": ["コ"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 289, "kanji": "商", "meaning": "торговать", "onYomi": ["ショウ"], "kunYomi": [], "jlpt": 3, "category": "экономика" },
+  { "id": 290, "kanji": "店", "meaning": "магазин", "onYomi": ["テン"], "kunYomi": ["みせ"], "jlpt": 4, "category": "экономика" },
+  { "id": 291, "kanji": "員", "meaning": "член", "onYomi": ["イン"], "kunYomi": [], "jlpt": 4, "category": "понятия" },
+
+  { "id": 292, "kanji": "用", "meaning": "использовать, дела", "onYomi": ["ヨウ"], "kunYomi": ["もち.いる"], "jlpt": 3, "category": "действия" },
+  { "id": 293, "kanji": "買", "meaning": "покупать", "onYomi": ["バイ"], "kunYomi": ["か.う"], "jlpt": 4, "category": "экономика" },
+  { "id": 294, "kanji": "売", "meaning": "продавать", "onYomi": ["バイ"], "kunYomi": ["う.る"], "jlpt": 4, "category": "экономика" },
+  { "id": 295, "kanji": "数", "meaning": "число, количество", "onYomi": ["スウ"], "kunYomi": ["かず"], "jlpt": 4, "category": "числа" },
+  { "id": 296, "kanji": "点", "meaning": "точка, пункт, очко", "onYomi": ["テン"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 297, "kanji": "単", "meaning": "простой, единственный", "onYomi": ["タン"], "kunYomi": [], "jlpt": 3, "category": "качества" },
+
+  { "id": 298, "kanji": "法", "meaning": "закон, метод", "onYomi": ["ホウ"], "kunYomi": [], "jlpt": 3, "category": "понятия" },
+  { "id": 299, "kanji": "究", "meaning": "исследовать", "onYomi": ["キュウ"], "kunYomi": ["きわ.める"], "jlpt": 3, "category": "образование" },
+  { "id": 300, "kanji": "研", "meaning": "шлифовать, изучать", "onYomi": ["ケン"], "kunYomi": ["と.ぐ"], "jlpt": 3, "category": "образование" }
+
+]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Цвет карточки -->
+    <solid android:color="@color/cardBackground" />
+
+    <!-- Обводка -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/accentPink" />
+
+    <!-- Скругления -->
+    <corners android:radius="10dp" />
+
+    <!-- Отступы внутри (по желанию) -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+</shape>

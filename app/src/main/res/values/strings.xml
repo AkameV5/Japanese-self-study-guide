@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Japanese Study Guide</string>
+    <string name="lang_button">日本語 / Русский</string>
+    <string name="login">Вход</string>
+    <string name="register">Регистрация</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="username">Имя пользователя</string>
+    <string name="no_account">Нет аккаунта? Зарегистрируйтесь</string>
+    <string name="have_account">Уже есть аккаунт? Войти</string>
+    <string name="fill_all_fields">Пожалуйста, заполните все поля</string>
+    <string name="email_verification">Подтвердите вашу почту перед входом.</string>
+    <string name="verification_sent">Письмо подтверждения отправлено.</string>
+    <string name="login_success">Вход выполнен успешно</string>
+    <string name="navigation_drawer_open">Открыть меню</string>
+    <string name="navigation_drawer_close">Закрыть меню</string>
+
+    <string name="verify_email_message">
+    Мы отправили письмо для подтверждения на ваш email:
+    %1$s
+    Пожалуйста, перейдите по ссылке в письме.
+</string>
+
+    <string name="email_verified">Почта подтверждена!</string>
+    <string name="email_sent_again">Письмо отправлено повторно.</string>
+    <string name="email_send_failed">Не удалось отправить письмо.</string>
+
+    <string name="verify_title">Подтвердите вашу почту</string>
+    <string name="verify_message">Мы отправили письмо для подтверждения на ваш email. Пожалуйста, перейдите по ссылке в письме, чтобы активировать ваш аккаунт.</string>
+    <string name="resend_email">Отправить письмо повторно</string>
+    <string name="back_to_login">Вернуться ко входу</string>
+
+    <string name="profile_pic" translatable="false">Profile Picture</string>
+</resources>
