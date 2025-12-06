@@ -93,6 +93,10 @@
         <activity android:name=".texts_and_translation.TextDetailActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
+        <activity android:name=".texts_and_translation.TextExercisesActivity"
+            android:exported="false"/>
+        <activity android:name=".texts_and_translation.ExerciseDetailActivity"
+            android:exported="false"/>
 
 
         <activity

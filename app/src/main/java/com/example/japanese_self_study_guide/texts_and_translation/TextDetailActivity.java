@@ -1,7 +1,9 @@
 package com.example.japanese_self_study_guide.texts_and_translation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.japanese_self_study_guide.R;
@@ -22,7 +24,7 @@ public class TextDetailActivity extends AppCompatActivity {
     private List<String> japaneseParagraphs = new ArrayList<>();
     private List<String> translationParagraphs = new ArrayList<>();
     private int currentIndex = 0;
-
+    private MaterialButton btnExercises;
     private String japaneseTitle = "";
     private String translationTitle = "";
 
@@ -36,10 +38,11 @@ public class TextDetailActivity extends AppCompatActivity {
         toggleLanguage = findViewById(R.id.toggleLanguage);
         btnPrev = findViewById(R.id.buttonPrev);
         btnNext = findViewById(R.id.buttonNext);
+        btnExercises = findViewById(R.id.buttonExercises);
+        btnExercises.setOnClickListener(v -> openExercises());
 
         textId = getIntent().getIntExtra("textId", -1);
 
-        // ✅ Принудительно выбираем японский язык при старте
         toggleLanguage.check(R.id.buttonJapanese);
 
         if (textId != -1) {
@@ -152,6 +155,12 @@ public class TextDetailActivity extends AppCompatActivity {
 
         btnPrev.setEnabled(currentIndex > 0);
         btnNext.setEnabled(currentIndex < currentList.size() - 1);
+
+        btnExercises.setVisibility(
+                currentIndex == getCurrentParagraphs().size() - 1
+                        ? View.VISIBLE
+                        : View.GONE
+        );
     }
 
     private List<String> getCurrentParagraphs() {
@@ -159,4 +168,11 @@ public class TextDetailActivity extends AppCompatActivity {
                 ? translationParagraphs
                 : japaneseParagraphs;
     }
+
+    private void openExercises() {
+        Intent intent = new Intent(this, TextExercisesActivity.class);
+        intent.putExtra("textId", textId);
+        startActivity(intent);
+    }
+
 }
