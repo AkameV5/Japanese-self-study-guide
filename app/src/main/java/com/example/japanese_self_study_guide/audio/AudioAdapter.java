@@ -42,7 +42,9 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.AudioViewHol
             Intent intent = new Intent(context, AudioPlayerActivity.class);
             intent.putExtra("audio_url", audio.getUrl());
             intent.putExtra("audio_name", audio.getName());
+            intent.putExtra("audio_description", audio.getDescription()); // добавить
             context.startActivity(intent);
+
         });
     }
 

@@ -28,10 +28,14 @@ public class AudioPlayerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_audio_player);
 
         url = getIntent().getStringExtra("audio_url");
-        String title = getIntent().getStringExtra("audio_name");
+        String name = getIntent().getStringExtra("audio_name");
+        String description = getIntent().getStringExtra("audio_description");
 
-        TextView titleView = findViewById(R.id.audioTitle);
-        titleView.setText(title);
+        TextView moduleTitle = findViewById(R.id.moduleTitle);
+        TextView audioTitle = findViewById(R.id.audioTitle);
+
+        moduleTitle.setText(name);
+        audioTitle.setText(description);
 
         playPauseBtn = findViewById(R.id.playPauseButton);
 
@@ -48,11 +52,11 @@ public class AudioPlayerActivity extends AppCompatActivity {
             if (isPlaying) {
                 player.pause();
                 isPlaying = false;
-                playPauseBtn.setText("▶ Воспроизвести");
+                playPauseBtn.setText("Воспроизвести");
             } else {
                 player.start();
                 isPlaying = true;
-                playPauseBtn.setText("⏸ Пауза");
+                playPauseBtn.setText("Пауза");
             }
         });
 
