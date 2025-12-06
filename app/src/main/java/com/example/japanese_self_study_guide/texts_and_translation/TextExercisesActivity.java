@@ -36,8 +36,8 @@ public class TextExercisesActivity extends AppCompatActivity {
 
     private void loadExercises() {
         FirebaseFirestore.getInstance()
-                .collection("Exercises_text")
-                .whereEqualTo("id_texta", textId)
+                .collection("TextsExercises")
+                .whereEqualTo("textId", textId)
                 .get()
                 .addOnSuccessListener(query -> {
                     exercises.clear();

@@ -31,9 +31,11 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         etAnswer = findViewById(R.id.etAnswer);
         btnCheck = findViewById(R.id.btnCheck);
 
+
+
         exerciseId = getIntent().getIntExtra("exerciseId", -1);
         textId = getIntent().getIntExtra("textId", -1);
-
+        Log.d("CHECK", "exerciseId = " + exerciseId + " | textId = " + textId);
         loadExercise();
 
         btnCheck.setOnClickListener(v -> {
@@ -43,12 +45,16 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                 etAnswer.setError("Введите ответ");
                 return;
             }
-            boolean correct = user.equalsIgnoreCase(currentExercise.getCorrectAnswer().trim());
+            String correctAnswer = currentExercise.getOptions().get(currentExercise.getCorrectIndex());
+
+            boolean correct = user.equalsIgnoreCase(correctAnswer.trim());
+
             tvExplanation.setVisibility(View.VISIBLE);
-            tvExplanation.setText((correct ? "Правильно!\n\n" : "Неправильно.\n\n")
-                    + "Правильный ответ: " + currentExercise.getCorrectAnswer() + "\n\n"
-                    + "Пояснение: " + (currentExercise.getExplanation() == null ? "-" : currentExercise.getExplanation()));
-            // Блокируем ввод
+            tvExplanation.setText(
+                    (correct ? "Правильно!\n\n" : "Неправильно.\n\n") +
+                            "Правильный ответ: " + correctAnswer + "\n\n" +
+                            "Подсказка: " + (currentExercise.getHint() == null ? "-" : currentExercise.getHint())
+            );
             etAnswer.setEnabled(false);
             btnCheck.setEnabled(false);
 
@@ -58,13 +64,16 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     }
 
     private void loadExercise() {
+        Log.d("CHECK", "Loading exercise with id=" + exerciseId);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         // поиск по полю id (если у тебя numeric id stored)
-        db.collection("Exercises_text")
+        db.collection("TextsExercises")
                 .whereEqualTo("id", exerciseId)
                 .get()
                 .addOnSuccessListener(query -> {
+                    Log.d("CHECK", "Firestore returned: " + query.size());
                     if (!query.isEmpty()) {
+                        Log.d("CHECK", "Document data = " + query.getDocuments().get(0).getData());
                         currentExercise = query.getDocuments().get(0).toObject(ExerciseModel.class);
                         tvQuestion.setText(currentExercise.getQuestion());
                         tvExplanation.setVisibility(View.GONE);
@@ -72,10 +81,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                         tvQuestion.setText("Упражнение не найдено.");
                     }
                 })
-                .addOnFailureListener(e -> {
-                    Log.e("ExerciseDetail", "Ошибка загрузки упражнения", e);
-                    tvQuestion.setText("Ошибка загрузки.");
-                });
+                .addOnFailureListener(e -> Log.e("CHECK", "Firestore ERROR", e));
     }
 
 }

@@ -25,8 +25,8 @@ public class DB extends Application {
 
     // ✅ флажки — включай при необходимости
     private static final boolean UPLOAD_NEW_KANJI = false;
-    private static final boolean UPLOAD_TEXTS = true;
-    private static final boolean UPLOAD_TRANSLATIONS = true;
+    private static final boolean UPLOAD_TEXTS = false;
+    private static final boolean UPLOAD_TRANSLATIONS = false;
 
     private static final boolean UPLOAD_GRAMMAR = false;
 
@@ -39,6 +39,8 @@ public class DB extends Application {
     private static final boolean UPLOAD_KANJI_EXERCISES = false;
 
     private static final boolean UPLOAD_GRAMMAR_EXERCISES = false;
+
+    private static final boolean UPLOAD_TEXTS_EXERCISES = false;
 
     @Override
     public void onCreate() {
@@ -91,6 +93,9 @@ public class DB extends Application {
         }
         if (UPLOAD_GRAMMAR_EXERCISES) {
             uploadGrammarExercises();
+        }
+        if (UPLOAD_TEXTS_EXERCISES) {
+            uploadTextsExercises();
         }
 
 
@@ -324,6 +329,33 @@ public class DB extends Application {
         }
     }
 
+    private void uploadTextsExercises() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        try {
+            String json = readJsonFromRaw(R.raw.texts_exercises); // твой файл в /res/raw
+            Gson gson = new Gson();
 
+            // JSON → List<TextExerciseModel>
+            Type type = new TypeToken<Map<String, Object>>() {}.getType();
+            Map<String, Object> wrapper = gson.fromJson(json, type);
+
+            List<Map<String, Object>> exercises = (List<Map<String, Object>>) wrapper.get("text_exercises");
+
+            for (Map<String, Object> ex : exercises) {
+                String id = String.valueOf(ex.get("id"));
+
+                db.collection("TextsExercises")
+                        .document(id)
+                        .set(ex)
+                        .addOnSuccessListener(a ->
+                                Log.d("UPLOAD_TEXTS_EX", "✅ Добавлено упражнение ID: " + id))
+                        .addOnFailureListener(e ->
+                                Log.e("UPLOAD_TEXTS_EX", "❌ Ошибка загрузки: " + id, e));
+            }
+
+        } catch (Exception e) {
+            Log.e("UPLOAD_TEXTS_EX", "❌ Ошибка чтения JSON", e);
+        }
+    }
 
 }

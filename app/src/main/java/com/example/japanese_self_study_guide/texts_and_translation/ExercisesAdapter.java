@@ -30,12 +30,12 @@ public class ExercisesAdapter extends RecyclerView.Adapter<ExercisesAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ExerciseModel e = list.get(position);
         holder.question.setText(e.getQuestion());
-        holder.difficulty.setText("ур: " + e.getDifficulty());
+        holder.difficulty.setText("type: " + e.getType());
 
         holder.buttonAnswer.setOnClickListener(v -> {
             Intent i = new Intent(v.getContext(), ExerciseDetailActivity.class);
             i.putExtra("exerciseId", e.getId());
-            i.putExtra("textId", e.getId_texta());
+            i.putExtra("textId", e.getTextId());
             v.getContext().startActivity(i);
         });
     }

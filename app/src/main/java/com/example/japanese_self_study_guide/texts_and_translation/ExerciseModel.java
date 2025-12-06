@@ -1,19 +1,31 @@
 package com.example.japanese_self_study_guide.texts_and_translation;
 
+import java.util.List;
+
 public class ExerciseModel {
     private int id;
-    private int id_texta;
+    private int textId;
+    private String type;
     private String question;
-    private String correctAnswer;
-    private String explanation;
-    private int difficulty;
+    private List<String> options;
+    private int correctIndex;
+    private String hint;
 
     public ExerciseModel() {}
 
     public int getId() { return id; }
-    public int getId_texta() { return id_texta; }
+    public int getTextId() { return textId; }
+    public String getType() { return type; }
     public String getQuestion() { return question; }
-    public String getCorrectAnswer() { return correctAnswer; }
-    public String getExplanation() { return explanation; }
-    public int getDifficulty() { return difficulty; }
+    public List<String> getOptions() { return options; }
+    public int getCorrectIndex() { return correctIndex; }
+    public String getHint() { return hint; }
+
+    public void setId(int id) { this.id = id; }
+    public void setTextId(int textId) { this.textId = textId; }
+    public void setType(String type) { this.type = type; }
+    public void setQuestion(String question) { this.question = question; }
+    public void setOptions(List<String> options) { this.options = options; }
+    public void setCorrectIndex(int correctIndex) { this.correctIndex = correctIndex; }
+    public void setHint(String hint) { this.hint = hint; }
 }
