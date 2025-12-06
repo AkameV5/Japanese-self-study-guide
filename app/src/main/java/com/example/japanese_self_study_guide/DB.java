@@ -25,8 +25,8 @@ public class DB extends Application {
 
     // ✅ флажки — включай при необходимости
     private static final boolean UPLOAD_NEW_KANJI = false;
-    private static final boolean UPLOAD_TEXTS = false;
-    private static final boolean UPLOAD_TRANSLATIONS = false;
+    private static final boolean UPLOAD_TEXTS = true;
+    private static final boolean UPLOAD_TRANSLATIONS = true;
 
     private static final boolean UPLOAD_GRAMMAR = false;
 
@@ -111,7 +111,7 @@ public class DB extends Application {
     private void uploadTexts() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
-            String json = readJsonFromRaw(R.raw.text2); // texts.json в /res/raw
+            String json = readJsonFromRaw(R.raw.text10); // texts.json в /res/raw
             Gson gson = new Gson();
 
             // Преобразуем JSON в Map<id, TextModel>
@@ -136,7 +136,7 @@ public class DB extends Application {
     private void uploadTranslations() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
-            String json = readJsonFromRaw(R.raw.translations_text2); // translations_texts.json
+            String json = readJsonFromRaw(R.raw.translations_text10); // translations_texts.json
             Gson gson = new Gson();
 
             // Преобразуем JSON в Map<id, TranslationModel>

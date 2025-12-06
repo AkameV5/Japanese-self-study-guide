@@ -28,8 +28,7 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
     private LinearLayout layoutOptions;
     private EditText etAnswer;
     private Button btnCheck, btnNext;
-
-    private int index = 0; // текущий номер задания
+    private int index = 0;
     private HiraganaExerciseModel currentEx;
 
     @Override
