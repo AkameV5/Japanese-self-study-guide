@@ -97,6 +97,8 @@
             android:exported="false"/>
         <activity android:name=".texts_and_translation.ExerciseDetailActivity"
             android:exported="false"/>
+        <activity android:name=".texts_and_translation.ExerciseFinishedActivity"
+            android:exported="false"/>
 
 
         <activity

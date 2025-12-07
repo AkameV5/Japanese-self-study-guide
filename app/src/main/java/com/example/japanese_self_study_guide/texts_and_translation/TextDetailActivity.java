@@ -170,9 +170,27 @@ public class TextDetailActivity extends AppCompatActivity {
     }
 
     private void openExercises() {
-        Intent intent = new Intent(this, TextExercisesActivity.class);
-        intent.putExtra("textId", textId);
-        startActivity(intent);
+        FirebaseFirestore.getInstance()
+                .collection("TextsExercises")
+                .whereEqualTo("textId", textId)
+                .get()
+                .addOnSuccessListener(query -> {
+
+                    ArrayList<ExerciseModel> list = new ArrayList<>();
+                    for (var doc : query) {
+                        list.add(doc.toObject(ExerciseModel.class));
+                    }
+
+                    if (list.isEmpty()) return;
+
+                    Intent i = new Intent(this, ExerciseDetailActivity.class);
+                    i.putExtra("allExercises", list);
+                    i.putExtra("currentIndex", 0);
+                    i.putExtra("textId", textId);
+                    startActivity(i);
+                });
     }
+
+
 
 }

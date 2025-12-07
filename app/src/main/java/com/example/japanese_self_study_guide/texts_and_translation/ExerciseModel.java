@@ -1,8 +1,9 @@
 package com.example.japanese_self_study_guide.texts_and_translation;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ExerciseModel {
+public class ExerciseModel implements Serializable {
     private int id;
     private int textId;
     private String type;
