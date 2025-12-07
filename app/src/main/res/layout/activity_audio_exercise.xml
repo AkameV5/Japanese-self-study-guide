@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkBackground">
+
+    <!-- Счётчик -->
+    <TextView
+        android:id="@+id/audioCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 / 12"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/textDark"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Вопрос -->
+    <TextView
+        android:id="@+id/audioQuestionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вопрос будет здесь"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/textDark"
+        android:layout_marginBottom="18dp"/>
+
+    <!-- Контейнер вариантов -->
+    <LinearLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Ответ (правильно/нет) -->
+    <TextView
+        android:id="@+id/audioResultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/textDark"
+        android:paddingTop="16dp"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Нижний блок кнопок -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <!-- Подсказка -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/audioHintBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подсказка"
+            android:backgroundTint="@color/accentPink"
+            android:textColor="@color/textDark"
+            app:cornerRadius="16dp"
+            android:layout_marginRight="12dp"/>
+
+        <!-- Ответить -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ответить"
+            android:backgroundTint="@color/accentPinkDark"
+            android:textColor="@color/textDark"
+            app:cornerRadius="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

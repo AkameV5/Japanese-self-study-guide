@@ -27,7 +27,12 @@
         android:textSize="18sp"
         android:layout_marginBottom="24dp"/>
 
-    <!-- Play-Pause -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
+
     <Button
         android:id="@+id/playPauseButton"
         android:layout_width="200dp"
@@ -36,6 +41,7 @@
         android:backgroundTint="@color/accentPink"
         android:textColor="@android:color/white"
         android:layout_marginBottom="24dp"/>
+
 
     <!-- Скорость -->
     <LinearLayout
@@ -70,5 +76,15 @@
             android:backgroundTint="@color/accentPink"
             android:textColor="@android:color/white"/>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Упражнения"
+        android:backgroundTint="@color/accentPink"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_marginTop="32dp"/>
 
 </LinearLayout>

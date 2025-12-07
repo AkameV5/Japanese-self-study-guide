@@ -42,6 +42,8 @@ public class DB extends Application {
 
     private static final boolean UPLOAD_TEXTS_EXERCISES = false;
 
+    private static final boolean UPLOAD_AUDIO_EXERCISES = false;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -96,6 +98,9 @@ public class DB extends Application {
         }
         if (UPLOAD_TEXTS_EXERCISES) {
             uploadTextsExercises();
+        }
+        if (UPLOAD_AUDIO_EXERCISES) {
+            uploadAudioExercises();
         }
 
 
@@ -355,6 +360,35 @@ public class DB extends Application {
 
         } catch (Exception e) {
             Log.e("UPLOAD_TEXTS_EX", "❌ Ошибка чтения JSON", e);
+        }
+    }
+    private void uploadAudioExercises() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        try {
+            String json = readJsonFromRaw(R.raw.audio_exercises);
+            Gson gson = new Gson();
+
+            Type type = new TypeToken<Map<String, Object>>() {}.getType();
+            Map<String, Object> wrapper = gson.fromJson(json, type);
+
+            List<Map<String, Object>> exercises =
+                    (List<Map<String, Object>>) wrapper.get("audio_exercises");
+
+            for (Map<String, Object> ex : exercises) {
+
+                String id = String.valueOf(ex.get("id"));
+
+                db.collection("AudioExercises")
+                        .document(id)
+                        .set(ex)
+                        .addOnSuccessListener(a ->
+                                Log.d("UPLOAD_AUDIO_EX", "Добавлено упражнение ID: " + id))
+                        .addOnFailureListener(e ->
+                                Log.e("UPLOAD_AUDIO_EX", "Ошибка загрузки ID: " + id, e));
+            }
+
+        } catch (Exception e) {
+            Log.e("UPLOAD_AUDIO_EX", "Ошибка чтения JSON", e);
         }
     }
 

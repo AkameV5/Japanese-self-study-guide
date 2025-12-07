@@ -93,19 +93,18 @@
         <activity android:name=".texts_and_translation.TextDetailActivity"
             android:exported="false"
             android:theme="@style/Theme.Material3.Light.NoActionBar" />
-        <activity android:name=".texts_and_translation.TextExercisesActivity"
-            android:exported="false"/>
         <activity android:name=".texts_and_translation.ExerciseDetailActivity"
             android:exported="false"/>
         <activity android:name=".texts_and_translation.ExerciseFinishedActivity"
             android:exported="false"/>
 
-
-        <activity
-            android:name=".audio.AudioActivity"
+        <activity android:name=".audio.AudioActivity"
             android:exported="false"/>
-        <activity
-            android:name=".audio.AudioPlayerActivity"
+        <activity android:name=".audio.AudioPlayerActivity"
+            android:exported="false"/>
+        <activity android:name=".audio.AudioExerciseActivity"
+            android:exported="false"/>
+        <activity android:name=".audio.AudioExerciseFinishActivity"
             android:exported="false"/>
 
     </application>
