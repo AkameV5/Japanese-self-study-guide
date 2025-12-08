@@ -1,12 +1,17 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_horizontal"
-    android:fitsSystemWindows="true"
+    android:fillViewport="true"
     android:background="@color/pinkBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal"
+        android:fitsSystemWindows="true">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivProfilePic"
@@ -49,4 +54,123 @@
         android:backgroundTint="@color/accentPink"
         android:textColor="@color/textDark" />
 
-</LinearLayout>
+    <com.example.japanese_self_study_guide.main_profile.ProgressRingsView
+        android:id="@+id/ringsView"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="16dp" />
+
+        <TextView
+        android:id="@+id/hiraganaLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Хирагана 0 / 0"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/hiraganaBar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        app:indicatorColor="#FF80AB"
+        app:trackColor="#FFE4EC"
+        app:trackThickness="12dp"/>
+
+    <TextView
+        android:id="@+id/katakanaLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Катакана 0 / 0"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/katakanaBar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        app:indicatorColor="#FFB74D"
+        app:trackColor="#FFEFD8"
+        app:trackThickness="12dp"/>
+
+    <TextView
+        android:id="@+id/kanjiLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Кандзи 0 / 0"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/kanjiBar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        app:indicatorColor="#4FC3F7"
+        app:trackColor="#DFF4FF"
+        app:trackThickness="12dp"/>
+
+    <TextView
+        android:id="@+id/grammarLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Грамматика 0 / 0"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/grammarBar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        app:indicatorColor="#81C784"
+        app:trackColor="#E3F6E8"
+        app:trackThickness="12dp"/>
+
+    <TextView
+        android:id="@+id/textsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Тексты 0 / 0"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/textsBar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        app:indicatorColor="#BA68C8"
+        app:trackColor="#F2E0F7"
+        app:trackThickness="12dp"/>
+
+    <TextView
+        android:id="@+id/audioLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Аудио 0 / 0"
+        android:textColor="@color/textDark"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/audioBar"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        app:indicatorColor="#FF8A65"
+        app:trackColor="#FFE4D8"
+        app:trackThickness="12dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,5 +1,6 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class HiraganaAdapter extends RecyclerView.Adapter<HiraganaAdapter.ViewHolder> {
@@ -17,6 +20,14 @@ public class HiraganaAdapter extends RecyclerView.Adapter<HiraganaAdapter.ViewHo
     public interface OnItemClickListener {
         void onClick(HiraganaItem item);
     }
+
+    private List<Integer> learnedIds = new ArrayList<>();
+
+    public void setLearnedIds(List<Integer> ids) {
+        this.learnedIds = ids;
+        notifyDataSetChanged();
+    }
+
 
     private final List<HiraganaItem> list;
     private final OnItemClickListener listener;
@@ -44,6 +55,13 @@ public class HiraganaAdapter extends RecyclerView.Adapter<HiraganaAdapter.ViewHo
         holder.itemView.setOnClickListener(v -> {
             if (item.getId() != -1) listener.onClick(item);
         });
+
+        if (learnedIds.contains(item.getId())) {
+            holder.tvSymbol.setTextColor(Color.GREEN); // или другой цвет
+        } else {
+            holder.tvSymbol.setTextColor(Color.BLACK);
+        }
+
     }
 
     @Override

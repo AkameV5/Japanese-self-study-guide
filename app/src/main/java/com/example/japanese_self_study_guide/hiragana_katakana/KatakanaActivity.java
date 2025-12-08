@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.ProgressManager;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -40,6 +42,8 @@ public class KatakanaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_katakana);
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
 
         recyclerKatakana = findViewById(R.id.recyclerKatakana);
         recyclerYouon = findViewById(R.id.recyclerYouonKata);
@@ -65,7 +69,20 @@ public class KatakanaActivity extends AppCompatActivity {
         });
 
         db = FirebaseFirestore.getInstance();
-        loadFromFirebase();
+        loadFromFirebase(); // загружаем символы
+
+        ProgressManager.getProgressDoc(userId).addOnSuccessListener(doc -> {
+            List<Long> learned = (List<Long>) doc.get("katakanaLearned");
+            if (learned == null) return;
+            List<Integer> ids = new ArrayList<>();
+            for (Long l : learned) ids.add(l.intValue());
+
+            handler.post(() -> {
+                adapterKatakana.setLearnedIds(ids);
+                adapterYouon.setLearnedIds(ids);
+            });
+        });
+
     }
 
     private void loadFromFirebase() {

@@ -11,6 +11,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -204,5 +205,15 @@ public class MainActivity extends AppCompatActivity {
             ivProfilePic.setImageURI(Uri.fromFile(new File(localAvatar)));
         }
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            ProgressManager.initProgressIfNeeded(user.getUid());
+        }
+    }
+
 
 }

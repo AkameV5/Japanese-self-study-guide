@@ -27,7 +27,8 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
     private LinearLayout layoutOptions;
     private EditText etAnswer;
     private Button btnCheck, btnNext;
-
+    private final java.util.Map<Integer, Integer> totalPerSymbol = new java.util.HashMap<>();
+    private final java.util.Map<Integer, Integer> correctPerSymbol = new java.util.HashMap<>();
     private int index = 0;
     private KatakanaExerciseModel currentEx;
 
@@ -90,6 +91,7 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
 
     private void show() {
         if (index >= exercises.size()) {
+            finishExercise();
             tvQuestion.setText("Все упражнения завершены!");
             layoutOptions.removeAllViews();
             etAnswer.setVisibility(View.GONE);
@@ -99,6 +101,12 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
         }
 
         currentEx = exercises.get(index);
+
+        int katakanaId = currentEx.getKatakanaId();
+        totalPerSymbol.put(
+                katakanaId,
+                totalPerSymbol.getOrDefault(katakanaId, 0) + 1
+        );
 
         tvQuestion.setText(currentEx.getQuestion());
         tvExplanation.setText("");
@@ -136,6 +144,11 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
 
         if (user.equals(correct)) {
             tvExplanation.setText("Правильно! 🎉\n" + currentEx.getExplanation());
+            int katakanaId = currentEx.getKatakanaId();
+            correctPerSymbol.put(
+                    katakanaId,
+                    correctPerSymbol.getOrDefault(katakanaId, 0) + 1
+            );
         } else {
             tvExplanation.setText("Неверно ❌\nПравильный ответ: " + correct +
                     "\n\n" + currentEx.getExplanation());
@@ -174,6 +187,68 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                 .addOnFailureListener(e ->
                         Toast.makeText(this, "Ошибка загрузки", Toast.LENGTH_SHORT).show()
                 );
+    }
+
+    private void finishExercise() {
+
+        String uid = com.google.firebase.auth.FirebaseAuth
+                .getInstance()
+                .getUid();
+
+        if (uid == null) return;
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("Progress")
+                .document(uid)
+                .get()
+                .addOnSuccessListener(doc -> {
+
+                    List<Long> learned =
+                            (List<Long>) doc.get("katakanaLearned");
+
+                    if (learned == null) learned = new ArrayList<>();
+
+                    for (Integer katakanaId : totalPerSymbol.keySet()) {
+
+                        if (learned.contains(katakanaId.longValue()))
+                            continue;
+
+                        int total = totalPerSymbol.get(katakanaId);
+                        int correct = correctPerSymbol.getOrDefault(katakanaId, 0);
+
+                        float percent = (correct * 100f) / total;
+
+                        if (percent >= 70f) {
+                            db.collection("Progress")
+                                    .document(uid)
+                                    .update(
+                                            "katakanaLearned",
+                                            com.google.firebase.firestore.FieldValue.arrayUnion(katakanaId),
+                                            "katakanaDone",
+                                            com.google.firebase.firestore.FieldValue.increment(1)
+                                    );
+                        }
+                    }
+
+                    Toast.makeText(
+                            this,
+                            "Упражнение завершено!",
+                            Toast.LENGTH_LONG
+                    ).show();
+                    android.content.Intent intent =
+                            new android.content.Intent(
+                                    KatakanaExercisesActivity.this,
+                                    KatakanaActivity.class
+                            );
+
+                    intent.setFlags(
+                            android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
+                                    | android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
+                    );
+                    startActivity(intent);
+                    finish();
+                });
     }
 
 }

@@ -38,7 +38,6 @@ public class GrammarDetailActivity extends AppCompatActivity {
             intent.putExtra("id_grammar", getIntent().getIntExtra("id", -1));
             startActivity(intent);
         });
-
     }
 }
 

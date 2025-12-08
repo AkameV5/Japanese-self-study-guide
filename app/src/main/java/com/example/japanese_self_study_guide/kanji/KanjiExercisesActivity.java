@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.japanese_self_study_guide.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 import java.util.*;
 
@@ -21,6 +22,9 @@ public class KanjiExercisesActivity extends AppCompatActivity {
     private int index = 0;
     private KanjiExerciseModel currentEx;
     private int startId, endId, limit;
+
+    private Map<Integer, Integer> totalPerKanji = new HashMap<>();
+    private Map<Integer, Integer> correctPerKanji = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +80,7 @@ public class KanjiExercisesActivity extends AppCompatActivity {
             etAnswer.setVisibility(View.GONE);
             btnCheck.setVisibility(View.GONE);
             btnNext.setVisibility(View.GONE);
+            finishKanjiExercise();
             return;
         }
 
@@ -122,6 +127,7 @@ public class KanjiExercisesActivity extends AppCompatActivity {
         List<String> correctAnswers = currentEx.getAnswer();
         boolean isCorrect = false;
 
+
         if (correctAnswers != null) {
             for (String ans : correctAnswers) {
                 if (ans != null && user.equals(ans.trim())) {
@@ -131,8 +137,18 @@ public class KanjiExercisesActivity extends AppCompatActivity {
             }
         }
 
+        int kanjiId = currentEx.getId_kanji();
+        totalPerKanji.put(
+                kanjiId,
+                totalPerKanji.getOrDefault(kanjiId, 0) + 1
+        );
+
         if (isCorrect) {
             tvExplanation.setText("Правильно ✅\n" + currentEx.getExplanation());
+            correctPerKanji.put(
+                    kanjiId,
+                    correctPerKanji.getOrDefault(kanjiId, 0) + 1
+            );
         } else {
             tvExplanation.setText(
                     "Ошибка ❌\nПравильный ответ: " + Arrays.toString(correctAnswers.toArray()) +
@@ -149,4 +165,50 @@ public class KanjiExercisesActivity extends AppCompatActivity {
         index++;
         showExercise();
     }
+    private void finishKanjiExercise() {
+
+        String uid = FirebaseAuth.getInstance().getUid();
+        if (uid == null) return;
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("Progress")
+                .document(uid)
+                .get()
+                .addOnSuccessListener(doc -> {
+
+                    List<Long> learned =
+                            (List<Long>) doc.get("kanjiLearned");
+
+                    if (learned == null) learned = new ArrayList<>();
+
+                    for (Integer kanjiId : totalPerKanji.keySet()) {
+
+                        if (learned.contains(kanjiId.longValue()))
+                            continue;
+
+                        int total = totalPerKanji.get(kanjiId);
+                        int correct = correctPerKanji.getOrDefault(kanjiId, 0);
+
+                        float percent = (correct * 100f) / total;
+
+                        if (percent >= 70f) {
+                            db.collection("Progress")
+                                    .document(uid)
+                                    .update(
+                                            "kanjiLearned",
+                                            FieldValue.arrayUnion(kanjiId),
+                                            "kanjiDone",
+                                            FieldValue.increment(1)
+                                    );
+                        }
+                    }
+
+                    Toast.makeText(this,
+                            "Упражнения по кандзи завершены!",
+                            Toast.LENGTH_LONG).show();
+                    finish();
+                });
+    }
+
 }
