@@ -26,6 +26,10 @@ public class KanjiExercisesActivity extends AppCompatActivity {
     private Map<Integer, Integer> totalPerKanji = new HashMap<>();
     private Map<Integer, Integer> correctPerKanji = new HashMap<>();
 
+    private boolean dailyMode = false;
+    private int dailyLimit = 20;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +48,8 @@ public class KanjiExercisesActivity extends AppCompatActivity {
         startId = getIntent().getIntExtra("startId", 0);
         endId = getIntent().getIntExtra("endId", 0);
         limit = getIntent().getIntExtra("limit", 40);
+
+        dailyMode = getIntent().getBooleanExtra("daily_mode", false);
 
         btnCheck.setOnClickListener(v -> checkAnswer());
         btnNext.setOnClickListener(v -> nextExercise());
@@ -165,6 +171,7 @@ public class KanjiExercisesActivity extends AppCompatActivity {
         index++;
         showExercise();
     }
+
     private void finishKanjiExercise() {
 
         String uid = FirebaseAuth.getInstance().getUid();
@@ -210,5 +217,4 @@ public class KanjiExercisesActivity extends AppCompatActivity {
                     finish();
                 });
     }
-
 }

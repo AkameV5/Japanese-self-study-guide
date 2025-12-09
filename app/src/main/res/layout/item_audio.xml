@@ -14,7 +14,7 @@
         android:text="Название"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textColor="@color/textDark" />
 
     <TextView
         android:id="@+id/audioDescription"

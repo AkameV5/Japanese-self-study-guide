@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -67,6 +68,36 @@ public class HiraganaActivity extends AppCompatActivity {
         });
 
         db = FirebaseFirestore.getInstance();
+
+        boolean dailyMode = getIntent().getBooleanExtra("daily_mode", false);
+        int[] dailyIds = getIntent().getIntArrayExtra("daily_hiragana_ids");
+
+        TextView tvHiraTitle = findViewById(R.id.tvHiraganaTitle);
+        TextView tvYouonTitle = findViewById(R.id.tvYouonTitle);
+
+        if (dailyMode && dailyIds != null) {
+
+            findViewById(R.id.btnExercises).setVisibility(View.GONE);
+
+            tvHiraTitle.setVisibility(View.GONE);
+            tvYouonTitle.setVisibility(View.GONE);
+
+            recyclerYouon.setVisibility(View.GONE);
+
+            findViewById(R.id.btnDaily).setVisibility(View.VISIBLE);
+
+            loadDailySymbols(dailyIds);
+
+            // переход к упражнениям
+            findViewById(R.id.btnDaily).setOnClickListener(v -> {
+                Intent ex = new Intent(this, HiraganaExercisesActivity.class);
+                ex.putExtra("daily_mode", true);
+                ex.putExtra("daily_hiragana_ids", dailyIds);
+                startActivity(ex);
+            });
+
+            return;
+        }
 
         loadFromFirebase();
     }
@@ -140,6 +171,42 @@ public class HiraganaActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    private void loadDailySymbols(int[] idsArr) {
+        List<Integer> ids = new ArrayList<>();
+        for (int i : idsArr) ids.add(i);
 
+        db.collection("Hiragana")
+                .whereIn("id", ids)
+                .get()
+                .addOnSuccessListener(query -> executor.execute(() -> {
+                    List<HiraganaItem> temp = new ArrayList<>();
+
+                    for (QueryDocumentSnapshot doc : query) {
+                        String symbol = doc.getString("symbol");
+                        String romaji = doc.getString("romanji");
+                        String imageUrl = doc.getString("imageUrl");
+                        Long id = doc.getLong("id");
+                        if (id == null) continue;
+                        temp.add(new HiraganaItem(symbol, romaji, imageUrl, id.intValue()));
+                    }
+
+                    // сортируем чтобы порядок совпадал с everyday ids
+                    Collections.sort(temp, Comparator.comparingInt(HiraganaItem::getId));
+
+                    handler.post(() -> {
+                        hiraganaList.clear();
+                        youonList.clear();
+
+                        hiraganaList.addAll(temp);
+                        youonList.clear(); // ёон не показываем
+
+                        adapterHiragana.notifyDataSetChanged();
+                        adapterYouon.notifyDataSetChanged();
+                    });
+                }))
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Ошибка загрузки: " + e.getMessage(), Toast.LENGTH_SHORT).show()
+                );
+    }
 
 }

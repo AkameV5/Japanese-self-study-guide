@@ -62,6 +62,13 @@ public class AudioExerciseActivity extends AppCompatActivity {
         prefs = getSharedPreferences("hintPrefs", MODE_PRIVATE);
         hintKey = "hint_used_audio_" + audioId;
 
+        boolean dailyMode = getIntent().getBooleanExtra("daily_mode", false);
+        int dailyAudioId = getIntent().getIntExtra("daily_audio_id", -1);
+
+        if (dailyMode && dailyAudioId != -1) {
+            audioId = dailyAudioId;
+        }
+
         checkHintAvailability();
 
         loadExercises();

@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.japanese_self_study_guide.R;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class GrammarDetailActivity extends AppCompatActivity {
 
@@ -33,11 +35,44 @@ public class GrammarDetailActivity extends AppCompatActivity {
         textExample.setText(example);
         textTranslation.setText(translation);
 
+        boolean dailyMode = getIntent().getBooleanExtra("daily_mode", false);
+        int grammarId = getIntent().getIntExtra("id", -1);
+
+        if (dailyMode && grammarId != -1) {
+            loadGrammarById(grammarId);
+        }
+
         btnExercises.setOnClickListener(v -> {
             Intent intent = new Intent(this, GrammarExerciseActivity.class);
             intent.putExtra("id_grammar", getIntent().getIntExtra("id", -1));
             startActivity(intent);
         });
     }
+
+    private void loadGrammarById(int grammarId) {
+        FirebaseFirestore.getInstance()
+                .collection("Grammar")
+                .whereEqualTo("id", grammarId)
+                .limit(1)
+                .get()
+                .addOnSuccessListener(query -> {
+                    if (query.isEmpty()) return;
+
+                    DocumentSnapshot doc = query.getDocuments().get(0);
+
+                    ((TextView)findViewById(R.id.textDetailStructure))
+                            .setText(doc.getString("structure"));
+
+                    ((TextView)findViewById(R.id.textDetailExplanation))
+                            .setText(doc.getString("explanation"));
+
+                    ((TextView)findViewById(R.id.textDetailExample))
+                            .setText(doc.getString("example"));
+
+                    ((TextView)findViewById(R.id.textDetailTranslation))
+                            .setText(doc.getString("translation"));
+                });
+    }
+
 }
 

@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GrammarExerciseActivity extends AppCompatActivity {
@@ -157,4 +158,5 @@ public class GrammarExerciseActivity extends AppCompatActivity {
 
         finish();
     }
+
 }

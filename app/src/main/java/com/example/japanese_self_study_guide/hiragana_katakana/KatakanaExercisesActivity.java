@@ -58,6 +58,14 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
             return;
         }
 
+        boolean dailyMode = getIntent().getBooleanExtra("daily_mode", false);
+        int dailyLimit = getIntent().getIntExtra("daily_limit", 0);
+        int[] dailyIds = getIntent().getIntArrayExtra("daily_katakana_ids");
+        if (dailyMode && dailyIds != null) {
+            loadDailyGroup(dailyIds, dailyLimit);
+            return;
+        }
+
 
         int[] groupIds = getIntent().getIntArrayExtra("group_ids");
         if (groupIds == null) {
@@ -250,5 +258,31 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                     finish();
                 });
     }
+
+    private void loadDailyGroup(int[] idsArr, int limit) {
+        List<Integer> ids = new ArrayList<>();
+        for (int i : idsArr) ids.add(i);
+
+        db.collection("KatakanaExercises")
+                .whereIn("katakanaId", ids)
+                .get()
+                .addOnSuccessListener(query -> {
+                    exercises.clear();
+                    for (DocumentSnapshot doc : query.getDocuments()) {
+                        KatakanaExerciseModel ex = doc.toObject(KatakanaExerciseModel.class);
+                        if (ex != null) exercises.add(ex);
+                    }
+                    Collections.shuffle(exercises);
+                    if (limit > 0 && exercises.size() > limit) {
+                        exercises = exercises.subList(0, limit);
+                    }
+                    index = 0;
+                    show();
+                })
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Ошибка загрузки", Toast.LENGTH_SHORT).show()
+                );
+    }
+
 
 }

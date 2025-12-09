@@ -6,16 +6,19 @@ import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TextsActivity extends AppCompatActivity {
@@ -43,6 +46,16 @@ public class TextsActivity extends AppCompatActivity {
         loadTexts();
         setupSearch();
         setupJlptFilter();
+
+        boolean dailyMode = getIntent().getBooleanExtra("daily_mode", false);
+        int dailyId = getIntent().getIntExtra("daily_text_id", -1);
+
+        if (dailyMode && dailyId != -1) {
+            openTextByDailyId(dailyId);
+            return;
+        }
+
+
     }
 
     private void loadTexts() {
@@ -116,4 +129,18 @@ public class TextsActivity extends AppCompatActivity {
         intent.putExtra("textId", text.getId());
         startActivity(intent);
     }
+    private void openTextByDailyId(int id) {
+        for (TextModel t : allTexts) {
+            if (t.getId() == id) {
+                Intent intent = new Intent(this, TextDetailActivity.class);
+                intent.putExtra("textId", id);
+                startActivity(intent);
+                finish();
+                return;
+            }
+        }
+    }
+
+
+
 }

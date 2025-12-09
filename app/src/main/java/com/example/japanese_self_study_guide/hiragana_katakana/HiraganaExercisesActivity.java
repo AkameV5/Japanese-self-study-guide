@@ -67,6 +67,14 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
             return;
         }
 
+        boolean dailyMode = getIntent().getBooleanExtra("daily_mode", false);
+        int dailyLimit = getIntent().getIntExtra("daily_limit", 0);
+        int[] dailyIds = getIntent().getIntArrayExtra("daily_hiragana_ids");
+        if (dailyMode && dailyIds != null) {
+            loadDailyGroup(dailyIds, dailyLimit);
+            return;
+        }
+
         int[] groupIds = getIntent().getIntArrayExtra("group_ids");
         if (groupIds == null) {
             Toast.makeText(this, "Ошибка: группа не выбрана", Toast.LENGTH_SHORT).show();
@@ -74,7 +82,6 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
             return;
         }
         loadGroup(groupIds);
-
     }
 
     private void showExercise() {
@@ -284,6 +291,32 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    private void loadDailyGroup(int[] idsArr, int limit) {
+        List<Integer> ids = new ArrayList<>();
+        for (int i : idsArr) ids.add(i);
+
+        db.collection("HiraganaExercises")
+                .whereIn("hiraganaId", ids)
+                .get()
+                .addOnSuccessListener(query -> {
+                    exercises.clear();
+                    for (DocumentSnapshot doc : query.getDocuments()) {
+                        HiraganaExerciseModel ex = doc.toObject(HiraganaExerciseModel.class);
+                        if (ex != null) exercises.add(ex);
+                    }
+                    Collections.shuffle(exercises);
+                    if (limit > 0 && exercises.size() > limit) {
+                        exercises = exercises.subList(0, limit);
+                    }
+                    index = 0;
+                    showExercise();
+                })
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Ошибка загрузки", Toast.LENGTH_SHORT).show()
+                );
+    }
+
 
 
 }
