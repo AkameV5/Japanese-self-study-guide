@@ -37,7 +37,7 @@ public class KatakanaGroupsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.groups_hiragana); // можно сделать свой layout
+        setContentView(R.layout.groups_katakana);
 
         layoutGroups = findViewById(R.id.layoutGroups);
 

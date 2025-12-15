@@ -1,6 +1,5 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,23 +18,17 @@ public class HiraganaAdapter extends RecyclerView.Adapter<HiraganaAdapter.ViewHo
     public interface OnItemClickListener {
         void onClick(HiraganaItem item);
     }
-
     private List<Integer> learnedIds = new ArrayList<>();
-
     public void setLearnedIds(List<Integer> ids) {
         this.learnedIds = ids;
         notifyDataSetChanged();
     }
-
-
     private final List<HiraganaItem> list;
     private final OnItemClickListener listener;
-
     public HiraganaAdapter(List<HiraganaItem> list, OnItemClickListener listener) {
         this.list = list;
         this.listener = listener;
     }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -44,7 +36,6 @@ public class HiraganaAdapter extends RecyclerView.Adapter<HiraganaAdapter.ViewHo
                 .inflate(R.layout.item_hiragana, parent, false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         HiraganaItem item = list.get(position);
@@ -57,23 +48,23 @@ public class HiraganaAdapter extends RecyclerView.Adapter<HiraganaAdapter.ViewHo
         });
 
         if (learnedIds.contains(item.getId())) {
-            holder.tvSymbol.setTextColor(Color.GREEN); // или другой цвет
+            holder.imgLearned.setVisibility(View.VISIBLE);
         } else {
-            holder.tvSymbol.setTextColor(Color.BLACK);
+            holder.imgLearned.setVisibility(View.GONE);
         }
 
     }
-
     @Override
     public int getItemCount() { return list.size(); }
-
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvSymbol, tvRomaji;
-
+        ImageView imgLearned;
         ViewHolder(View itemView) {
             super(itemView);
             tvSymbol = itemView.findViewById(R.id.tvSymbol);
             tvRomaji = itemView.findViewById(R.id.tvRomaji);
+            imgLearned = itemView.findViewById(R.id.imgLearned);
         }
     }
+
 }

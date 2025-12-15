@@ -40,8 +40,6 @@ public class HiraganaGroupsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.groups_hiragana);
 
-
-
         layoutGroups = findViewById(R.id.layoutGroups);
 
         loadSymbolsAndBuildGroups();

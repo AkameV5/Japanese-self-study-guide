@@ -1,6 +1,5 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
-// import android.layout.hiragana_katakana;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,6 +16,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.ProgressManager;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -46,7 +47,6 @@ public class HiraganaActivity extends AppCompatActivity {
         recyclerHiragana = findViewById(R.id.recyclerHiragana);
         recyclerYouon = findViewById(R.id.recyclerYouon);
 
-        // Настраиваем сетку
         recyclerHiragana.setLayoutManager(new GridLayoutManager(this, 5));
         recyclerYouon.setLayoutManager(new GridLayoutManager(this, 3));
 
@@ -88,7 +88,6 @@ public class HiraganaActivity extends AppCompatActivity {
 
             loadDailySymbols(dailyIds);
 
-            // переход к упражнениям
             findViewById(R.id.btnDaily).setOnClickListener(v -> {
                 Intent ex = new Intent(this, HiraganaExercisesActivity.class);
                 ex.putExtra("daily_mode", true);
@@ -100,6 +99,21 @@ public class HiraganaActivity extends AppCompatActivity {
         }
 
         loadFromFirebase();
+
+        ProgressManager.getProgressDoc(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .addOnSuccessListener(doc -> {
+                    List<Long> learned = (List<Long>) doc.get("hiraganaLearned");
+                    if (learned == null) return;
+
+                    List<Integer> ids = new ArrayList<>();
+                    for (Long l : learned) ids.add(l.intValue());
+
+                    handler.post(() -> {
+                        adapterHiragana.setLearnedIds(ids);
+                        adapterYouon.setLearnedIds(ids);
+                    });
+                });
+
     }
 
     private void loadFromFirebase() {
@@ -145,9 +159,9 @@ public class HiraganaActivity extends AppCompatActivity {
         for (HiraganaItem item : list) {
             newList.add(item);
 
-            if (item.getId() == 61) newList.add(new HiraganaItem("", "", null, -1)); // после ya
-            if (item.getId() == 62) newList.add(new HiraganaItem("", "", null, -1)); // после yu
-            if (item.getId() == 69) { // после wa
+            if (item.getId() == 61) newList.add(new HiraganaItem("", "", null, -1));
+            if (item.getId() == 62) newList.add(new HiraganaItem("", "", null, -1));
+            if (item.getId() == 69) {
                 newList.add(new HiraganaItem("", "", null, -1));
                 newList.add(new HiraganaItem("", "", null, -1));
                 newList.add(new HiraganaItem("", "", null, -1));
@@ -189,8 +203,6 @@ public class HiraganaActivity extends AppCompatActivity {
                         if (id == null) continue;
                         temp.add(new HiraganaItem(symbol, romaji, imageUrl, id.intValue()));
                     }
-
-                    // сортируем чтобы порядок совпадал с everyday ids
                     Collections.sort(temp, Comparator.comparingInt(HiraganaItem::getId));
 
                     handler.post(() -> {
@@ -198,7 +210,7 @@ public class HiraganaActivity extends AppCompatActivity {
                         youonList.clear();
 
                         hiraganaList.addAll(temp);
-                        youonList.clear(); // ёон не показываем
+                        youonList.clear();
 
                         adapterHiragana.notifyDataSetChanged();
                         adapterYouon.notifyDataSetChanged();

@@ -13,14 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.japanese_self_study_guide.audio.AudioExerciseActivity;
 import com.example.japanese_self_study_guide.audio.AudioPlayerActivity;
 import com.example.japanese_self_study_guide.grammar.GrammarDetailActivity;
-import com.example.japanese_self_study_guide.grammar.GrammarExerciseActivity;
-import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaExercisesActivity;
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaGroupProvider;
-import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaGroupsActivity;
-import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaExercisesActivity;
 import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaGroupProvider;
 import com.example.japanese_self_study_guide.kanji.ExerciseGroup;
 import com.example.japanese_self_study_guide.kanji.GroupsProvider;
@@ -53,6 +48,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.ListenerRegistration;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -72,8 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
     private FirebaseAuth mAuth;
-
-    // 👇 добавляем для анимации
+    private ListenerRegistration dailyListener;
     private View mainContent;
 
     @Override
@@ -84,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(ContextCompat.getColor(this, R.color.accentPinkDark)); // ← тот же цвет, что у Toolbar
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.accentPinkDark));
         }
 
         mAuth = FirebaseAuth.getInstance();
@@ -92,11 +87,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // ✔ Добавляем отступ сверху под фронталку, безопасно для всех устройств
         ViewCompat.setOnApplyWindowInsetsListener(toolbar, (v, insets) -> {
             int statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top;
 
-            // если статусбар > 0 — тогда добавляем отступ
             if (statusBarHeight > 0) {
                 v.setPadding(
                         v.getPaddingLeft(),
@@ -189,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         }
 
-
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
@@ -249,10 +241,22 @@ public class MainActivity extends AppCompatActivity {
         String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         DocumentReference ref = db.collection("Daily").document(uid);
 
-        ProgressManager.getProgressDoc(uid).addOnSuccessListener(progressDoc -> {
-            generateRecommendations(ref, today, progressDoc, null);
+        ref.get().addOnSuccessListener(doc -> {
+            if (doc.exists() && today.equals(doc.getString("date"))) {
+                List<Map<String, Object>> list =
+                        (List<Map<String, Object>>) doc.get("recommendations");
+                if (list != null) {
+                    showRecommendations(list);
+                    return;
+                }
+            }
+
+            ProgressManager.getProgressDoc(uid)
+                    .addOnSuccessListener(progressDoc ->
+                            generateRecommendations(ref, today, progressDoc, null));
         });
     }
+
 
     private void generateRecommendations(DocumentReference ref,
                                          String today,
@@ -264,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
         String uid = user.getUid();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("Users").document(uid).get().addOnSuccessListener(doc -> {
+        db.collection("Progress").document(uid).get().addOnSuccessListener(doc -> {
 
             List<Long> hiraganaLearned = doc.get("hiraganaLearned") == null ? new ArrayList<>() :
                     (List<Long>) doc.get("hiraganaLearned");
@@ -281,21 +285,18 @@ public class MainActivity extends AppCompatActivity {
 
             List<Map<String, Object>> newList = new ArrayList<>();
 
-            // ХИРАГАНА
             List<Integer> hiraIdsForToday = pickNextFromGroups(HiraganaGroupProvider.GROUPS_ALL, hiraganaLearned, 5);
             if (!hiraIdsForToday.isEmpty()) {
                 newList.add(makeRecMap("Хирагана", "hiragana",
                         Map.of("ids", hiraIdsForToday)));
             }
 
-            // КАТАКАНА
             List<Integer> kataIdsForToday = pickNextFromGroups(KatakanaGroupProvider.GROUPS_ALL, katakanaLearned, 5);
             if (!kataIdsForToday.isEmpty()) {
                 newList.add(makeRecMap("Катакана", "katakana",
                         Map.of("ids", kataIdsForToday)));
             }
 
-            // КАНДЗИ
             List<Integer> kanjiIdsForToday = pickNextKanjiIds(kanjiLearned);
             if (!kanjiIdsForToday.isEmpty()) {
                 ExerciseGroup group = findGroupForIds(kanjiIdsForToday);
@@ -309,21 +310,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-            // ГРАММАТИКА
             Long grammarId = pickNextSingleId(grammarLearned, "Grammar");
             if (grammarId != null) {
                 newList.add(makeRecMap("Грамматика", "grammar",
                         Map.of("id", grammarId.intValue())));
             }
 
-            // ТЕКСТ (асинхронный)
             pickNextTextIdByLevel(textsLearned, textId -> {
                 if (textId != null) {
                     newList.add(makeRecMap("Текст", "text",
                             Map.of("id", textId.intValue())));
                 }
 
-                // АУДИО
                 Long audioId = pickNextSingleId(audioLearned, "Audio");
                 if (audioId != null) {
                     newList.add(makeRecMap("Аудио", "audio",
@@ -393,7 +391,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (!res.isEmpty()) {
-                return res; // ✅ берём ТОЛЬКО ОДНУ группу
+                return res;
             }
         }
 
@@ -418,7 +416,6 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
-    // Выбор текста по уровню N5->N1. Проверяет поле "level" в коллекции Texts и возвращает первый текстId, которого нет в textsLearned
     private void pickNextTextIdByLevel(List<Long> learned, OnTextFound callback) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -468,11 +465,24 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout container = findViewById(R.id.recommendations_list);
         container.removeAllViews();
 
+        if (list.isEmpty()) {
+            View item = getLayoutInflater().inflate(R.layout.item_recommendation, container, false);
+
+            TextView title = item.findViewById(R.id.rec_title);
+            TextView subtitle = item.findViewById(R.id.rec_subtitle);
+
+            title.setText("Все рекомендации выполнены!");
+            if (subtitle != null) subtitle.setText("Отличная работа!");
+
+            container.addView(item);
+            return;
+        }
+
         for (Map<String, Object> rec : list) {
             View item = getLayoutInflater().inflate(R.layout.item_recommendation, container, false);
 
             TextView title = item.findViewById(R.id.rec_title);
-            TextView subtitle = item.findViewById(R.id.rec_subtitle); // добавь текстовое поле в item_recommendation
+            TextView subtitle = item.findViewById(R.id.rec_subtitle);
 
             String titleTxt = rec.get("title").toString();
             title.setText(titleTxt);
@@ -521,34 +531,40 @@ public class MainActivity extends AppCompatActivity {
                 return "";
         }
     }
-
     private void openRecommendedLesson(Map<String, Object> rec) {
         String type = (String) rec.get("type");
         Map<String,Object> payload = (Map<String,Object>) rec.get("payload");
 
         Intent intent = null;
-
         switch (type) {
 
-            // -------------------- HIRAGANA --------------------
             case "hiragana": {
                 intent = new Intent(this, HiraganaActivity.class);
-                List<Integer> idsList = (List<Integer>) payload.get("ids");
-                if (idsList != null) {
-                    int[] arr = new int[idsList.size()];
-                    for (int i = 0; i < idsList.size(); i++) arr[i] = idsList.get(i);
+                List<?> idsRaw = (List<?>) payload.get("ids");
+
+                if (idsRaw != null) {
+                    int[] arr = new int[idsRaw.size()];
+                    for (int i = 0; i < idsRaw.size(); i++) {
+                        Object v = idsRaw.get(i);
+                        arr[i] = (v instanceof Long) ? ((Long) v).intValue() : (int) v;
+                    }
                     intent.putExtra("daily_hiragana_ids", arr);
                 }
+
                 intent.putExtra("daily_mode", true);
                 break;
             }
+
             case "katakana": {
                 intent = new Intent(this, KatakanaActivity.class);
-                List<Integer> idsList = (List<Integer>) payload.get("ids");
+                List<?> idsRaw = (List<?>) payload.get("ids");
 
-                if (idsList != null) {
-                    int[] arr = new int[idsList.size()];
-                    for (int i = 0; i < idsList.size(); i++) arr[i] = idsList.get(i);
+                if (idsRaw != null) {
+                    int[] arr = new int[idsRaw.size()];
+                    for (int i = 0; i < idsRaw.size(); i++) {
+                        Object v = idsRaw.get(i);
+                        arr[i] = (v instanceof Long) ? ((Long) v).intValue() : (int) v;
+                    }
                     intent.putExtra("daily_katakana_ids", arr);
                 }
                 intent.putExtra("daily_mode", true);
@@ -557,55 +573,58 @@ public class MainActivity extends AppCompatActivity {
 
             case "kanji": {
                 intent = new Intent(this, KanjiActivity.class);
-                List<Integer> idsList = (List<Integer>) payload.get("ids");
+                List<?> idsRaw = (List<?>) payload.get("ids");
 
-                if (idsList != null) {
-                    int[] arr = new int[idsList.size()];
-                    for (int i = 0; i < idsList.size(); i++) arr[i] = idsList.get(i);
+                if (idsRaw != null) {
+                    int[] arr = new int[idsRaw.size()];
+                    for (int i = 0; i < idsRaw.size(); i++) {
+                        Object v = idsRaw.get(i);
+                        arr[i] = (v instanceof Long) ? ((Long) v).intValue() : (int) v;
+                    }
                     intent.putExtra("daily_kanji_ids", arr);
                 }
-                intent.putExtra("daily_start_id", (int)payload.get("startId"));
-                intent.putExtra("daily_end_id", (int)payload.get("endId"));
-                intent.putExtra("daily_limit", (int)payload.get("limit"));
-                intent.putExtra("daily_mode", true);
 
+                intent.putExtra("daily_start_id", ((Long) payload.get("startId")).intValue());
+                intent.putExtra("daily_end_id", ((Long) payload.get("endId")).intValue());
+                intent.putExtra("daily_limit", ((Long) payload.get("limit")).intValue());
+                intent.putExtra("daily_mode", true);
                 break;
             }
 
-            // -------------------- GRAMMAR --------------------
             case "grammar": {
                 intent = new Intent(this, GrammarDetailActivity.class);
-                Integer id = (Integer) payload.get("id");
+                Long id = (Long) payload.get("id");
                 if (id != null) {
+                    intent.putExtra("id", id.intValue());
                     intent.putExtra("daily_mode", true);
-                    intent.putExtra("id", id);
                 }
                 break;
             }
 
             case "text": {
                 intent = new Intent(this, TextDetailActivity.class);
-                Integer id = (Integer) payload.get("id");
-                if (id != null) intent.putExtra("textId", id);
+                Long id = (Long) payload.get("id");
+                if (id != null) {
+                    intent.putExtra("textId", id.intValue());
+                }
                 intent.putExtra("daily_mode", true);
                 break;
             }
 
-
             case "audio": {
-                Integer id = (Integer) payload.get("id");
+                Long id = (Long) payload.get("id");
                 if (id == null) return;
 
                 FirebaseFirestore.getInstance()
                         .collection("Audio")
-                        .whereEqualTo("id", id)
+                        .whereEqualTo("id", id.intValue())
                         .get()
                         .addOnSuccessListener(query -> {
                             if (!query.isEmpty()) {
                                 var doc = query.getDocuments().get(0);
 
                                 Intent i = new Intent(this, AudioPlayerActivity.class);
-                                i.putExtra("audioId", id);
+                                i.putExtra("audioId", id.intValue());
                                 i.putExtra("audio_url", doc.getString("url"));
                                 i.putExtra("audio_name", doc.getString("name"));
                                 i.putExtra("audio_description", doc.getString("description"));
@@ -614,13 +633,13 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(i);
                             }
                         });
-                return; //
+                return;
             }
-
         }
 
         if (intent != null) startActivity(intent);
     }
+
 
     private void saveDailyAndShow(DocumentReference ref, String today, List<Map<String,Object>> list) {
 
@@ -635,6 +654,70 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public static void removeDailyRecommendation(String type, int id, AppCompatActivity activity) {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user == null) return;
+
+        String uid = user.getUid();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        DocumentReference ref = db.collection("Daily").document(uid);
+
+        ref.get().addOnSuccessListener(doc -> {
+            if (!doc.exists()) return;
+
+            List<Map<String,Object>> list =
+                    (List<Map<String,Object>>) doc.get("recommendations");
+            if (list == null) return;
+
+            List<Map<String,Object>> newList = new ArrayList<>();
+
+            for (Map<String,Object> rec : list) {
+                if (!rec.get("type").equals(type)) {
+                    newList.add(rec);
+                    continue;
+                }
+
+                Map<String,Object> payload = (Map<String,Object>) rec.get("payload");
+
+                switch (type) {
+                    case "hiragana":
+                    case "katakana":
+                    case "kanji": {
+                        List<Long> ids = (List<Long>) payload.get("ids");
+                        if (!ids.contains((long) id)) newList.add(rec);
+                        break;
+                    }
+                    case "grammar":
+                    case "text":
+                    case "audio": {
+                        Long v = (Long) payload.get("id");
+                        if (!v.equals((long) id)) newList.add(rec);
+                        break;
+                    }
+                }
+            }
+            ref.update("recommendations", newList)
+                    .addOnSuccessListener(unused -> {
+                        if (activity instanceof MainActivity) {
+                            ((MainActivity) activity).refreshDailyRecommendations();
+                        }
+                    });
+        });
+    }
+    public void refreshDailyRecommendations() {
+        FirebaseFirestore.getInstance()
+                .collection("Daily")
+                .document(FirebaseAuth.getInstance().getUid())
+                .get()
+                .addOnSuccessListener(doc -> {
+                    if (!doc.exists()) return;
+
+                    List<Map<String, Object>> recs =
+                            (List<Map<String, Object>>) doc.get("recommendations");
+
+                    showRecommendations(recs);
+                });
+    }
 }
 
 

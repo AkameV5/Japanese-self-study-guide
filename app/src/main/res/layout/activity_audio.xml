@@ -7,6 +7,15 @@
     android:fitsSystemWindows="true"
     android:background="@color/pinkBackground">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Аудио"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/textDark"
+        android:paddingBottom="12dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/audioRecycler"
         android:layout_width="match_parent"

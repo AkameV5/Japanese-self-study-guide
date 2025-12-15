@@ -43,8 +43,6 @@ public class ProgressManager {
             }
         });
     }
-
-    // ✅ 2. УВЕЛИЧЕНИЕ ПРОГРЕССА
     public static Task<Void> incrementProgress(String userId, String field, long amount) {
         DocumentReference ref = db.collection("Progress").document(userId);
         Map<String, Object> updates = new HashMap<>();
@@ -52,8 +50,6 @@ public class ProgressManager {
         updates.put("lastUpdated", FieldValue.serverTimestamp());
         return ref.set(updates, com.google.firebase.firestore.SetOptions.merge());
     }
-
-    // ✅ 3. УСТАНОВКА ЗНАЧЕНИЯ
     public static Task<Void> setProgressValue(String userId, String field, long value) {
         DocumentReference ref = db.collection("Progress").document(userId);
         Map<String, Object> updates = new HashMap<>();
@@ -62,7 +58,6 @@ public class ProgressManager {
         return ref.set(updates, com.google.firebase.firestore.SetOptions.merge());
     }
 
-    // ✅ 4. ЧТЕНИЕ
     public static Task<com.google.firebase.firestore.DocumentSnapshot> getProgressDoc(String userId) {
         return db.collection("Progress").document(userId).get();
     }

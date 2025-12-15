@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
@@ -37,6 +39,7 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
     private Button btnCheck, btnNext;
     private int index = 0;
     private HiraganaExerciseModel currentEx;
+
     private final Map<Integer, Integer> totalPerSymbol = new HashMap<>();
     private final Map<Integer, Integer> correctPerSymbol = new HashMap<>();
 
@@ -54,6 +57,19 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
 
         layoutOptions = findViewById(R.id.layoutOptions);
         etAnswer = findViewById(R.id.etAnswer);
+        etAnswer.setFilters(new InputFilter[]{(source, start, end, dest, dstart, dend) -> {
+            for (int i = start; i < end; i++) {
+                char c = source.charAt(i);
+
+                // Проверка на русский (кириллица)
+                if (c >= 'А' && c <= 'я' || c == 'ё' || c == 'Ё') {
+                    Toast.makeText(this, "Ошибка: нельзя вводить на русском", Toast.LENGTH_SHORT).show();
+                    return "";
+                }
+            }
+            return null; // разрешаем ввод
+        }});
+
 
         btnCheck = findViewById(R.id.btnCheck);
         btnNext = findViewById(R.id.btnNext);
@@ -149,8 +165,8 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
 
     private void checkAnswer() {
 
-        String user = etAnswer.getText().toString().trim();
-        String correct = currentEx.getCorrectAnswer().trim();
+        String user = etAnswer.getText().toString().trim().toLowerCase();
+        String correct = currentEx.getCorrectAnswer().trim().toLowerCase();
 
         int hiraganaId = currentEx.getHiraganaId();
 
@@ -266,9 +282,14 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
                                             "hiraganaDone",
                                             FieldValue.increment(1)
                                     );
-                        }
-                    }
 
+                        }
+                        MainActivity.removeDailyRecommendation(
+                                "hiragana",
+                                hiraganaId,
+                                this
+                        );
+                    }
                     Toast.makeText(
                             HiraganaExercisesActivity.this,
                             "Упражнение завершено!",

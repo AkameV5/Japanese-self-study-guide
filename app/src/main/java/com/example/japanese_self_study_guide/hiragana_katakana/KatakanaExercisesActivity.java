@@ -1,6 +1,7 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.MainActivity;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -45,6 +47,19 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
 
         layoutOptions = findViewById(R.id.layoutOptions);
         etAnswer = findViewById(R.id.etAnswer);
+        etAnswer.setFilters(new InputFilter[]{(source, start, end, dest, dstart, dend) -> {
+            for (int i = start; i < end; i++) {
+                char c = source.charAt(i);
+
+                // Проверка на русский (кириллица)
+                if (c >= 'А' && c <= 'я' || c == 'ё' || c == 'Ё') {
+                    Toast.makeText(this, "Ошибка: нельзя вводить на русском", Toast.LENGTH_SHORT).show();
+                    return "";
+                }
+            }
+            return null; // разрешаем ввод
+        }});
+
 
         btnCheck = findViewById(R.id.btnCheck);
         btnNext = findViewById(R.id.btnNext);
@@ -147,8 +162,8 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
     }
 
     private void check() {
-        String user = etAnswer.getText().toString().trim();
-        String correct = currentEx.getCorrectAnswer().trim();
+        String user = etAnswer.getText().toString().trim().toLowerCase();
+        String correct = currentEx.getCorrectAnswer().trim().toLowerCase();
 
         if (user.equals(correct)) {
             tvExplanation.setText("Правильно! 🎉\n" + currentEx.getExplanation());
@@ -236,6 +251,11 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                                             "katakanaDone",
                                             com.google.firebase.firestore.FieldValue.increment(1)
                                     );
+                            MainActivity.removeDailyRecommendation(
+                                    "katakana",
+                                    katakanaId,
+                                    this
+                            );
                         }
                     }
 
