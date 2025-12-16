@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.MainActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FieldValue;
@@ -229,6 +230,7 @@ public class AudioExerciseActivity extends AppCompatActivity {
                             "audioLearned",
                             FieldValue.arrayUnion(audioId)
                     );
+            MainActivity.removeDailyRecommendation("audio", audioId);
         }
 
         // показываем уведомление

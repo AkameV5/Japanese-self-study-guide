@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 import java.util.*;
@@ -208,6 +209,7 @@ public class KanjiExercisesActivity extends AppCompatActivity {
                                             "kanjiDone",
                                             FieldValue.increment(1)
                                     );
+                            MainActivity.removeDailyRecommendation("kanji", kanjiId);
                         }
                     }
 

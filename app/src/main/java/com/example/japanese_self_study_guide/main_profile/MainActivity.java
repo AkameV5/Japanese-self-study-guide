@@ -1,5 +1,7 @@
 package com.example.japanese_self_study_guide.main_profile;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mAuth = FirebaseAuth.getInstance();
+        scheduleDailyReminder();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -238,25 +241,42 @@ public class MainActivity extends AppCompatActivity {
 
         String uid = user.getUid();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         DocumentReference ref = db.collection("Daily").document(uid);
 
-        ref.get().addOnSuccessListener(doc -> {
-            if (doc.exists() && today.equals(doc.getString("date"))) {
-                List<Map<String, Object>> list =
-                        (List<Map<String, Object>>) doc.get("recommendations");
-                if (list != null) {
-                    showRecommendations(list);
-                    return;
-                }
+        String today = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+
+        dailyListener = ref.addSnapshotListener((doc, e) -> {
+            if (e != null) return;
+            if (doc == null || !doc.exists()) {
+                generateRecommendations(ref, today, null, null);
+                return;
             }
 
-            ProgressManager.getProgressDoc(uid)
-                    .addOnSuccessListener(progressDoc ->
-                            generateRecommendations(ref, today, progressDoc, null));
+            String savedDate = doc.getString("date");
+            List<Map<String, Object>> list =
+                    (List<Map<String, Object>>) doc.get("recommendations");
+
+            if (savedDate == null || !savedDate.equals(today)) {
+                generateRecommendations(ref, today, doc, null);
+                return;
+            }
+
+            if (list != null && !list.isEmpty()) {
+                showRecommendations(list);
+                return;
+            }
+            showRecommendations(new ArrayList<>());
         });
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (dailyListener != null) {
+            dailyListener.remove();
+            dailyListener = null;
+        }
+    }
 
     private void generateRecommendations(DocumentReference ref,
                                          String today,
@@ -646,15 +666,9 @@ public class MainActivity extends AppCompatActivity {
         Map<String, Object> data = new HashMap<>();
         data.put("date", today);
         data.put("recommendations", list);
-
-        ref.set(data).addOnSuccessListener(unused -> {
-            showRecommendations(list);
-        }).addOnFailureListener(e -> {
-            Toast.makeText(this, "Ошибка сохранения daily", Toast.LENGTH_SHORT).show();
-        });
+        ref.set(data);
     }
-
-    public static void removeDailyRecommendation(String type, int id, AppCompatActivity activity) {
+    public static void removeDailyRecommendation(String type, int id) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) return;
 
@@ -662,62 +676,74 @@ public class MainActivity extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference ref = db.collection("Daily").document(uid);
 
-        ref.get().addOnSuccessListener(doc -> {
-            if (!doc.exists()) return;
+        db.runTransaction(transaction -> {
+            DocumentSnapshot doc = transaction.get(ref);
+            if (!doc.exists()) return null;
 
-            List<Map<String,Object>> list =
-                    (List<Map<String,Object>>) doc.get("recommendations");
-            if (list == null) return;
+            List<Map<String, Object>> list =
+                    (List<Map<String, Object>>) doc.get("recommendations");
+            if (list == null) return null;
 
-            List<Map<String,Object>> newList = new ArrayList<>();
+            List<Map<String, Object>> newList = new ArrayList<>();
 
-            for (Map<String,Object> rec : list) {
-                if (!rec.get("type").equals(type)) {
+            for (Map<String, Object> rec : list) {
+                if (!type.equals(rec.get("type"))) {
                     newList.add(rec);
                     continue;
                 }
 
-                Map<String,Object> payload = (Map<String,Object>) rec.get("payload");
+                Map<String, Object> payload =
+                        (Map<String, Object>) rec.get("payload");
 
                 switch (type) {
                     case "hiragana":
                     case "katakana":
                     case "kanji": {
                         List<Long> ids = (List<Long>) payload.get("ids");
-                        if (!ids.contains((long) id)) newList.add(rec);
+                        if (ids == null || !ids.contains((long) id)) {
+                            newList.add(rec);
+                        }
                         break;
                     }
-                    case "grammar":
-                    case "text":
-                    case "audio": {
+                    default: {
                         Long v = (Long) payload.get("id");
-                        if (!v.equals((long) id)) newList.add(rec);
-                        break;
+                        if (v == null || v != id) {
+                            newList.add(rec);
+                        }
                     }
                 }
             }
-            ref.update("recommendations", newList)
-                    .addOnSuccessListener(unused -> {
-                        if (activity instanceof MainActivity) {
-                            ((MainActivity) activity).refreshDailyRecommendations();
-                        }
-                    });
+            transaction.update(ref, "recommendations", newList);
+            return null;
         });
     }
-    public void refreshDailyRecommendations() {
-        FirebaseFirestore.getInstance()
-                .collection("Daily")
-                .document(FirebaseAuth.getInstance().getUid())
-                .get()
-                .addOnSuccessListener(doc -> {
-                    if (!doc.exists()) return;
 
-                    List<Map<String, Object>> recs =
-                            (List<Map<String, Object>>) doc.get("recommendations");
+    private void scheduleDailyReminder() {
+        Calendar now = Calendar.getInstance();
+        Calendar target = Calendar.getInstance();
 
-                    showRecommendations(recs);
-                });
+        target.set(Calendar.HOUR_OF_DAY, 18);
+        target.set(Calendar.MINUTE, 0);
+        target.set(Calendar.SECOND, 0);
+
+        if (now.after(target)) {
+            target.add(Calendar.DAY_OF_YEAR, 1);
+        }
+
+        Intent intent = new Intent(this, DailyReminderWorker.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
+        );
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.setRepeating(
+                AlarmManager.RTC_WAKEUP,
+                target.getTimeInMillis(),
+                AlarmManager.INTERVAL_DAY,
+                pendingIntent
+        );
     }
+
 }
 
 

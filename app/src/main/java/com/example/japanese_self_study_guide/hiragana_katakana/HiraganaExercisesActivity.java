@@ -284,11 +284,7 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
                                     );
 
                         }
-                        MainActivity.removeDailyRecommendation(
-                                "hiragana",
-                                hiraganaId,
-                                this
-                        );
+                        MainActivity.removeDailyRecommendation("hiragana", hiraganaId);
                     }
                     Toast.makeText(
                             HiraganaExercisesActivity.this,

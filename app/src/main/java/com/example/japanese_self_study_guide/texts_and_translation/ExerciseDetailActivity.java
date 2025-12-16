@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.MainActivity;
 import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -188,6 +189,7 @@ public class ExerciseDetailActivity extends AppCompatActivity {
                             "textsLearned",
                             FieldValue.arrayUnion(textId)
                     );
+            MainActivity.removeDailyRecommendation("text", textId);
         }
         Toast.makeText(
                 ExerciseDetailActivity.this,

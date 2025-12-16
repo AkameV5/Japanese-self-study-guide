@@ -251,11 +251,7 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                                             "katakanaDone",
                                             com.google.firebase.firestore.FieldValue.increment(1)
                                     );
-                            MainActivity.removeDailyRecommendation(
-                                    "katakana",
-                                    katakanaId,
-                                    this
-                            );
+                            MainActivity.removeDailyRecommendation("katakana", katakanaId);
                         }
                     }
 

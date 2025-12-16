@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.*;
 
@@ -151,6 +152,7 @@ public class GrammarExerciseActivity extends AppCompatActivity {
                         "grammarDone",
                         FieldValue.increment(1)
                 );
+        MainActivity.removeDailyRecommendation("grammar", grammarId);
 
         Toast.makeText(this,
                 "Грамматика изучена 🎉",
