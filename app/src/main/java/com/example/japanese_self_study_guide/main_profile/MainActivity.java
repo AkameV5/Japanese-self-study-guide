@@ -22,6 +22,7 @@ import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaGroupProv
 import com.example.japanese_self_study_guide.kanji.ExerciseGroup;
 import com.example.japanese_self_study_guide.kanji.GroupsProvider;
 import com.example.japanese_self_study_guide.kanji.KanjiExercisesActivity;
+import com.example.japanese_self_study_guide.login_and_registration.Login;
 import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.example.japanese_self_study_guide.main_profile.TotalManager;
 
@@ -108,6 +109,15 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
+
+        LinearLayout logoutContainer = navigationView.findViewById(R.id.nav_logout_container);
+        logoutContainer.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        });
+
 
         mainContent = findViewById(R.id.fragment_container);
         loadDailyRecommendations();
@@ -732,7 +742,10 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, DailyReminderWorker.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
+                this,
+                0,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);

@@ -4,28 +4,36 @@
     <group android:checkableBehavior="single">
 
         <item android:id="@+id/nav_profile"
-            android:title="Мой профиль" />
+            android:title="Мой профиль"
+            android:icon="@drawable/ic_profile"/>
 
         <item android:id="@+id/nav_hiragana"
-            android:title="Хирагана" />
+            android:title="Хирагана"
+            android:icon="@drawable/ic_hiragana"/>
 
         <item android:id="@+id/nav_katakana"
-            android:title="Катакана" />
+            android:title="Катакана"
+            android:icon="@drawable/ic_katakana" />
 
         <item android:id="@+id/nav_kanji"
-            android:title="Кандзи" />
+            android:title="Кандзи"
+            android:icon="@drawable/ic_kanji"/>
 
         <item android:id="@+id/nav_dictionary"
-            android:title="Словарь" />
+            android:title="Словарь"
+            android:icon="@drawable/ic_dictionary"/>
 
         <item android:id="@+id/nav_grammar"
-            android:title="Грамматика" />
+            android:title="Грамматика"
+            android:icon="@drawable/ic_grammar"/>
 
         <item android:id="@+id/nav_texts"
-            android:title="Тексты" />
+            android:title="Тексты"
+            android:icon="@drawable/ic_text"/>
 
         <item android:id="@+id/nav_audio"
-            android:title="Аудио" />
+            android:title="Аудио"
+            android:icon="@drawable/ic_audio"/>
 
     </group>
 </menu>

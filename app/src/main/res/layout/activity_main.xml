@@ -67,7 +67,6 @@
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 
-    <!-- Навигационное меню -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="280dp"
@@ -79,6 +78,34 @@
         android:fitsSystemWindows="true"
         app:itemTextColor="@color/textDark"
         app:itemIconTint="@color/accentPinkDark"
-        app:itemRippleColor="@color/pinkBackground" />
+        app:itemRippleColor="@color/pinkBackground">
+
+        <LinearLayout
+            android:id="@+id/nav_logout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_logout"
+                android:layout_marginEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/nav_logout_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Выйти"
+                android:textSize="16sp"
+                android:textColor="@color/textDark"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
