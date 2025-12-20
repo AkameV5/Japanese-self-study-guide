@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import java.io.File;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +22,8 @@ public class AudioPlayerActivity extends AppCompatActivity {
 
     private MediaPlayer player;
     private String url;
+    private File cachedFile;
+
 
     private Button playPauseBtn;
     private Button btn05, btn1, btn2;
@@ -56,7 +60,23 @@ public class AudioPlayerActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.speed2);
         btnExercises = findViewById(R.id.btnExercises);
 
-        initPlayer();
+        AudioCacheManager.preload(
+                this,
+                audioId,
+                url,
+                new AudioCacheManager.Callback() {
+                    @Override
+                    public void onReady(File file) {
+                        runOnUiThread(() -> initPlayerFromFile(file));
+                    }
+
+                    @Override
+                    public void onError() {
+                        runOnUiThread(() -> initPlayerFromUrl());
+                    }
+                }
+        );
+
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -98,35 +118,48 @@ public class AudioPlayerActivity extends AppCompatActivity {
 
     }
 
-    private void initPlayer() {
+    private void initPlayerFromFile(File file) {
+        cachedFile = file;
+        player = new MediaPlayer();
+
+        try {
+            player.setDataSource(file.getAbsolutePath());
+            setupPlayer();
+            player.prepareAsync();
+        } catch (Exception e) {
+            e.printStackTrace();
+            initPlayerFromUrl();
+        }
+    }
+
+    private void initPlayerFromUrl() {
         player = new MediaPlayer();
 
         try {
             player.setDataSource(url);
-
-            player.setOnPreparedListener(mp -> {
-                isPrepared = true;
-
-                // Инициализация seekBar
-                seekBar.setMax(player.getDuration());
-                updateSeekBar();
-
-                // Если пользователь нажмёт play
-                isPlaying = false;
-            });
-
-            player.setOnCompletionListener(mp -> {
-                isPlaying = false;
-                playPauseBtn.setText("Воспроизвести");
-                btnExercises.setVisibility(View.VISIBLE);
-            });
-
+            setupPlayer();
             player.prepareAsync();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    private void setupPlayer() {
+
+        player.setOnPreparedListener(mp -> {
+            isPrepared = true;
+            seekBar.setMax(player.getDuration());
+            playPauseBtn.setEnabled(true);
+        });
+
+        player.setOnCompletionListener(mp -> {
+            isPlaying = false;
+            playPauseBtn.setText("Воспроизвести");
+            btnExercises.setVisibility(View.VISIBLE);
+        });
+    }
+
+
 
     private void changeSpeed(float speed) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && player != null && isPrepared) {
@@ -157,4 +190,5 @@ public class AudioPlayerActivity extends AppCompatActivity {
             player = null;
         }
     }
+
 }

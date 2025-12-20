@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.ProgressManager;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
@@ -30,6 +32,18 @@ public class GrammarActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         loadRules();
+
+        ProgressManager.getProgressDoc(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .addOnSuccessListener(doc -> {
+                    List<Long> learned = (List<Long>) doc.get("grammarLearned");
+                    if (learned == null) return;
+
+                    List<Integer> ids = new ArrayList<>();
+                    for (Long l : learned) ids.add(l.intValue());
+
+                    adapter.setLearnedIds(ids);
+                });
+
     }
 
     private void loadRules() {

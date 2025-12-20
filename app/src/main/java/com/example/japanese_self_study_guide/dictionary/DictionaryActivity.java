@@ -26,6 +26,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.text.Collator;
+import java.util.Locale;
+
 
 public class DictionaryActivity extends AppCompatActivity {
 
@@ -77,6 +80,33 @@ public class DictionaryActivity extends AppCompatActivity {
         });
     }
 
+    private int wordGroup(Word w) {
+        String s = safe(w.getWord());
+        if (s.isEmpty()) return 2;
+
+        char c = s.charAt(0);
+
+        Character.UnicodeBlock block = Character.UnicodeBlock.of(c);
+        if (block == Character.UnicodeBlock.HIRAGANA
+                || block == Character.UnicodeBlock.KATAKANA
+                || block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS
+                || block == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A) {
+            return 0;
+        }
+        if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')) {
+            return 1;
+        }
+        return 2;
+    }
+
+    private String sortKey(Word w) {
+        String key = safe(w.getReading());
+        if (key.isEmpty()) {
+            key = safe(w.getWord());
+        }
+        return key;
+    }
+
     private void loadWords() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference wordsRef = db.collection("Words");
@@ -88,11 +118,11 @@ public class DictionaryActivity extends AppCompatActivity {
                     allWords.clear();
                     for (QueryDocumentSnapshot doc : task.getResult()) {
                         Word w = doc.toObject(Word.class);
-                        // НЕ трогаем w.word, просто добавляем объект
                         allWords.add(w);
                     }
                     filteredWords.clear();
                     filteredWords.addAll(allWords);
+                    sortWords("По алфавиту");
                     adapter.notifyDataSetChanged();
                     updateCount();
                 } else {
@@ -134,22 +164,58 @@ public class DictionaryActivity extends AppCompatActivity {
     }
 
     private void sortWords(String option) {
+
+        Collator collator = Collator.getInstance(Locale.JAPANESE);
+        collator.setStrength(Collator.PRIMARY);
+
         switch (option) {
+
             case "По алфавиту":
-                Collections.sort(filteredWords, Comparator.comparing(Word::getWord));
+                Collections.sort(filteredWords, (w1, w2) -> {
+
+                    int g1 = wordGroup(w1);
+                    int g2 = wordGroup(w2);
+                    if (g1 != g2) return Integer.compare(g1, g2);
+                    return collator.compare(
+                            sortKey(w1),
+                            sortKey(w2)
+                    );
+                });
                 break;
+
+
             case "По категории":
-                Collections.sort(filteredWords, Comparator.comparing(Word::getCategory));
+                Collections.sort(filteredWords, (w1, w2) -> {
+                    int cat = collator.compare(
+                            safe(w1.getCategory()),
+                            safe(w2.getCategory())
+                    );
+                    if (cat != 0) return cat;
+
+                    return collator.compare(
+                            safe(w1.getReading()),
+                            safe(w2.getReading())
+                    );
+                });
                 break;
+
             case "По длине слова":
-                Collections.sort(filteredWords, Comparator.comparingInt(w -> w.getWord().length()));
+                Collections.sort(filteredWords,
+                        Comparator.comparingInt(w -> safe(w.getWord()).length()));
                 break;
         }
+
         adapter.notifyDataSetChanged();
     }
+
 
     private void updateCount() {
         textWordCount.setText("Показано: " + filteredWords.size() + " слов");
     }
+
+    private String safe(String s) {
+        return s == null ? "" : s.trim();
+    }
+
 }
 

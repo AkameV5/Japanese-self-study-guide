@@ -59,6 +59,24 @@ public class KanjiExercisesActivity extends AppCompatActivity {
     }
 
     private void loadExercises() {
+        if (!dailyMode) {
+            loadExercisesClassic();
+            return;
+        }
+        String uid = FirebaseAuth.getInstance().getUid();
+        if (uid == null) return;
+
+        db.collection("Progress")
+                .document(uid)
+                .get()
+                .addOnSuccessListener(doc -> {
+                    List<Long> learned = (List<Long>) doc.get("kanjiLearned");
+                    if (learned == null) learned = new ArrayList<>();
+                    loadExercisesDaily(learned);
+                });
+    }
+
+    private void loadExercisesClassic() {
         db.collection("KanjiExercises")
                 .whereGreaterThanOrEqualTo("id_kanji", startId)
                 .whereLessThanOrEqualTo("id_kanji", endId)
@@ -69,16 +87,37 @@ public class KanjiExercisesActivity extends AppCompatActivity {
                         KanjiExerciseModel ex = doc.toObject(KanjiExerciseModel.class);
                         if (ex != null) exercises.add(ex);
                     }
-
                     Collections.shuffle(exercises);
-
                     if (exercises.size() > limit)
                         exercises = exercises.subList(0, limit);
-
                     index = 0;
                     showExercise();
                 });
     }
+
+    private void loadExercisesDaily(List<Long> learnedKanji) {
+        db.collection("KanjiExercises")
+                .whereGreaterThanOrEqualTo("id_kanji", startId)
+                .whereLessThanOrEqualTo("id_kanji", endId)
+                .get()
+                .addOnSuccessListener(query -> {
+                    exercises.clear();
+                    for (DocumentSnapshot doc : query.getDocuments()) {
+                        KanjiExerciseModel ex = doc.toObject(KanjiExerciseModel.class);
+                        if (ex == null) continue;
+                        if (learnedKanji.contains((long) ex.getId_kanji()))
+                            continue; // пропускаем уже выученные
+                        exercises.add(ex);
+                    }
+                    Collections.shuffle(exercises);
+                    if (exercises.size() > limit)
+                        exercises = exercises.subList(0, limit);
+                    index = 0;
+                    showExercise();
+                });
+    }
+
+
 
     private void showExercise() {
         if (index >= exercises.size()) {

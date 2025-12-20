@@ -1,6 +1,9 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
@@ -260,20 +263,24 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                             "Упражнение завершено!",
                             Toast.LENGTH_LONG
                     ).show();
-                    android.content.Intent intent =
-                            new android.content.Intent(
-                                    KatakanaExercisesActivity.this,
-                                    KatakanaActivity.class
-                            );
-
-                    intent.setFlags(
-                            android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
-                                    | android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
+                    new Handler(Looper.getMainLooper()).postDelayed(
+                            this::goBackToKatakanaList,
+                            2000
                     );
-                    startActivity(intent);
-                    finish();
                 });
     }
+
+    private void goBackToKatakanaList() {
+        Intent intent = new Intent(
+                KatakanaExercisesActivity.this,
+                KatakanaActivity.class
+        );
+
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
+    }
+
 
     private void loadDailyGroup(int[] idsArr, int limit) {
         List<Integer> ids = new ArrayList<>();

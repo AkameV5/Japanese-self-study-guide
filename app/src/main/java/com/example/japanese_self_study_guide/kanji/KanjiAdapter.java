@@ -3,6 +3,7 @@ package com.example.japanese_self_study_guide.kanji;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
 
     private List<KanjiModel> kanjiList;
     private List<KanjiModel> fullList;
+    private List<Integer> learnedIds = new ArrayList<>();
     private OnItemClickListener listener;
 
     public interface OnItemClickListener {
@@ -30,6 +32,11 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
     public KanjiAdapter(List<KanjiModel> kanjiList) {
         this.kanjiList = new ArrayList<>(kanjiList);
         this.fullList = new ArrayList<>(kanjiList);
+    }
+
+    public void setLearnedIds(List<Integer> ids) {
+        this.learnedIds = ids;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -50,6 +57,12 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
         holder.textKunYomi.setText("Кунъёми: " + String.join(", ", item.getKunYomi()));
         holder.textJlpt.setText("JLPT: N" + item.getJlpt());
         holder.textCategory.setText("Категория: " + item.getCategory());
+
+        if (learnedIds.contains((int) item.getId())) {
+            holder.imgLearned.setVisibility(View.VISIBLE);
+        } else {
+            holder.imgLearned.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -83,7 +96,7 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
     }
 
     static class KanjiViewHolder extends RecyclerView.ViewHolder {
-        TextView textKanji, textMeaning, textOnYomi, textKunYomi, textJlpt, textCategory;
+        TextView textKanji, textMeaning, textOnYomi, textKunYomi, textJlpt, textCategory; ImageView imgLearned;
 
         KanjiViewHolder(View itemView, OnItemClickListener listener, List<KanjiModel> list) {
             super(itemView);
@@ -94,6 +107,7 @@ public class KanjiAdapter extends RecyclerView.Adapter<KanjiAdapter.KanjiViewHol
             textKunYomi = itemView.findViewById(R.id.textKunYomi);
             textJlpt = itemView.findViewById(R.id.textJlpt);
             textCategory = itemView.findViewById(R.id.textCategory);
+            imgLearned = itemView.findViewById(R.id.imgLearned);
 
             itemView.setOnClickListener(v -> {
                 int pos = getAdapterPosition();

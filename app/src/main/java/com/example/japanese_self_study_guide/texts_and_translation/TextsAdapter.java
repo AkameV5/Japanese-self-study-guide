@@ -3,12 +3,14 @@ package com.example.japanese_self_study_guide.texts_and_translation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.japanese_self_study_guide.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.ViewHolder> {
@@ -19,6 +21,14 @@ public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.ViewHolder> 
 
     private List<TextModel> texts;
     private OnItemClickListener listener;
+
+
+    private List<Integer> learnedIds = new ArrayList<>();
+
+    public void setLearnedIds(List<Integer> ids) {
+        this.learnedIds = ids;
+        notifyDataSetChanged();
+    }
 
     public TextsAdapter(List<TextModel> texts, OnItemClickListener listener) {
         this.texts = texts;
@@ -38,6 +48,13 @@ public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.ViewHolder> 
         TextModel text = texts.get(position);
         holder.title.setText(text.getTitle());
         holder.level.setText("Уровень: N" + text.getDifficultyLevel());
+
+        if (learnedIds.contains(text.getId())) {
+            holder.imgLearned.setVisibility(View.VISIBLE);
+        } else {
+            holder.imgLearned.setVisibility(View.GONE);
+        }
+
         holder.itemView.setOnClickListener(v -> listener.onItemClick(text));
     }
 
@@ -48,10 +65,14 @@ public class TextsAdapter extends RecyclerView.Adapter<TextsAdapter.ViewHolder> 
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title, level;
+        ImageView imgLearned;
+
         ViewHolder(View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.textTitle);
             level = itemView.findViewById(R.id.textLevel);
+            imgLearned = itemView.findViewById(R.id.imgLearned);
         }
     }
+
 }

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.japanese_self_study_guide.R;
+import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.google.android.material.button.MaterialButton;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -20,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
@@ -77,9 +79,22 @@ public class KanjiActivity extends AppCompatActivity {
             return;
         }
 
+
         setupSortSpinner();
         setupJlptSpinner();
         loadKanjiFromFirestore();
+
+        ProgressManager.getProgressDoc(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .addOnSuccessListener(doc -> {
+                    List<Long> learned = (List<Long>) doc.get("kanjiLearned");
+                    if (learned == null) return;
+
+                    List<Integer> ids = new ArrayList<>();
+                    for (Long l : learned) ids.add(l.intValue());
+
+                    adapter.setLearnedIds(ids);
+                });
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

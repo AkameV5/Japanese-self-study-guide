@@ -3,6 +3,8 @@ package com.example.japanese_self_study_guide;
 import android.app.Application;
 import android.util.Log;
 
+import com.example.japanese_self_study_guide.audio.AudioCacheManager;
+import com.example.japanese_self_study_guide.audio.AudioModel;
 import com.example.japanese_self_study_guide.dictionary.Word;
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaExerciseModel;
 import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaExerciseModel;
@@ -20,6 +22,8 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
+import java.io.File;
+
 
 public class DB extends Application {
 
@@ -64,6 +68,12 @@ public class DB extends Application {
                         Log.w("DB", "Ошибка предзагрузки: ", task.getException());
                     }
                 });
+        db.collection("Katakana").get();
+        db.collection("Grammar").get();
+        db.collection("Texts").get();
+        db.collection("Kanji").limit(70).get();
+        preloadAllAudio();
+
 
         if (UPLOAD_NEW_KANJI) {
             uploadNewKanji();
@@ -392,4 +402,36 @@ public class DB extends Application {
         }
     }
 
+    private void preloadAllAudio() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("Audio")
+                .get()
+                .addOnSuccessListener(query -> {
+                    for (var doc : query) {
+                        AudioModel audio = doc.toObject(AudioModel.class);
+                        int audioId = audio.getId();
+                        String url = audio.getUrl();
+
+                        AudioCacheManager.preload(
+                                this,
+                                audioId,
+                                url,
+                                new AudioCacheManager.Callback() {
+                                    @Override
+                                    public void onReady(File file) {
+                                        // Файл предзагружен, можно логировать
+                                        Log.d("AUDIO_PRELOAD", "✅ Предзагружено: " + audioId);
+                                    }
+
+                                    @Override
+                                    public void onError() {
+                                        Log.e("AUDIO_PRELOAD", "❌ Ошибка предзагрузки: " + audioId);
+                                    }
+                                }
+                        );
+                    }
+                })
+                .addOnFailureListener(e -> Log.e("AUDIO_PRELOAD", "❌ Ошибка получения списка аудио", e));
+    }
 }

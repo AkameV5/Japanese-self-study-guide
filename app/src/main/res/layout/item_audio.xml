@@ -25,4 +25,12 @@
         android:layout_marginTop="4dp"
         android:textColor="@color/textDark" />
 
+    <ImageView
+        android:id="@+id/imgLearned"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="end"
+        android:src="@drawable/sakura_learned"
+        android:visibility="gone" />
+
 </LinearLayout>

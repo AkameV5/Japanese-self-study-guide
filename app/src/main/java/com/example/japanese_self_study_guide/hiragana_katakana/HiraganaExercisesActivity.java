@@ -251,8 +251,10 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
     }
 
     private void finishExercise() {
+
         String uid = FirebaseAuth.getInstance().getUid();
         if (uid == null) return;
+
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         db.collection("Progress")
@@ -264,16 +266,21 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
                             (List<Long>) doc.get("hiraganaLearned");
                     if (learned == null) learned = new ArrayList<>();
 
-                    for (Integer hiraganaId : totalPerSymbol.keySet()) {
+                    int learnedNow = 0;
+                    int totalSymbols = totalPerSymbol.size();
 
-                        if (learned.contains(hiraganaId.longValue()))
-                            continue;
+                    for (Integer hiraganaId : totalPerSymbol.keySet()) {
 
                         int total = totalPerSymbol.get(hiraganaId);
                         int correct = correctPerSymbol.getOrDefault(hiraganaId, 0);
                         float percent = (correct * 100f) / total;
 
+                        if (learned.contains(hiraganaId.longValue())) {
+                            learnedNow++;
+                            continue;
+                        }
                         if (percent >= 70f) {
+                            learnedNow++;
                             db.collection("Progress")
                                     .document(uid)
                                     .update(
@@ -282,9 +289,19 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
                                             "hiraganaDone",
                                             FieldValue.increment(1)
                                     );
-
                         }
-                        MainActivity.removeDailyRecommendation("hiragana", hiraganaId);
+                    }
+
+                    if (learnedNow == totalSymbols) {
+
+                        for (Integer hiraganaId : totalPerSymbol.keySet()) {
+                            MainActivity.removeDailyRecommendation("hiragana", hiraganaId);
+                        }
+
+                    } else {
+                        Log.d("DAILY",
+                                "Частично выполнено: "
+                                        + learnedNow + "/" + totalSymbols);
                     }
                     Toast.makeText(
                             HiraganaExercisesActivity.this,
@@ -295,9 +312,9 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
                             this::goBackToHiraganaList,
                             2000
                     );
-
                 });
     }
+
     private void goBackToHiraganaList() {
         Intent intent = new Intent(
                 HiraganaExercisesActivity.this,

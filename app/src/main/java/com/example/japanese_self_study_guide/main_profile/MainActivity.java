@@ -679,6 +679,7 @@ public class MainActivity extends AppCompatActivity {
         ref.set(data);
     }
     public static void removeDailyRecommendation(String type, int id) {
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) return;
 
@@ -687,6 +688,7 @@ public class MainActivity extends AppCompatActivity {
         DocumentReference ref = db.collection("Daily").document(uid);
 
         db.runTransaction(transaction -> {
+
             DocumentSnapshot doc = transaction.get(ref);
             if (!doc.exists()) return null;
 
@@ -706,15 +708,37 @@ public class MainActivity extends AppCompatActivity {
                         (Map<String, Object>) rec.get("payload");
 
                 switch (type) {
+
                     case "hiragana":
                     case "katakana":
                     case "kanji": {
-                        List<Long> ids = (List<Long>) payload.get("ids");
-                        if (ids == null || !ids.contains((long) id)) {
-                            newList.add(rec);
+
+                        List<Long> ids =
+                                (List<Long>) payload.get("ids");
+
+                        if (ids == null) {
+                            continue;
                         }
+
+                        List<Long> newIds = new ArrayList<>(ids);
+                        newIds.remove((Long) (long) id);
+
+                        if (!newIds.isEmpty()) {
+                            Map<String, Object> newRec = new HashMap<>(rec);
+                            Map<String, Object> newPayload = new HashMap<>(payload);
+                            newPayload.put("ids", newIds);
+                            newRec.put("payload", newPayload);
+
+                            Map<String, Object> newMeta = new HashMap<>();
+                            newMeta.put("count", newIds.size());
+                            newRec.put("meta", newMeta);
+
+                            newList.add(newRec);
+                        }
+
                         break;
                     }
+
                     default: {
                         Long v = (Long) payload.get("id");
                         if (v == null || v != id) {
@@ -723,10 +747,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+
             transaction.update(ref, "recommendations", newList);
             return null;
         });
     }
+
 
     private void scheduleDailyReminder() {
         Calendar now = Calendar.getInstance();

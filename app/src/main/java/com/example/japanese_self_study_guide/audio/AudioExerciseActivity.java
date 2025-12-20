@@ -80,9 +80,11 @@ public class AudioExerciseActivity extends AppCompatActivity {
         long oneDay = 24 * 60 * 60 * 1000L;
 
         if (System.currentTimeMillis() - lastUse < oneDay) {
-            hintBtn.setEnabled(false); // подсказку можно нажать только раз в день
+            hintBtn.setEnabled(false);
+            hintBtn.setText("Подсказка использована");
         }
     }
+
 
     private void loadExercises() {
         db.collection("AudioExercises")
@@ -132,6 +134,9 @@ public class AudioExerciseActivity extends AppCompatActivity {
             optionsContainer.addView(btn);
 
             btn.setOnClickListener(v -> checkAnswer(opt, m, btn));
+
+            hintBtn.setOnClickListener(v -> showHint(m));
+
         }
     }
 
@@ -188,9 +193,11 @@ public class AudioExerciseActivity extends AppCompatActivity {
         resultText.setVisibility(TextView.VISIBLE);
 
         hintBtn.setEnabled(false);
+        hintBtn.setText("Подсказка использована");
 
         prefs.edit().putLong(hintKey, System.currentTimeMillis()).apply();
     }
+
 
     private void next() {
         if (index < list.size() - 1) {
