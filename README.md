@@ -12,7 +12,7 @@
 Технологии
 Язык: Java (Android Studio)
 Backend: Firebase
-Архитектура:** Клиент-серверная модель.
+Архитектура: клиент-серверная модель.
 
 Как запустить
 1. Склонируйте проект: `git clone https://github.com/AkameV5/Japanese-self-study-guide.git`
