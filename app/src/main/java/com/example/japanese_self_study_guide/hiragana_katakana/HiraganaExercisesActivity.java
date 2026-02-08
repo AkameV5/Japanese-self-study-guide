@@ -43,6 +43,9 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
     private final Map<Integer, Integer> totalPerSymbol = new HashMap<>();
     private final Map<Integer, Integer> correctPerSymbol = new HashMap<>();
 
+    private int totalCorrectAnswers = 0;
+    private int totalQuestionsAnswered = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,10 +106,8 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
     private void showExercise() {
         if (index >= exercises.size()) {
 
-            // ✅ ГЛАВНОЕ — считаем прогресс
             finishExercise();
 
-            // ✅ дальше — визуальное завершение
             tvQuestion.setText("Все упражнения завершены!");
             layoutOptions.removeAllViews();
             etAnswer.setVisibility(View.GONE);
@@ -154,10 +155,9 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
             layoutOptions.addView(b);
         }
 
-        etAnswer.setVisibility(View.VISIBLE); // показываем выбранный ответ
+        etAnswer.setVisibility(View.VISIBLE);
     }
 
-    // --- WRITE ANSWER ---
     private void showWrite() {
         layoutOptions.setVisibility(View.GONE);
         etAnswer.setVisibility(View.VISIBLE);
@@ -170,19 +170,21 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
 
         int hiraganaId = currentEx.getHiraganaId();
 
-        // ✅ увеличиваем общее число вопросов по символу
         totalPerSymbol.put(
                 hiraganaId,
                 totalPerSymbol.getOrDefault(hiraganaId, 0) + 1
         );
 
-        // ✅ если ответ правильный
+        totalQuestionsAnswered++;
+
         if (user.equals(correct)) {
 
             correctPerSymbol.put(
                     hiraganaId,
                     correctPerSymbol.getOrDefault(hiraganaId, 0) + 1
             );
+
+            totalCorrectAnswers++;
 
             tvExplanation.setText("Правильно! 🎉\n" + currentEx.getExplanation());
 
@@ -273,6 +275,7 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
 
                         int total = totalPerSymbol.get(hiraganaId);
                         int correct = correctPerSymbol.getOrDefault(hiraganaId, 0);
+
                         float percent = (correct * 100f) / total;
 
                         if (learned.contains(hiraganaId.longValue())) {
@@ -308,10 +311,22 @@ public class HiraganaExercisesActivity extends AppCompatActivity {
                             "Упражнение завершено!",
                             Toast.LENGTH_SHORT
                     ).show();
-                    new Handler(Looper.getMainLooper()).postDelayed(
-                            this::goBackToHiraganaList,
-                            2000
-                    );
+
+                    final int finalLearnedNow = learnedNow;
+                    final int finalTotalSymbols = totalSymbols;
+
+                    new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                        Intent intent = new Intent(
+                                HiraganaExercisesActivity.this,
+                                HiraganaExerciseFinishActivity.class
+                        );
+                        intent.putExtra("correct", totalCorrectAnswers);
+                        intent.putExtra("total", totalQuestionsAnswered);
+                        intent.putExtra("learned", finalLearnedNow);
+                        intent.putExtra("totalSymbols", finalTotalSymbols);
+                        startActivity(intent);
+                        finish();
+                    }, 1500);
                 });
     }
 

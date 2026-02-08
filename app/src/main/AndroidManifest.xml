@@ -70,6 +70,13 @@
         <activity android:name=".hiragana_katakana.HiraganaGroupsActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
+        <activity
+            android:name=".hiragana_katakana.HiraganaExerciseFinishActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".hiragana_katakana.KatakanaExerciseFinishActivity"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".hiragana_katakana.KatakanaActivity"
             android:screenOrientation="portrait"
@@ -89,6 +96,9 @@
         <activity android:name=".kanji.KanjiExerciseGroupsActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
+        <activity
+            android:name=".kanji.KanjiExerciseFinishActivity"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".dictionary.DictionaryActivity"
             android:screenOrientation="portrait"
@@ -106,6 +116,10 @@
         <activity android:name=".grammar.GrammarExerciseDetailActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
+        <activity
+            android:name=".grammar.GrammarExerciseFinishActivity"
+            android:screenOrientation="portrait"/>
+
 
 
         <activity android:name=".texts_and_translation.TextsActivity"

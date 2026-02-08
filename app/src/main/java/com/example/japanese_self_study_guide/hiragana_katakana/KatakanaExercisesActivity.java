@@ -34,6 +34,8 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
     private Button btnCheck, btnNext;
     private final java.util.Map<Integer, Integer> totalPerSymbol = new java.util.HashMap<>();
     private final java.util.Map<Integer, Integer> correctPerSymbol = new java.util.HashMap<>();
+    private int totalCorrect = 0;
+    private int totalQuestions = 0;
     private int index = 0;
     private KatakanaExerciseModel currentEx;
 
@@ -168,6 +170,8 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
         String user = etAnswer.getText().toString().trim().toLowerCase();
         String correct = currentEx.getCorrectAnswer().trim().toLowerCase();
 
+        totalQuestions++;
+
         if (user.equals(correct)) {
             tvExplanation.setText("Правильно! 🎉\n" + currentEx.getExplanation());
             int katakanaId = currentEx.getKatakanaId();
@@ -175,6 +179,7 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                     katakanaId,
                     correctPerSymbol.getOrDefault(katakanaId, 0) + 1
             );
+            totalCorrect++;
         } else {
             tvExplanation.setText("Неверно ❌\nПравильный ответ: " + correct +
                     "\n\n" + currentEx.getExplanation());
@@ -235,10 +240,15 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
 
                     if (learned == null) learned = new ArrayList<>();
 
+                    int learnedNow = 0;
+                    int totalSymbols = totalPerSymbol.size();
+
                     for (Integer katakanaId : totalPerSymbol.keySet()) {
 
-                        if (learned.contains(katakanaId.longValue()))
+                        if (learned.contains(katakanaId.longValue())) {
+                            learnedNow++;
                             continue;
+                        }
 
                         int total = totalPerSymbol.get(katakanaId);
                         int correct = correctPerSymbol.getOrDefault(katakanaId, 0);
@@ -246,6 +256,7 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                         float percent = (correct * 100f) / total;
 
                         if (percent >= 70f) {
+                            learnedNow++;
                             db.collection("Progress")
                                     .document(uid)
                                     .update(
@@ -263,10 +274,22 @@ public class KatakanaExercisesActivity extends AppCompatActivity {
                             "Упражнение завершено!",
                             Toast.LENGTH_LONG
                     ).show();
-                    new Handler(Looper.getMainLooper()).postDelayed(
-                            this::goBackToKatakanaList,
-                            2000
-                    );
+
+                    final int finalLearnedNow = learnedNow;
+                    final int finalTotalSymbols = totalSymbols;
+
+                    new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                        Intent intent = new Intent(
+                                KatakanaExercisesActivity.this,
+                                KatakanaExerciseFinishActivity.class
+                        );
+                        intent.putExtra("correct", totalCorrect);
+                        intent.putExtra("total", totalQuestions);
+                        intent.putExtra("learned", finalLearnedNow);
+                        intent.putExtra("totalSymbols", finalTotalSymbols);
+                        startActivity(intent);
+                        finish();
+                    }, 1500);
                 });
     }
 

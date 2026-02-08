@@ -200,9 +200,11 @@ public class ExerciseDetailActivity extends AppCompatActivity {
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             Intent i = new Intent(this, ExerciseFinishedActivity.class);
             i.putExtra("textId", textId);
+            i.putExtra("correct", correct);
+            i.putExtra("total", total);
             startActivity(i);
             finish();
-        }, 1500); // можешь поставить 2000 как в хирагане
+        }, 1500);
     }
 
 

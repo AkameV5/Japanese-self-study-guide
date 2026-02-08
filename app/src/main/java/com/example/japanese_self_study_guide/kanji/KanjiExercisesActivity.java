@@ -27,6 +27,9 @@ public class KanjiExercisesActivity extends AppCompatActivity {
     private Map<Integer, Integer> totalPerKanji = new HashMap<>();
     private Map<Integer, Integer> correctPerKanji = new HashMap<>();
 
+    private int totalCorrectAnswers = 0;
+    private int totalQuestionsAnswered = 0;
+
     private boolean dailyMode = false;
     private int dailyLimit = 20;
 
@@ -189,12 +192,15 @@ public class KanjiExercisesActivity extends AppCompatActivity {
                 totalPerKanji.getOrDefault(kanjiId, 0) + 1
         );
 
+        totalQuestionsAnswered++;
+
         if (isCorrect) {
             tvExplanation.setText("Правильно ✅\n" + currentEx.getExplanation());
             correctPerKanji.put(
                     kanjiId,
                     correctPerKanji.getOrDefault(kanjiId, 0) + 1
             );
+            totalCorrectAnswers++;
         } else {
             tvExplanation.setText(
                     "Ошибка ❌\nПравильный ответ: " + Arrays.toString(correctAnswers.toArray()) +
@@ -229,10 +235,15 @@ public class KanjiExercisesActivity extends AppCompatActivity {
 
                     if (learned == null) learned = new ArrayList<>();
 
+                    int learnedNow = 0;
+                    int totalKanji = totalPerKanji.size();
+
                     for (Integer kanjiId : totalPerKanji.keySet()) {
 
-                        if (learned.contains(kanjiId.longValue()))
+                        if (learned.contains(kanjiId.longValue())) {
+                            learnedNow++;
                             continue;
+                        }
 
                         int total = totalPerKanji.get(kanjiId);
                         int correct = correctPerKanji.getOrDefault(kanjiId, 0);
@@ -240,6 +251,7 @@ public class KanjiExercisesActivity extends AppCompatActivity {
                         float percent = (correct * 100f) / total;
 
                         if (percent >= 70f) {
+                            learnedNow++;
                             db.collection("Progress")
                                     .document(uid)
                                     .update(
@@ -254,8 +266,24 @@ public class KanjiExercisesActivity extends AppCompatActivity {
 
                     Toast.makeText(this,
                             "Упражнения по кандзи завершены!",
-                            Toast.LENGTH_LONG).show();
-                    finish();
+                            Toast.LENGTH_SHORT).show();
+
+                    final int finalLearnedNow = learnedNow;
+                    final int finalTotalKanji = totalKanji;
+
+                    android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+                    handler.postDelayed(() -> {
+                        android.content.Intent intent = new android.content.Intent(
+                                KanjiExercisesActivity.this,
+                                KanjiExerciseFinishActivity.class
+                        );
+                        intent.putExtra("correct", totalCorrectAnswers);
+                        intent.putExtra("total", totalQuestionsAnswered);
+                        intent.putExtra("learned", finalLearnedNow);
+                        intent.putExtra("totalKanji", finalTotalKanji);
+                        startActivity(intent);
+                        finish();
+                    }, 1500);
                 });
     }
 }

@@ -4,17 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/pinkBackground"
-    android:padding="32dp">
+    android:padding="24dp"
+    android:background="@color/pinkBackground">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Упражнения завершены! 🎉"
-        android:textSize="26sp"
+        android:text="Упражнение завершено! 🎉"
+        android:textSize="24sp"
+        android:textColor="@color/accentPink"
         android:textStyle="bold"
-        android:textColor="@color/textDark"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="32dp"/>
 
     <TextView
         android:id="@+id/resultText"
@@ -24,15 +24,15 @@
         android:textSize="20sp"
         android:textColor="@color/textDark"
         android:gravity="center"
-        android:layout_marginBottom="48dp" />
+        android:layout_marginBottom="48dp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnBack"
+    <Button
+        android:id="@+id/btnBackToList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вернуться к тексту"
-        android:backgroundTint="@color/accentPink"
+        android:text="Вернуться к списку"
         android:textSize="16sp"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:backgroundTint="@color/accentPink"/>
 
 </LinearLayout>

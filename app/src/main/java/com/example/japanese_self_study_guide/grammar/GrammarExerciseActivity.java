@@ -1,5 +1,6 @@
 package com.example.japanese_self_study_guide.grammar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -156,9 +157,19 @@ public class GrammarExerciseActivity extends AppCompatActivity {
 
         Toast.makeText(this,
                 "Грамматика изучена 🎉",
-                Toast.LENGTH_LONG).show();
+                Toast.LENGTH_SHORT).show();
 
-        finish();
+        android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(
+                    GrammarExerciseActivity.this,
+                    GrammarExerciseFinishActivity.class
+            );
+            intent.putExtra("correct", correct);
+            intent.putExtra("total", total);
+            startActivity(intent);
+            finish();
+        }, 1500);
     }
 
 }
