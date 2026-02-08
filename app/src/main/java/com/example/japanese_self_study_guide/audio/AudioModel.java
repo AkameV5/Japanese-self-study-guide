@@ -6,21 +6,24 @@ public class AudioModel {
     private String description;
     private String difficulty;
     private String url;
+    private String audioPath;
 
     public AudioModel() {}
 
-    public AudioModel(int id, String name, String description, String difficulty, String url) {
+    public AudioModel(int id, String name, String description, String difficulty, String audioPath) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.difficulty = difficulty;
-        this.url = url;
+        this.audioPath = audioPath;
     }
 
     public int getId() { return id; }
-
     public String getName() { return name; }
     public String getDescription() { return description; }
     public String getDifficulty() { return difficulty; }
     public String getUrl() { return url; }
+    public String getAudioPath() { return audioPath; }
+
+    public void setUrl(String url) { this.url = url; }
 }

@@ -96,7 +96,7 @@ public class AudioExerciseActivity extends AppCompatActivity {
                         list.add(d.toObject(AudioExerciseModel.class));
                     }
 
-                    Collections.shuffle(list); // перемешиваем задания
+                    Collections.shuffle(list);
 
                     showExercise();
                 });
@@ -112,7 +112,7 @@ public class AudioExerciseActivity extends AppCompatActivity {
         optionsContainer.removeAllViews();
 
         List<String> options = new ArrayList<>(m.getOptions());
-        Collections.shuffle(options); // перемешиваем варианты
+        Collections.shuffle(options);
 
         optionsContainer.removeAllViews();
 
@@ -141,12 +141,8 @@ public class AudioExerciseActivity extends AppCompatActivity {
     }
 
     private void checkAnswer(String selected, AudioExerciseModel m, MaterialButton selectedBtn) {
-
         total++;
-
         String correctAnswer = m.getOptions().get(m.getCorrectIndex());
-
-        // отключаем все кнопки
         for (int i = 0; i < optionsContainer.getChildCount(); i++) {
             optionsContainer.getChildAt(i).setEnabled(false);
         }
@@ -158,7 +154,7 @@ public class AudioExerciseActivity extends AppCompatActivity {
                     getResources().getColor(android.R.color.holo_green_dark)
             ));
 
-            resultText.setText("✔ Правильно!");
+            resultText.setText("✓ Правильно!");
             resultText.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
 
         } else {
@@ -166,7 +162,6 @@ public class AudioExerciseActivity extends AppCompatActivity {
                     getResources().getColor(android.R.color.holo_red_dark)
             ));
 
-            // подсветить правильный вариант
             for (int i = 0; i < optionsContainer.getChildCount(); i++) {
                 MaterialButton b = (MaterialButton) optionsContainer.getChildAt(i);
                 if (b.getText().toString().equals(correctAnswer)) {
@@ -211,8 +206,6 @@ public class AudioExerciseActivity extends AppCompatActivity {
     private void finishExercises() {
 
         float percent = (correct * 100f) / total;
-
-        // если меньше 70% — не засчитываем
         if (percent < 70f) {
             Toast.makeText(
                     this,
@@ -225,10 +218,7 @@ public class AudioExerciseActivity extends AppCompatActivity {
 
         String uid = FirebaseAuth.getInstance().getUid();
         if (uid != null) {
-
             FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-            // Увеличиваем общее количество выполненных
             db.collection("Progress")
                     .document(uid)
                     .update(
@@ -239,17 +229,16 @@ public class AudioExerciseActivity extends AppCompatActivity {
                     );
             MainActivity.removeDailyRecommendation("audio", audioId);
         }
-
-        // показываем уведомление
         Toast.makeText(
                 this,
                 "Упражнение завершено!",
                 Toast.LENGTH_SHORT
         ).show();
 
-        // задержка перед переходом
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             Intent i = new Intent(this, AudioExerciseFinishActivity.class);
+            i.putExtra("correct", correct);
+            i.putExtra("total", total);
             startActivity(i);
             finish();
         }, 1500);

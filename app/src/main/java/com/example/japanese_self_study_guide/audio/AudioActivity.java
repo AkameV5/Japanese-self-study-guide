@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AudioActivity extends AppCompatActivity {
+    private static final String AUDIO_BASE_URL =
+            "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/";
 
     private RecyclerView recyclerView;
     private AudioAdapter adapter;
@@ -28,6 +30,7 @@ public class AudioActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.audioRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AudioAdapter(this, audioList);
+
         ProgressManager.getProgressDoc(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .addOnSuccessListener(doc -> {
                     List<Long> learned = (List<Long>) doc.get("audioLearned");
@@ -53,6 +56,12 @@ public class AudioActivity extends AppCompatActivity {
                     audioList.clear();
                     for (var doc : query) {
                         AudioModel audio = doc.toObject(AudioModel.class);
+
+                        if (audio.getAudioPath() != null) {
+                            String fullUrl = AUDIO_BASE_URL + audio.getAudioPath();
+                            audio.setUrl(fullUrl);
+                        }
+
                         audioList.add(audio);
                     }
                     adapter.notifyDataSetChanged();

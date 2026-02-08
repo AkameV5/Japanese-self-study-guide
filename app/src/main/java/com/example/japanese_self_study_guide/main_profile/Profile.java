@@ -18,7 +18,6 @@ import com.example.japanese_self_study_guide.grammar.GrammarActivity;
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaActivity;
 import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaActivity;
 import com.example.japanese_self_study_guide.kanji.KanjiActivity;
-import com.example.japanese_self_study_guide.main_profile.ProgressRingsView;
 import com.example.japanese_self_study_guide.R;
 import com.example.japanese_self_study_guide.texts_and_translation.TextsActivity;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
@@ -27,16 +26,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.squareup.picasso.Picasso;
 import com.yalantis.ucrop.UCrop;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 public class Profile extends AppCompatActivity {
 
@@ -44,8 +38,6 @@ public class Profile extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
-    private FirebaseStorage storage;
-    private StorageReference storageRef;
     private TextInputEditText editTextUsername;
     private ImageView ivProfilePic;
     private Button buttonSave;
@@ -59,8 +51,6 @@ public class Profile extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        storage = FirebaseStorage.getInstance();
-        storageRef = storage.getReference();
         loadProgressAndTotals();
 
         editTextUsername = findViewById(R.id.editTextUsername);
@@ -70,7 +60,6 @@ public class Profile extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             currentUserId = currentUser.getUid();
-            loadLocalData();
             loadUserData(currentUserId);
         }
 
@@ -166,15 +155,13 @@ public class Profile extends AppCompatActivity {
         updates.put("username", newUsername);
 
         if (imageUri != null) {
-            StorageReference imgRef = storageRef.child("profile_pics/" + UUID.randomUUID().toString());
-            imgRef.putFile(imageUri)
-                    .addOnSuccessListener(task -> imgRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                        updates.put("profilePicUrl", uri.toString());
+            FirestoreProfilePhoto.savePhoto(currentUserId, imageUri, this)
+                    .addOnSuccessListener(aVoid -> {
                         saveToFirestore(userRef, updates, progressDialog);
-                    }))
+                    })
                     .addOnFailureListener(e -> {
                         progressDialog.dismiss();
-                        Toast.makeText(this, "Ошибка загрузки: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Ошибка загрузки фото: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                     });
         } else {
             saveToFirestore(userRef, updates, progressDialog);
@@ -188,14 +175,10 @@ public class Profile extends AppCompatActivity {
 
                     Toast.makeText(this, "Данные обновлены", Toast.LENGTH_SHORT).show();
 
-                    // Обновляем UI
                     editTextUsername.setText(updates.get("username").toString());
-                    if (imageUri != null) ivProfilePic.setImageURI(imageUri);
 
-                    saveLocalData(updates.get("username").toString(),
-                            imageUri != null ? imageUri.getPath() : "");
+                    saveLocalData(updates.get("username").toString());
 
-                    // ✅ Теперь переходим в MainActivity только после успешного обновления
                     Intent intent = new Intent(Profile.this, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
@@ -208,22 +191,11 @@ public class Profile extends AppCompatActivity {
     }
 
 
-    private void saveLocalData(String username, String avatarPath) {
+    private void saveLocalData(String username) {
         SharedPreferences prefs = getSharedPreferences("LocalUser", MODE_PRIVATE);
         prefs.edit()
                 .putString("username", username)
-                .putString("avatarPath", avatarPath)
                 .apply();
-    }
-
-    private void loadLocalData() {
-        SharedPreferences prefs = getSharedPreferences("LocalUser", MODE_PRIVATE);
-        String localName = prefs.getString("username", null);
-        String localAvatar = prefs.getString("avatarPath", null);
-
-        if (localName != null) editTextUsername.setText(localName);
-        if (localAvatar != null && !localAvatar.isEmpty())
-            ivProfilePic.setImageURI(Uri.fromFile(new File(localAvatar)));
     }
 
     private void loadUserData(String userId) {
@@ -231,12 +203,18 @@ public class Profile extends AppCompatActivity {
                 .addOnSuccessListener(doc -> {
                     if (doc.exists()) {
                         String username = doc.getString("username");
-                        String profilePicUrl = doc.getString("profilePicUrl");
+                        if (username != null) {
+                            editTextUsername.setText(username);
+                            saveLocalData(username);
+                        }
 
-                        if (username != null) editTextUsername.setText(username);
-                        if (profilePicUrl != null && !profilePicUrl.isEmpty())
-                            Picasso.get().load(profilePicUrl).into(ivProfilePic);
+                        FirestoreProfilePhoto.loadPhoto(userId, ivProfilePic, R.drawable.profile_user_def);
                     }
+                })
+                .addOnFailureListener(e -> {
+                    SharedPreferences prefs = getSharedPreferences("LocalUser", MODE_PRIVATE);
+                    String localName = prefs.getString("username", null);
+                    if (localName != null) editTextUsername.setText(localName);
                 });
     }
 

@@ -21,7 +21,7 @@ public class AudioCacheManager {
             String url,
             Callback callback
     ) {
-        File file = new File(context.getCacheDir(), "audio_" + audioId + ".mp3");
+        File file = new File(context.getCacheDir(), "lesson" + audioId + ".mp3");
 
         if (file.exists()) {
             callback.onReady(file);

@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
                 if (task.isSuccessful() && task.getResult() != null) {
                     String username = task.getResult().getString("username");
                     String email = task.getResult().getString("email");
-                    String profilePicUrl = task.getResult().getString("profilePicUrl");
 
                     FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
                             .setPersistenceEnabled(true)
@@ -152,19 +151,17 @@ public class MainActivity extends AppCompatActivity {
                     tvUsername.setText(username != null ? username : "Без имени");
                     tvUserEmail.setText(email != null ? email : currentUser.getEmail());
 
-                    if (profilePicUrl != null && !profilePicUrl.isEmpty()) {
-                        Picasso.get().load(profilePicUrl)
-                                .placeholder(R.drawable.profile_user_def)
-                                .error(R.drawable.profile_user_def)
-                                .into(ivProfilePic);
-                    } else {
-                        ivProfilePic.setImageResource(R.drawable.profile_user_def);
-                    }
+                    FirestoreProfilePhoto.loadPhoto(
+                            currentUser.getUid(),
+                            ivProfilePic,
+                            R.drawable.profile_user_def
+                    );
+
                 } else {
                     Toast.makeText(this, "Ошибка получения данных", Toast.LENGTH_SHORT).show();
                 }
             });
-        }
+    }
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
