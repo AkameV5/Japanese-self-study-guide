@@ -6,19 +6,17 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.japanese_self_study_guide.audio.AudioActivity
 
 @Composable
 fun AudioNavGraph(
     onExit: () -> Unit = {},
-    startAudioId: Int? = null,
-    startAudioUrl: String = "",
-    startAudioName: String = "",
-    startAudioDescription: String = ""
+    dailyMode: Boolean = false
 ) {
     val navController = rememberNavController()
 
-    val startDest = if (startAudioId != null) {
-        "audio_player/$startAudioId/${startAudioUrl.encode()}/${startAudioName.encode()}/${startAudioDescription.encode()}"
+    val startDest = if (dailyMode && AudioActivity.pendingDailyAudioId != null) {
+        "audio_player/${AudioActivity.pendingDailyAudioId}"
     } else {
         "audio_list"
     }
@@ -29,47 +27,54 @@ fun AudioNavGraph(
             AudioScreen(
                 onAudioClick = { audio ->
                     navController.navigate(
-                        "audio_player/${audio.id}/${audio.url.encode()}/${audio.name.encode()}/${audio.description.encode()}"
+                        "audio_player_full/${audio.id}/${audio.url.enc()}/${audio.name.enc()}/${audio.description.enc()}"
                     )
                 }
             )
         }
 
         composable(
-            route = "audio_player/{audioId}/{url}/{name}/{description}",
+            route = "audio_player/{audioId}",
+            arguments = listOf(navArgument("audioId") { type = NavType.IntType })
+        ) { back ->
+            val audioId = back.arguments!!.getInt("audioId")
+            AudioPlayerScreen(
+                audioId          = audioId,
+                audioUrl         = AudioActivity.pendingDailyAudioUrl,
+                audioName        = AudioActivity.pendingDailyAudioName,
+                audioDescription = AudioActivity.pendingDailyAudioDescription,
+                onBack           = onExit,
+                onGoToExercises  = { id -> navController.navigate("audio_exercise/$id") }
+            )
+        }
+
+        composable(
+            route = "audio_player_full/{audioId}/{url}/{name}/{description}",
             arguments = listOf(
-                navArgument("audioId") { type = NavType.IntType },
-                navArgument("url") { type = NavType.StringType },
-                navArgument("name") { type = NavType.StringType },
+                navArgument("audioId")     { type = NavType.StringType },
+                navArgument("url")         { type = NavType.StringType },
+                navArgument("name")        { type = NavType.StringType },
                 navArgument("description") { type = NavType.StringType }
             )
-        ) { backStackEntry ->
-            val audioId = backStackEntry.arguments!!.getInt("audioId")
-            val url = backStackEntry.arguments!!.getString("url", "").decode()
-            val name = backStackEntry.arguments!!.getString("name", "").decode()
-            val description = backStackEntry.arguments!!.getString("description", "").decode()
-
+        ) { back ->
+            val args = back.arguments!!
             AudioPlayerScreen(
-                audioId = audioId,
-                audioUrl = url,
-                audioName = name,
-                audioDescription = description,
-                onBack = { navController.popBackStack() },
-                onGoToExercises = { id ->
-                    navController.navigate("audio_exercise/$id")
-                }
+                audioId          = args.getString("audioId", "0").toIntOrNull() ?: 0,
+                audioUrl         = args.getString("url", "").dec(),
+                audioName        = args.getString("name", "").dec(),
+                audioDescription = args.getString("description", "").dec(),
+                onBack           = { navController.popBackStack() },
+                onGoToExercises  = { id -> navController.navigate("audio_exercise/$id") }
             )
         }
 
         composable(
             route = "audio_exercise/{audioId}",
             arguments = listOf(navArgument("audioId") { type = NavType.IntType })
-        ) { backStackEntry ->
-            val audioId = backStackEntry.arguments!!.getInt("audioId")
-
+        ) { back ->
             AudioExerciseScreen(
-                audioId = audioId,
-                onBack = { navController.popBackStack() },
+                audioId    = back.arguments!!.getInt("audioId"),
+                onBack     = { navController.popBackStack() },
                 onFinished = { correct, total ->
                     navController.navigate("audio_exercise_finish/$correct/$total") {
                         popUpTo("audio_list")
@@ -82,16 +87,13 @@ fun AudioNavGraph(
             route = "audio_exercise_finish/{correct}/{total}",
             arguments = listOf(
                 navArgument("correct") { type = NavType.IntType },
-                navArgument("total") { type = NavType.IntType }
+                navArgument("total")   { type = NavType.IntType }
             )
-        ) { backStackEntry ->
-            val correct = backStackEntry.arguments!!.getInt("correct")
-            val total = backStackEntry.arguments!!.getInt("total")
-
+        ) { back ->
             AudioExerciseFinishScreen(
-                correct = correct,
-                total = total,
-                onBack = {
+                correct = back.arguments!!.getInt("correct"),
+                total   = back.arguments!!.getInt("total"),
+                onBack  = {
                     navController.navigate("audio_list") {
                         popUpTo("audio_list") { inclusive = true }
                     }
@@ -101,8 +103,5 @@ fun AudioNavGraph(
     }
 }
 
-private fun String.encode(): String =
-    java.net.URLEncoder.encode(this, "UTF-8")
-
-private fun String.decode(): String =
-    java.net.URLDecoder.decode(this, "UTF-8")
+private fun String.enc(): String = java.net.URLEncoder.encode(this, "UTF-8")
+private fun String.dec(): String = java.net.URLDecoder.decode(this, "UTF-8")

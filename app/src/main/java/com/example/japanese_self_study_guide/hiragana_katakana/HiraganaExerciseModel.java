@@ -6,7 +6,7 @@ public class HiraganaExerciseModel {
 
     private int exerciseId;
     private int hiraganaId;
-    private String type; // choose / write / reverse_write
+    private String type;
     private String question;
     private String correctAnswer;
     private List<String> options;

@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.japanese_self_study_guide.grammar.GrammarDetailActivity;
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaGroupProvider;
 import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaGroupProvider;
 import com.example.japanese_self_study_guide.kanji.ExerciseGroup;
@@ -160,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Ошибка получения данных", Toast.LENGTH_SHORT).show();
                 }
             });
-    }
+        }
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
@@ -173,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.nav_kanji) {
                 startActivity(new Intent(MainActivity.this, KanjiActivity.class));
             } else if (id == R.id.nav_texts) {
-                    startActivity(new Intent(MainActivity.this, TextsActivity.class));
+                startActivity(new Intent(MainActivity.this, TextsActivity.class));
             } else if (id == R.id.nav_dictionary) {
                 startActivity(new Intent(MainActivity.this, DictionaryActivity.class));
             } else if (id == R.id.nav_grammar) {
@@ -425,9 +424,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Long pickNextSingleId(List<Long> learnedLongs, String collectionName) {
-        for (int id = 1; id <= 500; id++) {
-            if (!learnedLongs.contains((long)id)) {
-                return (long) id;
+        // Returns lowest id from Firestore that is not in learnedLongs.
+        // Uses a simple heuristic: ids are sequential starting from 1.
+        // We pick the first gap — Firestore query happens in openRecommendedLesson.
+        Set<Long> learnedSet = new HashSet<>(learnedLongs);
+        for (long id = 1; id <= 1000; id++) {
+            if (!learnedSet.contains(id)) {
+                return id;
             }
         }
         return null;
@@ -618,8 +621,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case "grammar": {
-                intent = new Intent(this, GrammarDetailActivity.class);
-                Long id = (Long) payload.get("id");
+                intent = new Intent(this, GrammarActivity.class);
+                Object idObj = payload.get("id");
+                Long id = idObj instanceof Long ? (Long) idObj : ((Integer) idObj).longValue();
                 if (id != null) {
                     intent.putExtra("id", id.intValue());
                     intent.putExtra("daily_mode", true);
@@ -643,24 +647,22 @@ public class MainActivity extends AppCompatActivity {
 
                 FirebaseFirestore.getInstance()
                         .collection("Audio")
-                        .whereEqualTo("id", id.intValue())
+                        .whereEqualTo("id", id)  // keep as Long — Firestore stores numbers as Long
                         .get()
                         .addOnSuccessListener(query -> {
                             if (!query.isEmpty()) {
                                 var doc = query.getDocuments().get(0);
 
-                                String audioPath = doc.getString("audioPath");
-                                String fullUrl = audioPath != null
-                                        ? "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/" + audioPath
-                                        : "";
-
                                 Intent i = new Intent(this, AudioActivity.class);
                                 i.putExtra("audioId", id.intValue());
+                                String audioPath = doc.getString("audioPath");
+                                String fullUrl = (audioPath != null && !audioPath.isEmpty())
+                                        ? "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/" + audioPath
+                                        : "";
                                 i.putExtra("audio_url", fullUrl);
                                 i.putExtra("audio_name", doc.getString("name"));
                                 i.putExtra("audio_description", doc.getString("description"));
                                 i.putExtra("daily_mode", true);
-                                i.putExtra("daily_audio_id", id.intValue());
 
                                 startActivity(i);
                             }
@@ -786,5 +788,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-

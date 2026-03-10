@@ -325,11 +325,11 @@ public class DB extends Application {
             String json = readJsonFromRaw(R.raw.grammar_exercises); // grammar_exercises.json
             Gson gson = new Gson();
 
-            Type type = new TypeToken<List<com.example.japanese_self_study_guide.grammar.GrammarExerciseModel>>() {}.getType();
-            List<com.example.japanese_self_study_guide.grammar.GrammarExerciseModel> exercises =
+            Type type = new TypeToken<List<com.example.japanese_self_study_guide.grammar.GrammarExercise>>() {}.getType();
+            List<com.example.japanese_self_study_guide.grammar.GrammarExercise> exercises =
                     gson.fromJson(json, type);
 
-            for (com.example.japanese_self_study_guide.grammar.GrammarExerciseModel ex : exercises) {
+            for (com.example.japanese_self_study_guide.grammar.GrammarExercise ex : exercises) {
                 db.collection("GrammarExercises")
                         .document(String.valueOf(ex.getId()))
                         .set(ex)

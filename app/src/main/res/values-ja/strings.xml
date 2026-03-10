@@ -55,4 +55,32 @@
     <string name="result_done">練習完了！</string>
     <string name="result_correct_of">正解数：%1$d / %2$d</string>
     <string name="result_back">レッスン一覧に戻る</string>
+
+    <string name="dict_title">辞書</string>
+    <string name="dict_search_hint">単語を検索…</string>
+    <string name="dict_sort_alpha">五十音順</string>
+    <string name="dict_sort_category">カテゴリ順</string>
+    <string name="dict_sort_length">文字数順</string>
+    <string name="dict_word_count">表示中: %1$d 件</string>
+    <string name="dict_no_results">見つかりませんでした</string>
+
+    <string name="grammar_title">文法</string>
+    <string name="grammar_example_label">例文</string>
+    <string name="grammar_exercises_btn">練習問題</string>
+    <string name="grammar_answer_hint">答えを入力してください</string>
+    <string name="grammar_check_btn">確認する</string>
+    <string name="grammar_next_btn">次へ</string>
+
+    <string name="hiragana_title">ひらがな</string>
+    <string name="hiragana_main_group">基本文字</string>
+    <string name="hiragana_youon_group">拗音</string>
+    <string name="hiragana_exercises_btn">練習する</string>
+    <string name="hiragana_start_daily_btn">練習を始める</string>
+    <string name="katakana_title">カタカナ</string>
+    <string name="katakana_main_group">基本文字</string>
+    <string name="groups_main_title">基本グループ：</string>
+    <string name="groups_youon_title">拗音：</string>
+    <string name="groups_training_title">練習モード：</string>
+    <string name="groups_all_random">全文字（ランダム）</string>
+    <string name="result_learned_symbols">習得文字：%1$d／%2$d</string>
 </resources>

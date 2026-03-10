@@ -55,4 +55,32 @@
     <string name="result_done">Упражнение завершено!</string>
     <string name="result_correct_of">Правильных ответов: %1$d из %2$d</string>
     <string name="result_back">Вернуться к урокам</string>
+
+    <string name="dict_title">Словарь</string>
+    <string name="dict_search_hint">Поиск слов…</string>
+    <string name="dict_sort_alpha">По алфавиту</string>
+    <string name="dict_sort_category">По категории</string>
+    <string name="dict_sort_length">По длине</string>
+    <string name="dict_word_count">Показано: %1$d слов</string>
+    <string name="dict_no_results">Ничего не найдено</string>
+
+    <string name="grammar_title">Грамматика</string>
+    <string name="grammar_example_label">Пример</string>
+    <string name="grammar_exercises_btn">Упражнения</string>
+    <string name="grammar_answer_hint">Введите ответ</string>
+    <string name="grammar_check_btn">Проверить</string>
+    <string name="grammar_next_btn">Далее</string>
+
+    <string name="hiragana_title">Хирагана</string>
+    <string name="hiragana_main_group">Основные символы</string>
+    <string name="hiragana_youon_group">Ёоны</string>
+    <string name="hiragana_exercises_btn">Упражнения</string>
+    <string name="hiragana_start_daily_btn">Начать упражнения</string>
+    <string name="katakana_title">Катакана</string>
+    <string name="katakana_main_group">Основные символы</string>
+    <string name="groups_main_title">Основные группы:</string>
+    <string name="groups_youon_title">Ёоны:</string>
+    <string name="groups_training_title">Режим тренировки:</string>
+    <string name="groups_all_random">Все символы (случайные)</string>
+    <string name="result_learned_symbols">Изучено символов: %1$d из %2$d</string>
 </resources>

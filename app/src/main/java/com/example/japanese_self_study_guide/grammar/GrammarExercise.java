@@ -10,21 +10,10 @@ public class GrammarExercise {
 
     public GrammarExercise() {}
 
-    public GrammarExercise(int id, int id_grammar, String task,
-                           String rightAnswer, String explanation, int difficulty) {
-        this.id = id;
-        this.id_grammar = id_grammar;
-        this.task = task;
-        this.rightAnswer = rightAnswer;
-        this.explanation = explanation;
-        this.difficulty = difficulty;
-    }
-
-    public int getId() { return id; }
+    public int getId()            { return id; }
     public int getId_grammar() { return id_grammar; }
-    public String getTask() { return task; }
-    public String getRightAnswer() { return rightAnswer; }
-    public String getExplanation() { return explanation; }
-    public int getDifficulty() { return difficulty; }
+    public String getTask()       { return task        != null ? task        : ""; }
+    public String getRightAnswer(){ return rightAnswer  != null ? rightAnswer  : ""; }
+    public String getExplanation(){ return explanation  != null ? explanation  : ""; }
+    public int getDifficulty()    { return difficulty; }
 }
-

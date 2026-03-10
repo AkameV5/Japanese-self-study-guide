@@ -1,5 +1,6 @@
 package com.example.japanese_self_study_guide.audio.view_model
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.japanese_self_study_guide.audio.AudioRepository
 import com.example.japanese_self_study_guide.audio.model.AudioModel
@@ -26,9 +27,10 @@ class AudioViewModel(
     }
 
     private fun loadData() {
-        repository.audioList
+        repository.getAudioList()
             .addOnSuccessListener { audioList ->
-                repository.learnedAudioIds
+                Log.d("AudioVM", "Loaded ${audioList.size} audio items")
+                repository.getLearnedAudioIds()
                     .addOnSuccessListener { learnedIds ->
                         _uiState.value = AudioListUiState(
                             isLoading = false,
@@ -36,7 +38,8 @@ class AudioViewModel(
                             learnedIds = learnedIds
                         )
                     }
-                    .addOnFailureListener {
+                    .addOnFailureListener { e ->
+                        Log.e("AudioVM", "getLearnedIds error: ${e.message}")
                         _uiState.value = AudioListUiState(
                             isLoading = false,
                             audioList = audioList
@@ -44,6 +47,7 @@ class AudioViewModel(
                     }
             }
             .addOnFailureListener { e ->
+                Log.e("AudioVM", "getAudioList error: ${e.message}")
                 _uiState.value = AudioListUiState(isLoading = false, error = e.message)
             }
     }

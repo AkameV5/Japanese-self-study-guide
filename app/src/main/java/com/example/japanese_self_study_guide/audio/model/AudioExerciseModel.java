@@ -10,7 +10,7 @@ public class AudioExerciseModel {
     private int correctIndex;
     private String hint;
 
-    public AudioExerciseModel() {} // Firebase needs empty constructor
+    public AudioExerciseModel() {}
 
     public int getId() { return id; }
     public int getAudioId() { return audioId; }

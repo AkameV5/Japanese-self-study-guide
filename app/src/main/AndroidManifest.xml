@@ -64,27 +64,8 @@
         <activity android:name=".hiragana_katakana.HiraganaActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
-        <activity android:name=".hiragana_katakana.HiraganaExercisesActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity android:name=".hiragana_katakana.HiraganaGroupsActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity
-            android:name=".hiragana_katakana.HiraganaExerciseFinishActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".hiragana_katakana.KatakanaExerciseFinishActivity"
-            android:screenOrientation="portrait"/>
 
         <activity android:name=".hiragana_katakana.KatakanaActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity android:name=".hiragana_katakana.KatakanaExercisesActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity android:name=".hiragana_katakana.KatakanaGroupsActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
 
@@ -107,20 +88,6 @@
         <activity android:name=".grammar.GrammarActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
-        <activity android:name=".grammar.GrammarDetailActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity android:name=".grammar.GrammarExerciseActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity android:name=".grammar.GrammarExerciseDetailActivity"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-        <activity
-            android:name=".grammar.GrammarExerciseFinishActivity"
-            android:screenOrientation="portrait"/>
-
-
 
         <activity android:name=".texts_and_translation.TextsActivity"
             android:screenOrientation="portrait"

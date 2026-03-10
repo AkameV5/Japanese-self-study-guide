@@ -18,16 +18,15 @@ public class GrammarRule {
         this.translation = translation;
     }
 
-    public int getId() { return id; }
-    public String getStructure() { return structure; }
-    public String getExplanation() { return explanation; }
-    public String getExample() { return example; }
-    public String getTranslation() { return translation; }
+    public int getId()           { return id; }
+    public String getStructure() { return structure   != null ? structure   : ""; }
+    public String getExplanation(){ return explanation != null ? explanation : ""; }
+    public String getExample()   { return example     != null ? example     : ""; }
+    public String getTranslation(){ return translation != null ? translation : ""; }
 
-    public void setId(int id) { this.id = id; }
-    public void setStructure(String structure) { this.structure = structure; }
-    public void setExplanation(String explanation) { this.explanation = explanation; }
-    public void setExample(String example) { this.example = example; }
-    public void setTranslation(String translation) { this.translation = translation; }
+    public void setId(int id)                       { this.id = id; }
+    public void setStructure(String s)              { this.structure = s; }
+    public void setExplanation(String e)            { this.explanation = e; }
+    public void setExample(String e)                { this.example = e; }
+    public void setTranslation(String t)            { this.translation = t; }
 }
-
