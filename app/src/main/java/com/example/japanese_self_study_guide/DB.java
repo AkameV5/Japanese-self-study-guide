@@ -3,8 +3,8 @@ package com.example.japanese_self_study_guide;
 import android.app.Application;
 import android.util.Log;
 
-import com.example.japanese_self_study_guide.audio.AudioCacheManager;
-import com.example.japanese_self_study_guide.audio.AudioModel;
+import com.example.japanese_self_study_guide.audio.model.AudioCacheManager;
+import com.example.japanese_self_study_guide.audio.model.AudioModel;
 import com.example.japanese_self_study_guide.dictionary.Word;
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaExerciseModel;
 import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaExerciseModel;

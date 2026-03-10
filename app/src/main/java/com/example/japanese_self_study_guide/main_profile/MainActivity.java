@@ -15,7 +15,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.japanese_self_study_guide.audio.AudioPlayerActivity;
 import com.example.japanese_self_study_guide.grammar.GrammarDetailActivity;
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaGroupProvider;
 import com.example.japanese_self_study_guide.hiragana_katakana.KatakanaGroupProvider;
@@ -650,12 +649,18 @@ public class MainActivity extends AppCompatActivity {
                             if (!query.isEmpty()) {
                                 var doc = query.getDocuments().get(0);
 
-                                Intent i = new Intent(this, AudioPlayerActivity.class);
+                                String audioPath = doc.getString("audioPath");
+                                String fullUrl = audioPath != null
+                                        ? "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/" + audioPath
+                                        : "";
+
+                                Intent i = new Intent(this, AudioActivity.class);
                                 i.putExtra("audioId", id.intValue());
-                                i.putExtra("audio_url", doc.getString("url"));
+                                i.putExtra("audio_url", fullUrl);
                                 i.putExtra("audio_name", doc.getString("name"));
                                 i.putExtra("audio_description", doc.getString("description"));
                                 i.putExtra("daily_mode", true);
+                                i.putExtra("daily_audio_id", id.intValue());
 
                                 startActivity(i);
                             }

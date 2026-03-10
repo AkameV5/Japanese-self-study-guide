@@ -1,70 +1,35 @@
-package com.example.japanese_self_study_guide.audio;
+package com.example.japanese_self_study_guide.audio
 
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import com.example.japanese_self_study_guide.audio.ui.AudioNavGraph
+import com.example.japanese_self_study_guide.ui.theme.JapaneseSelfStudyGuideTheme
 
-import com.example.japanese_self_study_guide.R;
-import com.example.japanese_self_study_guide.main_profile.ProgressManager;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
+class AudioActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-import java.util.ArrayList;
-import java.util.List;
+        val audioId = intent.getIntExtra("audioId", -1)
+        val audioUrl = intent.getStringExtra("audio_url") ?: ""
+        val audioName = intent.getStringExtra("audio_name") ?: ""
+        val audioDescription = intent.getStringExtra("audio_description") ?: ""
+        val dailyMode = intent.getBooleanExtra("daily_mode", false)
 
-public class AudioActivity extends AppCompatActivity {
-    private static final String AUDIO_BASE_URL =
-            "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/";
-
-    private RecyclerView recyclerView;
-    private AudioAdapter adapter;
-    private ArrayList<AudioModel> audioList = new ArrayList<>();
-    private FirebaseFirestore db;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_audio);
-
-        recyclerView = findViewById(R.id.audioRecycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new AudioAdapter(this, audioList);
-
-        ProgressManager.getProgressDoc(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .addOnSuccessListener(doc -> {
-                    List<Long> learned = (List<Long>) doc.get("audioLearned");
-                    if (learned == null) return;
-
-                    List<Integer> ids = new ArrayList<>();
-                    for (Long l : learned) ids.add(l.intValue());
-
-                    adapter.setLearnedIds(ids);
-                });
-
-        recyclerView.setAdapter(adapter);
-
-        db = FirebaseFirestore.getInstance();
-
-        loadAudioList();
-    }
-
-    private void loadAudioList() {
-        db.collection("Audio")
-                .get()
-                .addOnSuccessListener(query -> {
-                    audioList.clear();
-                    for (var doc : query) {
-                        AudioModel audio = doc.toObject(AudioModel.class);
-
-                        if (audio.getAudioPath() != null) {
-                            String fullUrl = AUDIO_BASE_URL + audio.getAudioPath();
-                            audio.setUrl(fullUrl);
-                        }
-
-                        audioList.add(audio);
-                    }
-                    adapter.notifyDataSetChanged();
-                });
+        setContent {
+            JapaneseSelfStudyGuideTheme {
+                Surface {
+                    AudioNavGraph(
+                        onExit = { finish() },
+                        startAudioId = if (dailyMode && audioId != -1) audioId else null,
+                        startAudioUrl = audioUrl,
+                        startAudioName = audioName,
+                        startAudioDescription = audioDescription
+                    )
+                }
+            }
+        }
     }
 }

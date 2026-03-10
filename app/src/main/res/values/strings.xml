@@ -31,4 +31,28 @@
     <string name="back_to_login">Вернуться ко входу</string>
 
     <string name="profile_pic" translatable="false">Profile Picture</string>
+
+    <string name="audio_title">Аудиоуроки</string>
+    <string name="audio_loading">Загрузка аудио…</string>
+    <string name="audio_error">Ошибка: %1$s</string>
+    <string name="audio_completed">Пройдено</string>
+    <string name="audio_play">Воспроизвести</string>
+    <string name="audio_pause">Пауза</string>
+    <string name="audio_speed">Скорость</string>
+    <string name="audio_go_to_exercises">Перейти к упражнениям</string>
+    <string name="audio_back">Назад</string>
+
+    <string name="exercise_title">Упражнение</string>
+    <string name="exercise_hint">Подсказка</string>
+    <string name="exercise_hint_used">Подсказка использована</string>
+    <string name="exercise_correct">✓ Правильно!</string>
+    <string name="exercise_wrong">✖ Неправильно!</string>
+    <string name="exercise_next">Следующее</string>
+    <string name="exercise_finish">Завершить</string>
+    <string name="exercise_low_score">Результат ниже 70%%. Попробуйте ещё раз.</string>
+
+    <string name="result_title">Результат</string>
+    <string name="result_done">Упражнение завершено!</string>
+    <string name="result_correct_of">Правильных ответов: %1$d из %2$d</string>
+    <string name="result_back">Вернуться к урокам</string>
 </resources>

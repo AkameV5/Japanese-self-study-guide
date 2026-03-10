@@ -1,4 +1,4 @@
-package com.example.japanese_self_study_guide.audio;
+package com.example.japanese_self_study_guide.audio.model;
 
 import java.util.List;
 

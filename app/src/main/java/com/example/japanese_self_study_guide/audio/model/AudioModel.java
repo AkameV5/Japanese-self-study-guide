@@ -1,4 +1,4 @@
-package com.example.japanese_self_study_guide.audio;
+package com.example.japanese_self_study_guide.audio.model;
 
 public class AudioModel {
     private int id;
@@ -21,7 +21,9 @@ public class AudioModel {
     public int getId() { return id; }
     public String getName() { return name; }
     public String getDescription() { return description; }
-    public String getDifficulty() { return difficulty; }
+    public String getDifficulty() {
+        return difficulty != null ? difficulty : "";
+    }
     public String getUrl() { return url; }
     public String getAudioPath() { return audioPath; }
 
