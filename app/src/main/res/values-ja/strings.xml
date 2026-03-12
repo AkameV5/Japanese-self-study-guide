@@ -18,7 +18,6 @@
     <string name="verify_email_message">
     確認メールを次のメールアドレスに送信しました:
     %1$s
-
     メール内のリンクをクリックしてください。
 </string>
 
@@ -31,7 +30,14 @@
     <string name="resend_email">確認メールを再送信</string>
     <string name="back_to_login">ログイン画面に戻る</string>
 
-    <!-- Audio module -->
+    <string name="login_error">ログインエラー: %1$s</string>
+    <string name="register_error">登録エラー: %1$s</string>
+    <string name="send_email_error">メールの送信に失敗しました</string>
+    <string name="resend_success">メールを再送信しました</string>
+    <string name="resend_error">メールの送信に失敗しました</string>
+
+    <string name="profile_pic" translatable="false">Profile Picture</string>
+
     <string name="audio_title">リスニングレッスン</string>
     <string name="audio_loading">音声を読み込み中…</string>
     <string name="audio_error">エラー: %1$s</string>
@@ -83,4 +89,80 @@
     <string name="groups_training_title">練習モード：</string>
     <string name="groups_all_random">全文字（ランダム）</string>
     <string name="result_learned_symbols">習得文字：%1$d／%2$d</string>
+
+    <string name="kanji_title">漢字</string>
+    <string name="kanji_daily_title">今日の漢字</string>
+    <string name="kanji_search_hint">漢字を検索…</string>
+    <string name="kanji_sort_by_id">ID順</string>
+    <string name="kanji_sort_by_category">カテゴリ順</string>
+    <string name="kanji_filter_all">すべて</string>
+    <string name="kanji_count_shown">表示中: %1$d / %2$d</string>
+    <string name="kanji_count_daily">今日の漢字: %1$d</string>
+    <string name="kanji_random_btn">ランダム漢字</string>
+    <string name="kanji_exercises_btn">練習問題</string>
+    <string name="kanji_daily_exercises_btn">今日の練習</string>
+    <string name="kanji_no_category">カテゴリなし</string>
+    <string name="kanji_onyomi_label">音: %1$s</string>
+    <string name="kanji_kunyomi_label">訓: %1$s</string>
+    <string name="kanji_jlpt_label">N%1$d</string>
+    <string name="kanji_learned">習得済み</string>
+    <string name="kanji_dialog_onyomi">音読み: %1$s</string>
+    <string name="kanji_dialog_kunyomi">訓読み: %1$s</string>
+    <string name="kanji_dialog_jlpt">JLPT N%1$d</string>
+    <string name="kanji_dialog_close">閉じる</string>
+    <string name="kanji_groups_title">グループを選択</string>
+    <string name="kanji_group_exercises_count">%1$d 問</string>
+    <string name="kanji_group_total">合計: %1$d</string>
+    <string name="kanji_group_loading">読み込み中…</string>
+    <string name="kanji_exercise_title">漢字練習</string>
+    <string name="kanji_exercise_progress">%1$d / %2$d</string>
+    <string name="kanji_exercise_check">確認する</string>
+    <string name="kanji_exercise_next">次へ</string>
+    <string name="kanji_exercise_answer_hint">答えを入力してください</string>
+    <string name="kanji_finish_title">結果</string>
+    <string name="kanji_finish_correct_of">正解数: %1$d / %2$d</string>
+    <string name="kanji_finish_learned">習得漢字: %1$d / %2$d</string>
+    <string name="kanji_finish_back">一覧に戻る</string>
+    <string name="kanji_finish_retry">もう一度</string>
+
+    <string name="texts_title">テキストと翻訳</string>
+    <string name="texts_search_hint">テキストを検索…</string>
+    <string name="texts_count">表示中: %1$d 件</string>
+    <string name="texts_level">レベル: N%1$s</string>
+    <string name="texts_translation">翻訳</string>
+    <string name="texts_paragraph">段落 %1$d / %2$d</string>
+    <string name="texts_prev">前へ</string>
+    <string name="texts_next">次へ</string>
+    <string name="texts_go_to_exercises">練習問題へ</string>
+    <string name="texts_back_to_text">テキストに戻る</string>
+
+    <string name="tile_done_prefix">%1$sの練習
+完了 ✓</string>
+    <string name="tile_done_label">本日完了 ✓</string>
+    <string name="tile_all_done_title">全てのタスク完了！</string>
+    <string name="tile_all_done_sub">よくできました 🌸</string>
+    <string name="profile_no_name">名前なし</string>
+
+    <string name="settings_title">設定</string>
+    <string name="settings_language_title">言語</string>
+    <string name="settings_account_title">アカウント</string>
+    <string name="settings_about_title">アプリについて</string>
+    <string name="settings_version_label">バージョン</string>
+    <string name="settings_version_value">1.1.1</string>
+    <string name="settings_developer_label">開発者</string>
+    <string name="settings_logout">ログアウト</string>
+    <string name="settings_logout_confirm_title">ログアウト</string>
+    <string name="settings_logout_confirm_msg">ログアウトしますか？</string>
+    <string name="settings_cancel">キャンセル</string>
+    <string name="nav_profile">マイプロフィール</string>
+
+    <string name="profile_title">マイプロフィール</string>
+    <string name="profile_pick_photo">タップして写真を選ぶ</string>
+    <string name="profile_save">保存する</string>
+    <string name="profile_saved">データを更新しました</string>
+    <string name="profile_username_empty">ユーザー名を入力してください</string>
+    <string name="profile_save_error">エラー: %1$s</string>
+    <string name="profile_photo_error">写真エラー: %1$s</string>
+    <string name="profile_crop_error">トリミングエラー: %1$s</string>
+    <string name="settings_language_note">* 完全に適用するにはアプリを再起動してください</string>
 </resources>

@@ -16,7 +16,7 @@ fun AudioNavGraph(
     val navController = rememberNavController()
 
     val startDest = if (dailyMode && AudioActivity.pendingDailyAudioId != null) {
-        "audio_player/${AudioActivity.pendingDailyAudioId}"
+        "daily_player"
     } else {
         "audio_list"
     }
@@ -33,11 +33,8 @@ fun AudioNavGraph(
             )
         }
 
-        composable(
-            route = "audio_player/{audioId}",
-            arguments = listOf(navArgument("audioId") { type = NavType.IntType })
-        ) { back ->
-            val audioId = back.arguments!!.getInt("audioId")
+        composable("daily_player") {
+            val audioId = AudioActivity.pendingDailyAudioId ?: return@composable
             AudioPlayerScreen(
                 audioId          = audioId,
                 audioUrl         = AudioActivity.pendingDailyAudioUrl,

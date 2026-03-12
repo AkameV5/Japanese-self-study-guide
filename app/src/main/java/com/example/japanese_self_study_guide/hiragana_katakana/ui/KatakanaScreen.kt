@@ -61,7 +61,6 @@ fun KatakanaScreen(
                         insertGaps(state.symbols.filter { it.id < 72 }) to
                                 state.symbols.filter { it.id >= 72 }
                     }
-
                     val cellDp = 64.dp
                     val mainRows  = ceil(main.size / 5.0).toInt()
                     val youonRows = ceil(youon.size / 3.0).toInt()

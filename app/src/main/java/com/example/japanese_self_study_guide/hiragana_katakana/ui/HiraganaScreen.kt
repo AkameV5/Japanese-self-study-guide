@@ -1,6 +1,5 @@
 package com.example.japanese_self_study_guide.hiragana_katakana.ui
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -241,7 +240,8 @@ fun SymbolCell(item: HiraganaItem, isLearned: Boolean, cellSize: Dp, onClick: ()
         return
     }
     Card(
-        modifier = Modifier.size(cellSize).clickable(onClick = onClick),
+        onClick = onClick,
+        modifier = Modifier.size(cellSize),
         shape = RoundedCornerShape(8.dp),
         elevation = CardDefaults.cardElevation(2.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)

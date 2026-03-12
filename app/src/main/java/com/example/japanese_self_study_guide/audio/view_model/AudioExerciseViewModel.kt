@@ -39,21 +39,25 @@ class AudioExerciseViewModel(
     private lateinit var prefs: SharedPreferences
 
     fun init(context: Context, audioId: Int) {
+        if (this.audioId == audioId && _uiState.value.exercises.isNotEmpty()) return  // already loaded
         this.audioId = audioId
         prefs = context.getSharedPreferences("hintPrefs", Context.MODE_PRIVATE)
 
         val hintKey = "hint_used_audio_$audioId"
         val hintDisabled = System.currentTimeMillis() - prefs.getLong(hintKey, 0) < 86_400_000L
-        _uiState.value = _uiState.value.copy(hintDisabled = hintDisabled)
+        _uiState.value = AudioExerciseUiState(isLoading = true, hintDisabled = hintDisabled)
 
+        android.util.Log.d("AudioExerciseVM", "Loading exercises for audioId=$audioId")
         repository.getExercises(audioId)
             .addOnSuccessListener { exercises ->
+                android.util.Log.d("AudioExerciseVM", "Got ${exercises.size} exercises for audioId=$audioId")
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     exercises = exercises.shuffled()
                 )
             }
             .addOnFailureListener { e ->
+                android.util.Log.e("AudioExerciseVM", "Failed to load exercises: ${e.message}")
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.message)
             }
     }

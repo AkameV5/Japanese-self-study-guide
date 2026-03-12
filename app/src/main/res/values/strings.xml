@@ -30,6 +30,12 @@
     <string name="resend_email">Отправить письмо повторно</string>
     <string name="back_to_login">Вернуться ко входу</string>
 
+    <string name="login_error">Ошибка входа: %1$s</string>
+    <string name="register_error">Ошибка регистрации: %1$s</string>
+    <string name="send_email_error">Не удалось отправить письмо</string>
+    <string name="resend_success">Письмо отправлено повторно</string>
+    <string name="resend_error">Не удалось отправить письмо</string>
+
     <string name="profile_pic" translatable="false">Profile Picture</string>
 
     <string name="audio_title">Аудиоуроки</string>
@@ -83,4 +89,80 @@
     <string name="groups_training_title">Режим тренировки:</string>
     <string name="groups_all_random">Все символы (случайные)</string>
     <string name="result_learned_symbols">Изучено символов: %1$d из %2$d</string>
+
+    <string name="kanji_title">Кандзи</string>
+    <string name="kanji_daily_title">Кандзи дня</string>
+    <string name="kanji_search_hint">Поиск кандзи…</string>
+    <string name="kanji_sort_by_id">По ID</string>
+    <string name="kanji_sort_by_category">По категории</string>
+    <string name="kanji_filter_all">Все</string>
+    <string name="kanji_count_shown">Показано: %1$d / %2$d</string>
+    <string name="kanji_count_daily">Кандзи дня: %1$d</string>
+    <string name="kanji_random_btn">Случайный кандзи</string>
+    <string name="kanji_exercises_btn">Упражнения</string>
+    <string name="kanji_daily_exercises_btn">Ежедневные упражнения</string>
+    <string name="kanji_no_category">Без категории</string>
+    <string name="kanji_onyomi_label">音: %1$s</string>
+    <string name="kanji_kunyomi_label">訓: %1$s</string>
+    <string name="kanji_jlpt_label">N%1$d</string>
+    <string name="kanji_learned">Изучено</string>
+    <string name="kanji_dialog_onyomi">Онъёми: %1$s</string>
+    <string name="kanji_dialog_kunyomi">Кунъёми: %1$s</string>
+    <string name="kanji_dialog_jlpt">JLPT N%1$d</string>
+    <string name="kanji_dialog_close">Закрыть</string>
+    <string name="kanji_groups_title">Выбор группы</string>
+    <string name="kanji_group_exercises_count">%1$d упр.</string>
+    <string name="kanji_group_total">Всего: %1$d</string>
+    <string name="kanji_group_loading">Загрузка…</string>
+    <string name="kanji_exercise_title">Упражнения по кандзи</string>
+    <string name="kanji_exercise_progress">%1$d / %2$d</string>
+    <string name="kanji_exercise_check">Проверить</string>
+    <string name="kanji_exercise_next">Далее</string>
+    <string name="kanji_exercise_answer_hint">Введите ответ</string>
+    <string name="kanji_finish_title">Результат</string>
+    <string name="kanji_finish_correct_of">Правильных: %1$d из %2$d</string>
+    <string name="kanji_finish_learned">Изучено кандзи: %1$d из %2$d</string>
+    <string name="kanji_finish_back">Вернуться к списку</string>
+    <string name="kanji_finish_retry">Повторить</string>
+
+    <string name="texts_title">Тексты и переводы</string>
+    <string name="texts_search_hint">Поиск рассказа…</string>
+    <string name="texts_count">Показано: %1$d текстов</string>
+    <string name="texts_level">Уровень: N%1$s</string>
+    <string name="texts_translation">Перевод</string>
+    <string name="texts_paragraph">Абзац %1$d из %2$d</string>
+    <string name="texts_prev">Предыдущее</string>
+    <string name="texts_next">Следующее</string>
+    <string name="texts_go_to_exercises">Перейти к упражнениям</string>
+    <string name="texts_back_to_text">Вернуться к тексту</string>
+
+    <string name="tile_done_prefix">Упражнения по %1$s
+пройдены ✓</string>
+    <string name="tile_done_label">Пройдено сегодня ✓</string>
+    <string name="tile_all_done_title">Все задания выполнены!</string>
+    <string name="tile_all_done_sub">Отличная работа 🌸</string>
+    <string name="profile_no_name">Без имени</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_language_title">Язык интерфейса</string>
+    <string name="settings_account_title">Аккаунт</string>
+    <string name="settings_about_title">О приложении</string>
+    <string name="settings_version_label">Версия</string>
+    <string name="settings_version_value">1.1.1</string>
+    <string name="settings_developer_label">Разработчик</string>
+    <string name="settings_logout">Выйти из аккаунта</string>
+    <string name="settings_logout_confirm_title">Выход</string>
+    <string name="settings_logout_confirm_msg">Вы уверены, что хотите выйти?</string>
+    <string name="settings_cancel">Отмена</string>
+    <string name="nav_profile">Мой профиль</string>
+
+    <string name="profile_title">Мой профиль</string>
+    <string name="profile_pick_photo">Нажмите, чтобы выбрать фото</string>
+    <string name="profile_save">Сохранить</string>
+    <string name="profile_saved">Данные обновлены</string>
+    <string name="profile_username_empty">Введите имя пользователя</string>
+    <string name="profile_save_error">Ошибка: %1$s</string>
+    <string name="profile_photo_error">Ошибка фото: %1$s</string>
+    <string name="profile_crop_error">Ошибка обрезки: %1$s</string>
+    <string name="settings_language_note">* Для полного применения языка перезапустите приложение</string>
 </resources>

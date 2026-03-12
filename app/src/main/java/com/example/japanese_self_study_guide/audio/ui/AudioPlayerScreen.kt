@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -132,7 +133,7 @@ fun AudioPlayerScreen(
                     )
                 ) {
                     Icon(
-                        imageVector = if (state.isPlaying) Icons.Default.Clear else Icons.Default.PlayArrow,
+                        imageVector = if (state.isPlaying) Icons.Default.Pause else Icons.Default.PlayArrow,
                         contentDescription = if (state.isPlaying)
                             stringResource(R.string.audio_pause)
                         else

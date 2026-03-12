@@ -26,8 +26,11 @@
         <item name="android:windowBackground">@android:color/white</item>
     </style>
 
-
-
-
     <style name="Theme.Japaneseselfstudyguide" parent="Base.Theme.Japaneseselfstudyguide" />
+
+    <style name="Theme.JapaneseSelfStudyGuide.Splash" parent="Theme.Japaneseselfstudyguide">
+        <item name="android:windowBackground">@color/accentPink</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/accentPinkDark</item>
+    </style>
 </resources>

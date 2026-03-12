@@ -58,9 +58,9 @@ public class AudioRepository {
     }
 
     public Task<List<AudioExerciseModel>> getExercises(int audioId) {
+        // Use long to match Firestore storage type; no orderBy to avoid composite index requirement
         return db.collection("AudioExercises")
-                .whereEqualTo("audioId", audioId)
-                .orderBy("id")
+                .whereEqualTo("audioId", (long) audioId)
                 .get()
                 .continueWith(task -> {
                     List<AudioExerciseModel> result = new ArrayList<>();
@@ -70,6 +70,8 @@ public class AudioRepository {
                         AudioExerciseModel m = doc.toObject(AudioExerciseModel.class);
                         if (m != null) result.add(m);
                     }
+                    // Sort client-side instead of relying on Firestore index
+                    result.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
                     return result;
                 });
     }
