@@ -37,7 +37,6 @@ public class TotalManager {
             "audioTotal"
     };
 
-    // Загружает totals (кэшированный или новый)
     public static void loadTotals(Context context, TotalsCallback callback) {
 
         SharedPreferences prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -45,7 +44,6 @@ public class TotalManager {
 
         long now = System.currentTimeMillis();
 
-        // Если прошло меньше недели — берём из кэша
         if (now - lastUpdate < CACHE_TIME) {
             Map<String, Integer> cached = new HashMap<>();
             for (String key : KEYS) {
@@ -55,7 +53,6 @@ public class TotalManager {
             return;
         }
 
-        // Загружаем из Firestore
         Task<QuerySnapshot>[] tasks = new Task[COLLECTIONS.length];
         for (int i = 0; i < COLLECTIONS.length; i++) {
             tasks[i] = db.collection(COLLECTIONS[i]).get();

@@ -12,7 +12,6 @@ public class KanjiExerciseModel {
     private String explanation;
     private int difficulty;
 
-    // ✅ Пустой конструктор — обязателен для Firestore & Gson
     public KanjiExerciseModel() {}
 
     public KanjiExerciseModel(int id, int id_kanji, String question,

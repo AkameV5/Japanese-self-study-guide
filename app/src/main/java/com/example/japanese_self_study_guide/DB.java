@@ -27,7 +27,7 @@ import java.io.File;
 
 public class DB extends Application {
 
-    // ✅ флажки — включай при необходимости
+    // флажки — включать при необходимости
     private static final boolean UPLOAD_NEW_KANJI = false;
     private static final boolean UPLOAD_TEXTS = false;
     private static final boolean UPLOAD_TRANSLATIONS = false;
@@ -58,7 +58,6 @@ public class DB extends Application {
                 .build();
         db.setFirestoreSettings(settings);
 
-        // Предзагрузка хираганы в кэш
         db.collection("Hiragana")
                 .get()
                 .addOnCompleteListener(task -> {
@@ -116,7 +115,6 @@ public class DB extends Application {
 
     }
 
-    // ✅ Универсальный метод чтения JSON из /res/raw
     private String readJsonFromRaw(int rawId) throws Exception {
         InputStream is = getResources().openRawResource(rawId);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -131,10 +129,9 @@ public class DB extends Application {
     private void uploadTexts() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
-            String json = readJsonFromRaw(R.raw.text10); // texts.json в /res/raw
+            String json = readJsonFromRaw(R.raw.text10);
             Gson gson = new Gson();
 
-            // Преобразуем JSON в Map<id, TextModel>
             Type type = new TypeToken<Map<String, TextModel>>() {}.getType();
             Map<String, TextModel> data = gson.fromJson(json, type);
 
@@ -152,7 +149,6 @@ public class DB extends Application {
         }
     }
 
-    // ✅ Загрузка переводов
     private void uploadTranslations() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
@@ -177,7 +173,6 @@ public class DB extends Application {
         }
     }
 
-    // ✅ Твоя прежняя функция для кандзи
     private void uploadNewKanji() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
@@ -200,7 +195,6 @@ public class DB extends Application {
         }
     }
 
-    // ✅ Загрузка словаря в Firestore
     private void uploadWords() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
@@ -274,7 +268,6 @@ public class DB extends Application {
     private void uploadKatakanaExercises() {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         try {
-            // Катакана JSON в /res/raw/katakana_exercises.json
             String json = readJsonFromRaw(R.raw.katakana_exercises);
             Gson gson = new Gson();
 
