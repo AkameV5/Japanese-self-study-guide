@@ -1,9 +1,11 @@
 package com.example.japanese_self_study_guide.texts_and_translation.view_model
 
+import android.app.Application
 import android.util.Log
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
+import com.example.japanese_self_study_guide.R
 import com.example.japanese_self_study_guide.texts_and_translation.ExerciseModel
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.japanese_self_study_guide.texts_and_translation.TextsRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,16 +23,16 @@ data class TextDetailUiState(
 ) {
     val currentParagraphs get() = if (showTranslation) translationParagraphs else japaneseParagraphs
     val currentText get() = currentParagraphs.getOrNull(currentIndex) ?: ""
-    val currentTitle get() = if (showTranslation)
-        translationTitle.ifBlank { "Перевод" } else japaneseTitle
+    val currentTitle get() = if (showTranslation) translationTitle.ifBlank { japaneseTitle } else japaneseTitle
     val isLastParagraph get() = currentIndex == currentParagraphs.size - 1 && currentParagraphs.isNotEmpty()
     val canGoPrev get() = currentIndex > 0
     val canGoNext get() = currentIndex < currentParagraphs.size - 1
 }
 
-class TextDetailViewModel : ViewModel() {
+class TextDetailViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val db = FirebaseFirestore.getInstance()
+    private val app = getApplication<Application>()
+    private val repository = TextsRepository()
     private val _uiState = MutableStateFlow(TextDetailUiState())
     val uiState: StateFlow<TextDetailUiState> = _uiState.asStateFlow()
 
@@ -46,26 +48,21 @@ class TextDetailViewModel : ViewModel() {
     }
 
     private fun loadText(textId: Int) {
-        db.collection("Texts")
-            .get()
-            .addOnSuccessListener { query ->
-                val doc = query.documents.firstOrNull { doc ->
-                    val id = doc.getLong("id") ?: doc.get("id")?.toString()?.toLongOrNull()
-                    id?.toInt() == textId
-                }
-                if (doc == null) {
+        repository.getTextById(textId)
+            .addOnSuccessListener { text ->
+                if (text == null) {
                     Log.e("TextDetailVM", "Text not found for id=$textId")
-                    _uiState.value = _uiState.value.copy(isLoading = false, error = "Текст не найден (id=$textId)")
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        error = app.getString(R.string.texts_not_found, textId)
+                    )
                     return@addOnSuccessListener
                 }
-                val title = doc.getString("title") ?: ""
-                @Suppress("UNCHECKED_CAST")
-                val sentences = doc.get("sentences") as? List<String> ?: emptyList()
-                val paragraphs = groupIntoParagraphs(sentences)
+                val paragraphs = groupIntoParagraphs(text.sentences ?: emptyList())
                 Log.d("TextDetailVM", "Loaded text id=$textId, paragraphs=${paragraphs.size}")
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    japaneseTitle = title,
+                    japaneseTitle = text.title ?: "",
                     japaneseParagraphs = paragraphs
                 )
             }
@@ -76,35 +73,20 @@ class TextDetailViewModel : ViewModel() {
     }
 
     private fun loadTranslation(textId: Int) {
-        db.collection("Translations_texts")
-            .get()
-            .addOnSuccessListener { query ->
-                val doc = query.documents.firstOrNull { doc ->
-                    val id = doc.getLong("textId") ?: doc.get("textId")?.toString()?.toLongOrNull()
-                    id?.toInt() == textId
-                } ?: return@addOnSuccessListener
-
-                val title = doc.getString("translationTitle") ?: ""
-                @Suppress("UNCHECKED_CAST")
-                val sentences = doc.get("sentences") as? List<String> ?: emptyList()
-                val paragraphs = groupIntoParagraphs(sentences)
+        repository.getTranslationByTextId(textId)
+            .addOnSuccessListener { translation ->
+                if (translation == null) return@addOnSuccessListener
+                val paragraphs = groupIntoParagraphs(translation.sentences ?: emptyList())
                 _uiState.value = _uiState.value.copy(
-                    translationTitle = title,
+                    translationTitle = translation.translationTitle ?: "",
                     translationParagraphs = paragraphs
                 )
             }
     }
 
     private fun loadExercises(textId: Int) {
-        db.collection("TextsExercises")
-            .get()
-            .addOnSuccessListener { query ->
-                val list = query.documents
-                    .filter { doc ->
-                        val id = doc.getLong("textId") ?: doc.get("textId")?.toString()?.toLongOrNull()
-                        id?.toInt() == textId
-                    }
-                    .mapNotNull { it.toObject(ExerciseModel::class.java) }
+        repository.getExercisesByTextId(textId)
+            .addOnSuccessListener { list ->
                 _uiState.value = _uiState.value.copy(exercises = list)
             }
     }
@@ -129,14 +111,14 @@ class TextDetailViewModel : ViewModel() {
     private fun groupIntoParagraphs(sentences: List<String>): List<String> {
         val paragraphs = mutableListOf<String>()
         val builder = StringBuilder()
-        for (s in sentences) {
-            if (s.trim().isEmpty()) {
+        for (sentence in sentences) {
+            if (sentence.trim().isEmpty()) {
                 if (builder.isNotEmpty()) {
                     paragraphs.add(builder.toString().trim())
                     builder.clear()
                 }
             } else {
-                builder.append(s).append("\n")
+                builder.append(sentence).append("\n")
             }
         }
         if (builder.isNotEmpty()) paragraphs.add(builder.toString().trim())

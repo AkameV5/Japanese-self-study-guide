@@ -3,6 +3,7 @@ package com.example.japanese_self_study_guide.kanji.view_model
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.japanese_self_study_guide.kanji.KanjiExerciseModel
+import com.example.japanese_self_study_guide.kanji.KanjiRepository
 import com.example.japanese_self_study_guide.main_profile.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
@@ -26,7 +27,9 @@ data class KanjiExerciseUiState(
     val totalKanjiCount: Int = 0
 )
 
-class KanjiExerciseViewModel : ViewModel() {
+class KanjiExerciseViewModel(
+    private val repository: KanjiRepository = KanjiRepository()
+) : ViewModel() {
 
     private val db = FirebaseFirestore.getInstance()
     private val _uiState = MutableStateFlow(KanjiExerciseUiState())
@@ -52,13 +55,9 @@ class KanjiExerciseViewModel : ViewModel() {
     }
 
     private fun fetchExercises(startId: Int, endId: Int, limit: Int, learnedKanji: List<Long>) {
-        db.collection("KanjiExercises")
-            .whereGreaterThanOrEqualTo("id_kanji", startId)
-            .whereLessThanOrEqualTo("id_kanji", endId)
-            .get()
-            .addOnSuccessListener { query ->
-                var list = query.documents
-                    .mapNotNull { it.toObject(KanjiExerciseModel::class.java) }
+        repository.getExercisesInRange(startId, endId)
+            .addOnSuccessListener { exercises ->
+                var list = exercises
                     .filter { !learnedKanji.contains(it.id_kanji.toLong()) }
                     .shuffled()
                 if (list.size > limit) list = list.subList(0, limit)

@@ -1,17 +1,41 @@
 package com.example.japanese_self_study_guide.texts_and_translation.ui
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -24,6 +48,11 @@ import com.example.japanese_self_study_guide.R
 import com.example.japanese_self_study_guide.texts_and_translation.TextModel
 import com.example.japanese_self_study_guide.texts_and_translation.view_model.TextsViewModel
 
+private data class JlptFilterOption(
+    val value: String,
+    val label: String
+)
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TextsScreen(
@@ -33,19 +62,31 @@ fun TextsScreen(
     val vm: TextsViewModel = viewModel()
     val state by vm.uiState.collectAsState()
 
-    val jlptLevels = listOf("Все уровни", "N5", "N4", "N3", "N2", "N1")
+    val jlptLevels = listOf(
+        JlptFilterOption(TextsViewModel.JLPT_ALL, stringResource(R.string.texts_all_levels)),
+        JlptFilterOption("N5", "N5"),
+        JlptFilterOption("N4", "N4"),
+        JlptFilterOption("N3", "N3"),
+        JlptFilterOption("N2", "N2"),
+        JlptFilterOption("N1", "N1")
+    )
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(stringResource(R.string.texts_title),
-                        color = MaterialTheme.colorScheme.onPrimary)
+                    Text(
+                        stringResource(R.string.texts_title),
+                        color = MaterialTheme.colorScheme.onPrimary
+                    )
                 },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, null,
-                            tint = MaterialTheme.colorScheme.onPrimary)
+                        Icon(
+                            Icons.Default.ArrowBack,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -54,8 +95,11 @@ fun TextsScreen(
             )
         }
     ) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+        ) {
             OutlinedTextField(
                 value = state.query,
                 onValueChange = vm::onQueryChange,
@@ -63,11 +107,11 @@ fun TextsScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 12.dp, vertical = 8.dp),
                 placeholder = { Text(stringResource(R.string.texts_search_hint)) },
-                leadingIcon = { Icon(Icons.Default.Search, null) },
+                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                 trailingIcon = {
                     if (state.query.isNotEmpty()) {
                         IconButton(onClick = { vm.onQueryChange("") }) {
-                            Icon(Icons.Default.Close, null)
+                            Icon(Icons.Default.Close, contentDescription = null)
                         }
                     }
                 },
@@ -83,9 +127,9 @@ fun TextsScreen(
             ) {
                 items(jlptLevels) { level ->
                     FilterChip(
-                        selected = state.jlptFilter == level,
-                        onClick = { vm.onJlptFilter(level) },
-                        label = { Text(level, fontSize = 13.sp) }
+                        selected = state.jlptFilter == level.value,
+                        onClick = { vm.onJlptFilter(level.value) },
+                        label = { Text(level.label, fontSize = 13.sp) }
                     )
                 }
             }
@@ -101,14 +145,21 @@ fun TextsScreen(
                 state.isLoading -> Box(Modifier.fillMaxSize(), Alignment.Center) {
                     CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
                 }
+
                 state.error != null -> Box(Modifier.fillMaxSize(), Alignment.Center) {
-                    Text(stringResource(R.string.audio_error, state.error!!),
-                        color = MaterialTheme.colorScheme.error)
+                    Text(
+                        text = stringResource(R.string.audio_error, state.error!!),
+                        color = MaterialTheme.colorScheme.error
+                    )
                 }
+
                 state.displayedTexts.isEmpty() -> Box(Modifier.fillMaxSize(), Alignment.Center) {
-                    Text(stringResource(R.string.dict_no_results),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(
+                        stringResource(R.string.dict_no_results),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 }
+
                 else -> LazyColumn(
                     contentPadding = PaddingValues(bottom = 16.dp)
                 ) {
@@ -149,7 +200,12 @@ private fun TextCard(text: TextModel, isLearned: Boolean, onClick: () -> Unit) {
                 Spacer(Modifier.height(4.dp))
                 AssistChip(
                     onClick = {},
-                    label = { Text(stringResource(R.string.texts_level, text.difficultyLevel ?: "?"), fontSize = 13.sp) }
+                    label = {
+                        Text(
+                            stringResource(R.string.texts_level, text.difficultyLevel ?: "?"),
+                            fontSize = 13.sp
+                        )
+                    }
                 )
             }
             if (isLearned) {

@@ -1,41 +1,53 @@
 package com.example.japanese_self_study_guide.audio;
 
+import com.example.japanese_self_study_guide.DB;
 import com.example.japanese_self_study_guide.audio.model.AudioExerciseModel;
 import com.example.japanese_self_study_guide.audio.model.AudioModel;
+import com.example.japanese_self_study_guide.cache.CacheTaskRunner;
+import com.example.japanese_self_study_guide.cache.ContentDao;
+import com.example.japanese_self_study_guide.cache.FirebaseContentSync;
 import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AudioRepository {
 
-    private static final String AUDIO_BASE_URL =
-            "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/";
-
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
+    private final ContentDao dao = DB.getLocalDatabase().contentDao();
+    private final FirebaseContentSync sync = new FirebaseContentSync();
 
     public Task<List<AudioModel>> getAudioList() {
-        return db.collection("Audio")
-                .get()
-                .continueWith(task -> {
-                    List<AudioModel> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-
-                    for (var doc : task.getResult()) {
-                        AudioModel audio = doc.toObject(AudioModel.class);
-                        if (audio.getAudioPath() != null) {
-                            audio.setUrl(AUDIO_BASE_URL + audio.getAudioPath());
-                        }
-                        result.add(audio);
+        return CacheTaskRunner.call(dao::getAllAudio)
+                .continueWithTask(task -> {
+                    List<AudioModel> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncAudio();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncAudio();
+                });
+    }
+
+    public Task<AudioModel> getAudioById(int audioId) {
+        return CacheTaskRunner.call(() -> dao.getAudioById(audioId))
+                .continueWithTask(task -> {
+                    AudioModel cached = task.isSuccessful() ? task.getResult() : null;
+                    if (cached != null) {
+                        sync.syncAudio();
+                        return Tasks.forResult(cached);
+                    }
+                    return sync.syncAudio().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getAudioById(audioId))
+                    );
                 });
     }
 
@@ -58,21 +70,18 @@ public class AudioRepository {
     }
 
     public Task<List<AudioExerciseModel>> getExercises(int audioId) {
-        // Use long to match Firestore storage type; no orderBy to avoid composite index requirement
-        return db.collection("AudioExercises")
-                .whereEqualTo("audioId", (long) audioId)
-                .get()
-                .continueWith(task -> {
-                    List<AudioExerciseModel> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-
-                    for (var doc : task.getResult().getDocuments()) {
-                        AudioExerciseModel m = doc.toObject(AudioExerciseModel.class);
-                        if (m != null) result.add(m);
+        return CacheTaskRunner.call(() -> dao.getAudioExercisesByAudioId(audioId))
+                .continueWithTask(task -> {
+                    List<AudioExerciseModel> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncAudioExercises();
+                        return Tasks.forResult(cached);
                     }
-                    // Sort client-side instead of relying on Firestore index
-                    result.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
-                    return result;
+                    return sync.syncAudioExercises().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getAudioExercisesByAudioId(audioId))
+                    );
                 });
     }
 

@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import com.example.japanese_self_study_guide.R
 import com.example.japanese_self_study_guide.kanji.ExerciseGroup
 import com.example.japanese_self_study_guide.kanji.GroupsProvider
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.japanese_self_study_guide.kanji.KanjiRepository
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -27,29 +27,14 @@ fun KanjiExerciseGroupsScreen(
 ) {
     val groups = remember { GroupsProvider.getGroups() }
     val kanjiPreview = remember { mutableStateMapOf<String, List<String>>() }
+    val repository = remember { KanjiRepository() }
 
     LaunchedEffect(Unit) {
-        val db = FirebaseFirestore.getInstance()
         for (group in groups) {
-            val ids = (group.startId..group.endId).map { it.toDouble() }
-            val chunks = ids.chunked(10)
-            val collected = mutableListOf<Pair<Double, String>>()
-            var done = 0
-            for (chunk in chunks) {
-                db.collection("Kanji").whereIn("id", chunk).get()
-                    .addOnSuccessListener { query ->
-                        for (doc in query.documents) {
-                            val id = (doc.get("id") as? Double) ?: continue
-                            val char = doc.getString("kanji") ?: continue
-                            collected.add(id to char)
-                        }
-                        done++
-                        if (done == chunks.size) {
-                            kanjiPreview[group.title] = collected.sortedBy { it.first }.map { it.second }
-                        }
-                    }
-                    .addOnFailureListener { done++ }
-            }
+            repository.getKanjiByIds((group.startId..group.endId).toList())
+                .addOnSuccessListener { items ->
+                    kanjiPreview[group.title] = items.sortedBy { it.id }.mapNotNull { it.kanji }
+                }
         }
     }
 

@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.japanese_self_study_guide.R
 import com.example.japanese_self_study_guide.audio.AudioActivity
+import com.example.japanese_self_study_guide.audio.AudioRepository
 import com.example.japanese_self_study_guide.dictionary.DictionaryActivity
 import com.example.japanese_self_study_guide.grammar.GrammarActivity
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaActivity
@@ -25,7 +26,6 @@ import com.example.japanese_self_study_guide.login_and_registration.LoginActivit
 import com.example.japanese_self_study_guide.texts_and_translation.TextsActivity
 import com.example.japanese_self_study_guide.ui.theme.JapaneseSelfStudyGuideTheme
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Calendar
 import java.util.Locale
 
@@ -178,20 +178,15 @@ class MainActivity : AppCompatActivity() {
             }
             "audio" -> {
                 val audioId = longVal("id")?.toLong() ?: return
-                FirebaseFirestore.getInstance().collection("Audio")
-                    .whereEqualTo("id", audioId).get()
-                    .addOnSuccessListener { query ->
-                        if (!query.isEmpty) {
-                            val doc = query.documents[0]
-                            val audioPath = doc.getString("audioPath") ?: ""
-                            val fullUrl = if (audioPath.isNotEmpty())
-                                "https://raw.githubusercontent.com/AkameV5/Japanese-self-study-guide/master/audio/$audioPath"
-                            else ""
+                AudioRepository()
+                    .getAudioById(audioId.toInt())
+                    .addOnSuccessListener { audio ->
+                        if (audio != null) {
                             startActivity(Intent(this, AudioActivity::class.java).apply {
                                 putExtra("audioId", audioId.toInt())
-                                putExtra("audio_url", fullUrl)
-                                putExtra("audio_name", doc.getString("name"))
-                                putExtra("audio_description", doc.getString("description"))
+                                putExtra("audio_url", audio.url ?: "")
+                                putExtra("audio_name", audio.name)
+                                putExtra("audio_description", audio.description)
                                 putExtra("daily_mode", true)
                             })
                         }

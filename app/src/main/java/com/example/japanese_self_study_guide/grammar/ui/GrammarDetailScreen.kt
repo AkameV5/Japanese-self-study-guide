@@ -15,8 +15,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.japanese_self_study_guide.R
+import com.example.japanese_self_study_guide.grammar.GrammarRepository
 import com.example.japanese_self_study_guide.grammar.GrammarRule
-import com.google.firebase.firestore.FirebaseFirestore
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,31 +39,14 @@ fun GrammarDetailScreen(
         )
     }
     var isLoading by remember { mutableStateOf(dailyMode) }
+    val repository = remember { GrammarRepository() }
 
     LaunchedEffect(grammarId) {
         if (!dailyMode) return@LaunchedEffect
-        FirebaseFirestore.getInstance()
-            .collection("Grammar")
-            .get()
-            .addOnSuccessListener { query ->
-                val doc = query.documents.firstOrNull { doc ->
-                    val idVal = doc.get("id")
-                    when (idVal) {
-                        is Long    -> idVal.toInt() == grammarId
-                        is Int     -> idVal == grammarId
-                        is Double  -> idVal.toInt() == grammarId
-                        is String  -> idVal.toIntOrNull() == grammarId
-                        else       -> false
-                    }
-                }
-                if (doc != null) {
-                    rule = GrammarRule(
-                        grammarId,
-                        doc.getString("structure") ?: "",
-                        doc.getString("explanation") ?: "",
-                        doc.getString("example") ?: "",
-                        doc.getString("translation") ?: ""
-                    )
+        repository.getRuleById(grammarId)
+            .addOnSuccessListener { cachedRule ->
+                if (cachedRule != null) {
+                    rule = cachedRule
                 }
                 isLoading = false
             }

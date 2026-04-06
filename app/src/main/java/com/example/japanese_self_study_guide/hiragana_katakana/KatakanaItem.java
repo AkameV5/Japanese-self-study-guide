@@ -4,28 +4,28 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "hiragana_items")
-public class HiraganaItem {
+@Entity(tableName = "katakana_items")
+public class KatakanaItem {
     @PrimaryKey
     private int id;
     private String symbol;
     private String romaji;
     private String imageUrl;
 
-    public HiraganaItem() {}
+    public KatakanaItem() {}
 
     @Ignore
-    public HiraganaItem(String symbol, String romaji, String imageUrl, int id) {
+    public KatakanaItem(int id, String symbol, String romaji, String imageUrl) {
+        this.id = id;
         this.symbol = symbol;
         this.romaji = romaji;
         this.imageUrl = imageUrl;
-        this.id = id;
     }
 
+    public int getId() { return id; }
     public String getSymbol() { return symbol; }
     public String getRomaji() { return romaji; }
     public String getImageUrl() { return imageUrl; }
-    public int getId() { return id; }
 
     public void setId(int id) { this.id = id; }
     public void setSymbol(String symbol) { this.symbol = symbol; }

@@ -1,5 +1,9 @@
 package com.example.japanese_self_study_guide.grammar;
 
+import com.example.japanese_self_study_guide.DB;
+import com.example.japanese_self_study_guide.cache.CacheTaskRunner;
+import com.example.japanese_self_study_guide.cache.ContentDao;
+import com.example.japanese_self_study_guide.cache.FirebaseContentSync;
 import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -14,18 +18,34 @@ public class GrammarRepository {
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
+    private final ContentDao dao = DB.getLocalDatabase().contentDao();
+    private final FirebaseContentSync sync = new FirebaseContentSync();
 
     public Task<List<GrammarRule>> getRules() {
-        return db.collection("Grammar")
-                .get()
-                .continueWith(task -> {
-                    List<GrammarRule> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        GrammarRule r = doc.toObject(GrammarRule.class);
-                        if (r != null) result.add(r);
+        return CacheTaskRunner.call(dao::getAllGrammarRules)
+                .continueWithTask(task -> {
+                    List<GrammarRule> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncGrammarRules();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncGrammarRules();
+                });
+    }
+
+    public Task<GrammarRule> getRuleById(int grammarId) {
+        return CacheTaskRunner.call(() -> dao.getGrammarRuleById(grammarId))
+                .continueWithTask(task -> {
+                    GrammarRule cached = task.isSuccessful() ? task.getResult() : null;
+                    if (cached != null) {
+                        sync.syncGrammarRules();
+                        return Tasks.forResult(cached);
+                    }
+                    return sync.syncGrammarRules().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getGrammarRuleById(grammarId))
+                    );
                 });
     }
 
@@ -46,17 +66,18 @@ public class GrammarRepository {
     }
 
     public Task<List<GrammarExercise>> getExercises(int grammarId) {
-        return db.collection("GrammarExercises")
-                .whereEqualTo("id_grammar", grammarId)
-                .get()
-                .continueWith(task -> {
-                    List<GrammarExercise> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        GrammarExercise ex = doc.toObject(GrammarExercise.class);
-                        if (ex != null) result.add(ex);
+        return CacheTaskRunner.call(() -> dao.getGrammarExercisesByGrammarId(grammarId))
+                .continueWithTask(task -> {
+                    List<GrammarExercise> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncGrammarExercises();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncGrammarExercises().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getGrammarExercisesByGrammarId(grammarId))
+                    );
                 });
     }
 

@@ -1,6 +1,16 @@
 package com.example.japanese_self_study_guide.hiragana_katakana.ui
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -8,10 +18,29 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -25,6 +54,9 @@ import com.example.japanese_self_study_guide.R
 import com.example.japanese_self_study_guide.hiragana_katakana.HiraganaItem
 import com.example.japanese_self_study_guide.hiragana_katakana.view_model.HiraganaViewModel
 import kotlin.math.ceil
+
+private val SymbolGridGap = 8.dp
+val SymbolCellSize = 76.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -42,9 +74,11 @@ fun HiraganaScreen(
                 title = { Text(stringResource(R.string.hiragana_title), color = MaterialTheme.colorScheme.onPrimary) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack,
+                        Icon(
+                            Icons.Default.ArrowBack,
                             contentDescription = stringResource(R.string.audio_back),
-                            tint = MaterialTheme.colorScheme.onPrimary)
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.primary)
@@ -57,39 +91,40 @@ fun HiraganaScreen(
                     modifier = Modifier.align(Alignment.Center),
                     color = MaterialTheme.colorScheme.primary
                 )
+
                 state.error != null -> Text(
                     text = stringResource(R.string.audio_error, state.error!!),
                     modifier = Modifier.align(Alignment.Center),
                     color = MaterialTheme.colorScheme.error
                 )
+
                 else -> {
                     val (main, youon) = remember(state.symbols) {
                         insertGaps(state.symbols.filter { it.id < 72 }) to
-                                state.symbols.filter { it.id >= 72 }
+                            state.symbols.filter { it.id >= 72 }
                     }
 
-                    val cellDp = 64.dp
-                    val mainRows  = ceil(main.size / 5.0).toInt()
+                    val mainRows = ceil(main.size / 5.0).toInt()
                     val youonRows = ceil(youon.size / 3.0).toInt()
 
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
-                        contentPadding = PaddingValues(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 10.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         item {
                             Text(
                                 text = stringResource(R.string.hiragana_main_group),
                                 style = MaterialTheme.typography.titleMedium,
                                 color = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.padding(vertical = 4.dp)
+                                modifier = Modifier.padding(top = 4.dp)
                             )
                         }
                         item {
                             FixedGrid(
                                 items = main,
                                 columns = 5,
-                                cellDp = cellDp,
+                                cellDp = SymbolCellSize,
                                 learnedIds = state.learnedIds,
                                 rows = mainRows,
                                 onClick = { dialogItem = it }
@@ -100,33 +135,37 @@ fun HiraganaScreen(
                                 text = stringResource(R.string.hiragana_youon_group),
                                 style = MaterialTheme.typography.titleMedium,
                                 color = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
+                                modifier = Modifier.padding(top = 6.dp)
                             )
                         }
                         item {
                             FixedGrid(
                                 items = youon,
                                 columns = 3,
-                                cellDp = cellDp,
+                                cellDp = SymbolCellSize,
                                 learnedIds = state.learnedIds,
                                 rows = youonRows,
                                 onClick = { dialogItem = it }
                             )
                         }
                         item {
-                            Spacer(Modifier.height(4.dp))
+                            Spacer(Modifier.height(6.dp))
                             Button(
                                 onClick = onGoToGroups,
-                                modifier = Modifier.fillMaxWidth().height(52.dp),
-                                shape = RoundedCornerShape(14.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(54.dp),
+                                shape = RoundedCornerShape(16.dp),
                                 colors = ButtonDefaults.buttonColors(
                                     containerColor = MaterialTheme.colorScheme.primary
                                 )
                             ) {
-                                Text(stringResource(R.string.hiragana_exercises_btn),
-                                    style = MaterialTheme.typography.titleMedium)
+                                Text(
+                                    stringResource(R.string.hiragana_exercises_btn),
+                                    style = MaterialTheme.typography.titleMedium
+                                )
                             }
-                            Spacer(Modifier.height(8.dp))
+                            Spacer(Modifier.height(10.dp))
                         }
                     }
                 }
@@ -147,7 +186,7 @@ fun HiraganaDailyScreen(
     onStartExercises: () -> Unit
 ) {
     var dialogItem by remember { mutableStateOf<HiraganaItem?>(null) }
-    val cellDp = 64.dp
+    val cellDp = SymbolCellSize
     val rows = ceil(symbols.size / 5.0).toInt().coerceAtLeast(1)
 
     Scaffold(
@@ -156,8 +195,7 @@ fun HiraganaDailyScreen(
                 title = { Text(stringResource(R.string.hiragana_title), color = MaterialTheme.colorScheme.onPrimary) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = null,
-                            tint = MaterialTheme.colorScheme.onPrimary)
+                        Icon(Icons.Default.ArrowBack, contentDescription = null, tint = MaterialTheme.colorScheme.onPrimary)
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.primary)
@@ -166,8 +204,10 @@ fun HiraganaDailyScreen(
     ) { padding ->
         Box(Modifier.fillMaxSize().padding(padding)) {
             if (isLoading) {
-                CircularProgressIndicator(Modifier.align(Alignment.Center),
-                    color = MaterialTheme.colorScheme.primary)
+                CircularProgressIndicator(
+                    Modifier.align(Alignment.Center),
+                    color = MaterialTheme.colorScheme.primary
+                )
             } else {
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
@@ -187,12 +227,16 @@ fun HiraganaDailyScreen(
                     item {
                         Button(
                             onClick = onStartExercises,
-                            modifier = Modifier.fillMaxWidth().height(52.dp),
-                            shape = RoundedCornerShape(14.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(54.dp),
+                            shape = RoundedCornerShape(16.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                         ) {
-                            Text(stringResource(R.string.hiragana_start_daily_btn),
-                                style = MaterialTheme.typography.titleMedium)
+                            Text(
+                                stringResource(R.string.hiragana_start_daily_btn),
+                                style = MaterialTheme.typography.titleMedium
+                            )
                         }
                     }
                 }
@@ -204,7 +248,7 @@ fun HiraganaDailyScreen(
 }
 
 @Composable
-private fun FixedGrid(
+fun FixedGrid(
     items: List<HiraganaItem>,
     columns: Int,
     cellDp: Dp,
@@ -212,15 +256,14 @@ private fun FixedGrid(
     rows: Int,
     onClick: (HiraganaItem) -> Unit
 ) {
-    val gap = 4.dp
     LazyVerticalGrid(
         columns = GridCells.Fixed(columns),
         modifier = Modifier
             .fillMaxWidth()
-            .height(cellDp * rows + gap * (rows - 1)),
+            .height(cellDp * rows + SymbolGridGap * (rows - 1)),
         userScrollEnabled = false,
-        horizontalArrangement = Arrangement.spacedBy(gap),
-        verticalArrangement = Arrangement.spacedBy(gap)
+        horizontalArrangement = Arrangement.spacedBy(SymbolGridGap),
+        verticalArrangement = Arrangement.spacedBy(SymbolGridGap)
     ) {
         items(items, key = { it.id }) { item ->
             SymbolCell(
@@ -239,26 +282,63 @@ fun SymbolCell(item: HiraganaItem, isLearned: Boolean, cellSize: Dp, onClick: ()
         Box(Modifier.size(cellSize))
         return
     }
+
+    val accent = if (isLearned) {
+        MaterialTheme.colorScheme.primary
+    } else {
+        Color(0xFFE57D7D)
+    }
+    val gradient = if (isLearned) {
+        listOf(
+            MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.72f),
+            MaterialTheme.colorScheme.surface
+        )
+    } else {
+        listOf(
+            accent.copy(alpha = 0.20f),
+            MaterialTheme.colorScheme.surface,
+            MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.18f)
+        )
+    }
+
     Card(
         onClick = onClick,
         modifier = Modifier.size(cellSize),
-        shape = RoundedCornerShape(8.dp),
-        elevation = CardDefaults.cardElevation(2.dp),
+        shape = RoundedCornerShape(18.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Brush.verticalGradient(gradient))
+                .padding(horizontal = 4.dp, vertical = 6.dp),
+            contentAlignment = Alignment.Center
+        ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(item.symbol ?: "", fontSize = 22.sp, fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface, textAlign = TextAlign.Center)
-                Text(item.romaji ?: "", fontSize = 10.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant, textAlign = TextAlign.Center)
+                Text(
+                    text = item.symbol ?: "",
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    textAlign = TextAlign.Center
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(
+                    text = item.romaji ?: "",
+                    fontSize = 11.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = TextAlign.Center
+                )
             }
             if (isLearned) {
                 Icon(
                     painter = painterResource(R.drawable.sakura_learned),
                     contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(14.dp).align(Alignment.TopEnd).padding(2.dp)
+                    tint = accent,
+                    modifier = Modifier
+                        .size(18.dp)
+                        .align(Alignment.TopEnd)
                 )
             }
         }
@@ -268,13 +348,35 @@ fun SymbolCell(item: HiraganaItem, isLearned: Boolean, cellSize: Dp, onClick: ()
 @Composable
 fun SymbolZoomDialog(item: HiraganaItem, onDismiss: () -> Unit) {
     Dialog(onDismissRequest = onDismiss) {
-        Card(shape = RoundedCornerShape(16.dp), elevation = CardDefaults.cardElevation(8.dp)) {
-            Column(Modifier.padding(40.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(item.symbol ?: "", fontSize = 80.sp, fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface)
+        Card(
+            shape = RoundedCornerShape(20.dp),
+            elevation = CardDefaults.cardElevation(10.dp)
+        ) {
+            Column(
+                modifier = Modifier
+                    .background(
+                        Brush.verticalGradient(
+                            listOf(
+                                MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.55f),
+                                MaterialTheme.colorScheme.surface
+                            )
+                        )
+                    )
+                    .padding(40.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = item.symbol ?: "",
+                    fontSize = 80.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurface
+                )
                 Spacer(Modifier.height(12.dp))
-                Text(item.romaji ?: "", fontSize = 28.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(
+                    text = item.romaji ?: "",
+                    fontSize = 28.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
         }
     }

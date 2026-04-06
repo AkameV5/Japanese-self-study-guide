@@ -1,8 +1,13 @@
 package com.example.japanese_self_study_guide.dictionary;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.List;
 
+@Entity(tableName = "words")
 public class Word {
+    @PrimaryKey
     public int id;
     public List<Integer> idKanji;
     public String word;

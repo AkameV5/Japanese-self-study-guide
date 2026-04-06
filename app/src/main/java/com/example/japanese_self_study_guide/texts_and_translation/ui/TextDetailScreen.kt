@@ -3,6 +3,7 @@ package com.example.japanese_self_study_guide.texts_and_translation.ui
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -10,9 +11,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -70,6 +71,8 @@ fun TextDetailScreen(
                     .padding(padding)
                     .padding(16.dp)
             ) {
+                val swipeThreshold = 72f
+
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -82,7 +85,7 @@ fun TextDetailScreen(
                     FilterChip(
                         selected = !state.showTranslation,
                         onClick = { vm.toggleLanguage(false) },
-                        label = { Text("日本語") },
+                        label = { Text(stringResource(R.string.texts_original)) },
                         modifier = Modifier.padding(end = 8.dp)
                     )
                     FilterChip(
@@ -104,7 +107,25 @@ fun TextDetailScreen(
                 Card(
                     modifier = Modifier
                         .weight(1f)
-                        .fillMaxWidth(),
+                        .fillMaxWidth()
+                        .pointerInput(state.currentIndex, state.canGoPrev, state.canGoNext) {
+                            var totalHorizontalDrag = 0f
+                            detectHorizontalDragGestures(
+                                onHorizontalDrag = { _, dragAmount ->
+                                    totalHorizontalDrag += dragAmount
+                                },
+                                onDragEnd = {
+                                    when {
+                                        totalHorizontalDrag <= -swipeThreshold && state.canGoNext -> vm.goNext()
+                                        totalHorizontalDrag >= swipeThreshold && state.canGoPrev -> vm.goPrev()
+                                    }
+                                    totalHorizontalDrag = 0f
+                                },
+                                onDragCancel = {
+                                    totalHorizontalDrag = 0f
+                                }
+                            )
+                        },
                     shape = RoundedCornerShape(14.dp),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     elevation = CardDefaults.cardElevation(2.dp)
@@ -125,6 +146,17 @@ fun TextDetailScreen(
                 }
 
                 Spacer(Modifier.height(16.dp))
+
+                if (state.currentParagraphs.size > 1) {
+                    Text(
+                        text = stringResource(R.string.texts_swipe_hint),
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier
+                            .align(Alignment.CenterHorizontally)
+                            .padding(bottom = 10.dp)
+                    )
+                }
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),

@@ -1,7 +1,9 @@
 package com.example.japanese_self_study_guide.texts_and_translation.view_model
 
+import android.app.Application
 import android.content.SharedPreferences
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
+import com.example.japanese_self_study_guide.R
 import com.example.japanese_self_study_guide.main_profile.MainActivity
 import com.example.japanese_self_study_guide.main_profile.ProgressManager
 import com.example.japanese_self_study_guide.texts_and_translation.ExerciseModel
@@ -35,9 +37,10 @@ data class ExerciseUiState(
     val counter get() = "${currentIndex + 1} / ${exercises.size}"
 }
 
-class ExerciseViewModel : ViewModel() {
+class ExerciseViewModel(application: Application) : AndroidViewModel(application) {
 
     private val db = FirebaseFirestore.getInstance()
+    private val app = getApplication<Application>()
     private val _uiState = MutableStateFlow(ExerciseUiState())
     val uiState: StateFlow<ExerciseUiState> = _uiState.asStateFlow()
 
@@ -67,10 +70,11 @@ class ExerciseViewModel : ViewModel() {
         val s = _uiState.value
         val correct = chosenIndex == s.shuffledCorrectIndex
         val correctAnswer = s.shuffledOptions.getOrNull(s.shuffledCorrectIndex) ?: ""
-        val resultText = if (correct)
-            "Правильно!\n\nПравильный ответ: $correctAnswer"
-        else
-            "Неправильно!\n\nПравильный ответ: $correctAnswer"
+        val resultText = if (correct) {
+            app.getString(R.string.texts_result_correct, correctAnswer)
+        } else {
+            app.getString(R.string.texts_result_wrong, correctAnswer)
+        }
 
         _uiState.value = s.copy(
             resultText = resultText,
@@ -84,7 +88,7 @@ class ExerciseViewModel : ViewModel() {
         val ex = _uiState.value.current ?: return
         saveHintUsed(prefs, textId)
         _uiState.value = _uiState.value.copy(
-            hintText = "Подсказка:\n\n${ex.hint}",
+            hintText = app.getString(R.string.texts_hint_body, ex.hint ?: ""),
             hintUsed = true
         )
     }

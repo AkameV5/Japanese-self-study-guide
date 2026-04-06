@@ -148,7 +148,7 @@
     <string name="settings_account_title">アカウント</string>
     <string name="settings_about_title">アプリについて</string>
     <string name="settings_version_label">バージョン</string>
-    <string name="settings_version_value">1.1.1</string>
+    <string name="settings_version_value">1.1.2</string>
     <string name="settings_developer_label">開発者</string>
     <string name="settings_logout">ログアウト</string>
     <string name="settings_logout_confirm_title">ログアウト</string>
@@ -165,4 +165,24 @@
     <string name="profile_photo_error">写真エラー: %1$s</string>
     <string name="profile_crop_error">トリミングエラー: %1$s</string>
     <string name="settings_language_note">* 完全に適用するにはアプリを再起動してください</string>
+    <string name="main_today">今日</string>
+    <string name="main_daily_overview_title">今日の学習プラン</string>
+    <string name="main_daily_overview_title_named">%1$sさんの今日の学習プラン</string>
+    <string name="main_daily_overview_pending">今日のレッスン数: %1$d</string>
+    <string name="main_daily_overview_complete">今日の予定はすべて完了しました。</string>
+    <string name="main_summary_done">完了</string>
+    <string name="main_summary_left">残り</string>
+    <string name="main_summary_plan">予定</string>
+    <string name="main_tile_open_practice">練習を開く</string>
+    <string name="main_tile_continue_reading">続きを読む</string>
+    <string name="main_tile_start_listening">音声を始める</string>
+    <string name="main_tile_review_rule">文法を見る</string>
+    <string name="main_tile_open_lesson">レッスンを開く</string>
+    <string name="texts_original">原文</string>
+    <string name="texts_swipe_hint">左スワイプで次へ、右スワイプで前へ</string>
+    <string name="texts_all_levels">すべてのレベル</string>
+    <string name="texts_result_correct">正解！\n\n正しい答え: %1$s</string>
+    <string name="texts_result_wrong">不正解\n\n正しい答え: %1$s</string>
+    <string name="texts_hint_body">ヒント:\n\n%1$s</string>
+    <string name="texts_not_found">テキストが見つかりません (id=%1$d)</string>
 </resources>

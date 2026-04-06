@@ -2,6 +2,7 @@ package com.example.japanese_self_study_guide.texts_and_translation.view_model
 
 import androidx.lifecycle.ViewModel
 import com.example.japanese_self_study_guide.texts_and_translation.TextModel
+import com.example.japanese_self_study_guide.texts_and_translation.TextsRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,11 +15,13 @@ data class TextsUiState(
     val displayedTexts: List<TextModel> = emptyList(),
     val learnedIds: Set<Int> = emptySet(),
     val query: String = "",
-    val jlptFilter: String = "Все уровни",
+    val jlptFilter: String = TextsViewModel.JLPT_ALL,
     val error: String? = null
 )
 
-class TextsViewModel : ViewModel() {
+class TextsViewModel(
+    private val repository: TextsRepository = TextsRepository()
+) : ViewModel() {
 
     private val db = FirebaseFirestore.getInstance()
     private val _uiState = MutableStateFlow(TextsUiState())
@@ -30,11 +33,9 @@ class TextsViewModel : ViewModel() {
     }
 
     private fun loadTexts() {
-        db.collection("Texts").get()
-            .addOnSuccessListener { query ->
-                val list = query.documents
-                    .mapNotNull { doc -> doc.toObject(TextModel::class.java) }
-                    .sortedBy { it.id }
+        repository.getTexts()
+            .addOnSuccessListener { texts ->
+                val list = texts.sortedBy { it.id }
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     allTexts = list,
@@ -52,7 +53,9 @@ class TextsViewModel : ViewModel() {
             .addOnSuccessListener { doc ->
                 @Suppress("UNCHECKED_CAST")
                 val learned = (doc.get("textsLearned") as? List<Long>)
-                    ?.map { it.toInt() }?.toSet() ?: emptySet()
+                    ?.map { it.toInt() }
+                    ?.toSet()
+                    ?: emptySet()
                 _uiState.value = _uiState.value.copy(learnedIds = learned)
             }
     }
@@ -74,11 +77,17 @@ class TextsViewModel : ViewModel() {
     }
 
     private fun applyFilters(list: List<TextModel>, query: String, jlpt: String): List<TextModel> {
-        var r = list
-        if (query.isNotBlank())
-            r = r.filter { it.title?.lowercase()?.contains(query.lowercase()) == true }
-        if (jlpt != "Все уровни")
-            r = r.filter { "N${it.difficultyLevel}" == jlpt }
-        return r
+        var result = list
+        if (query.isNotBlank()) {
+            result = result.filter { it.title?.lowercase()?.contains(query.lowercase()) == true }
+        }
+        if (jlpt != JLPT_ALL) {
+            result = result.filter { "N${it.difficultyLevel}" == jlpt }
+        }
+        return result
+    }
+
+    companion object {
+        const val JLPT_ALL = "ALL"
     }
 }

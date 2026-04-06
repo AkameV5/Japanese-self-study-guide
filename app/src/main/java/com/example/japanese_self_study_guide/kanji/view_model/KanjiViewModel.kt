@@ -2,6 +2,7 @@ package com.example.japanese_self_study_guide.kanji
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.example.japanese_self_study_guide.kanji.KanjiRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -23,7 +24,9 @@ data class KanjiUiState(
     val error: String? = null
 )
 
-class KanjiViewModel : ViewModel() {
+class KanjiViewModel(
+    private val repository: KanjiRepository = KanjiRepository()
+) : ViewModel() {
 
     private val db = FirebaseFirestore.getInstance()
     private val _uiState = MutableStateFlow(KanjiUiState())
@@ -37,11 +40,9 @@ class KanjiViewModel : ViewModel() {
     }
 
     private fun loadAll() {
-        db.collection("Kanji").get()
-            .addOnSuccessListener { query ->
-                val list = query.documents
-                    .mapNotNull { doc -> doc.toObject(KanjiModel::class.java) }
-                    .sortedBy { model -> model.id }
+        repository.getAllKanji()
+            .addOnSuccessListener { items ->
+                val list = items.sortedBy { model -> model.id }
 
                 val categories = list
                     .mapNotNull { model -> model.category?.takeIf { it.isNotBlank() } }
@@ -76,33 +77,19 @@ class KanjiViewModel : ViewModel() {
 
     fun loadDailyKanji(ids: IntArray) {
         _uiState.value = _uiState.value.copy(isLoading = true)
-        val doubleIds: List<Double> = ids.map { it.toDouble() }
-        val chunks = doubleIds.chunked(10)
-        val result = mutableListOf<KanjiModel>()
-        var loaded = 0
-
-        for (chunk in chunks) {
-            db.collection("Kanji").whereIn("id", chunk).get()
-                .addOnSuccessListener { query ->
-                    val items = query.documents.mapNotNull { doc -> doc.toObject(KanjiModel::class.java) }
-                    result.addAll(items)
-                    loaded++
-                    if (loaded == chunks.size) {
-                        val sorted = result.sortedBy { model -> model.id }
-                        _uiState.value = _uiState.value.copy(
-                            isLoading = false,
-                            allKanji = sorted,
-                            displayedKanji = sorted
-                        )
-                        loadLearnedIds()
-                    }
-                }
-                .addOnFailureListener {
-                    loaded++
-                    if (loaded == chunks.size)
-                        _uiState.value = _uiState.value.copy(isLoading = false)
-                }
-        }
+        repository.getKanjiByIds(ids.toList())
+            .addOnSuccessListener { items ->
+                val sorted = items.sortedBy { model -> model.id }
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    allKanji = sorted,
+                    displayedKanji = sorted
+                )
+                loadLearnedIds()
+            }
+            .addOnFailureListener {
+                _uiState.value = _uiState.value.copy(isLoading = false)
+            }
     }
 
     fun onQueryChange(q: String) {

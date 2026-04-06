@@ -1,5 +1,9 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
+import com.example.japanese_self_study_guide.DB;
+import com.example.japanese_self_study_guide.cache.CacheTaskRunner;
+import com.example.japanese_self_study_guide.cache.ContentDao;
+import com.example.japanese_self_study_guide.cache.FirebaseContentSync;
 import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -14,47 +18,40 @@ public class HiraganaRepository {
 
     private final FirebaseFirestore db   = FirebaseFirestore.getInstance();
     private final FirebaseAuth      auth = FirebaseAuth.getInstance();
+    private final ContentDao dao = DB.getLocalDatabase().contentDao();
+    private final FirebaseContentSync sync = new FirebaseContentSync();
 
     public Task<List<HiraganaItem>> getSymbols() {
-        return db.collection("Hiragana")
-                .orderBy("id")
-                .get()
-                .continueWith(task -> {
-                    List<HiraganaItem> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        Long id = doc.getLong("id");
-                        if (id == null) continue;
-                        result.add(new HiraganaItem(
-                                doc.getString("symbol"),
-                                doc.getString("romanji"),
-                                doc.getString("imageUrl"),
-                                id.intValue()
-                        ));
+        return CacheTaskRunner.call(dao::getAllHiragana)
+                .continueWithTask(task -> {
+                    List<HiraganaItem> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncHiragana();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncHiragana();
                 });
     }
 
     public Task<List<HiraganaItem>> getSymbolsByIds(List<Integer> ids) {
-        return db.collection("Hiragana")
-                .whereIn("id", ids)
-                .get()
-                .continueWith(task -> {
-                    List<HiraganaItem> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        Long id = doc.getLong("id");
-                        if (id == null) continue;
-                        result.add(new HiraganaItem(
-                                doc.getString("symbol"),
-                                doc.getString("romanji"),
-                                doc.getString("imageUrl"),
-                                id.intValue()
-                        ));
+        if (ids == null || ids.isEmpty()) {
+            return Tasks.forResult(new ArrayList<>());
+        }
+
+        return CacheTaskRunner.call(() -> dao.getHiraganaByIds(ids))
+                .continueWithTask(task -> {
+                    List<HiraganaItem> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncHiragana();
+                        return Tasks.forResult(cached);
                     }
-                    result.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
-                    return result;
+                    return sync.syncHiragana().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getHiraganaByIds(ids))
+                    );
                 });
     }
 
@@ -75,31 +72,36 @@ public class HiraganaRepository {
     }
 
     public Task<List<HiraganaExerciseModel>> getExercises(List<Integer> hiraganaIds) {
-        return db.collection("HiraganaExercises")
-                .whereIn("hiraganaId", hiraganaIds)
-                .get()
-                .continueWith(task -> {
-                    List<HiraganaExerciseModel> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        HiraganaExerciseModel ex = doc.toObject(HiraganaExerciseModel.class);
-                        if (ex != null) result.add(ex);
+        if (hiraganaIds == null || hiraganaIds.isEmpty()) {
+            return Tasks.forResult(new ArrayList<>());
+        }
+
+        return CacheTaskRunner.call(() -> dao.getHiraganaExercisesByIds(hiraganaIds))
+                .continueWithTask(task -> {
+                    List<HiraganaExerciseModel> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncHiraganaExercises();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncHiraganaExercises().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getHiraganaExercisesByIds(hiraganaIds))
+                    );
                 });
     }
 
     public Task<List<HiraganaExerciseModel>> getAllExercises() {
-        return db.collection("HiraganaExercises")
-                .get()
-                .continueWith(task -> {
-                    List<HiraganaExerciseModel> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        HiraganaExerciseModel ex = doc.toObject(HiraganaExerciseModel.class);
-                        if (ex != null) result.add(ex);
+        return CacheTaskRunner.call(dao::getAllHiraganaExercises)
+                .continueWithTask(task -> {
+                    List<HiraganaExerciseModel> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncHiraganaExercises();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncHiraganaExercises();
                 });
     }
 

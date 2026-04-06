@@ -148,7 +148,7 @@
     <string name="settings_account_title">Аккаунт</string>
     <string name="settings_about_title">О приложении</string>
     <string name="settings_version_label">Версия</string>
-    <string name="settings_version_value">1.1.1</string>
+    <string name="settings_version_value">1.1.2</string>
     <string name="settings_developer_label">Разработчик</string>
     <string name="settings_logout">Выйти из аккаунта</string>
     <string name="settings_logout_confirm_title">Выход</string>
@@ -165,4 +165,24 @@
     <string name="profile_photo_error">Ошибка фото: %1$s</string>
     <string name="profile_crop_error">Ошибка обрезки: %1$s</string>
     <string name="settings_language_note">* Для полного применения языка перезапустите приложение</string>
+    <string name="main_today">Сегодня</string>
+    <string name="main_daily_overview_title">План на сегодня</string>
+    <string name="main_daily_overview_title_named">%1$s, план на сегодня</string>
+    <string name="main_daily_overview_pending">На сегодня подготовлено уроков: %1$d</string>
+    <string name="main_daily_overview_complete">Все запланированное на сегодня уже выполнено.</string>
+    <string name="main_summary_done">Готово</string>
+    <string name="main_summary_left">Осталось</string>
+    <string name="main_summary_plan">План</string>
+    <string name="main_tile_open_practice">Открыть упражнения</string>
+    <string name="main_tile_continue_reading">Продолжить чтение</string>
+    <string name="main_tile_start_listening">Начать аудиоурок</string>
+    <string name="main_tile_review_rule">Открыть правило</string>
+    <string name="main_tile_open_lesson">Открыть урок</string>
+    <string name="texts_original">Оригинал</string>
+    <string name="texts_swipe_hint">Свайп влево — следующая страница, вправо — предыдущая</string>
+    <string name="texts_all_levels">Все уровни</string>
+    <string name="texts_result_correct">Правильно!\n\nПравильный ответ: %1$s</string>
+    <string name="texts_result_wrong">Неправильно!\n\nПравильный ответ: %1$s</string>
+    <string name="texts_hint_body">Подсказка:\n\n%1$s</string>
+    <string name="texts_not_found">Текст не найден (id=%1$d)</string>
 </resources>

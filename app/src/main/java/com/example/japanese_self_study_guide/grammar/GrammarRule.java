@@ -1,6 +1,12 @@
 package com.example.japanese_self_study_guide.grammar;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "grammar_rules")
 public class GrammarRule {
+    @PrimaryKey
     private int id;
     private String structure;
     private String explanation;
@@ -9,6 +15,7 @@ public class GrammarRule {
 
     public GrammarRule() {}
 
+    @Ignore
     public GrammarRule(int id, String structure, String explanation,
                        String example, String translation) {
         this.id = id;

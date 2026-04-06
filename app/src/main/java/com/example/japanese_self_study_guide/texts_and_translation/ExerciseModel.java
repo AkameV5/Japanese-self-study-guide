@@ -1,9 +1,14 @@
 package com.example.japanese_self_study_guide.texts_and_translation;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.io.Serializable;
 import java.util.List;
 
+@Entity(tableName = "text_exercises")
 public class ExerciseModel implements Serializable {
+    @PrimaryKey
     private int id;
     private int textId;
     private String type;

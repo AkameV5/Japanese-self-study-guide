@@ -1,5 +1,9 @@
 package com.example.japanese_self_study_guide.hiragana_katakana;
 
+import com.example.japanese_self_study_guide.DB;
+import com.example.japanese_self_study_guide.cache.CacheTaskRunner;
+import com.example.japanese_self_study_guide.cache.ContentDao;
+import com.example.japanese_self_study_guide.cache.FirebaseContentSync;
 import com.example.japanese_self_study_guide.main_profile.ProgressManager;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
@@ -14,47 +18,40 @@ public class KatakanaRepository {
 
     private final FirebaseFirestore db   = FirebaseFirestore.getInstance();
     private final FirebaseAuth      auth = FirebaseAuth.getInstance();
+    private final ContentDao dao = DB.getLocalDatabase().contentDao();
+    private final FirebaseContentSync sync = new FirebaseContentSync();
 
     public Task<List<HiraganaItem>> getSymbols() {
-        return db.collection("Katakana")
-                .orderBy("id")
-                .get()
-                .continueWith(task -> {
-                    List<HiraganaItem> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        Long id = doc.getLong("id");
-                        if (id == null) continue;
-                        result.add(new HiraganaItem(
-                                doc.getString("symbol"),
-                                doc.getString("romanji"),
-                                doc.getString("imageUrl"),
-                                id.intValue()
-                        ));
+        return CacheTaskRunner.call(dao::getAllKatakana)
+                .continueWithTask(task -> {
+                    List<KatakanaItem> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncKatakana();
+                        return Tasks.forResult(mapItems(cached));
                     }
-                    return result;
+                    return sync.syncKatakana().continueWith(task1 -> mapItems(task1.getResult()));
                 });
     }
 
     public Task<List<HiraganaItem>> getSymbolsByIds(List<Integer> ids) {
-        return db.collection("Katakana")
-                .whereIn("id", ids)
-                .get()
-                .continueWith(task -> {
-                    List<HiraganaItem> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        Long id = doc.getLong("id");
-                        if (id == null) continue;
-                        result.add(new HiraganaItem(
-                                doc.getString("symbol"),
-                                doc.getString("romanji"),
-                                doc.getString("imageUrl"),
-                                id.intValue()
-                        ));
+        if (ids == null || ids.isEmpty()) {
+            return Tasks.forResult(new ArrayList<>());
+        }
+
+        return CacheTaskRunner.call(() -> dao.getKatakanaByIds(ids))
+                .continueWithTask(task -> {
+                    List<KatakanaItem> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncKatakana();
+                        return Tasks.forResult(mapItems(cached));
                     }
-                    result.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
-                    return result;
+                    return sync.syncKatakana().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> mapItems(dao.getKatakanaByIds(ids)))
+                    );
                 });
     }
 
@@ -75,31 +72,36 @@ public class KatakanaRepository {
     }
 
     public Task<List<KatakanaExerciseModel>> getExercises(List<Integer> katakanaIds) {
-        return db.collection("KatakanaExercises")
-                .whereIn("katakanaId", katakanaIds)
-                .get()
-                .continueWith(task -> {
-                    List<KatakanaExerciseModel> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        KatakanaExerciseModel ex = doc.toObject(KatakanaExerciseModel.class);
-                        if (ex != null) result.add(ex);
+        if (katakanaIds == null || katakanaIds.isEmpty()) {
+            return Tasks.forResult(new ArrayList<>());
+        }
+
+        return CacheTaskRunner.call(() -> dao.getKatakanaExercisesByIds(katakanaIds))
+                .continueWithTask(task -> {
+                    List<KatakanaExerciseModel> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncKatakanaExercises();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncKatakanaExercises().continueWithTask(ignored ->
+                            CacheTaskRunner.call(() -> dao.getKatakanaExercisesByIds(katakanaIds))
+                    );
                 });
     }
 
     public Task<List<KatakanaExerciseModel>> getAllExercises() {
-        return db.collection("KatakanaExercises")
-                .get()
-                .continueWith(task -> {
-                    List<KatakanaExerciseModel> result = new ArrayList<>();
-                    if (!task.isSuccessful() || task.getResult() == null) return result;
-                    for (var doc : task.getResult()) {
-                        KatakanaExerciseModel ex = doc.toObject(KatakanaExerciseModel.class);
-                        if (ex != null) result.add(ex);
+        return CacheTaskRunner.call(dao::getAllKatakanaExercises)
+                .continueWithTask(task -> {
+                    List<KatakanaExerciseModel> cached = task.isSuccessful() && task.getResult() != null
+                            ? task.getResult()
+                            : new ArrayList<>();
+                    if (!cached.isEmpty()) {
+                        sync.syncKatakanaExercises();
+                        return Tasks.forResult(cached);
                     }
-                    return result;
+                    return sync.syncKatakanaExercises();
                 });
     }
 
@@ -137,5 +139,20 @@ public class KatakanaRepository {
 
     public interface LearnedCallback {
         void onDone(int learnedNow, int totalSymbols);
+    }
+
+    private List<HiraganaItem> mapItems(List<KatakanaItem> items) {
+        List<HiraganaItem> result = new ArrayList<>();
+        if (items == null) return result;
+        for (KatakanaItem item : items) {
+            result.add(new HiraganaItem(
+                    item.getSymbol(),
+                    item.getRomaji(),
+                    item.getImageUrl(),
+                    item.getId()
+            ));
+        }
+        result.sort((a, b) -> Integer.compare(a.getId(), b.getId()));
+        return result;
     }
 }

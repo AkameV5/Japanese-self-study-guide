@@ -1,9 +1,15 @@
 package com.example.japanese_self_study_guide.kanji;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import java.util.List;
 
+@Entity(tableName = "kanji_exercises")
 public class KanjiExerciseModel {
 
+    @PrimaryKey
     private int id;
     private int id_kanji;
     private String question;
@@ -14,6 +20,7 @@ public class KanjiExerciseModel {
 
     public KanjiExerciseModel() {}
 
+    @Ignore
     public KanjiExerciseModel(int id, int id_kanji, String question,
                               List<String> options, List<String> answer,
                               String explanation, int difficulty) {

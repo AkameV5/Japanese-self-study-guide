@@ -14,8 +14,8 @@ android {
         applicationId "com.example.japanese_self_study_guide"
         minSdk 24
         targetSdk 36
-        versionCode 7
-        versionName "1.1.1"
+        versionCode 8
+        versionName "1.1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -65,6 +65,8 @@ dependencies {
     implementation libs.firebase.crashlytics.buildtools
 
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'androidx.room:room-runtime:2.6.1'
+    annotationProcessor 'androidx.room:room-compiler:2.6.1'
     implementation libs.core.ktx
     implementation libs.lifecycle.runtime.compose
 
